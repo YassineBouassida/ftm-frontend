@@ -1,0 +1,291 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="458.888" height="492.297" viewBox="0 0 458.888 492.297">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" y1="0.822" x2="0.5" y2="0.277" gradientUnits="objectBoundingBox">
+      <stop offset="0.151" stop-color="#333" stop-opacity="0"/>
+      <stop offset="1" stop-color="#fff"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="0.5" y1="0.048" x2="0.5" y2="0.713" gradientUnits="objectBoundingBox">
+      <stop offset="0.151" stop-color="#e02b2b"/>
+      <stop offset="1" stop-color="#333" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-3" x1="0.241" y1="0.226" x2="0.818" y2="0.836" xlink:href="#linear-gradient-2"/>
+    <linearGradient id="linear-gradient-4" y1="0.5" x2="1" y2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0.151" stop-color="#333"/>
+      <stop offset="1" stop-color="#875454"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-5" x1="-0.064" y1="0.474" x2="1.09" y2="0.474" xlink:href="#linear-gradient-4"/>
+    <linearGradient id="linear-gradient-6" y1="0.5" x2="1" y2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0.151" stop-color="#333"/>
+      <stop offset="1" stop-color="#ff7676"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-7" x1="0.568" y1="0.918" x2="0.429" y2="0.062" xlink:href="#linear-gradient-6"/>
+    <linearGradient id="linear-gradient-8" x1="0.713" y1="0.634" x2="0.089" y2="0.242" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-9" x1="-2.727" y1="0.976" x2="-1.281" y2="0.976" gradientUnits="objectBoundingBox">
+      <stop offset="0.151" stop-color="#fff"/>
+      <stop offset="1" stop-color="#875454"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-10" x1="0.669" y1="-1.049" x2="1.824" y2="-1.049" gradientUnits="objectBoundingBox">
+      <stop offset="0.155" stop-color="#333" stop-opacity="0"/>
+      <stop offset="1" stop-color="#875454"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-11" x1="-2.212" y1="0.986" x2="-0.107" y2="0.986" xlink:href="#linear-gradient-10"/>
+    <linearGradient id="linear-gradient-12" x1="-2.188" y1="12.467" x2="-1.033" y2="12.467" xlink:href="#linear-gradient-10"/>
+    <linearGradient id="linear-gradient-13" x1="-9.482" y1="53.345" x2="-8.328" y2="53.345" xlink:href="#linear-gradient-10"/>
+    <linearGradient id="linear-gradient-14" x1="-4.24" y1="6.713" x2="-2.826" y2="6.713" xlink:href="#linear-gradient-10"/>
+  </defs>
+  <g id="machine" transform="translate(-1098.275 -265.84)">
+    <path id="Path_364" data-name="Path 364" d="M1412.553,358.053V624.227L1260.728,536.57V291.649a12.27,12.27,0,0,1,18.405-10.626Z" transform="translate(-20.135 -1.683)" fill="url(#linear-gradient)"/>
+    <path id="Path_365" data-name="Path 365" d="M1524.305,313.133c-10.469-6.045-18.956-1.144-18.956,10.944V509.688c0,12.088,8.487,26.789,18.956,32.832s18.956,1.144,18.956-10.944V345.965C1543.261,333.877,1534.774,319.177,1524.305,313.133Z" transform="translate(-50.583 -5.564)" fill="url(#linear-gradient-2)"/>
+    <path id="Path_366" data-name="Path 366" d="M1567.7,774.71,1292.461,615.8c-10.469-6.044-27.443-6.044-37.911,0s-10.469,15.844,0,21.888L1529.788,796.6c10.469,6.045,27.443,6.045,37.911,0S1578.169,780.754,1567.7,774.71Z" transform="translate(-18.389 -42.994)" fill="url(#linear-gradient-3)"/>
+    <path id="Path_367" data-name="Path 367" d="M1298.374,607.126c.029-3.464-2.243-6.933-6.82-9.576-9.1-5.252-23.849-5.252-32.945,0-4.578,2.643-6.85,6.112-6.821,9.576v17.049c-.029,3.465,2.243,6.933,6.821,9.577,9.1,5.252,23.848,5.252,32.945,0,4.578-2.643,6.849-6.112,6.82-9.576V607.126Z" transform="translate(-19.022 -40.797)" fill="url(#linear-gradient-4)"/>
+    <ellipse id="Ellipse_310" data-name="Ellipse 310" cx="23.296" cy="13.45" rx="23.296" ry="13.45" transform="translate(1232.762 552.813)" fill="#fff"/>
+    <path id="Path_368" data-name="Path 368" d="M1533.6,684.054,1278.5,536.771V342.76l255.1,147.284Z" transform="translate(-22.347 -9.574)" fill="url(#linear-gradient-5)"/>
+    <path id="Path_369" data-name="Path 369" d="M1533.6,489.243,1278.5,341.96l7.684-4.436,255.1,147.284Z" transform="translate(-22.347 -8.922)" fill="url(#linear-gradient-6)"/>
+    <path id="Path_370" data-name="Path 370" d="M1577.459,699.757l-7.684,4.436V510.182l7.684-4.436Z" transform="translate(-58.601 -29.86)" fill="url(#linear-gradient-7)"/>
+    <path id="Path_371" data-name="Path 371" d="M1552.689,751.042,1322.594,618.2V424.186l246.767,142.471A16.674,16.674,0,0,1,1577.7,581.1V736.6A16.672,16.672,0,0,1,1552.689,751.042Z" transform="translate(-27.836 -19.709)" fill="none" stroke="#707070" stroke-miterlimit="10" stroke-width="1"/>
+    <path id="Path_372" data-name="Path 372" d="M1462.861,580.791,1187.621,421.882c-10.469-6.044-18.955-1.144-18.955,10.944s8.486,26.788,18.955,32.832l275.239,158.909c10.469,6.044,18.955,1.144,18.955-10.944S1473.329,586.836,1462.861,580.791Z" transform="translate(-8.676 -19.1)" fill="url(#linear-gradient-8)"/>
+    <ellipse id="Ellipse_312" data-name="Ellipse 312" cx="11.144" cy="19.301" rx="11.144" ry="19.301" transform="translate(1161.918 414.84) rotate(-30)" fill="#ff7676"/>
+    <ellipse id="Ellipse_308" data-name="Ellipse 308" cx="38.384" cy="66.483" rx="38.384" ry="66.483" transform="translate(1122.159 387.579) rotate(-30)" fill="none" stroke="#ff7676" stroke-miterlimit="10" stroke-width="1"/>
+    <ellipse id="Ellipse_308-2" data-name="Ellipse 308" cx="38.384" cy="66.483" rx="38.384" ry="66.483" transform="translate(1098.958 402.901) rotate(-30)" fill="none" stroke="#ff7676" stroke-miterlimit="10" stroke-width="1"/>
+    <g id="Group_185" data-name="Group 185" transform="translate(1183.068 265.84)" opacity="0.5">
+      <ellipse id="Ellipse_310-2" data-name="Ellipse 310" cx="12.461" cy="7.194" rx="12.461" ry="7.194" transform="translate(60.53 293.229)" fill="#fff"/>
+      <ellipse id="Ellipse_313" data-name="Ellipse 313" cx="12.746" cy="7.359" rx="12.746" ry="7.359" transform="translate(60.244 291.846)" fill="#fffefe" opacity="0.995"/>
+      <ellipse id="Ellipse_314" data-name="Ellipse 314" cx="13.032" cy="7.524" rx="13.032" ry="7.524" transform="translate(59.959 290.463)" fill="#fffdfd" opacity="0.991"/>
+      <ellipse id="Ellipse_315" data-name="Ellipse 315" cx="13.317" cy="7.689" rx="13.317" ry="7.689" transform="translate(59.673 289.079)" fill="#fffcfc" opacity="0.986"/>
+      <ellipse id="Ellipse_316" data-name="Ellipse 316" cx="13.603" cy="7.854" rx="13.603" ry="7.854" transform="translate(59.388 287.696)" fill="#fefbfb" opacity="0.981"/>
+      <ellipse id="Ellipse_317" data-name="Ellipse 317" cx="13.888" cy="8.018" rx="13.888" ry="8.018" transform="translate(59.102 286.313)" fill="#fefafa" opacity="0.976"/>
+      <ellipse id="Ellipse_318" data-name="Ellipse 318" cx="14.174" cy="8.183" rx="14.174" ry="8.183" transform="translate(58.817 284.93)" fill="#fef9f9" opacity="0.972"/>
+      <ellipse id="Ellipse_319" data-name="Ellipse 319" cx="14.459" cy="8.348" rx="14.459" ry="8.348" transform="translate(58.531 283.547)" fill="#fef8f8" opacity="0.967"/>
+      <ellipse id="Ellipse_320" data-name="Ellipse 320" cx="14.745" cy="8.513" rx="14.745" ry="8.513" transform="translate(58.246 282.164)" fill="#fef7f7" opacity="0.962"/>
+      <ellipse id="Ellipse_321" data-name="Ellipse 321" cx="15.03" cy="8.678" rx="15.03" ry="8.678" transform="translate(57.96 280.781)" fill="#fef6f6" opacity="0.958"/>
+      <ellipse id="Ellipse_322" data-name="Ellipse 322" cx="15.316" cy="8.843" rx="15.316" ry="8.843" transform="translate(57.675 279.397)" fill="#fef5f5" opacity="0.953"/>
+      <ellipse id="Ellipse_323" data-name="Ellipse 323" cx="15.602" cy="9.008" rx="15.602" ry="9.008" transform="translate(57.389 278.014)" fill="#fdf4f4" opacity="0.948"/>
+      <ellipse id="Ellipse_324" data-name="Ellipse 324" cx="15.887" cy="9.172" rx="15.887" ry="9.172" transform="translate(57.103 276.631)" fill="#fdf3f3" opacity="0.943"/>
+      <ellipse id="Ellipse_325" data-name="Ellipse 325" cx="16.173" cy="9.337" rx="16.173" ry="9.337" transform="translate(56.818 275.248)" fill="#fdf2f2" opacity="0.939"/>
+      <ellipse id="Ellipse_326" data-name="Ellipse 326" cx="16.458" cy="9.502" rx="16.458" ry="9.502" transform="translate(56.532 273.865)" fill="#fdf1f1" opacity="0.934"/>
+      <ellipse id="Ellipse_327" data-name="Ellipse 327" cx="16.744" cy="9.667" rx="16.744" ry="9.667" transform="translate(56.247 272.482)" fill="#fdf0f0" opacity="0.929"/>
+      <ellipse id="Ellipse_328" data-name="Ellipse 328" cx="17.029" cy="9.832" rx="17.029" ry="9.832" transform="translate(55.961 271.098)" fill="#fdefef" opacity="0.925"/>
+      <ellipse id="Ellipse_329" data-name="Ellipse 329" cx="17.315" cy="9.997" rx="17.315" ry="9.997" transform="translate(55.676 269.715)" fill="#fdeeee" opacity="0.92"/>
+      <ellipse id="Ellipse_330" data-name="Ellipse 330" cx="17.6" cy="10.161" rx="17.6" ry="10.161" transform="translate(55.39 268.332)" fill="#fceded" opacity="0.915"/>
+      <ellipse id="Ellipse_331" data-name="Ellipse 331" cx="17.886" cy="10.326" rx="17.886" ry="10.326" transform="translate(55.105 266.949)" fill="#fcecec" opacity="0.91"/>
+      <ellipse id="Ellipse_332" data-name="Ellipse 332" cx="18.171" cy="10.491" rx="18.171" ry="10.491" transform="translate(54.819 265.566)" fill="#fcebeb" opacity="0.906"/>
+      <ellipse id="Ellipse_333" data-name="Ellipse 333" cx="18.457" cy="10.656" rx="18.457" ry="10.656" transform="translate(54.534 264.183)" fill="#fceaea" opacity="0.901"/>
+      <ellipse id="Ellipse_334" data-name="Ellipse 334" cx="18.742" cy="10.821" rx="18.742" ry="10.821" transform="translate(54.248 262.799)" fill="#fce9e9" opacity="0.896"/>
+      <ellipse id="Ellipse_335" data-name="Ellipse 335" cx="19.028" cy="10.986" rx="19.028" ry="10.986" transform="translate(53.963 261.416)" fill="#fce8e8" opacity="0.892"/>
+      <ellipse id="Ellipse_336" data-name="Ellipse 336" cx="19.313" cy="11.151" rx="19.313" ry="11.151" transform="translate(53.677 260.033)" fill="#fbe7e7" opacity="0.887"/>
+      <ellipse id="Ellipse_337" data-name="Ellipse 337" cx="19.599" cy="11.315" rx="19.599" ry="11.315" transform="translate(53.392 258.65)" fill="#fbe6e6" opacity="0.882"/>
+      <ellipse id="Ellipse_338" data-name="Ellipse 338" cx="19.884" cy="11.48" rx="19.884" ry="11.48" transform="translate(53.106 257.267)" fill="#fbe5e5" opacity="0.877"/>
+      <ellipse id="Ellipse_339" data-name="Ellipse 339" cx="20.17" cy="11.645" rx="20.17" ry="11.645" transform="translate(52.821 255.884)" fill="#fbe4e4" opacity="0.873"/>
+      <ellipse id="Ellipse_340" data-name="Ellipse 340" cx="20.455" cy="11.81" rx="20.455" ry="11.81" transform="translate(52.535 254.501)" fill="#fbe3e3" opacity="0.868"/>
+      <ellipse id="Ellipse_341" data-name="Ellipse 341" cx="20.741" cy="11.975" rx="20.741" ry="11.975" transform="translate(52.25 253.117)" fill="#fbe2e2" opacity="0.863"/>
+      <ellipse id="Ellipse_342" data-name="Ellipse 342" cx="21.026" cy="12.14" rx="21.026" ry="12.14" transform="translate(51.964 251.734)" fill="#fbe1e1" opacity="0.858"/>
+      <ellipse id="Ellipse_343" data-name="Ellipse 343" cx="21.312" cy="12.304" rx="21.312" ry="12.304" transform="translate(51.679 250.351)" fill="#fae0e0" opacity="0.854"/>
+      <ellipse id="Ellipse_344" data-name="Ellipse 344" cx="21.597" cy="12.469" rx="21.597" ry="12.469" transform="translate(51.393 248.968)" fill="#fadfdf" opacity="0.849"/>
+      <ellipse id="Ellipse_345" data-name="Ellipse 345" cx="21.883" cy="12.634" rx="21.883" ry="12.634" transform="translate(51.108 247.585)" fill="#fadede" opacity="0.844"/>
+      <ellipse id="Ellipse_346" data-name="Ellipse 346" cx="22.168" cy="12.799" rx="22.168" ry="12.799" transform="translate(50.822 246.202)" fill="#fadddd" opacity="0.84"/>
+      <ellipse id="Ellipse_347" data-name="Ellipse 347" cx="22.454" cy="12.964" rx="22.454" ry="12.964" transform="translate(50.537 244.818)" fill="#fadcdc" opacity="0.835"/>
+      <ellipse id="Ellipse_348" data-name="Ellipse 348" cx="22.739" cy="13.129" rx="22.739" ry="13.129" transform="translate(50.251 243.435)" fill="#fadbdb" opacity="0.83"/>
+      <ellipse id="Ellipse_349" data-name="Ellipse 349" cx="23.025" cy="13.293" rx="23.025" ry="13.293" transform="translate(49.966 242.052)" fill="#fadada" opacity="0.825"/>
+      <ellipse id="Ellipse_350" data-name="Ellipse 350" cx="23.31" cy="13.458" rx="23.31" ry="13.458" transform="translate(49.68 240.669)" fill="#f9d9d9" opacity="0.821"/>
+      <ellipse id="Ellipse_351" data-name="Ellipse 351" cx="23.596" cy="13.623" rx="23.596" ry="13.623" transform="translate(49.394 239.286)" fill="#f9d8d8" opacity="0.816"/>
+      <ellipse id="Ellipse_352" data-name="Ellipse 352" cx="23.882" cy="13.788" rx="23.882" ry="13.788" transform="translate(49.109 237.903)" fill="#f9d7d7" opacity="0.811"/>
+      <ellipse id="Ellipse_353" data-name="Ellipse 353" cx="24.167" cy="13.953" rx="24.167" ry="13.953" transform="translate(48.823 236.52)" fill="#f9d6d6" opacity="0.807"/>
+      <ellipse id="Ellipse_354" data-name="Ellipse 354" cx="24.453" cy="14.118" rx="24.453" ry="14.118" transform="translate(48.538 235.136)" fill="#f9d5d5" opacity="0.802"/>
+      <ellipse id="Ellipse_355" data-name="Ellipse 355" cx="24.738" cy="14.283" rx="24.738" ry="14.283" transform="translate(48.253 233.753)" fill="#f9d4d4" opacity="0.797"/>
+      <ellipse id="Ellipse_356" data-name="Ellipse 356" cx="25.024" cy="14.447" rx="25.024" ry="14.447" transform="translate(47.967 232.37)" fill="#f9d3d3" opacity="0.792"/>
+      <ellipse id="Ellipse_357" data-name="Ellipse 357" cx="25.309" cy="14.612" rx="25.309" ry="14.612" transform="translate(47.681 230.987)" fill="#f8d2d2" opacity="0.788"/>
+      <ellipse id="Ellipse_358" data-name="Ellipse 358" cx="25.595" cy="14.777" rx="25.595" ry="14.777" transform="translate(47.396 229.604)" fill="#f8d1d1" opacity="0.783"/>
+      <ellipse id="Ellipse_359" data-name="Ellipse 359" cx="25.88" cy="14.942" rx="25.88" ry="14.942" transform="translate(47.11 228.221)" fill="#f8d0d0" opacity="0.778"/>
+      <ellipse id="Ellipse_360" data-name="Ellipse 360" cx="26.166" cy="15.107" rx="26.166" ry="15.107" transform="translate(46.825 226.837)" fill="#f8cfcf" opacity="0.774"/>
+      <ellipse id="Ellipse_361" data-name="Ellipse 361" cx="26.451" cy="15.272" rx="26.451" ry="15.272" transform="translate(46.539 225.454)" fill="#f8cece" opacity="0.769"/>
+      <ellipse id="Ellipse_362" data-name="Ellipse 362" cx="26.737" cy="15.436" rx="26.737" ry="15.436" transform="translate(46.254 224.071)" fill="#f8cdcd" opacity="0.764"/>
+      <ellipse id="Ellipse_363" data-name="Ellipse 363" cx="27.022" cy="15.601" rx="27.022" ry="15.601" transform="translate(45.968 222.688)" fill="#f8cccc" opacity="0.759"/>
+      <ellipse id="Ellipse_364" data-name="Ellipse 364" cx="27.308" cy="15.766" rx="27.308" ry="15.766" transform="translate(45.683 221.305)" fill="#f7cbcb" opacity="0.755"/>
+      <ellipse id="Ellipse_365" data-name="Ellipse 365" cx="27.593" cy="15.931" rx="27.593" ry="15.931" transform="translate(45.397 219.922)" fill="#f7caca" opacity="0.75"/>
+      <ellipse id="Ellipse_366" data-name="Ellipse 366" cx="27.879" cy="16.096" rx="27.879" ry="16.096" transform="translate(45.112 218.539)" fill="#f7c9c9" opacity="0.745"/>
+      <ellipse id="Ellipse_367" data-name="Ellipse 367" cx="28.164" cy="16.261" rx="28.164" ry="16.261" transform="translate(44.826 217.155)" fill="#f7c8c8" opacity="0.741"/>
+      <ellipse id="Ellipse_368" data-name="Ellipse 368" cx="28.45" cy="16.426" rx="28.45" ry="16.426" transform="translate(44.541 215.772)" fill="#f7c7c7" opacity="0.736"/>
+      <ellipse id="Ellipse_369" data-name="Ellipse 369" cx="28.735" cy="16.59" rx="28.735" ry="16.59" transform="translate(44.255 214.389)" fill="#f7c6c6" opacity="0.731"/>
+      <ellipse id="Ellipse_370" data-name="Ellipse 370" cx="29.021" cy="16.755" rx="29.021" ry="16.755" transform="translate(43.97 213.006)" fill="#f7c5c5" opacity="0.726"/>
+      <ellipse id="Ellipse_371" data-name="Ellipse 371" cx="29.306" cy="16.92" rx="29.306" ry="16.92" transform="translate(43.684 211.623)" fill="#f6c4c4" opacity="0.722"/>
+      <ellipse id="Ellipse_372" data-name="Ellipse 372" cx="29.592" cy="17.085" rx="29.592" ry="17.085" transform="translate(43.399 210.24)" fill="#f6c3c3" opacity="0.717"/>
+      <ellipse id="Ellipse_373" data-name="Ellipse 373" cx="29.877" cy="17.25" rx="29.877" ry="17.25" transform="translate(43.113 208.856)" fill="#f6c2c2" opacity="0.712"/>
+      <ellipse id="Ellipse_374" data-name="Ellipse 374" cx="30.163" cy="17.415" rx="30.163" ry="17.415" transform="translate(42.828 207.473)" fill="#f6c1c1" opacity="0.708"/>
+      <ellipse id="Ellipse_375" data-name="Ellipse 375" cx="30.448" cy="17.579" rx="30.448" ry="17.579" transform="translate(42.542 206.09)" fill="#f6c0c0" opacity="0.703"/>
+      <ellipse id="Ellipse_376" data-name="Ellipse 376" cx="30.734" cy="17.744" rx="30.734" ry="17.744" transform="translate(42.257 204.707)" fill="#f6bfbf" opacity="0.698"/>
+      <ellipse id="Ellipse_377" data-name="Ellipse 377" cx="31.019" cy="17.909" rx="31.019" ry="17.909" transform="translate(41.971 203.324)" fill="#f5bebe" opacity="0.693"/>
+      <ellipse id="Ellipse_378" data-name="Ellipse 378" cx="31.305" cy="18.074" rx="31.305" ry="18.074" transform="translate(41.686 201.941)" fill="#f5bdbd" opacity="0.689"/>
+      <ellipse id="Ellipse_379" data-name="Ellipse 379" cx="31.59" cy="18.239" rx="31.59" ry="18.239" transform="translate(41.4 200.558)" fill="#f5bcbc" opacity="0.684"/>
+      <ellipse id="Ellipse_380" data-name="Ellipse 380" cx="31.876" cy="18.404" rx="31.876" ry="18.404" transform="translate(41.115 199.174)" fill="#f5bbbb" opacity="0.679"/>
+      <ellipse id="Ellipse_381" data-name="Ellipse 381" cx="32.162" cy="18.568" rx="32.162" ry="18.568" transform="translate(40.829 197.791)" fill="#f5baba" opacity="0.675"/>
+      <ellipse id="Ellipse_382" data-name="Ellipse 382" cx="32.447" cy="18.733" rx="32.447" ry="18.733" transform="translate(40.544 196.408)" fill="#f5b9b9" opacity="0.67"/>
+      <ellipse id="Ellipse_383" data-name="Ellipse 383" cx="32.733" cy="18.898" rx="32.733" ry="18.898" transform="translate(40.258 195.025)" fill="#f5b8b8" opacity="0.665"/>
+      <ellipse id="Ellipse_384" data-name="Ellipse 384" cx="33.018" cy="19.063" rx="33.018" ry="19.063" transform="translate(39.972 193.642)" fill="#f4b7b7" opacity="0.66"/>
+      <ellipse id="Ellipse_385" data-name="Ellipse 385" cx="33.304" cy="19.228" rx="33.304" ry="19.228" transform="translate(39.687 192.259)" fill="#f4b6b6" opacity="0.656"/>
+      <ellipse id="Ellipse_386" data-name="Ellipse 386" cx="33.589" cy="19.393" rx="33.589" ry="19.393" transform="translate(39.401 190.875)" fill="#f4b5b5" opacity="0.651"/>
+      <ellipse id="Ellipse_387" data-name="Ellipse 387" cx="33.875" cy="19.558" rx="33.875" ry="19.558" transform="translate(39.116 189.492)" fill="#f4b4b4" opacity="0.646"/>
+      <ellipse id="Ellipse_388" data-name="Ellipse 388" cx="34.16" cy="19.722" rx="34.16" ry="19.722" transform="translate(38.83 188.109)" fill="#f4b3b3" opacity="0.642"/>
+      <ellipse id="Ellipse_389" data-name="Ellipse 389" cx="34.446" cy="19.887" rx="34.446" ry="19.887" transform="translate(38.545 186.726)" fill="#f4b2b2" opacity="0.637"/>
+      <ellipse id="Ellipse_390" data-name="Ellipse 390" cx="34.731" cy="20.052" rx="34.731" ry="20.052" transform="translate(38.259 185.343)" fill="#f4b1b1" opacity="0.632"/>
+      <ellipse id="Ellipse_391" data-name="Ellipse 391" cx="35.017" cy="20.217" rx="35.017" ry="20.217" transform="translate(37.974 183.96)" fill="#f3b0b0" opacity="0.627"/>
+      <ellipse id="Ellipse_392" data-name="Ellipse 392" cx="35.302" cy="20.382" rx="35.302" ry="20.382" transform="translate(37.688 182.577)" fill="#f3afaf" opacity="0.623"/>
+      <ellipse id="Ellipse_393" data-name="Ellipse 393" cx="35.588" cy="20.547" rx="35.588" ry="20.547" transform="translate(37.403 181.193)" fill="#f3aeae" opacity="0.618"/>
+      <ellipse id="Ellipse_394" data-name="Ellipse 394" cx="35.873" cy="20.711" rx="35.873" ry="20.711" transform="translate(37.117 179.81)" fill="#f3adad" opacity="0.613"/>
+      <ellipse id="Ellipse_395" data-name="Ellipse 395" cx="36.159" cy="20.876" rx="36.159" ry="20.876" transform="translate(36.832 178.427)" fill="#f3acac" opacity="0.608"/>
+      <ellipse id="Ellipse_396" data-name="Ellipse 396" cx="36.444" cy="21.041" rx="36.444" ry="21.041" transform="translate(36.546 177.044)" fill="#f3abab" opacity="0.604"/>
+      <ellipse id="Ellipse_397" data-name="Ellipse 397" cx="36.73" cy="21.206" rx="36.73" ry="21.206" transform="translate(36.261 175.661)" fill="#f3aaaa" opacity="0.599"/>
+      <ellipse id="Ellipse_398" data-name="Ellipse 398" cx="37.015" cy="21.371" rx="37.015" ry="21.371" transform="translate(35.975 174.278)" fill="#f2a9a9" opacity="0.594"/>
+      <ellipse id="Ellipse_399" data-name="Ellipse 399" cx="37.301" cy="21.536" rx="37.301" ry="21.536" transform="translate(35.69 172.894)" fill="#f2a8a8" opacity="0.59"/>
+      <ellipse id="Ellipse_400" data-name="Ellipse 400" cx="37.586" cy="21.7" rx="37.586" ry="21.7" transform="translate(35.404 171.511)" fill="#f2a7a7" opacity="0.585"/>
+      <ellipse id="Ellipse_401" data-name="Ellipse 401" cx="37.872" cy="21.865" rx="37.872" ry="21.865" transform="translate(35.119 170.128)" fill="#f2a6a6" opacity="0.58"/>
+      <ellipse id="Ellipse_402" data-name="Ellipse 402" cx="38.157" cy="22.03" rx="38.157" ry="22.03" transform="translate(34.833 168.745)" fill="#f2a5a5" opacity="0.575"/>
+      <ellipse id="Ellipse_403" data-name="Ellipse 403" cx="38.443" cy="22.195" rx="38.443" ry="22.195" transform="translate(34.548 167.362)" fill="#f2a4a4" opacity="0.571"/>
+      <ellipse id="Ellipse_404" data-name="Ellipse 404" cx="38.728" cy="22.36" rx="38.728" ry="22.36" transform="translate(34.262 165.979)" fill="#f2a3a3" opacity="0.566"/>
+      <ellipse id="Ellipse_405" data-name="Ellipse 405" cx="39.014" cy="22.525" rx="39.014" ry="22.525" transform="translate(33.977 164.595)" fill="#f1a2a2" opacity="0.561"/>
+      <ellipse id="Ellipse_406" data-name="Ellipse 406" cx="39.299" cy="22.69" rx="39.299" ry="22.69" transform="translate(33.691 163.212)" fill="#f1a1a1" opacity="0.557"/>
+      <ellipse id="Ellipse_407" data-name="Ellipse 407" cx="39.585" cy="22.854" rx="39.585" ry="22.854" transform="translate(33.406 161.829)" fill="#f1a0a0" opacity="0.552"/>
+      <ellipse id="Ellipse_408" data-name="Ellipse 408" cx="39.871" cy="23.019" rx="39.871" ry="23.019" transform="translate(33.12 160.446)" fill="#f19f9f" opacity="0.547"/>
+      <ellipse id="Ellipse_409" data-name="Ellipse 409" cx="40.156" cy="23.184" rx="40.156" ry="23.184" transform="translate(32.835 159.063)" fill="#f19e9e" opacity="0.542"/>
+      <ellipse id="Ellipse_410" data-name="Ellipse 410" cx="40.442" cy="23.349" rx="40.442" ry="23.349" transform="translate(32.549 157.68)" fill="#f19d9d" opacity="0.538"/>
+      <ellipse id="Ellipse_411" data-name="Ellipse 411" cx="40.727" cy="23.514" rx="40.727" ry="23.514" transform="translate(32.263 156.297)" fill="#f19c9c" opacity="0.533"/>
+      <ellipse id="Ellipse_412" data-name="Ellipse 412" cx="41.013" cy="23.679" rx="41.013" ry="23.679" transform="translate(31.978 154.913)" fill="#f09b9b" opacity="0.528"/>
+      <ellipse id="Ellipse_413" data-name="Ellipse 413" cx="41.298" cy="23.843" rx="41.298" ry="23.843" transform="translate(31.692 153.53)" fill="#f09a9a" opacity="0.524"/>
+      <ellipse id="Ellipse_414" data-name="Ellipse 414" cx="41.584" cy="24.008" rx="41.584" ry="24.008" transform="translate(31.407 152.147)" fill="#f09999" opacity="0.519"/>
+      <ellipse id="Ellipse_415" data-name="Ellipse 415" cx="41.869" cy="24.173" rx="41.869" ry="24.173" transform="translate(31.121 150.764)" fill="#f09898" opacity="0.514"/>
+      <ellipse id="Ellipse_416" data-name="Ellipse 416" cx="42.155" cy="24.338" rx="42.155" ry="24.338" transform="translate(30.836 149.381)" fill="#f09797" opacity="0.509"/>
+      <ellipse id="Ellipse_417" data-name="Ellipse 417" cx="42.44" cy="24.503" rx="42.44" ry="24.503" transform="translate(30.55 147.998)" fill="#f09696" opacity="0.505"/>
+      <ellipse id="Ellipse_418" data-name="Ellipse 418" cx="42.726" cy="24.668" rx="42.726" ry="24.668" transform="translate(30.265 146.614)" fill="#f09595" opacity="0.5"/>
+      <ellipse id="Ellipse_419" data-name="Ellipse 419" cx="43.011" cy="24.833" rx="43.011" ry="24.833" transform="translate(29.979 145.231)" fill="#ef9494" opacity="0.495"/>
+      <ellipse id="Ellipse_420" data-name="Ellipse 420" cx="43.297" cy="24.997" rx="43.297" ry="24.997" transform="translate(29.694 143.848)" fill="#ef9393" opacity="0.491"/>
+      <ellipse id="Ellipse_421" data-name="Ellipse 421" cx="43.582" cy="25.162" rx="43.582" ry="25.162" transform="translate(29.408 142.465)" fill="#ef9292" opacity="0.486"/>
+      <ellipse id="Ellipse_422" data-name="Ellipse 422" cx="43.868" cy="25.327" rx="43.868" ry="25.327" transform="translate(29.123 141.082)" fill="#ef9191" opacity="0.481"/>
+      <ellipse id="Ellipse_423" data-name="Ellipse 423" cx="44.153" cy="25.492" rx="44.153" ry="25.492" transform="translate(28.837 139.699)" fill="#ef9090" opacity="0.476"/>
+      <ellipse id="Ellipse_424" data-name="Ellipse 424" cx="44.439" cy="25.657" rx="44.439" ry="25.657" transform="translate(28.552 138.316)" fill="#ef8f8f" opacity="0.472"/>
+      <ellipse id="Ellipse_425" data-name="Ellipse 425" cx="44.724" cy="25.822" rx="44.724" ry="25.822" transform="translate(28.266 136.932)" fill="#ee8e8e" opacity="0.467"/>
+      <ellipse id="Ellipse_426" data-name="Ellipse 426" cx="45.01" cy="25.986" rx="45.01" ry="25.986" transform="translate(27.981 135.549)" fill="#ee8d8d" opacity="0.462"/>
+      <ellipse id="Ellipse_427" data-name="Ellipse 427" cx="45.295" cy="26.151" rx="45.295" ry="26.151" transform="translate(27.695 134.166)" fill="#ee8c8c" opacity="0.458"/>
+      <ellipse id="Ellipse_428" data-name="Ellipse 428" cx="45.581" cy="26.316" rx="45.581" ry="26.316" transform="translate(27.41 132.783)" fill="#ee8b8b" opacity="0.453"/>
+      <ellipse id="Ellipse_429" data-name="Ellipse 429" cx="45.866" cy="26.481" rx="45.866" ry="26.481" transform="translate(27.124 131.4)" fill="#ee8a8a" opacity="0.448"/>
+      <ellipse id="Ellipse_430" data-name="Ellipse 430" cx="46.152" cy="26.646" rx="46.152" ry="26.646" transform="translate(26.839 130.017)" fill="#ee8989" opacity="0.443"/>
+      <ellipse id="Ellipse_431" data-name="Ellipse 431" cx="46.437" cy="26.811" rx="46.437" ry="26.811" transform="translate(26.553 128.633)" fill="#e88" opacity="0.439"/>
+      <ellipse id="Ellipse_432" data-name="Ellipse 432" cx="46.723" cy="26.975" rx="46.723" ry="26.975" transform="translate(26.268 127.25)" fill="#ed8787" opacity="0.434"/>
+      <ellipse id="Ellipse_433" data-name="Ellipse 433" cx="47.008" cy="27.14" rx="47.008" ry="27.14" transform="translate(25.982 125.867)" fill="#ed8686" opacity="0.429"/>
+      <ellipse id="Ellipse_434" data-name="Ellipse 434" cx="47.294" cy="27.305" rx="47.294" ry="27.305" transform="translate(25.697 124.484)" fill="#ed8585" opacity="0.425"/>
+      <ellipse id="Ellipse_435" data-name="Ellipse 435" cx="47.579" cy="27.47" rx="47.579" ry="27.47" transform="translate(25.411 123.101)" fill="#ed8484" opacity="0.42"/>
+      <ellipse id="Ellipse_436" data-name="Ellipse 436" cx="47.865" cy="27.635" rx="47.865" ry="27.635" transform="translate(25.125 121.718)" fill="#ed8383" opacity="0.415"/>
+      <ellipse id="Ellipse_437" data-name="Ellipse 437" cx="48.151" cy="27.8" rx="48.151" ry="27.8" transform="translate(24.84 120.335)" fill="#ed8282" opacity="0.41"/>
+      <ellipse id="Ellipse_438" data-name="Ellipse 438" cx="48.436" cy="27.965" rx="48.436" ry="27.965" transform="translate(24.554 118.951)" fill="#ed8181" opacity="0.406"/>
+      <ellipse id="Ellipse_439" data-name="Ellipse 439" cx="48.722" cy="28.129" rx="48.722" ry="28.129" transform="translate(24.269 117.568)" fill="#ec8080" opacity="0.401"/>
+      <ellipse id="Ellipse_440" data-name="Ellipse 440" cx="49.007" cy="28.294" rx="49.007" ry="28.294" transform="translate(23.984 116.185)" fill="#ec7f7f" opacity="0.396"/>
+      <ellipse id="Ellipse_441" data-name="Ellipse 441" cx="49.293" cy="28.459" rx="49.293" ry="28.459" transform="translate(23.698 114.802)" fill="#ec7e7e" opacity="0.392"/>
+      <ellipse id="Ellipse_442" data-name="Ellipse 442" cx="49.578" cy="28.624" rx="49.578" ry="28.624" transform="translate(23.412 113.419)" fill="#ec7d7d" opacity="0.387"/>
+      <ellipse id="Ellipse_443" data-name="Ellipse 443" cx="49.864" cy="28.789" rx="49.864" ry="28.789" transform="translate(23.127 112.036)" fill="#ec7c7c" opacity="0.382"/>
+      <ellipse id="Ellipse_444" data-name="Ellipse 444" cx="50.149" cy="28.954" rx="50.149" ry="28.954" transform="translate(22.841 110.652)" fill="#ec7b7b" opacity="0.377"/>
+      <ellipse id="Ellipse_445" data-name="Ellipse 445" cx="50.435" cy="29.118" rx="50.435" ry="29.118" transform="translate(22.556 109.269)" fill="#ec7a7a" opacity="0.373"/>
+      <ellipse id="Ellipse_446" data-name="Ellipse 446" cx="50.72" cy="29.283" rx="50.72" ry="29.283" transform="translate(22.27 107.886)" fill="#eb7979" opacity="0.368"/>
+      <ellipse id="Ellipse_447" data-name="Ellipse 447" cx="51.006" cy="29.448" rx="51.006" ry="29.448" transform="translate(21.985 106.503)" fill="#eb7878" opacity="0.363"/>
+      <ellipse id="Ellipse_448" data-name="Ellipse 448" cx="51.291" cy="29.613" rx="51.291" ry="29.613" transform="translate(21.699 105.12)" fill="#eb7777" opacity="0.358"/>
+      <ellipse id="Ellipse_449" data-name="Ellipse 449" cx="51.577" cy="29.778" rx="51.577" ry="29.778" transform="translate(21.414 103.737)" fill="#eb7676" opacity="0.354"/>
+      <ellipse id="Ellipse_450" data-name="Ellipse 450" cx="51.862" cy="29.943" rx="51.862" ry="29.943" transform="translate(21.128 102.354)" fill="#eb7575" opacity="0.349"/>
+      <ellipse id="Ellipse_451" data-name="Ellipse 451" cx="52.148" cy="30.108" rx="52.148" ry="30.108" transform="translate(20.843 100.97)" fill="#eb7474" opacity="0.344"/>
+      <ellipse id="Ellipse_452" data-name="Ellipse 452" cx="52.433" cy="30.272" rx="52.433" ry="30.272" transform="translate(20.557 99.587)" fill="#eb7373" opacity="0.34"/>
+      <ellipse id="Ellipse_453" data-name="Ellipse 453" cx="52.719" cy="30.437" rx="52.719" ry="30.437" transform="translate(20.272 98.204)" fill="#ea7272" opacity="0.335"/>
+      <ellipse id="Ellipse_454" data-name="Ellipse 454" cx="53.004" cy="30.602" rx="53.004" ry="30.602" transform="translate(19.986 96.821)" fill="#ea7171" opacity="0.33"/>
+      <ellipse id="Ellipse_455" data-name="Ellipse 455" cx="53.29" cy="30.767" rx="53.29" ry="30.767" transform="translate(19.701 95.438)" fill="#ea7070" opacity="0.325"/>
+      <ellipse id="Ellipse_456" data-name="Ellipse 456" cx="53.575" cy="30.932" rx="53.575" ry="30.932" transform="translate(19.415 94.055)" fill="#ea6f6f" opacity="0.321"/>
+      <ellipse id="Ellipse_457" data-name="Ellipse 457" cx="53.861" cy="31.097" rx="53.861" ry="31.097" transform="translate(19.13 92.671)" fill="#ea6e6e" opacity="0.316"/>
+      <ellipse id="Ellipse_458" data-name="Ellipse 458" cx="54.146" cy="31.261" rx="54.146" ry="31.261" transform="translate(18.844 91.288)" fill="#ea6d6d" opacity="0.311"/>
+      <ellipse id="Ellipse_459" data-name="Ellipse 459" cx="54.432" cy="31.426" rx="54.432" ry="31.426" transform="translate(18.559 89.905)" fill="#ea6c6c" opacity="0.307"/>
+      <ellipse id="Ellipse_460" data-name="Ellipse 460" cx="54.717" cy="31.591" rx="54.717" ry="31.591" transform="translate(18.273 88.522)" fill="#e96b6b" opacity="0.302"/>
+      <ellipse id="Ellipse_461" data-name="Ellipse 461" cx="55.003" cy="31.756" rx="55.003" ry="31.756" transform="translate(17.988 87.139)" fill="#e96a6a" opacity="0.297"/>
+      <ellipse id="Ellipse_462" data-name="Ellipse 462" cx="55.288" cy="31.921" rx="55.288" ry="31.921" transform="translate(17.702 85.756)" fill="#e96969" opacity="0.292"/>
+      <ellipse id="Ellipse_463" data-name="Ellipse 463" cx="55.574" cy="32.086" rx="55.574" ry="32.086" transform="translate(17.417 84.372)" fill="#e96868" opacity="0.288"/>
+      <ellipse id="Ellipse_464" data-name="Ellipse 464" cx="55.859" cy="32.25" rx="55.859" ry="32.25" transform="translate(17.131 82.989)" fill="#e96767" opacity="0.283"/>
+      <ellipse id="Ellipse_465" data-name="Ellipse 465" cx="56.145" cy="32.415" rx="56.145" ry="32.415" transform="translate(16.846 81.606)" fill="#e96666" opacity="0.278"/>
+      <ellipse id="Ellipse_466" data-name="Ellipse 466" cx="56.431" cy="32.58" rx="56.431" ry="32.58" transform="translate(16.56 80.223)" fill="#e86565" opacity="0.274"/>
+      <ellipse id="Ellipse_467" data-name="Ellipse 467" cx="56.716" cy="32.745" rx="56.716" ry="32.745" transform="translate(16.275 78.84)" fill="#e86464" opacity="0.269"/>
+      <ellipse id="Ellipse_468" data-name="Ellipse 468" cx="57.002" cy="32.91" rx="57.002" ry="32.91" transform="translate(15.989 77.457)" fill="#e86363" opacity="0.264"/>
+      <ellipse id="Ellipse_469" data-name="Ellipse 469" cx="57.287" cy="33.075" rx="57.287" ry="33.075" transform="translate(15.703 76.074)" fill="#e86262" opacity="0.259"/>
+      <ellipse id="Ellipse_470" data-name="Ellipse 470" cx="57.573" cy="33.24" rx="57.573" ry="33.24" transform="translate(15.418 74.69)" fill="#e86161" opacity="0.255"/>
+      <ellipse id="Ellipse_471" data-name="Ellipse 471" cx="57.858" cy="33.404" rx="57.858" ry="33.404" transform="translate(15.132 73.307)" fill="#e86060" opacity="0.25"/>
+      <ellipse id="Ellipse_472" data-name="Ellipse 472" cx="58.144" cy="33.569" rx="58.144" ry="33.569" transform="translate(14.847 71.924)" fill="#e85f5f" opacity="0.245"/>
+      <ellipse id="Ellipse_473" data-name="Ellipse 473" cx="58.429" cy="33.734" rx="58.429" ry="33.734" transform="translate(14.561 70.541)" fill="#e75e5e" opacity="0.241"/>
+      <ellipse id="Ellipse_474" data-name="Ellipse 474" cx="58.715" cy="33.899" rx="58.715" ry="33.899" transform="translate(14.276 69.158)" fill="#e75d5d" opacity="0.236"/>
+      <ellipse id="Ellipse_475" data-name="Ellipse 475" cx="59" cy="34.064" rx="59" ry="34.064" transform="translate(13.99 67.775)" fill="#e75c5c" opacity="0.231"/>
+      <ellipse id="Ellipse_476" data-name="Ellipse 476" cx="59.286" cy="34.229" rx="59.286" ry="34.229" transform="translate(13.705 66.391)" fill="#e75b5b" opacity="0.226"/>
+      <ellipse id="Ellipse_477" data-name="Ellipse 477" cx="59.571" cy="34.393" rx="59.571" ry="34.393" transform="translate(13.419 65.008)" fill="#e75a5a" opacity="0.222"/>
+      <ellipse id="Ellipse_478" data-name="Ellipse 478" cx="59.857" cy="34.558" rx="59.857" ry="34.558" transform="translate(13.134 63.625)" fill="#e75959" opacity="0.217"/>
+      <ellipse id="Ellipse_479" data-name="Ellipse 479" cx="60.142" cy="34.723" rx="60.142" ry="34.723" transform="translate(12.848 62.242)" fill="#e75858" opacity="0.212"/>
+      <ellipse id="Ellipse_480" data-name="Ellipse 480" cx="60.428" cy="34.888" rx="60.428" ry="34.888" transform="translate(12.563 60.859)" fill="#e65757" opacity="0.208"/>
+      <ellipse id="Ellipse_481" data-name="Ellipse 481" cx="60.713" cy="35.053" rx="60.713" ry="35.053" transform="translate(12.277 59.476)" fill="#e65656" opacity="0.203"/>
+      <ellipse id="Ellipse_482" data-name="Ellipse 482" cx="60.999" cy="35.218" rx="60.999" ry="35.218" transform="translate(11.992 58.093)" fill="#e65555" opacity="0.198"/>
+      <ellipse id="Ellipse_483" data-name="Ellipse 483" cx="61.284" cy="35.383" rx="61.284" ry="35.383" transform="translate(11.706 56.709)" fill="#e65454" opacity="0.193"/>
+      <ellipse id="Ellipse_484" data-name="Ellipse 484" cx="61.57" cy="35.547" rx="61.57" ry="35.547" transform="translate(11.421 55.326)" fill="#e65353" opacity="0.189"/>
+      <ellipse id="Ellipse_485" data-name="Ellipse 485" cx="61.855" cy="35.712" rx="61.855" ry="35.712" transform="translate(11.135 53.943)" fill="#e65252" opacity="0.184"/>
+      <ellipse id="Ellipse_486" data-name="Ellipse 486" cx="62.141" cy="35.877" rx="62.141" ry="35.877" transform="translate(10.85 52.56)" fill="#e65151" opacity="0.179"/>
+      <ellipse id="Ellipse_487" data-name="Ellipse 487" cx="62.426" cy="36.042" rx="62.426" ry="36.042" transform="translate(10.564 51.177)" fill="#e55050" opacity="0.175"/>
+      <ellipse id="Ellipse_488" data-name="Ellipse 488" cx="62.712" cy="36.207" rx="62.712" ry="36.207" transform="translate(10.279 49.794)" fill="#e54f4f" opacity="0.17"/>
+      <ellipse id="Ellipse_489" data-name="Ellipse 489" cx="62.997" cy="36.372" rx="62.997" ry="36.372" transform="translate(9.993 48.41)" fill="#e54e4e" opacity="0.165"/>
+      <ellipse id="Ellipse_490" data-name="Ellipse 490" cx="63.283" cy="36.536" rx="63.283" ry="36.536" transform="translate(9.708 47.027)" fill="#e54d4d" opacity="0.16"/>
+      <ellipse id="Ellipse_491" data-name="Ellipse 491" cx="63.568" cy="36.701" rx="63.568" ry="36.701" transform="translate(9.422 45.644)" fill="#e54c4c" opacity="0.156"/>
+      <ellipse id="Ellipse_492" data-name="Ellipse 492" cx="63.854" cy="36.866" rx="63.854" ry="36.866" transform="translate(9.137 44.261)" fill="#e54b4b" opacity="0.151"/>
+      <ellipse id="Ellipse_493" data-name="Ellipse 493" cx="64.139" cy="37.031" rx="64.139" ry="37.031" transform="translate(8.851 42.878)" fill="#e54a4a" opacity="0.146"/>
+      <ellipse id="Ellipse_494" data-name="Ellipse 494" cx="64.425" cy="37.196" rx="64.425" ry="37.196" transform="translate(8.566 41.495)" fill="#e44949" opacity="0.142"/>
+      <ellipse id="Ellipse_495" data-name="Ellipse 495" cx="64.711" cy="37.361" rx="64.711" ry="37.361" transform="translate(8.28 40.112)" fill="#e44848" opacity="0.137"/>
+      <ellipse id="Ellipse_496" data-name="Ellipse 496" cx="64.996" cy="37.525" rx="64.996" ry="37.525" transform="translate(7.994 38.728)" fill="#e44747" opacity="0.132"/>
+      <ellipse id="Ellipse_497" data-name="Ellipse 497" cx="65.282" cy="37.69" rx="65.282" ry="37.69" transform="translate(7.709 37.345)" fill="#e44646" opacity="0.127"/>
+      <ellipse id="Ellipse_498" data-name="Ellipse 498" cx="65.567" cy="37.855" rx="65.567" ry="37.855" transform="translate(7.423 35.962)" fill="#e44545" opacity="0.123"/>
+      <ellipse id="Ellipse_499" data-name="Ellipse 499" cx="65.853" cy="38.02" rx="65.853" ry="38.02" transform="translate(7.138 34.579)" fill="#e44444" opacity="0.118"/>
+      <ellipse id="Ellipse_500" data-name="Ellipse 500" cx="66.138" cy="38.185" rx="66.138" ry="38.185" transform="translate(6.852 33.196)" fill="#e44343" opacity="0.113"/>
+      <ellipse id="Ellipse_501" data-name="Ellipse 501" cx="66.424" cy="38.35" rx="66.424" ry="38.35" transform="translate(6.567 31.813)" fill="#e34242" opacity="0.108"/>
+      <ellipse id="Ellipse_502" data-name="Ellipse 502" cx="66.709" cy="38.515" rx="66.709" ry="38.515" transform="translate(6.281 30.429)" fill="#e34141" opacity="0.104"/>
+      <ellipse id="Ellipse_503" data-name="Ellipse 503" cx="66.995" cy="38.679" rx="66.995" ry="38.679" transform="translate(5.996 29.046)" fill="#e34040" opacity="0.099"/>
+      <ellipse id="Ellipse_504" data-name="Ellipse 504" cx="67.28" cy="38.844" rx="67.28" ry="38.844" transform="translate(5.71 27.663)" fill="#e33f3f" opacity="0.094"/>
+      <ellipse id="Ellipse_505" data-name="Ellipse 505" cx="67.566" cy="39.009" rx="67.566" ry="39.009" transform="translate(5.425 26.28)" fill="#e33e3e" opacity="0.09"/>
+      <ellipse id="Ellipse_506" data-name="Ellipse 506" cx="67.851" cy="39.174" rx="67.851" ry="39.174" transform="translate(5.139 24.897)" fill="#e33d3d" opacity="0.085"/>
+      <ellipse id="Ellipse_507" data-name="Ellipse 507" cx="68.137" cy="39.339" rx="68.137" ry="39.339" transform="translate(4.854 23.514)" fill="#e23c3c" opacity="0.08"/>
+      <ellipse id="Ellipse_508" data-name="Ellipse 508" cx="68.422" cy="39.504" rx="68.422" ry="39.504" transform="translate(4.568 22.13)" fill="#e23b3b" opacity="0.075"/>
+      <ellipse id="Ellipse_509" data-name="Ellipse 509" cx="68.708" cy="39.668" rx="68.708" ry="39.668" transform="translate(4.283 20.747)" fill="#e23a3a" opacity="0.071"/>
+      <ellipse id="Ellipse_510" data-name="Ellipse 510" cx="68.993" cy="39.833" rx="68.993" ry="39.833" transform="translate(3.997 19.364)" fill="#e23939" opacity="0.066"/>
+      <ellipse id="Ellipse_511" data-name="Ellipse 511" cx="69.279" cy="39.998" rx="69.279" ry="39.998" transform="translate(3.712 17.981)" fill="#e23838" opacity="0.061"/>
+      <ellipse id="Ellipse_512" data-name="Ellipse 512" cx="69.564" cy="40.163" rx="69.564" ry="40.163" transform="translate(3.426 16.598)" fill="#e23737" opacity="0.057"/>
+      <ellipse id="Ellipse_513" data-name="Ellipse 513" cx="69.85" cy="40.328" rx="69.85" ry="40.328" transform="translate(3.141 15.215)" fill="#e23636" opacity="0.052"/>
+      <ellipse id="Ellipse_514" data-name="Ellipse 514" cx="70.135" cy="40.493" rx="70.135" ry="40.493" transform="translate(2.855 13.832)" fill="#e13535" opacity="0.047"/>
+      <ellipse id="Ellipse_515" data-name="Ellipse 515" cx="70.421" cy="40.658" rx="70.421" ry="40.658" transform="translate(2.57 12.448)" fill="#e13434" opacity="0.042"/>
+      <ellipse id="Ellipse_516" data-name="Ellipse 516" cx="70.706" cy="40.822" rx="70.706" ry="40.822" transform="translate(2.284 11.065)" fill="#e13333" opacity="0.038"/>
+      <ellipse id="Ellipse_517" data-name="Ellipse 517" cx="70.992" cy="40.987" rx="70.992" ry="40.987" transform="translate(1.999 9.682)" fill="#e13232" opacity="0.033"/>
+      <ellipse id="Ellipse_518" data-name="Ellipse 518" cx="71.277" cy="41.152" rx="71.277" ry="41.152" transform="translate(1.713 8.299)" fill="#e13131" opacity="0.028"/>
+      <ellipse id="Ellipse_519" data-name="Ellipse 519" cx="71.563" cy="41.317" rx="71.563" ry="41.317" transform="translate(1.428 6.916)" fill="#e13030" opacity="0.024"/>
+      <ellipse id="Ellipse_520" data-name="Ellipse 520" cx="71.848" cy="41.482" rx="71.848" ry="41.482" transform="translate(1.142 5.533)" fill="#e12f2f" opacity="0.019"/>
+      <ellipse id="Ellipse_521" data-name="Ellipse 521" cx="72.134" cy="41.647" rx="72.134" ry="41.647" transform="translate(0.857 4.149)" fill="#e02e2e" opacity="0.014"/>
+      <ellipse id="Ellipse_522" data-name="Ellipse 522" cx="72.419" cy="41.811" rx="72.419" ry="41.811" transform="translate(0.571 2.766)" fill="#e02d2d" opacity="0.009"/>
+      <ellipse id="Ellipse_523" data-name="Ellipse 523" cx="72.705" cy="41.976" rx="72.705" ry="41.976" transform="translate(0.285 1.383)" fill="#e02c2c" opacity="0.005"/>
+      <ellipse id="Ellipse_310-3" data-name="Ellipse 310" cx="72.991" cy="42.141" rx="72.991" ry="42.141" transform="translate(0)" fill="#e02b2b" opacity="0"/>
+    </g>
+    <g id="Group_186" data-name="Group 186" transform="translate(1356.213 553.794)">
+      <path id="Path_373" data-name="Path 373" d="M1489.359,714.567l-92.817-53.588c-2.075-1.2-3.757-4.412-3.757-7.178V598.021c0-2.766,1.682-4.038,3.757-2.84l92.817,53.589c2.075,1.2,3.757,4.411,3.757,7.178v55.779C1493.116,714.493,1491.434,715.765,1489.359,714.567Z" transform="translate(-1392.785 -594.73)" fill="url(#linear-gradient-9)"/>
+      <path id="Path_374" data-name="Path 374" d="M1416.468,634.286l-9.549-5.512a6.727,6.727,0,0,1-2.808-5.366V613.386c0-2.068,1.257-3.019,2.808-2.123l9.549,5.512a6.728,6.728,0,0,1,2.808,5.366v10.021C1419.276,634.231,1418.019,635.182,1416.468,634.286Z" transform="translate(-1394.195 -596.746)" fill="none" stroke="#933" stroke-miterlimit="10" stroke-width="1"/>
+      <line id="Line_127" data-name="Line 127" x2="34.121" y2="19.699" transform="translate(33.043 38.943)" fill="none" stroke="#933" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"/>
+      <line id="Line_128" data-name="Line 128" x2="79.615" y2="45.965" transform="translate(10.675 40.913)" fill="none" stroke="#e02b2b" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"/>
+      <line id="Line_129" data-name="Line 129" x2="79.615" y2="45.965" transform="translate(10.675 47.917)" fill="none" stroke="#e02b2b" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"/>
+      <line id="Line_130" data-name="Line 130" x2="49.285" y2="28.455" transform="translate(10.675 54.921)" fill="none" stroke="#e02b2b" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"/>
+    </g>
+    <ellipse id="Ellipse_310-4" data-name="Ellipse 310" cx="45.515" cy="26.278" rx="45.515" ry="26.278" transform="translate(1210.544 281.703)" fill="none" stroke="#e02b2b" stroke-miterlimit="10" stroke-width="1"/>
+    <g id="Group_187" data-name="Group 187" transform="translate(1265.386 429.612)">
+      <path id="Path_375" data-name="Path 375" d="M1386.095,597.48l-83.477-48.2v-96.39l83.477,48.2Z" transform="translate(-1290.735 -452.894)" fill="url(#linear-gradient-10)"/>
+      <path id="Path_376" data-name="Path 376" d="M1352.079,587.525l-43.5-25.114c-6.536-3.773-11.834-13.9-11.834-22.611v-46c0-8.715,5.3-12.72,11.834-8.947l43.5,25.114c6.536,3.773,11.834,13.9,11.834,22.611v46C1363.913,587.292,1358.615,591.3,1352.079,587.525Z" transform="translate(-1290.005 -456.695)" fill="#483b3b" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+      <path id="Path_377" data-name="Path 377" d="M1292.733,558l13.559-26.093c1.257-2.419,5.075-.377,6.527,3.492l16.27,43.314c1.352,3.6-.413,6.038-3.2,4.427l-29.829-17.222C1293.385,564.378,1291.614,560.157,1292.733,558Z" transform="translate(-1289.463 -462.599)" fill="#fff"/>
+      <path id="Path_378" data-name="Path 378" d="M1316.432,562.779l17.495-33.668L1354.92,585Z" transform="translate(-1292.455 -462.381)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+      <ellipse id="Ellipse_524" data-name="Ellipse 524" cx="8.226" cy="14.248" rx="8.226" ry="14.248" transform="translate(0 40.385) rotate(-30)" fill="#423939" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+    </g>
+    <path id="Path_379" data-name="Path 379" d="M1492.506,594.847,1441.2,565.224c-5.095-2.942-9.225-10.833-9.225-17.626V421.608c0-6.793,4.131-9.915,9.225-6.974l51.307,29.623c5.095,2.941,9.225,10.833,9.225,17.626v125.99C1501.731,594.666,1497.6,597.788,1492.506,594.847Z" transform="translate(-41.45 -18.382)" stroke="#fff" stroke-miterlimit="10" stroke-width="1" fill="url(#linear-gradient-11)"/>
+    <path id="Path_380" data-name="Path 380" d="M1462.826,503.515l-43.051-24.855c-4.025-2.324-7.287-8.557-7.287-13.924V449.148c0-5.367,3.262-7.833,7.287-5.51l43.051,24.855c4.025,2.324,7.288,8.557,7.288,13.924v15.588C1470.114,503.373,1466.851,505.839,1462.826,503.515Z" transform="translate(-39.024 -22.021)" fill="#fff" stroke="#ff7676" stroke-miterlimit="10" stroke-width="1"/>
+    <path id="Path_381" data-name="Path 381" d="M1515.966,534.2l-22.579-13.036c-4.025-2.324-7.287-8.557-7.287-13.924V491.648c0-5.367,3.262-7.833,7.287-5.51l22.579,13.036c4.025,2.324,7.287,8.557,7.287,13.925v15.588C1523.253,534.053,1519.991,536.519,1515.966,534.2Z" transform="translate(-48.187 -27.311)" fill="#fff" stroke="#ff7676" stroke-miterlimit="10" stroke-width="1"/>
+    <path id="Path_382" data-name="Path 382" d="M1507.859,588.515l-43.051-24.856c-4.024-2.324-7.287-8.558-7.287-13.924V534.148c0-5.366,3.263-7.833,7.287-5.509l43.051,24.855c4.025,2.324,7.288,8.558,7.288,13.924v15.588C1515.147,588.372,1511.884,590.839,1507.859,588.515Z" transform="translate(-44.629 -32.601)" fill="#fff" stroke="#ff7676" stroke-miterlimit="10" stroke-width="1"/>
+    <g id="Group_188" data-name="Group 188" transform="translate(1414.977 412.485)">
+      <line id="Line_131" data-name="Line 131" x2="14.406" y2="8.318" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1" fill="url(#linear-gradient-12)"/>
+      <line id="Line_132" data-name="Line 132" x2="3.033" y2="1.751" transform="translate(17.818 10.288)" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1" fill="url(#linear-gradient-13)"/>
+    </g>
+    <ellipse id="Ellipse_525" data-name="Ellipse 525" cx="3.715" cy="6.434" rx="3.715" ry="6.434" transform="translate(1418.589 548.527) rotate(-30)" stroke="#fff" stroke-miterlimit="10" stroke-width="1" fill="url(#linear-gradient-14)"/>
+  </g>
+</svg>

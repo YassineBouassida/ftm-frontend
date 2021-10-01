@@ -1,0 +1,24 @@
+$colors: (primary: #E02B2B,
+  text1: #333333,
+  text2: #707070,
+  text3: #8A8A8A,
+  lightGrey: #F2F2F2,
+  roseLight:#FFF1F1,
+  redLight:#FF7676,
+  fb: #3a559f,
+  whatsApp:#1bd741,
+  SMS:#5c7fff,
+  brand: #6779fe,
+  white: #ffffff,
+);
+$gradients: (horizontal: linear-gradient(100deg, #333333 0%, #875454 100%) 0% 0%,
+
+);
+
+.text {
+  @include color-modifiers($attribute: 'color', $prefix: '_');
+}
+
+.bg {
+  @include color-modifiers($attribute: 'background', $prefix: '_');
+}

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="88.896" height="76.912" viewBox="0 0 88.896 76.912">
+  <g id="launch" transform="translate(-16 -16)">
+    <g id="Group_156" data-name="Group 156" transform="translate(16.5 16.5)">
+      <rect id="Rectangle_197" data-name="Rectangle 197" width="87.896" height="58.074" rx="4.13" fill="#fff" stroke="#8a8a8a" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"/>
+      <g id="Group_155" data-name="Group 155" transform="translate(20.797 58.074)">
+        <line id="Line_123" data-name="Line 123" x1="9.823" y1="17.658" transform="translate(36.479)" fill="#fff" stroke="#8a8a8a" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"/>
+        <line id="Line_124" data-name="Line 124" y1="17.658" x2="9.823" fill="#fff" stroke="#8a8a8a" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"/>
+        <line id="Line_125" data-name="Line 125" x1="37.096" transform="translate(4.603 9.383)" fill="#fff" stroke="#8a8a8a" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"/>
+      </g>
+    </g>
+    <path id="Rectangle_198" data-name="Rectangle 198" d="M10.987,0h0A10.987,10.987,0,0,1,21.974,10.987V22.759a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V10.987A10.987,10.987,0,0,1,10.987,0Z" transform="translate(25.133 44.752)" fill="#fff" stroke="#8a8a8a" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"/>
+    <circle id="Ellipse_288" data-name="Ellipse 288" cx="6.278" cy="6.278" r="6.278" transform="translate(29.841 28.272)" fill="#fff" stroke="#8a8a8a" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"/>
+    <line id="Line_126" data-name="Line 126" x2="24.328" transform="translate(69.081 32.196)" fill="#fff" stroke="#8a8a8a" stroke-linecap="round" stroke-miterlimit="10" stroke-width="4"/>
+    <path id="Rectangle_199" data-name="Rectangle 199" d="M2.5,0H3.778a2.5,2.5,0,0,1,2.5,2.5V16.481a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V2.5A2.5,2.5,0,0,1,2.5,0Z" transform="translate(66.334 48.284)" fill="#8a8a8a"/>
+    <path id="Rectangle_200" data-name="Rectangle 200" d="M2.5,0H3.778a2.5,2.5,0,0,1,2.5,2.5V21.974a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V2.5A2.5,2.5,0,0,1,2.5,0Z" transform="translate(75.751 42.79)" fill="#8a8a8a"/>
+    <path id="Rectangle_201" data-name="Rectangle 201" d="M2.5,0H3.778a2.5,2.5,0,0,1,2.5,2.5V25.113a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V2.5A2.5,2.5,0,0,1,2.5,0Z" transform="translate(85.954 39.651)" fill="#8a8a8a"/>
+  </g>
+</svg>

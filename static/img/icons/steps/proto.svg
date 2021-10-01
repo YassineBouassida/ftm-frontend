@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="85" height="85" viewBox="0 0 85 85">
+  <g id="proto" transform="translate(-13 -11)">
+    <rect id="Rectangle_175" data-name="Rectangle 175" width="31" height="31" rx="5.778" transform="translate(13.5 64.5)" fill="#8a8a8a" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"/>
+    <rect id="Rectangle_176" data-name="Rectangle 176" width="31" height="31" rx="15.5" transform="translate(66.5 64.5)" fill="#fff" stroke="#8a8a8a" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"/>
+    <rect id="Rectangle_177" data-name="Rectangle 177" width="30" height="31" rx="5.778" transform="translate(40.5 11.5)" fill="#fff" stroke="#8a8a8a" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"/>
+    <path id="Path_332" data-name="Path 332" d="M61.026,53.5V63.816H34.5V75.605" transform="translate(-5.526 -11.053)" fill="#fff" stroke="#8a8a8a" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"/>
+    <path id="Path_333" data-name="Path 333" d="M91.5,32.5h11.053V70.079" transform="translate(-20.526 -5.526)" fill="#fff" stroke="#8a8a8a" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"/>
+    <circle id="Ellipse_286" data-name="Ellipse 286" cx="3.5" cy="3.5" r="3.5" transform="translate(38.5 49.5)" fill="#8a8a8a" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"/>
+  </g>
+</svg>

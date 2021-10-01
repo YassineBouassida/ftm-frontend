@@ -1,0 +1,206 @@
+<template>
+  <div class="steps">
+    <!-- ***************Only on desktop************** -->
+    <div class="desktop steps_head flex space_between">
+      <div
+        class="flex pointer step align_center space_around"
+        v-for="(step, index) in steps"
+        :key="index"
+        @click="activeStep=index"
+        :class="{flex0:index==steps.length-1,flex1:index!=steps.length-1}"
+      >
+        <div
+          class="step_btn elevate_2 bg_white flex align_center center relative"
+          :class="{fixing_step:index==steps.length-1}"
+        >
+          <div class="circle_deco" v-show="activeStep==index"></div>
+          <img
+            :src="require(`~/static/img/icons/steps/${activeStep!=index?step.icon:step.icon+'_h'}.svg`)"
+            alt="step.title"
+          />
+        </div>
+        <div
+          class="separator bg_primary relative"
+          :style="{visibility:index==7?'hidden':'visible'}"
+          v-if="index!=steps.length-1"
+        ></div>
+      </div>
+    </div>
+    <!-- ***************************** -->
+    <div class="steps_body mt-5">
+      <h3 class="txt_right mb-2">A cocktail of skills !</h3>
+      <div class="step_content elevate_1 bg_white pa-4">
+        <VueSlickCarousel v-bind="slickSettings" @beforeChange="beforeSlideChange" class="mobile">
+          <div
+            class="flex pointer step align_center space_around"
+            v-for="(step, index) in steps"
+            :key="index"
+          >
+            <div
+              class="step_btn elevate_2 bg_white flex align_center center relative"
+              :class="{fixing_step:index==steps.length-1}"
+            >
+              <div class="circle_deco" v-show="activeStep==index"></div>
+              <img :src="require(`~/static/img/icons/steps/${step.icon}_h.svg`)" alt="step.title" />
+            </div>
+          </div>
+          <template #prevArrow>
+            <div class="custom-arrow prev_arrow">
+              <img src="~static/img/icons/arrow_left.png" alt />
+            </div>
+          </template>
+          <template #nextArrow>
+            <div class="custom-arrow next_arrow">
+              <img src="~static/img/icons/arrow_right.png" alt />
+            </div>
+          </template>
+        </VueSlickCarousel>
+        <h2 class="text_primary">{{activeStep+1}}. {{steps[activeStep].title}}</h2>
+        <p>{{steps[activeStep].desc}}</p>
+        <div v-if="steps[activeStep].skills" class="divider my-4 bg_text2"></div>
+        <div class="skills" v-if="steps[activeStep].skills">
+          <div class="skills_toolbar flex">
+            <h3
+              @click="selectedTab=i"
+              v-for="(skill, i) in steps[activeStep].skills"
+              :key="i"
+              class="pointer tab pa-3 txt_center"
+              :class="{bg_primary:selectedTab==i, text_white:selectedTab==i}"
+            >{{skill.name}}</h3>
+          </div>
+          <div class="skills_content flex align_center pa-3 bg_roseLight">
+            <div class="tommpon bg_white flex align_center center">
+              <img src="~static/img/icons/tompon.svg" alt />
+            </div>
+            <p class="subheading px-4">{{steps[activeStep].skills[selectedTab].desc}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+<script>
+import VueSlickCarousel from "vue-slick-carousel";
+
+export default {
+  components: { VueSlickCarousel },
+  data() {
+    return {
+      selectedTab: 0,
+      activeStep: 0,
+      slickSettings: {
+        dots: false,
+        arrows: true,
+        dotsClass: "slick-dots custom-dot-class",
+        edgeFriction: 0.35,
+        infinite: false,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true
+      }
+    };
+  },
+  props: {
+    steps: {
+      type: [Array, Object]
+    }
+  },
+  methods: {
+    beforeSlideChange(old, newVal) {
+      this.activeStep = newVal;
+    }
+  }
+};
+</script>
+<style lang="scss" scoped>
+.step {
+  position: relative;
+  display: flex !important;
+  .circle_deco {
+    background: transparent;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    width: 90%;
+    height: 90%;
+    border-radius: 50%;
+    border: 3px solid map-get($map: $colors, $key: primary);
+  }
+}
+.separator {
+  height: 4px;
+  width: 1.5rem;
+  border-radius: 15px;
+}
+.fixing_step {
+  width: 5rem;
+  height: 5rem;
+  margin-left: 0.8rem;
+}
+.step_btn {
+  @media (max-width: 1640px) {
+    width: 5rem;
+    height: 5rem;
+  }
+  width: 8.75rem;
+  height: 8.75rem;
+  border-radius: 50%;
+  img {
+    max-width: 70%;
+    max-height: 50%;
+  }
+}
+
+.steps_body {
+  max-width: 1080px;
+  margin-right: auto;
+  margin-left: auto;
+  .step_content {
+    border-radius: 5px;
+    .divider {
+      height: 1px;
+      margin-right: -24px;
+      margin-left: -24px;
+    }
+    .tab {
+      width: 16.25rem;
+    }
+    .tommpon {
+      border-radius: 50%;
+      width: 5.875rem;
+      height: 5.875rem;
+      flex-shrink: 0;
+    }
+  }
+}
+@media (max-width: 1024px) {
+  .step_btn {
+    width: 7rem;
+    height: 7rem;
+    box-shadow: none;
+  }
+  .custom-arrow {
+    top: calc(50% - 1.5rem);
+    z-index: 99999;
+    &.next_arrow {
+      right: calc(50% - 8.5rem);
+    }
+    &.prev_arrow {
+      left: calc(50% - 8.5rem);
+    }
+  }
+}
+@media (max-width: 767px) {
+  .skills_toolbar {
+    flex-wrap: wrap;
+    .tab {
+      width: 100% !important;
+      margin-bottom: 0.5rem;
+    }
+  }
+  .tommpon {
+    display: none !important;
+  }
+}
+</style>
