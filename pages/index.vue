@@ -173,7 +173,11 @@
       </div>
       <!-- ***************************** -->
       <!-- ***************Only on mobiles************** -->
-      <VueSlickCarousel v-bind="servicesSlickSettings" class="flex wrap center mobile">
+      <VueSlickCarousel
+        v-bind="servicesSlickSettings"
+        class="flex wrap center mobile"
+        v-if="services.length"
+      >
         <serviceCard
           v-for="(service, index) in services"
           :key="index"
@@ -247,7 +251,11 @@
     <!-- Technologies Section -->
     <section class="technologies container small_container flex align_center wrap">
       <h2 class="flex0 fill_width txt_center mr-4">Technologies</h2>
-      <VueSlickCarousel v-bind="slickSettings" class="flex2 tech_list flex align_center end">
+      <VueSlickCarousel
+        v-bind="slickSettings"
+        v-if="technologies.length"
+        class="flex2 tech_list flex align_center end"
+      >
         <div
           class="tech bg_lightGrey flex align_center center ml-4"
           v-for="(tech, index) in technologies"
@@ -692,6 +700,16 @@ section {
       margin-right: 0 !important;
       margin-left: 0 !important;
     }
+    #case1 {
+      .text_side {
+        margin-right: 1rem !important;
+      }
+    }
+    #case2 {
+      .text_side {
+        margin-left: 1rem !important;
+      }
+    }
   }
   @media (max-width: 767px) {
     min-height: 100vh;
@@ -707,6 +725,16 @@ section {
       }
       &#case1 {
         flex-direction: column-reverse;
+      }
+    }
+    #case1 {
+      .text_side {
+        margin-right: 0rem !important;
+      }
+    }
+    #case2 {
+      .text_side {
+        margin-left: 0rem !important;
       }
     }
   }

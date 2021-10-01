@@ -7,8 +7,10 @@
 </template>
 <style lang="scss" >
 @import "~/static/scss/global.scss";
-.app{
-    min-height: 100vh;
+@import "vue-slick-carousel/dist/vue-slick-carousel-theme.css";
+@import "vue-slick-carousel/dist/vue-slick-carousel.css";
+.app {
+  min-height: 100vh;
 }
 .main {
   flex-grow: 2;
