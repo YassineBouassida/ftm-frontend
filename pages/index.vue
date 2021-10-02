@@ -31,9 +31,7 @@
         </div>
       </div>
     </section>
-
     <!-- Cases section -->
-
     <section class="cases container flex column small_container">
       <div class="c_head txt_center">
         <h1>We exist to help you improve your business</h1>
@@ -84,7 +82,6 @@
       </div>
     </section>
     <!-- About us section -->
-
     <section class="about bg_lightGrey">
       <div class="container">
         <div class="c_head txt_center">
@@ -159,47 +156,7 @@
         <h1>Services we provide</h1>
         <p>We offer the full spectrum of digital services to help your business grow successfully.</p>
       </div>
-      <!-- ***************Only on desktop and tablet************** -->
-      <div class="flex wrap center desktop">
-        <serviceCard
-          v-for="(service, index) in services"
-          :key="index"
-          class="service_card pointer pa-2"
-          :size="114"
-          :title="service.title"
-          :desc="service.desc"
-          :icon="service.icon"
-        ></serviceCard>
-      </div>
-      <!-- ***************************** -->
-      <!-- ***************Only on mobiles************** -->
-      <VueSlickCarousel
-        v-bind="servicesSlickSettings"
-        class="flex wrap center mobile"
-        v-if="services.length"
-      >
-        <serviceCard
-          v-for="(service, index) in services"
-          :key="index"
-          :alwaysActive="true"
-          class="service_card pointer pa-2"
-          :size="114"
-          :title="service.title"
-          :desc="service.desc"
-          :icon="service.icon"
-        ></serviceCard>
-        <template #prevArrow>
-          <div class="custom-arrow prev_arrow">
-            <img src="~static/img/icons/arrow_left.png" alt />
-          </div>
-        </template>
-        <template #nextArrow>
-          <div class="custom-arrow next_arrow">
-            <img src="~static/img/icons/arrow_right.png" alt />
-          </div>
-        </template>
-      </VueSlickCarousel>
-      <!-- ***************************** -->
+      <fServicesCarousel :services="services"></fServicesCarousel>
     </section>
     <!-- How we do it section -->
     <section class="howItWorks bg_lightGrey">
@@ -276,15 +233,7 @@
           <h1>Our latest cases</h1>
           <p>The success of our partners is what truly defines us, but most importantly their TRUST. Check out some of our Tunisian and international partners we worked with.</p>
         </div>
-        <VueSlickCarousel
-          @beforeChange="beforeProjectChange"
-          ref="projectSlick"
-          v-bind="projectSlickSettings"
-          v-if="projects.length>1"
-          class="align_center flex projects_list"
-        >
-          <fProject v-for="(project, index) in projects" :key="index"></fProject>
-        </VueSlickCarousel>
+        <fProjects ref="projects" @projectChanged="selectedProject=$event" :projects="projects"></fProjects>
         <div class="project_footer flex mt-2">
           <div class="empty flex2"></div>
           <div class="mr-5 footer_desc flex align_center space_between flex1">
@@ -529,38 +478,16 @@ export default {
         ]
       },
 
-      servicesSlickSettings: {
-        dots: false,
-        arrows: true,
-        dotsClass: "slick-dots custom-dot-class",
-        edgeFriction: 0.35,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        infinite: true
-      },
-      projectSlickSettings: {
-        dots: false,
-        arrows: false,
-        dotsClass: "slick-dots custom-dot-class",
-        edgeFriction: 0.35,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        infinite: false
-      },
-      projects: []
+      projects: [1, 2, 3]
     };
   },
   methods: {
     beforeServiceSlideChange(old, newVal) {
       this.activeStep = newVal;
     },
-    beforeProjectChange(old, newVal) {
-      this.selectedProject = newVal;
-    },
+
     changeProjectSlick(index) {
-      this.$refs["projectSlick"].goTo(index);
+      this.$refs["projects"].$refs["projectSlick"].goTo(index);
     }
   },
   mounted() {
@@ -807,58 +734,9 @@ section {
   @media (min-height: 1080px) {
     min-height: 1080px;
   }
-  .service_card {
-    @media (max-width: 1641px) {
-      width: 370px;
-    }
-    @media (max-width: 1024px) {
-      transition: none;
-      margin: 1rem auto;
-      max-width: 450px;
-      min-height: 450px;
-    }
-    @media (max-width: 767px) {
-      max-width: 390px;
-    }
-    @media (max-width: 480px) {
-      max-width: 90%;
-      min-height: 300px;
-    }
-    width: 390px;
-    height: 340px;
-    border-radius: 5px;
-    transition: 0.5s all;
-  }
+
   @media (max-width: 1024px) {
     min-height: auto;
-    .slick-slider {
-      display: block !important;
-    }
-  }
-  .custom-arrow {
-    border-radius: 50%;
-    width: 2.8rem;
-    height: 2.8rem;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16) !important;
-    background: map-get($map: $colors, $key: white);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    &::before {
-      display: none !important;
-    }
-    &.next_arrow {
-      right: -1rem;
-      @media (max-width: 480px) {
-        right: calc(5% - 1.4rem);
-      }
-    }
-    &.prev_arrow {
-      left: -1rem;
-      @media (max-width: 480px) {
-        left: calc(5% - 1.4rem);
-      }
-    }
   }
 }
 //How it works part
