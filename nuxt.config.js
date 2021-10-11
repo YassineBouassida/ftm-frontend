@@ -25,13 +25,18 @@ export default {
       href: 'favicon/favicon.ico'
     }]
   },
-
+  env: {
+    strapiBaseUri: process.env.API_URL || "http://localhost:1337"
+  },
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: ["~static/fonts/font.css", "~static/css/global.css"],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
-
+  loading: {
+    color: 'blue',
+    height: '5px'
+  },
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: [
     // Equivalent to { path: '~/components' }
@@ -62,10 +67,16 @@ export default {
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
-
+    '@nuxtjs/apollo',
 
   ],
-
+  apollo: {
+    clientConfigs: {
+      default: {
+        httpEndpoint: 'http://localhost:1337/graphql'
+      }
+    }
+  },
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
 

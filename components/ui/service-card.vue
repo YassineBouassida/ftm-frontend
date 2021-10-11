@@ -1,6 +1,6 @@
 <template>
   <div
-    class="service flex column center"
+    class="service flex column start"
     :class="{elevate_1:serviceHovered ||alwaysActive}"
     @mouseenter="serviceHovered=true"
     @mouseleave="serviceHovered=false"
@@ -14,10 +14,7 @@
         :style="{height:size+'px',width:size+'px'}"
       >
         <box class="box_icon relative">
-          <img
-            :src="require(`~/static/img/icons/services/${!(serviceHovered||alwaysActive)?icon:icon+'_h'}.svg`)"
-            alt
-          />
+          <img :src="  !(serviceHovered||alwaysActive)?api_url+icon:api_url+iconHover" alt />
         </box>
       </div>
     </div>
@@ -30,7 +27,7 @@
     </div>
     <div class="s_footer txt_right">
       <nuxt-link
-        to="#"
+        :to="`/services/${slug}`"
         class="a text_primary mr-3"
         :style="{visibility:!(serviceHovered||alwaysActive)?'hidden':'visible'}"
       >Load more</nuxt-link>
@@ -52,9 +49,15 @@ export default {
     icon: {
       type: String
     },
+    iconHover: {
+      type: String
+    },
     alwaysActive: {
       type: Boolean,
       default: false
+    },
+    slug: {
+      type: String
     }
   },
   data() {
@@ -65,6 +68,11 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+.service {
+  @media (max-width: 1024px) {
+    justify-content: center;
+  }
+}
 .s_icon {
   transition: 0.5s all;
 

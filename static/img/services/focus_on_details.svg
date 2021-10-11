@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="281" height="111" viewBox="0 0 281 111">
+  <g id="focus_on_details" transform="translate(-199.5 -69.5)">
+    <rect id="Rectangle_289" data-name="Rectangle 289" width="280" height="110" rx="8.88" transform="translate(200 70)" fill="#e02b2b" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+    <rect id="Rectangle_290" data-name="Rectangle 290" width="68.778" height="68.778" transform="translate(352.167 85.834)" fill="#e02b2b" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+    <path id="Path_421" data-name="Path 421" d="M250.741,91.168l.129,11.759-11.592-.3v53.232a4.083,4.083,0,0,0,4.083,4.083h64.7V91.168Z" fill="#e02b2b" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+    <rect id="Rectangle_291" data-name="Rectangle 291" width="68.778" height="68.778" transform="translate(296.778 99.612)" fill="#fff" stroke="#e02b2b" stroke-miterlimit="10" stroke-width="1"/>
+    <path id="Path_422" data-name="Path 422" d="M422.13,140.242a9.778,9.778,0,1,1-9.778-9.778A9.734,9.734,0,0,1,422.13,140.242Z" fill="#e02b2b" stroke="#fff" stroke-miterlimit="10" stroke-width="2"/>
+    <line id="Line_167" data-name="Line 167" x1="9.185" y1="9.185" transform="translate(419.315 147.427)" fill="#e02b2b" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+    <line id="Line_168" data-name="Line 168" x2="12.741" transform="translate(310.13 121.778)" fill="#fff" stroke="#e02b2b" stroke-miterlimit="10" stroke-width="2"/>
+    <line id="Line_169" data-name="Line 169" x2="32.889" transform="translate(310.13 132.444)" fill="#fff" stroke="#e02b2b" stroke-miterlimit="10" stroke-width="2"/>
+    <line id="Line_170" data-name="Line 170" x2="32.889" transform="translate(310.13 136.889)" fill="#fff" stroke="#e02b2b" stroke-miterlimit="10" stroke-width="2"/>
+    <line id="Line_171" data-name="Line 171" x2="32.889" transform="translate(310.13 141.333)" fill="#fff" stroke="#e02b2b" stroke-miterlimit="10" stroke-width="2"/>
+    <line id="Line_172" data-name="Line 172" x2="32.889" transform="translate(310.13 145.778)" fill="#fff" stroke="#e02b2b" stroke-miterlimit="10" stroke-width="2"/>
+  </g>
+</svg>

@@ -1,22 +1,19 @@
 <template>
   <div class="steps">
     <!-- ***************Only on desktop************** -->
-    <div class="desktop steps_head flex space_between">
+    <div class="desktop steps_head flex center">
       <div
-        class="flex pointer step align_center space_around"
+        class="flex pointer step align_center center"
         v-for="(step, index) in steps"
         :key="index"
         @click="activeStep=index"
-        :class="{flex0:index==steps.length-1,flex1:index!=steps.length-1}"
+        :class="{flex0:index==steps.length-1}"
       >
-        <div
-          class="step_btn elevate_2 bg_white flex align_center center relative"
-          :class="{fixing_step:index==steps.length-1}"
-        >
+        <div class="step_btn elevate_2 bg_white flex align_center center relative">
           <div class="circle_deco" v-show="activeStep==index"></div>
           <img
-            :src="require(`~/static/img/icons/steps/${activeStep!=index?step.icon:step.icon+'_h'}.svg`)"
-            alt="step.title"
+            :src="activeStep!=index? api_url+deepFind(step, 'icon.url'):api_url+deepFind(step, 'iconHover.url')"
+            :alt="step.title"
           />
         </div>
         <div
@@ -30,6 +27,7 @@
     <div class="steps_body mt-5">
       <h3 class="txt_right mb-2">A cocktail of skills !</h3>
       <div class="step_content elevate_1 bg_white pa-4">
+        <!-- ***************Only on desktop************** -->
         <VueSlickCarousel v-bind="slickSettings" @beforeChange="beforeSlideChange" class="mobile">
           <div
             class="flex pointer step align_center space_around"
@@ -41,7 +39,10 @@
               :class="{fixing_step:index==steps.length-1}"
             >
               <div class="circle_deco" v-show="activeStep==index"></div>
-              <img :src="require(`~/static/img/icons/steps/${step.icon}_h.svg`)" alt="step.title" />
+              <img
+                :src="activeStep!=index? api_url+deepFind(step, 'icon.url'):api_url+deepFind(step, 'iconHover.url')"
+                :alt="step.title"
+              />
             </div>
           </div>
           <template #prevArrow>
@@ -55,10 +56,11 @@
             </div>
           </template>
         </VueSlickCarousel>
+        <!-- ***************************** -->
         <h2 class="text_primary">{{activeStep+1}}. {{steps[activeStep].title}}</h2>
-        <p>{{steps[activeStep].desc}}</p>
-        <div v-if="steps[activeStep].skills" class="divider my-4 bg_text2"></div>
-        <div class="skills" v-if="steps[activeStep].skills">
+        <p>{{steps[activeStep].description}}</p>
+        <div v-if="steps[activeStep].skills.length>0" class="divider my-4 bg_text2"></div>
+        <div class="skills" v-if="steps[activeStep].skills.length>0">
           <div class="skills_toolbar flex">
             <h3
               @click="selectedTab=i"
@@ -72,7 +74,7 @@
             <div class="tommpon bg_white flex align_center center">
               <img src="~static/img/icons/tompon.svg" alt />
             </div>
-            <p class="subheading px-4">{{steps[activeStep].skills[selectedTab].desc}}</p>
+            <p class="subheading px-4">{{steps[activeStep].skills[selectedTab].description}}</p>
           </div>
         </div>
       </div>

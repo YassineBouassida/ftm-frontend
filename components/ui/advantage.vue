@@ -5,17 +5,17 @@
   >
     <div class="cover bg_primary absolute fill_height fill_width flex center column align_center">
       <div class>
-        <img src="~static/img/services/techProviders.svg" alt="tech providers" />
+        <img :src="api_url+deepFind(advantage, 'image.url')" alt="tech providers" />
       </div>
-      <h2 class="mt-2 text_white">TECHNOLOGY PROVIDERS</h2>
+      <h2 class="mt-2 text_white">{{deepFind(advantage, 'title')}}</h2>
     </div>
     <div class="flex relative adv_content pa-3">
       <div class="tick bg_redLight flex align_center center">
         <img src="~static/img/icons/tick.svg" alt />
       </div>
       <div class="adv_desc ml-3">
-        <h2 class="text_primary">SOLUTIONS OVER SERVICES</h2>
-        <h4>We provide you innovative and comprehensive solutions developed with the most modern and diverse technologies that we master perfectly. What we do here is providing not just consulting and development services, but versatile solutions for a wide range of business problems.</h4>
+        <h2 class="text_primary">{{deepFind(advantage, 'title')}}</h2>
+        <h4>{{deepFind(advantage, 'description')}}</h4>
       </div>
     </div>
   </div>
@@ -25,6 +25,9 @@ export default {
   props: {
     selected: {
       type: Boolean
+    },
+    advantage: {
+      type: Object
     }
   }
 };

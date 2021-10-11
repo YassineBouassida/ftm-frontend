@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="home" v-if="!this.$apollo.loading">
     <!-- Hero section -->
     <section class="hero_container">
       <div class="hero flex container align_center">
@@ -169,7 +169,7 @@
             industry, the values ​​of your company and your target.
           </p>
         </div>
-        <fStepper :steps="steps"></fStepper>
+        <fStepper :steps="deepFind(page,'Section.0.steps')"></fStepper>
       </div>
     </section>
     <!-- Idea To Solution -->
@@ -256,147 +256,49 @@
 
 <script>
 import VueSlickCarousel from "vue-slick-carousel";
+import servicesQuery from "~/apollo/queries/home/services";
+import pageQuery from "~/apollo/queries/page/page";
 
 export default {
   components: { VueSlickCarousel },
+  apollo: {
+    services: {
+      prefetch: true,
+      query: servicesQuery,
+      watchLoading: function(isLoading) {
+        this.$nextTick(() => {
+          if (this.$nuxt && this.$nuxt.$loading) {
+            isLoading
+              ? this.$nuxt.$loading.start()
+              : setTimeout(() => this.$nuxt.$loading.finish(), 1500);
+          }
+        });
+      }
+    },
+    page: {
+      prefetch: true,
+      query: pageQuery,
+      variables() {
+        return { id: 1 };
+      },
+      watchLoading: function(isLoading) {
+        this.$nextTick(() => {
+          if (this.$nuxt && this.$nuxt.$loading) {
+            isLoading
+              ? this.$nuxt.$loading.start()
+              : this.$nuxt.$loading.finish();
+          }
+        });
+      }
+    }
+  },
   data() {
     return {
       selectedTab: 0,
       activeStep: 0,
       selectedIdea: 0,
       selectedProject: 0,
-      services: [
-        {
-          title: "Digital Marketing",
-          desc:
-            "Social medias are also tools to make you known and allow you to create a dynamic with your customers by adding a participatory concept.",
-          icon: "marketing",
-          link: "#"
-        },
-        {
-          title: " Web Development",
-          desc:
-            "We conceive custom-made websites based on technologies and development frameworks that will offer maximum interactivity while fully respecting your needs and specifications",
-          icon: "webDev",
-          link: "#"
-        },
-        {
-          title: "Design",
-          desc:
-            "We help keeping your design and branding up to speed with what your target expects to see and make it more engaged.",
-          icon: "design",
-          link: "#"
-        },
-        {
-          title: "SEO optimization",
-          desc:
-            "We implement your acquisition and reputation strategies to make your business visible in the first pages of search engine results.",
-          icon: "seo",
-          link: "#"
-        },
-        {
-          title: "Ecommerce",
-          desc:
-            "We help allow you to quickly and simply offer online sales to your customers through innovative and interactive ecommerce websites.",
-          icon: "ecommerce",
-          link: "#"
-        },
-        {
-          title: "Showcase",
-          desc:
-            "We reinforce your presence and visibility on the web, we help strengthen your brand image and reputation with potential customers by creating fascinating showcase websites.",
-          icon: "showcase",
-          link: "#"
-        },
-        {
-          title: "Branding",
-          desc:
-            "We build identities as powerful communication vectors that must be embodied in each of your communication support. It will give you massive growth and raving fans",
-          icon: "branding",
-          link: "#"
-        },
-        {
-          title: "Content creating",
-          desc:
-            "We create useful content to develop your audience (blogs, social media posts, infographics, emailing etc.)",
-          icon: "content",
-          link: "#"
-        }
-      ],
-      steps: [
-        {
-          title: "Planning",
-          desc:
-            "It is the art of fulfilling successfully the different activities of your digital campaigns. That’s how we achieve goals in an efficient way. ",
-          icon: "planning",
-          link: "#"
-        },
-        {
-          title: " Content creation",
-          desc: "We transform your ideas into resonant stories. ",
-          icon: "content",
-          link: "#"
-        },
-        {
-          title: "Prototyping",
-          desc:
-            "We aim to create prototypes as realistic as possible, faithfully executed to the pixel.",
-          icon: "proto",
-          link: "#"
-        },
-        {
-          title: "Web Design",
-          desc:
-            "We assure high quality web design that makes of your web pages respect your values and your digital identity.",
-          icon: "design",
-          link: "#"
-        },
-        {
-          title: "Coding",
-          desc:
-            "Our strong coding skills contribute to a consistent client experience while ensuring high quality digital product.",
-          icon: "coding",
-          link: "#",
-          skills: [
-            {
-              name: "Experienced team",
-              desc:
-                "We are focused on bringing value to our customers and on helping them succeed in the marketplace."
-            },
-            {
-              name: "Full-service web",
-              desc:
-                "We are committed to supporting you over the long term: before, during and after the entire software development process."
-            },
-            {
-              name: "High quality service ",
-              desc:
-                "You take advantage of our experiences, high quality IT solutions, and the most exciting experience with a long term partner."
-            }
-          ]
-        },
-        {
-          title: "Quality assurance",
-          desc:
-            "Our exceptional and rigorous quality assurance methods, guarantee you the excellence of your digital products.",
-          icon: "quality",
-          link: "#"
-        },
-        {
-          title: "Presentation & launch",
-          desc:
-            "We offer you exclusive and original presentations and launches ideas.",
-          icon: "launch",
-          link: "#"
-        },
-        {
-          title: "Support",
-          desc:
-            "We support you with solutions before, throughout and after the whole process.",
-          icon: "support",
-          link: "#"
-        }
-      ],
+
       ideas: [
         {
           title: "turnKey",
@@ -491,6 +393,9 @@ export default {
     }
   },
   mounted() {
+    console.log(this.services);
+    console.log(this.page);
+
     setTimeout(() => {
       this.projects = [{ id: 1 }, { id: 2 }, { id: 3 }];
     }, 2000);

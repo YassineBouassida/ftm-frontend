@@ -1,15 +1,17 @@
 <template>
   <div>
     <!-- ***************Only on desktop and tablet************** -->
-    <div class="flex wrap center desktop">
+    <div class="flex wrap center desktop mt-5">
       <serviceCard
         v-for="(service, index) in services"
         :key="index"
         class="service_card pointer pa-2"
         :size="114"
         :title="service.title"
-        :desc="service.desc"
-        :icon="service.icon"
+        :desc="service.description"
+        :icon="service.icon.url"
+        :iconHover="service.iconHover.url"
+        :slug="service.slug"
       ></serviceCard>
     </div>
     <!-- ***************************** -->
@@ -26,8 +28,10 @@
         class="service_card pointer pa-2"
         :size="114"
         :title="service.title"
-        :desc="service.desc"
-        :icon="service.icon"
+        :desc="service.description"
+        :icon="service.icon.url"
+        :iconHover="service.iconHover.url"
+        :slug="service.slug"
       ></serviceCard>
       <template #prevArrow>
         <div class="custom-arrow prev_arrow">

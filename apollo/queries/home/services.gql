@@ -1,0 +1,12 @@
+# Write your query or mutation here
+{
+  services {
+    locale
+    title
+    id
+    icon{url}
+    iconHover{url}
+    slug
+    description
+  }
+}

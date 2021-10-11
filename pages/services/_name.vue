@@ -1,5 +1,5 @@
 <template>
-  <div class="bg_lightGrey">
+  <div class="bg_lightGrey" v-if="!this.$apollo.loading">
     <!-- hero section -->
     <section class="hero relative flex align_center">
       <img
@@ -21,15 +21,10 @@
             We are focused on
             <br class="br" />your success!
           </h1>
-          <p class="my-5 text_white">
-            Regardless of how complex or even small your needs are, our dedicated in-house
-            team of web developers and project managers will provide you a wide range of web
-            application development services to boost, develop, manage and better maintain your
-            web material at a reasonable cost.
-          </p>
+          <p class="my-5 text_white">{{deepFind(this.serviceBySlug, "hero.description")}}</p>
         </div>
         <div class="image flex1 flex align_center center">
-          <img src="~static/img/services/machine.svg" alt />
+          <img :src="api_url+deepFind(this.serviceBySlug, 'hero.image.url')" alt />
         </div>
       </div>
     </section>
@@ -43,21 +38,23 @@
             <div class="separator bg_primary relative"></div>
           </div>
           <div class="title_part pr-5">
-            <h1 class="txt_right">Full-Cycle Web Dev Services</h1>
-            <p
-              class="txt_right"
-            >Fiction To Mission is here to take your business to the next level with a high-performance web applications. Our team will support you in developing an app concept, expanding its business possibility, and converting it into an app.</p>
+            <h1 class="txt_right">{{deepFind(this.serviceBySlug, "cycle.title")}}</h1>
+            <p class="txt_right">{{deepFind(this.serviceBySlug, "cycle.description")}}</p>
           </div>
-          <h4 class="notice text_white bg_primary txt_right py-2 px-5 mt-4">
-            We have built all sorts of web applications, from online forms and workflows to
-            whole management systems with both big and small projects.
-          </h4>
+          <h4
+            class="notice text_white bg_primary txt_right py-2 px-5 mt-4"
+          >{{deepFind(this.serviceBySlug, "cycle.notice")}}</h4>
         </div>
         <div class="body flex flex2 pa-5 wrap">
-          <subService class="sub_cat" v-for="(item, index) in 7" :key="index"></subService>
+          <subService
+            class="sub_cat my-3 pa-3"
+            :sub="sub"
+            v-for="(sub, index) in deepFind(this.serviceBySlug, 'cycle.subCategory')"
+            :key="index"
+          ></subService>
         </div>
         <div class="footer mx-5">
-          <p>We have a lot of experience developing complex web-based business systems with multiple users and roles and that connect with CRM, Accounting, Inventory, and Other Systems. Our mission is to develop a customized, secure, and scalable system related to your business needs.</p>
+          <p>{{deepFind(this.serviceBySlug, "cycle.footer")}}</p>
         </div>
       </div>
     </section>
@@ -65,15 +62,16 @@
     <!-- Technology stack section -->
     <section class="tech_stack container">
       <div class="tech_desc">
-        <h1>Technology Stack</h1>
-        <p>
-          Embrace the latest tech trends in business technology and achieve your goals with us !
-          The cutting-edge tools we use allow delivering robust and competitive mobile applications that will boost your business.
-          We also carefully choose technologies for each project to meet our clients' highest expectations and business needs.
-        </p>
+        <h1>{{deepFind(this.serviceBySlug, 'techStack.title')}}</h1>
+        <p>{{deepFind(this.serviceBySlug, 'techStack.description')}}</p>
       </div>
       <div class="tech_content mt-5 flex align_center space_between wrap">
-        <serviceTech v-for="(item, index) in 5" :key="index" class="bg_white w-45 py-4 px-3 mb-3"></serviceTech>
+        <serviceTech
+          :stack="stack"
+          v-for="(stack, index) in deepFind(this.serviceBySlug, 'techStack.stacks')"
+          :key="index"
+          class="bg_white w-45 py-4 px-3 mb-3"
+        ></serviceTech>
       </div>
     </section>
     <!-- ********************************* -->
@@ -81,10 +79,10 @@
     <section class="our_process bg_white py-5">
       <div class="container">
         <div class="c_head txt_center">
-          <h1>Our Process</h1>
-          <p>Embrace the latest tech trends in business technology and achieve your goals with us !</p>
+          <h1>{{deepFind(this.serviceBySlug, 'process.title')}}</h1>
+          <p>{{deepFind(this.serviceBySlug, 'process.description')}}</p>
         </div>
-        <fStepper :steps="steps"></fStepper>
+        <fStepper :steps="deepFind(this.serviceBySlug, 'process.steps')"></fStepper>
       </div>
     </section>
     <!-- ********************************* -->
@@ -93,11 +91,16 @@
       <div class="container">
         <div class="c_head">
           <h2>WHY-FTM?</h2>
-          <h1>For your web application development services</h1>
+          <h1>{{deepFind(this.serviceBySlug, 'advantages.title')}}</h1>
         </div>
         <!-- Show only on desktop -->
         <div class="advantages my-4 flex wrap center desktop">
-          <advantage v-for="(item, index) in 7" :key="index" class="advantage mr-3 mt-3"></advantage>
+          <advantage
+            :advantage="advantage"
+            v-for="(advantage, index) in deepFind(this.serviceBySlug, 'advantages.list')"
+            :key="index"
+            class="advantage mr-3 mt-3"
+          ></advantage>
         </div>
         <!-- *********************************** -->
         <!-- Show only on mobile -->
@@ -108,7 +111,8 @@
           class="advantages my-4 flex wrap center mobile"
         >
           <advantage
-            v-for="(item, index) in 7"
+            :advantage="advantage"
+            v-for="(advantage, index) in deepFind(this.serviceBySlug, 'advantages.list')"
             :key="index"
             class="advantage mr-3 mt-3"
             :selected="selectedAdv==index"
@@ -137,16 +141,19 @@
         <div class="package flex space_between">
           <div class="pack_standards py-5 w-45 flex column space_between">
             <div class="standards_head">
-              <h1 class="hero_text text_white">Our Starter Package</h1>
-              <p class="text_white">
-                Feeling persuaded to work with us and to start your digital transition?
-                Discover our packages that are carefully crafted to meet your needs, goals and visions.
-              </p>
+              <h1
+                class="hero_text text_white"
+              >{{deepFind(serviceBySlug, 'packages.0.standards.title')}}</h1>
+              <p class="text_white">{{deepFind(serviceBySlug, 'packages.0.standards.description')}}</p>
             </div>
             <div class="standards_list">
-              <div class="flex my-3" v-for="(item, index) in 5" :key="index">
+              <div
+                class="flex my-3"
+                v-for="(standard, index) in deepFind(serviceBySlug, 'packages.0.standards.standardsList')"
+                :key="index"
+              >
                 <img src="~static/img/icons/tick.svg" alt="tick" />
-                <h4 class="text_white ml-3">Cross Browser Compatibility</h4>
+                <h4 class="text_white ml-3">{{standard.text}}</h4>
               </div>
             </div>
             <div class="standards_footer">
@@ -159,26 +166,29 @@
             <div class="pack_holder pa-3 flex column">
               <div class="pack_head flex align_center pb-2">
                 <img src="~static/img/icons/packBadge.svg" alt="tick" />
-                <h2 class="ml-3 text_white">Silver Packge</h2>
+                <h2 class="ml-3 text_white">{{deepFind(serviceBySlug, 'packages.0.details.title')}}</h2>
               </div>
               <div class="pack_body flex1 py-5">
                 <h4
                   class="text_white my-3"
-                >This service will help you assess your web application for any vulnerabilities of which a real attacker may exploit, and provide you with a professionally written report including; vulnerability descriptions, exploitation steps, recommendations, root causes and more.</h4>
-                <h4
-                  class="text_white my-3"
-                >You will receive a full report based on low hanging fruit vulnerabilities.</h4>
+                  v-html="deepFind(serviceBySlug, 'packages.0.details.descriptionHtml')"
+                ></h4>
+
                 <div class="features_list py-2 px-3 bg_white mt-5">
                   <h4 v-for="(item, index) in 5" :key="index">-5 pages</h4>
                 </div>
               </div>
               <div class="pack_footer">
                 <div class="more_details flex space_between align_center">
-                  <h4 class="text_white">30 Days Delivery</h4>
-                  <h4 class="text_white">Unlimited Revisions</h4>
+                  <h4
+                    class="text_white"
+                  >{{deepFind(serviceBySlug, 'packages.0.details.delivery')}} Days Delivery</h4>
+                  <h4
+                    class="text_white"
+                  >{{deepFind(serviceBySlug, 'packages.0.details.revisions') }} Revisions</h4>
                 </div>
                 <fBtn link to="/" class="fill_width mt-4 mb-3">
-                  <h3>($ 500) Continue</h3>
+                  <h3>($ {{deepFind(serviceBySlug, 'packages.0.details.price')}}) Continue</h3>
                 </fBtn>
                 <div class="a text_white txt_center">
                   <u>Do you have any special requirements?</u>
@@ -195,7 +205,12 @@
     <section class="faqs py-5 bg_white">
       <div class="container">
         <h1 class="txt_right mb-4">Frequently Asked Questions</h1>
-        <faq class="faq bg_lightGrey pa-2 my-4" v-for="(item, index) in 4" :key="index"></faq>
+        <faq
+          class="faq bg_lightGrey pa-2 my-4"
+          :faq="faq"
+          v-for="(faq, index) in deepFind(serviceBySlug, 'faqs')"
+          :key="index"
+        ></faq>
       </div>
     </section>
     <!-- ********************************* -->
@@ -208,13 +223,15 @@
         </div>
         <div class="flex align_center wrap space_between py-3 my-3">
           <serviceCard
-            v-for="(service, index) in services"
+            v-for="(service, index) in deepFind(serviceBySlug, 'services')"
             :key="index"
             class="service_card pointer pa-2 my-2"
             :size="114"
             :title="service.title"
-            :desc="service.desc"
-            :icon="service.icon"
+            :desc="service.description"
+            :icon="service.icon.url"
+            :iconHover="service.iconHover.url"
+            :slug="service.slug"
             :alwaysActive="true"
           ></serviceCard>
         </div>
@@ -225,81 +242,105 @@
 </template>
 <script>
 import VueSlickCarousel from "vue-slick-carousel";
+import serviceQuery from "~/apollo/queries/service/services";
+
 export default {
+  head() {
+    return {
+      title: this.deepFind(this.serviceBySlug, "title"),
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: this.deepFind(this.serviceBySlug, "description")
+        },
+        {
+          hid: "keywords",
+          name: "keywords",
+          content: this.deepFind(this.serviceBySlug, "keywords")
+        }
+      ]
+    };
+  },
   components: { VueSlickCarousel },
+  mounted() {
+    console.log(this.serviceBySlug);
+    console.log(this.deepFind(this.serviceBySlug, "hero.image.url"));
+  },
   data() {
     return {
       expanded: false,
       selectedAdv: 0,
+
       steps: [
         {
           title: "Planning",
-          desc:
+          description:
             "It is the art of fulfilling successfully the different activities of your digital campaigns. That’s how we achieve goals in an efficient way. ",
           icon: "planning",
           link: "#"
         },
         {
           title: " Content creation",
-          desc: "We transform your ideas into resonant stories. ",
+          description: "We transform your ideas into resonant stories. ",
           icon: "content",
           link: "#"
         },
         {
           title: "Prototyping",
-          desc:
+          description:
             "We aim to create prototypes as realistic as possible, faithfully executed to the pixel.",
           icon: "proto",
           link: "#"
         },
         {
           title: "Web Design",
-          desc:
+          description:
             "We assure high quality web design that makes of your web pages respect your values and your digital identity.",
           icon: "design",
           link: "#"
         },
         {
           title: "Coding",
-          desc:
+          description:
             "Our strong coding skills contribute to a consistent client experience while ensuring high quality digital product.",
           icon: "coding",
           link: "#",
           skills: [
             {
               name: "Experienced team",
-              desc:
+              description:
                 "We are focused on bringing value to our customers and on helping them succeed in the marketplace."
             },
             {
               name: "Full-service web",
-              desc:
+              description:
                 "We are committed to supporting you over the long term: before, during and after the entire software development process."
             },
             {
               name: "High quality service ",
-              desc:
+              description:
                 "You take advantage of our experiences, high quality IT solutions, and the most exciting experience with a long term partner."
             }
           ]
         },
         {
           title: "Quality assurance",
-          desc:
+          description:
             "Our exceptional and rigorous quality assurance methods, guarantee you the excellence of your digital products.",
           icon: "quality",
           link: "#"
         },
         {
           title: "Presentation & launch",
-          desc:
+          description:
             "We offer you exclusive and original presentations and launches ideas.",
           icon: "launch",
           link: "#"
         },
         {
           title: "Support",
-          desc:
+          description:
             "We support you with solutions before, throughout and after the whole process.",
           icon: "support",
           link: "#"
@@ -350,6 +391,24 @@ export default {
         ]
       }
     };
+  },
+  apollo: {
+    serviceBySlug: {
+      prefetch: true,
+      query: serviceQuery,
+      variables() {
+        return { slug: this.$route.params.name };
+      },
+      watchLoading: function(isLoading) {
+        this.$nextTick(() => {
+          if (this.$nuxt && this.$nuxt.$loading) {
+            isLoading
+              ? this.$nuxt.$loading.start()
+              : this.$nuxt.$loading.finish();
+          }
+        });
+      }
+    }
   },
   methods: {
     afterAdvantageChange(newVal) {
@@ -521,7 +580,7 @@ export default {
     .body {
       .sub_cat {
         max-width: 33%;
-        height: 16.25rem;
+        height: auto;
       }
     }
   }
@@ -582,7 +641,7 @@ export default {
       padding: 1rem !important;
       .sub_cat {
         max-width: 100%;
-        height: 16.25rem;
+        height: auto;
       }
     }
     .footer {

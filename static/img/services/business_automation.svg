@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="281" height="111" viewBox="0 0 281 111">
+  <g id="business_automation" transform="translate(-1384.5 -4276.5)">
+    <g id="business_automation-2" data-name="business_automation" transform="translate(1185 4207)">
+      <rect id="Rectangle_288" data-name="Rectangle 288" width="280" height="110" rx="8.88" transform="translate(200 70)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+      <path id="Path_419" data-name="Path 419" d="M458.908,132.615l-8.567-.693c-.207-.575-.442-1.138-.7-1.686l5.57-6.55a3.277,3.277,0,0,0-.179-4.44l-3.73-3.73a3.277,3.277,0,0,0-4.44-.179l-6.55,5.569c-.549-.258-1.111-.493-1.686-.7l-.693-8.567a3.277,3.277,0,0,0-3.266-3.014h-5.275a3.277,3.277,0,0,0-3.266,3.014l-.693,8.567c-.576.207-1.138.442-1.687.7l-6.549-5.569a3.279,3.279,0,0,0-4.441.179l-3.729,3.73a3.277,3.277,0,0,0-.179,4.44l5.569,6.55c-.258.548-.493,1.111-.7,1.686l-8.568.693a3.277,3.277,0,0,0-3.013,3.266v5.275a3.277,3.277,0,0,0,3.013,3.266l8.568.693c.207.575.442,1.138.7,1.686l-5.569,6.55a3.279,3.279,0,0,0,.179,4.441l3.729,3.729a3.279,3.279,0,0,0,4.441.179l6.549-5.569c.549.258,1.111.493,1.687.7l.693,8.568a3.277,3.277,0,0,0,3.266,3.013h5.275a3.277,3.277,0,0,0,3.266-3.013l.693-8.568c.575-.207,1.137-.442,1.686-.7l6.55,5.569a3.277,3.277,0,0,0,4.44-.179l3.73-3.729a3.279,3.279,0,0,0,.179-4.441l-5.57-6.55c.259-.548.494-1.111.7-1.686l8.567-.693a3.277,3.277,0,0,0,3.014-3.266v-5.275A3.277,3.277,0,0,0,458.908,132.615Z" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+      <circle id="Ellipse_549" data-name="Ellipse 549" cx="13.055" cy="13.055" r="13.055" transform="translate(418.974 125.464)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+      <line id="Line_165" data-name="Line 165" x2="99.759" transform="translate(200 93.185)" fill="#e02b2b" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+      <circle id="Ellipse_550" data-name="Ellipse 550" cx="5.333" cy="5.333" r="5.333" transform="translate(209.093 75.704)" fill="#e02b2b" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+      <path id="Path_420" data-name="Path 420" d="M287.019,180V130.222h84.741V97.037" fill="#e02b2b" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+      <line id="Line_166" data-name="Line 166" x2="9.778" transform="translate(225.389 81.037)" fill="#e02b2b" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+    </g>
+    <path id="Polygon_3" data-name="Polygon 3" d="M7,0l7,12H0Z" transform="translate(1550 4296)" fill="#fff"/>
+  </g>
+</svg>

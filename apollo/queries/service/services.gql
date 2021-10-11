@@ -1,0 +1,134 @@
+# Write your query or mutation here
+query Service($slug: String!) {
+  serviceBySlug(slug: $slug) {
+    services {
+      locale
+      title
+      id
+      icon {
+        url
+      }
+      iconHover {
+        url
+      }
+      slug
+      description
+    }
+    locale
+    title
+    id
+    link
+    slug
+    icon {
+      url
+    }
+    iconHover {
+      url
+    }
+    hero {
+      id
+      title
+      description
+      image {
+        url
+      }
+    }
+    faqs {
+      question
+      answer
+    }
+    advantages {
+      id
+      title
+      list {
+        id
+        title
+        subTitle
+        description
+        image {
+          url
+        }
+      }
+    }
+    cycle {
+      id
+      title
+      notice
+      description
+      footer
+      subCategory {
+        id
+        title
+        description
+      }
+    }
+    process {
+      id
+      title
+      description
+      keywords
+      steps {
+        id
+        title
+        description
+        icon {
+          url
+        }
+        iconHover {
+          url
+        }
+        skills {
+          id
+          name
+          description
+        }
+      }
+    }
+
+    packages {
+      id
+      standards {
+        id
+        title
+        description
+        standardsList {
+          id
+          text
+        }
+        link
+      }
+      details {
+        id
+        title
+        icon {
+          url
+        }
+        features {
+          id
+          text
+        }
+        link
+        delivery
+        revisions
+        price
+        requirmentsLink
+        descriptionHtml
+      }
+    }
+    keywords
+    techStack {
+      id
+      title
+      description
+      stacks {
+        id
+        title
+        description
+        image {
+          url
+        }
+      }
+    }
+    description
+  }
+}

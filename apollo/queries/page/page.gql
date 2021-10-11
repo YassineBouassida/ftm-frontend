@@ -1,0 +1,41 @@
+query Pages($id: ID!) {
+  page(id: $id) {
+    id
+    seo {
+      title
+      description
+      keywords
+      __typename
+    }
+    url
+    name
+    Section {
+      ... on ComponentPartsProcess {
+        id
+        title
+        description
+        keywords
+        steps {
+          id
+          title
+          description
+          icon {
+            url
+            __typename
+          }
+          skills {
+            id
+            name
+            description
+            __typename
+          }
+          __typename
+        }
+        __typename
+      }
+      __typename
+    }
+    locale
+    __typename
+  }
+}

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="281" height="111" viewBox="0 0 281 111">
+  <g id="security_and_safety" transform="translate(-199.5 -69.5)">
+    <rect id="Rectangle_292" data-name="Rectangle 292" width="280" height="110" rx="8.88" transform="translate(200 70)" fill="#e02b2b" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+    <g id="Group_214" data-name="Group 214">
+      <path id="Path_423" data-name="Path 423" d="M340,79.511,301.811,96.886l5.478,20.02c5.373,19.638,16.1,35.551,29.854,44.3L340,163.021l2.857-1.816c13.757-8.748,24.481-24.661,29.854-44.3l5.478-20.02Z" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+      <circle id="Ellipse_551" data-name="Ellipse 551" cx="23.741" cy="23.741" r="23.741" transform="translate(316.259 94.525)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+      <path id="Path_424" data-name="Path 424" d="M329.389,115.081l10.194,10.194,16.3-16.3" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+      <g id="Group_212" data-name="Group 212">
+        <rect id="Rectangle_293" data-name="Rectangle 293" width="62.815" height="62.815" rx="3.852" transform="translate(227.759 91.081)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+        <path id="Path_425" data-name="Path 425" d="M260.944,158.637v11.852h55.315v-5.926" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+        <circle id="Ellipse_552" data-name="Ellipse 552" cx="2.269" cy="2.269" r="2.269" transform="translate(313.991 162.294)" fill="#fff"/>
+        <rect id="Rectangle_294" data-name="Rectangle 294" width="16" height="16" transform="translate(237.833 106.489)" fill="#fff"/>
+        <line id="Line_173" data-name="Line 173" x2="44.444" transform="translate(237.833 132.563)" fill="#fff" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+        <line id="Line_174" data-name="Line 174" x2="44.444" transform="translate(237.833 138.785)" fill="#fff" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+      </g>
+      <g id="Group_213" data-name="Group 213">
+        <rect id="Rectangle_295" data-name="Rectangle 295" width="62.815" height="62.815" rx="3.852" transform="translate(452.241 153.896) rotate(-180)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+        <path id="Path_426" data-name="Path 426" d="M419.056,158.637v11.852H363.741v-5.926" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+        <circle id="Ellipse_553" data-name="Ellipse 553" cx="2.269" cy="2.269" r="2.269" transform="translate(361.472 162.294)" fill="#fff"/>
+        <rect id="Rectangle_296" data-name="Rectangle 296" width="16" height="16" transform="translate(442.167 122.489) rotate(-180)" fill="#fff"/>
+        <line id="Line_175" data-name="Line 175" x1="44.444" transform="translate(397.722 132.563)" fill="#fff" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+        <line id="Line_176" data-name="Line 176" x1="44.444" transform="translate(397.722 138.785)" fill="#fff" stroke="#fff" stroke-miterlimit="10" stroke-width="1"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,21 +1,26 @@
 <template>
   <div class="faq bg_lightGrey pa-2 my-4" :class="{expanded:expanded}">
     <div class="question pointer flex space_between align_center mb-2" @click="expanded=!expanded">
-      <h2 class="my-2">How much does a video cost?</h2>
+      <h2 class="my-2">{{faq.question}}</h2>
       <div class="expand_arrow bg_primary pa-2">
         <arrow class="arrow" :dark="!expanded"></arrow>
       </div>
     </div>
     <div class="answer bg_white pa-3" v-show="expanded">
       <h4>
-        Of course! Keep in mind, though, that doing so increases the project's costs. Crafting a compelling, striking, and creative video
-        takes time! So it's best not to rush the process if possible.
+       {{faq.answer}}
       </h4>
     </div>
   </div>
 </template>
 <script>
 export default {
+  props:{
+
+    faq:{
+      type:Object
+    }
+  },
   data() {
     return {
       expanded: false

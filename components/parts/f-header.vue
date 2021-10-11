@@ -34,7 +34,7 @@
             alt="instagram"
           />
         </fBtn>
-        <fBtn link to="/" class="quote_btn bg_primary f_link">
+        <fBtn link to="/contact" class="quote_btn bg_primary f_link">
           <h3 class="text_white">GET A QUOTE</h3>
         </fBtn>
       </div>
@@ -170,6 +170,14 @@ export default {
   .social_btn {
     width: 2.5rem;
     height: 2.5rem;
+    &::v-deep span {
+      width: 1.7rem;
+      height: 1.7rem;
+    }
+    img {
+      max-width: 1.7rem;
+      max-height: 1.7rem;
+    }
   }
   .quote_btn {
     width: 200px;
