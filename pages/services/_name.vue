@@ -157,7 +157,7 @@
               </div>
             </div>
             <div class="standards_footer">
-              <fBtn link to="/" class="talk_btn">
+              <fBtn link to="/contact" class="talk_btn">
                 <h3 class="text_white">Let's talk</h3>
               </fBtn>
             </div>
@@ -238,6 +238,9 @@
       </div>
     </section>
     <!-- ********************************* -->
+  </div>
+  <div v-else class="bg_lightGrey loading_page flex align_center center">
+    <div class="load_spinner open_spinner"></div>
   </div>
 </template>
 <script>

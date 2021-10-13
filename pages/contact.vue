@@ -214,6 +214,45 @@ export default {
       rgba(135, 84, 84, 1) 100%
     );
   }
+  @media (max-width: 1024px) {
+    & > .container {
+      flex-wrap: wrap;
+      .image {
+        justify-content: center;
+        bottom: 0rem;
+
+        img {
+          animation: bounce 3s infinite ease-in-out;
+          max-height: 30rem;
+        }
+      }
+      .desc {
+        width: 100% !important;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        align-items: center;
+      }
+    }
+    .hero_content {
+      .container {
+        justify-content: center;
+        .w-50 {
+          width: 100% !important;
+          h1,
+          p {
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 480px) {
+    .image {
+      img {
+        max-width: 20rem;
+      }
+    }
+  }
 }
 //********************* */
 //*********Contact form************ */
@@ -228,7 +267,28 @@ export default {
       line-height: 1.5;
     }
   }
+  @media (max-width: 1024px) {
+    .c_head {
+      width: 100% !important;
+    }
+    .c_body {
+      flex-wrap: wrap;
+      .form_contact {
+        width: 100% !important;
+        .cellule {
+          text-align: center;
+        }
+      }
+      form {
+        width: 100% !important;
+      }
+    }
+  }
+  @media (max-width: 480px) {
+    padding: 2rem;
+  }
 }
+
 //********************* */
 @keyframes bounce {
   0% {

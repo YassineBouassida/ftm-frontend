@@ -17,7 +17,7 @@
             with Fiction To Mission!
           </h2>
           <div class="flex ml-5 call_to_action_container">
-            <fBtn link to="/" class="w-60 call_to_action bg_primary f_link text_white">
+            <fBtn link to="/contact" class="w-60 call_to_action bg_primary f_link text_white">
               <h3 class="text_white">GET APPOINTMENT</h3>
             </fBtn>
           </div>
@@ -151,7 +151,7 @@
       </div>
     </section>
     <!-- Services section -->
-    <section class="services container">
+    <section class="services container" id="services">
       <div class="c_head txt_center">
         <h1>Services we provide</h1>
         <p>We offer the full spectrum of digital services to help your business grow successfully.</p>
@@ -224,7 +224,7 @@
       </VueSlickCarousel>
     </section>
     <!-- Projects Section -->
-    <section class="projects bg_lightGrey relative flex">
+    <section class="projects bg_lightGrey relative flex" id="projects">
       <div class="vertical_name flex align_baseline">
         <h1 class="text_white">#PORTFOLIO</h1>
       </div>
@@ -251,6 +251,9 @@
         </div>
       </div>
     </section>
+  </div>
+  <div v-else class="bg_lightGrey loading_page flex align_center center">
+    <div class="load_spinner open_spinner"></div>
   </div>
 </template>
 

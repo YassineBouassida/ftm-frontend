@@ -26,7 +26,7 @@ export default {
     }]
   },
   env: {
-    strapiBaseUri: process.env.API_URL || "http://localhost:1337"
+    strapiBaseUri: process.env.NODE_ENV == 'production' ? process.env.API_URL : "http://localhost:1337"
   },
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: ["~static/fonts/font.css", "~static/css/global.css"],
@@ -34,8 +34,8 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
   loading: {
-    color: 'blue',
-    height: '5px'
+    color: '#E02B2B',
+    height: '3px'
   },
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: [

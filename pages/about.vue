@@ -59,7 +59,7 @@
     <!-- Cases section -->
     <section class="cases flex column small_container">
       <!-- First Case  -->
-      <div class="case flex flex2 txt_left align_center center" id="case2">
+      <div class="case flex flex1 txt_left align_center center" id="case2">
         <div class="w-50">
           <img src="~static/img/about/who_are_you.svg" alt="no website" class="fill_width img" />
         </div>
@@ -86,6 +86,29 @@
         </div>
         <div class="w-50">
           <img src="~static/img/about/our_values.svg" alt="no website" class="fill_width img" />
+        </div>
+      </div>
+    </section>
+    <!-- Team members -->
+    <section class="team container my-5">
+      <h1>Meet the founders</h1>
+      <p
+        class="w-50"
+      >Whether you are in the process of creating a website or you are looking to boost the attendance of your site, Fiction To Mission can offer you a personalized solution, adapted to your needs.</p>
+      <div class="flex align_center space_between py-4 members">
+        <div class="member flex align_center">
+          <div class="avatar"></div>
+          <div class="ml-3">
+            <h1>Yassine Bouassida</h1>
+            <p class="my-1">co-founder/ fullstack developper</p>
+          </div>
+        </div>
+        <div class="member flex align_center">
+          <div class="avatar"></div>
+          <div class="ml-3">
+            <h1>Yassine Bouassida</h1>
+            <p class="my-1">co-founder/ fullstack developper</p>
+          </div>
         </div>
       </div>
     </section>
@@ -152,6 +175,9 @@ export default {
       align-items: end;
       p {
         animation: fade-in 2s forwards;
+        @media (max-width: 768px) {
+          animation: vertical-fade-in 2s forwards;
+        }
       }
     }
     .circles_deco {
@@ -183,13 +209,72 @@ export default {
   .about_footer {
     height: 8.125rem;
   }
+  @media (max-width: 1024px) {
+    .artboard {
+      padding-top: 2.5rem;
+      flex-wrap: wrap;
+      & > .w-50 {
+        width: 100% !important;
+        justify-content: center;
+        padding-right: 0 !important;
+        h1 {
+          text-align: center;
+        }
+        &:first-child {
+          margin-bottom: 2rem;
+        }
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    .artboard {
+      padding-top: 2.5rem;
+      flex-wrap: wrap;
+      & > .w-50 {
+        width: 100% !important;
+        justify-content: center;
+        padding-right: 0 !important;
+        img {
+          max-width: 300px;
+          position: relative;
+        }
+        h1 {
+          text-align: center;
+        }
+        &:first-child {
+          margin-bottom: 2rem;
+        }
+      }
+    }
+    .about_text {
+      height: auto;
+      min-height: 510px;
+      .container > .flex {
+        flex-wrap: wrap;
+      }
+      .call_to_action,
+      .paragraph {
+        width: 100% !important;
+        .circles_deco {
+          display: none !important;
+        }
+      }
+      .bottom_part {
+        display: none !important;
+      }
+    }
+    .about_footer {
+      h2 {
+        font-size: 0.9rem;
+        text-align: center;
+      }
+    }
+  }
 }
 //**Cases */
 .cases {
   padding: 5rem 0;
-  @media (min-height: 1080px) {
-    min-height: 1600px;
-  }
+
   #case2 {
     margin-bottom: 4rem;
     .text_side {
@@ -215,17 +300,21 @@ export default {
     }
   }
   @media (max-width: 1024px) {
-    min-height: 150vh;
-    .c_head {
-      width: 90%;
-      margin-right: auto;
-      margin-left: auto;
-      margin-bottom: 2rem;
-    }
     .text_side {
       margin-right: 0 !important;
       margin-left: 0 !important;
     }
+    .case {
+      flex-wrap: wrap;
+      .w-50 {
+        width: 100% !important;
+
+        img {
+          min-width: 300px;
+        }
+      }
+    }
+
     #case1 {
       .text_side {
         margin-right: 1rem !important;
@@ -256,11 +345,69 @@ export default {
     #case1 {
       .text_side {
         margin-right: 0rem !important;
+        padding-right: 1rem !important;
+        padding-left: 1rem !important;
       }
     }
     #case2 {
       .text_side {
         margin-left: 0rem !important;
+        padding-right: 1rem !important;
+        padding-left: 1rem !important;
+      }
+    }
+  }
+}
+.team {
+  .avatar {
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+    background: url("~static/img/about/avatar.jpg") no-repeat;
+    background-position-y: top;
+    background-position-x: 38%;
+    background-size: cover;
+    flex-shrink: 0;
+  }
+  @media (max-width: 1640px) {
+    .avatar {
+      width: 15rem;
+      height: 15rem;
+    }
+  }
+  @media (max-width: 1200px) {
+    .avatar {
+      width: 9rem;
+      height: 9rem;
+    }
+  }
+  @media (max-width: 1024px) {
+    & > p {
+      width: 90% !important;
+    }
+    .members {
+      flex-wrap: wrap;
+      justify-content: center;
+      .member {
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+  @media (max-width: 767px) {
+    & > h1 {
+      text-align: center;
+    }
+    & > p {
+      text-align: center;
+      width: 100% !important;
+    }
+    .members {
+      flex-wrap: wrap;
+      justify-content: center;
+      .member {
+        margin-bottom: 1.5rem;
+        flex-wrap: wrap;
+        justify-content: center;
       }
     }
   }
@@ -269,6 +416,17 @@ export default {
 @keyframes slide {
   from {
     transform: translateY(-5rem);
+  }
+}
+//********************* */
+@keyframes vertical-fade-in {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+
+  100% {
+    opacity: 1;
   }
 }
 //********************* */
@@ -296,7 +454,7 @@ export default {
 @keyframes text_big_to_small {
   0% {
     order: 2;
-    font-size: 9rem;
+    font-size: var(--font-size);
     opacity: 0;
   }
 
@@ -317,7 +475,7 @@ export default {
 
   100% {
     order: 1;
-    font-size: 9rem;
+    font-size: var(--font-size);
     opacity: 1;
   }
 }

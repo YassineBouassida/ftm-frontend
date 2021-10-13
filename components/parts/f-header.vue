@@ -18,8 +18,8 @@
       <div class="links flex align_center center">
         <nuxt-link class="f_link mr-4" to="/">Home</nuxt-link>
         <nuxt-link class="f_link mx-4" to="/about">About</nuxt-link>
-        <nuxt-link class="f_link mx-4" to="/portfolio">Portfolio</nuxt-link>
-        <nuxt-link class="f_link ml-4" to="/services">Services</nuxt-link>
+        <nuxt-link class="f_link mx-4" to="/#projects">Portfolio</nuxt-link>
+        <nuxt-link class="f_link ml-4" to="/#services">Services</nuxt-link>
       </div>
       <div class="flex social_part end">
         <fBtn link :flat="true" to="/" class="mr-3 social_btn bg_primary flex align_center center">
@@ -47,6 +47,15 @@ export default {
     return {
       openMenu: false
     };
+  },
+  watch: {
+    $route: {
+      handler: function(route) {
+        this.openMenu = false;
+      },
+      deep: true,
+      immediate: false
+    }
   }
 };
 </script>

@@ -10,6 +10,25 @@
   user-select: none;
 }
 
+:root {
+  --font-size: 9rem
+}
+
+
+@media(max-width:1600px) {
+  :root {
+    --font-size: 7rem
+  }
+}
+
+@media(max-width:1024px) {
+  :root {
+    --font-size: 6rem
+  }
+}
+.loading_page{
+  height: 100vh;
+}
 h1,
 h2,
 h3,
@@ -412,7 +431,31 @@ html {
     font-size: 16px !important;
   }
 }
+.load_spinner {
+  width: 3rem;
+  height: 3rem;
+  border: 2px solid map-get($map: $colors, $key: primary);
+  border-radius: 100%;
+}
 
+.open_spinner {
+  border-top: 2px solid transparent;
+  animation: load-animate infinite linear 1s;
+}
+
+
+@keyframes load-animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+    opacity: 0.35;
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 @keyframes bounce {
   to {
     transform: scale(1.05);
