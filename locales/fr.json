@@ -1,0 +1,26 @@
+{
+  "home": {
+    "hero": {
+      "h1": "Nous nous concentrons sur <br> votre réussite !",
+      "p": " Votre projet est terminé mais manque quelque chose ? Vous n'avez qu'une idée mais toujours pas concrétisée ? ",
+      "h2": "Préparez-vous pour votre prochaine aventure avec Fiction To Mission !",
+      "btn": "PRENDRE RENDEZ-VOUS"
+
+    },
+    "cases": {
+      "h1": "Nous existons pour vous aider à améliorer votre entreprise",
+      "p": "Que vous soyez en train de créer un site internet ou que vous cherchiez à booster la fréquentation de votre site, Fiction To Mission peut vous proposer une solution personnalisée, adaptée à vos besoins.",
+      "case1": {
+        "h2": "Si vous n'avez pas de site Web",
+        "p": "Votre site Web peut être disponible 24/7/365 même lorsque vous ne l'êtes pas, il attirera de nouveaux clients dans votre entreprise, vous fera plus d'argent et ajoutera une crédibilité instantanée à votre projet.",
+        "notice": "Saviez-vous que 81% des personnes recherchent une entreprise ou un service sur Internet avant de prendre une décision d'achat ! Si vous n'avez pas de site Web, vous n'avez aucune chance de capturer une part de ce marché."
+      },
+      "case2": {
+        "h2": "En cas d'avoir un site web",
+        "p": "Alors il est temps d'adapter votre site Web aux dernières tendances en matière de conception et de développement Web. Notre mission est de redonner vie à votre site Web et d'aider votre organisation à prendre son envol, en facilitant vos efforts et en créant de nouvelles opportunités.",
+        "notice": "Pensez-vous que votre site Web n'est pas assez bon pour votre entreprise ? Pensez-vous que votre site Web sous-performant peut laisser votre entreprise dans la poussière ?"
+      }
+
+    }
+  }
+}

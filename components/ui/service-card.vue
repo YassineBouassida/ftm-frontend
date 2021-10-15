@@ -14,7 +14,12 @@
         :style="{height:size+'px',width:size+'px'}"
       >
         <box class="box_icon relative">
-          <img :src="  !(serviceHovered||alwaysActive)?api_url+icon:api_url+iconHover" alt />
+          <img
+            width="auto"
+            height="auto"
+            :src="  !(serviceHovered||alwaysActive)?api_url+icon:api_url+iconHover"
+            alt
+          />
         </box>
       </div>
     </div>

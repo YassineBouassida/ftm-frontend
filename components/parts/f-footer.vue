@@ -20,19 +20,48 @@
         <h3 class="text_white my-2">Request Free Consultation Here.</h3>
         <h2 class="text_white">Follow us</h2>
         <div class="social_links flex align_center mt-3">
-          <a class="mr-3" href="http://facebook.com" target="_blank" rel="noopener noreferrer">
+          <a
+            class="mr-3"
+            aria-label="social"
+            href="http://facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img src="~static/img/icons/social/facebook.png" alt />
           </a>
-          <a class="mr-3" href="http://facebook.com" target="_blank" rel="noopener noreferrer">
+          <a
+            class="mr-3"
+            aria-label="social"
+            href="http://facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img src="~static/img/icons/social/instagram.png" alt />
           </a>
-          <a class="mr-3" href="http://facebook.com" target="_blank" rel="noopener noreferrer">
+          <a
+            class="mr-3"
+            aria-label="social"
+            href="http://facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img src="~static/img/icons/social/twitter.png" alt />
           </a>
-          <a class="mr-3" href="http://facebook.com" target="_blank" rel="noopener noreferrer">
+          <a
+            class="mr-3"
+            aria-label="social"
+            href="http://facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img src="~static/img/icons/social/linkedin.png" alt />
           </a>
-          <a href="http://facebook.com" target="_blank" rel="noopener noreferrer">
+          <a
+            aria-label="social"
+            href="http://facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img src="~static/img/icons/social/youtube.png" alt />
           </a>
         </div>
@@ -42,7 +71,13 @@
         <div class="flex column f_link_container">
           <div class="flex start">
             <div class="mr-3">
-              <img class="mt-3" src="~static/img/icons/contact/pin.png" alt="pin" />
+              <img
+                width="auto"
+                height="auto"
+                class="mt-3"
+                src="~static/img/icons/contact/pin.png"
+                alt="pin"
+              />
             </div>
             <p class="text_white subheading">
               Av. Hédi Nouira,Sfax El Jadida,
@@ -52,13 +87,25 @@
           </div>
           <div class="flex start">
             <div class="mr-3">
-              <img class="mt-3" src="~static/img/icons/contact/msg.png" alt="pin" />
+              <img
+                width="auto"
+                height="auto"
+                class="mt-3"
+                src="~static/img/icons/contact/msg.png"
+                alt="pin"
+              />
             </div>
             <p class="text_white subheading">Info@fictiontomission.com</p>
           </div>
           <div class="flex start">
             <div class="mr-3">
-              <img class="mt-3" src="~static/img/icons/contact/phone.png" alt="pin" />
+              <img
+                width="auto"
+                height="auto"
+                class="mt-3"
+                src="~static/img/icons/contact/phone.png"
+                alt="pin"
+              />
             </div>
             <p class="text_white subheading">(+216) 92 24 33 33</p>
           </div>

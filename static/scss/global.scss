@@ -14,6 +14,9 @@
   --font-size: 9rem
 }
 
+.rtl {
+  direction: rtl;
+}
 
 @media(max-width:1600px) {
   :root {
@@ -26,9 +29,11 @@
     --font-size: 6rem
   }
 }
-.loading_page{
+
+.loading_page {
   height: 100vh;
 }
+
 h1,
 h2,
 h3,
@@ -54,6 +59,14 @@ h2 {
 h3 {
   font-size: 1.125rem;
   font-family: $bold;
+}
+
+.h4 {
+  font-size: 1rem;
+  font-family: $regular;
+  color: map-get($map: $colors, $key:text3);
+  font-weight: normal;
+
 }
 
 h4 {
@@ -113,6 +126,7 @@ html,
 body {
   margin: 0 !important;
   font-family: $regular;
+
 }
 
 .wrap {
@@ -431,6 +445,7 @@ html {
     font-size: 16px !important;
   }
 }
+
 .load_spinner {
   width: 3rem;
   height: 3rem;
@@ -448,14 +463,17 @@ html {
   0% {
     transform: rotate(0deg);
   }
+
   50% {
     transform: rotate(180deg);
     opacity: 0.35;
   }
+
   100% {
     transform: rotate(360deg);
   }
 }
+
 @keyframes bounce {
   to {
     transform: scale(1.05);

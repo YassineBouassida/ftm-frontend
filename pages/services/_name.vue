@@ -8,7 +8,14 @@
         alt="elipse top"
         id="elipseTop"
       />
-      <img src="~static/img/services/path_top.svg" class="deco absolute" alt="path" id="pathLeft" />
+      <img
+        width="auto"
+        height="auto"
+        src="~static/img/services/path_top.svg"
+        class="deco absolute"
+        alt="path"
+        id="pathLeft"
+      />
       <img
         src="~static/img/services/elipse_bottom.svg"
         class="deco absolute"
@@ -24,7 +31,12 @@
           <p class="my-5 text_white">{{deepFind(this.serviceBySlug, "hero.description")}}</p>
         </div>
         <div class="image flex1 flex align_center center">
-          <img :src="api_url+deepFind(this.serviceBySlug, 'hero.image.url')" alt />
+          <img
+            width="auto"
+            height="auto"
+            :src="api_url+deepFind(this.serviceBySlug, 'hero.image.url')"
+            alt
+          />
         </div>
       </div>
     </section>
@@ -41,9 +53,9 @@
             <h1 class="txt_right">{{deepFind(this.serviceBySlug, "cycle.title")}}</h1>
             <p class="txt_right">{{deepFind(this.serviceBySlug, "cycle.description")}}</p>
           </div>
-          <h4
-            class="notice text_white bg_primary txt_right py-2 px-5 mt-4"
-          >{{deepFind(this.serviceBySlug, "cycle.notice")}}</h4>
+          <p
+            class="h4 notice text_white bg_primary txt_right py-2 px-5 mt-4"
+          >{{deepFind(this.serviceBySlug, "cycle.notice")}}</p>
         </div>
         <div class="body flex flex2 pa-5 wrap">
           <subService
@@ -153,7 +165,7 @@
                 :key="index"
               >
                 <img src="~static/img/icons/tick.svg" alt="tick" />
-                <h4 class="text_white ml-3">{{standard.text}}</h4>
+                <p class="h4 text_white ml-3">{{standard.text}}</p>
               </div>
             </div>
             <div class="standards_footer">
@@ -169,23 +181,23 @@
                 <h2 class="ml-3 text_white">{{deepFind(serviceBySlug, 'packages.0.details.title')}}</h2>
               </div>
               <div class="pack_body flex1 py-5">
-                <h4
-                  class="text_white my-3"
+                <p
+                  class="h4 text_white my-3"
                   v-html="deepFind(serviceBySlug, 'packages.0.details.descriptionHtml')"
-                ></h4>
+                ></p>
 
                 <div class="features_list py-2 px-3 bg_white mt-5">
-                  <h4 v-for="(item, index) in 5" :key="index">-5 pages</h4>
+                  <p class="h4" v-for="(item, index) in 5" :key="index">-5 pages</p>
                 </div>
               </div>
               <div class="pack_footer">
                 <div class="more_details flex space_between align_center">
-                  <h4
-                    class="text_white"
-                  >{{deepFind(serviceBySlug, 'packages.0.details.delivery')}} Days Delivery</h4>
-                  <h4
-                    class="text_white"
-                  >{{deepFind(serviceBySlug, 'packages.0.details.revisions') }} Revisions</h4>
+                  <p
+                    class="h4 text_white"
+                  >{{deepFind(serviceBySlug, 'packages.0.details.delivery')}} Days Delivery</p>
+                  <p
+                    class="h4 text_white"
+                  >{{deepFind(serviceBySlug, 'packages.0.details.revisions') }} Revisions</p>
                 </div>
                 <fBtn link to="/" class="fill_width mt-4 mb-3">
                   <h3>($ {{deepFind(serviceBySlug, 'packages.0.details.price')}}) Continue</h3>

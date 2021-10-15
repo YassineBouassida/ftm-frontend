@@ -1,5 +1,5 @@
-query Pages($id: ID!) {
-  page(id: $id) {
+query Pages($locale:String!,$slug:String!) {
+  pages(locale:$locale where: {slug:$slug} limit:1) {
     id
     seo {
       title
@@ -35,6 +35,7 @@ query Pages($id: ID!) {
       }
       __typename
     }
+    localizations{locale}
     locale
     __typename
   }

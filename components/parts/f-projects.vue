@@ -3,8 +3,9 @@
     @beforeChange="beforeProjectChange"
     ref="projectSlick"
     v-bind="projectSlickSettings"
-    v-if="projects.length>1"
+    v-if="projects"
     class="align_center flex projects_list"
+    key="projects"
   >
     <fProject v-for="(project, index) in projects" :key="index"></fProject>
   </VueSlickCarousel>
@@ -18,6 +19,7 @@ export default {
       type: [Array, Object]
     }
   },
+
   data() {
     return {
       projectSlickSettings: {

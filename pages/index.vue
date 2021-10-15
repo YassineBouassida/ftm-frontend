@@ -4,29 +4,17 @@
     <section class="hero_container">
       <div class="hero flex container align_center">
         <div class="desc">
-          <h1 class="hero_text mb-3 desktop">
-            We are focused on
-            <br />your success!
-          </h1>
-          <p class="my-5">
-            Your project is complete but misses something?
-            <br />You only have an idea but still not concreted?
-          </p>
-          <h2 class="my-5">
-            Get ready for your next adventure
-            with Fiction To Mission!
-          </h2>
+          <h1 class="hero_text mb-3 desktop" v-html="$t('home.hero.h1')"></h1>
+          <p class="my-5" v-html="$t('home.hero.p')"></p>
+          <h2 class="my-5" v-html="$t('home.hero.h2')"></h2>
           <div class="flex ml-5 call_to_action_container">
             <fBtn link to="/contact" class="w-60 call_to_action bg_primary f_link text_white">
-              <h3 class="text_white">GET APPOINTMENT</h3>
+              <h3 class="text_white">{{$t('home.hero.btn')}}</h3>
             </fBtn>
           </div>
         </div>
         <div>
-          <h1 class="hero_text mb-3 mobile">
-            We are focused on
-            <br />your success!
-          </h1>
+          <h1 class="hero_text mb-3 mobile" v-html="$t('home.hero.h1')"></h1>
           <hero class="image"></hero>
         </div>
       </div>
@@ -34,47 +22,52 @@
     <!-- Cases section -->
     <section class="cases container flex column small_container">
       <div class="c_head txt_center">
-        <h1>We exist to help you improve your business</h1>
-        <p>Whether you are in the process of creating a website or you are looking to boost the attendance of your site, Fiction To Mission can offer you a personalized solution, adapted to your needs.</p>
+        <h1 v-html="$t('home.cases.h1')"></h1>
+        <p v-html="$t('home.cases.p')"></p>
       </div>
       <!-- First Case  -->
 
       <div class="case txt_right flex1 flex align_center space_between" id="case1">
         <div class="text_side mr-4">
           <div class="desc">
-            <h2 class="text_primary mb-3">In case of not having a website</h2>
-            <h4>
-              Your website can be available 24/7/365 even when you’re not, it will attract new customers
-              to your business, make you more money and add instant credibility to your project.
-            </h4>
+            <h2 class="text_primary mb-3" v-html="$t('home.cases.case1.h2')"></h2>
+            <p class="h4" v-html="$t('home.cases.case1.p')"></p>
           </div>
           <div class="desktop notice bg_lightGrey pa-3 flex align_center">
-            <p
-              class="subheading pr-4"
-            >Did you know that 81% of people research a business or service on the internet prior to making a purchase decision ! If you don’t have a website, you have no chance at capturing a share of this market.</p>
+            <p v-html="$t('home.cases.case1.notice')" class="subheading pr-4"></p>
             <img src="~static/img/notice.png" alt="notice" />
           </div>
         </div>
         <div>
-          <img src="~static/img/case1.png" alt="no website" class="fill_width img" />
+          <img
+            width="auto"
+            height="auto"
+            src="~static/img/case1.png"
+            alt="no website"
+            class="fill_width img"
+          />
         </div>
       </div>
       <!-- Second Case  -->
       <div class="case flex flex2 txt_left align_center center" id="case2">
         <div>
-          <img src="~static/img/case2.png" alt="no website" class="fill_width img" />
+          <img
+            width="auto"
+            height="auto"
+            src="~static/img/case2.png"
+            alt="no website"
+            class="fill_width img"
+          />
         </div>
         <div class="text_side ml-4">
           <div class="desc">
-            <h2 class="text_primary mb-3">In case of not having a website</h2>
-            <h4>
-              Your website can be available 24/7/365 even when you’re not, it will attract new customers
-              to your business, make you more money and add instant credibility to your project.
-            </h4>
+            <h2 class="text_primary mb-3" v-html="$t('home.cases.case2.h2')"></h2>
+            <p class="h4" v-html="$t('home.cases.case2.p')"></p>
           </div>
           <div class="desktop notice bg_lightGrey pa-3 flex align_center">
             <img src="~static/img/notice.png" alt="notice" />
             <p
+              v-html="$t('home.cases.case2.notice')"
               class="subheading pl-4"
             >Did you know that 81% of people research a business or service on the internet prior to making a purchase decision ! If you don’t have a website, you have no chance at capturing a share of this market.</p>
           </div>
@@ -169,7 +162,7 @@
             industry, the values ​​of your company and your target.
           </p>
         </div>
-        <fStepper :steps="deepFind(page,'Section.0.steps')"></fStepper>
+        <fStepper :steps="deepFind(pages,'0.Section.0.steps')"></fStepper>
       </div>
     </section>
     <!-- Idea To Solution -->
@@ -178,9 +171,9 @@
         <div class="w-50 absolute itsDesc">
           <h1 class="text_white mb-4">Fiction To Mission - Idea to solution</h1>
           <h2 class="text_white mb-3">Spark an idea and build a fire</h2>
-          <h4
-            class="text_white"
-          >We turn your ideas into successful projects by incorporating your vision. We like challenges that require technical solutions and original content. Our company develops both turnkey and custom solutions. Both are acceptable, depending on your goals and your budget.</h4>
+          <p
+            class="h4 text_white"
+          >We turn your ideas into successful projects by incorporating your vision. We like challenges that require technical solutions and original content. Our company develops both turnkey and custom solutions. Both are acceptable, depending on your goals and your budget.</p>
         </div>
         <div class="absolute features flex column align_center">
           <div
@@ -191,7 +184,7 @@
           >
             <img src="~static/img/key.png" alt="key" />
             <h3 class="text_white my-2 mt-4">{{idea.title}}</h3>
-            <h4 class="px-2 text_white txt_center my-2">{{idea.desc}}</h4>
+            <p class="h4 px-2 text_white txt_center my-2">{{idea.desc}}</p>
           </div>
           <div class="indicators flex align_center center mt-3">
             <span
@@ -219,7 +212,12 @@
           :key="index"
           :title="tech.title"
         >
-          <img :src="require(`~/static/img/icons/techs/${tech.icon}`)" :alt="tech.title" />
+          <img
+            width="auto"
+            height="auto"
+            :src="require(`~/static/img/icons/techs/${tech.icon}`)"
+            :alt="tech.title"
+          />
         </div>
       </VueSlickCarousel>
     </section>
@@ -264,6 +262,23 @@ import pageQuery from "~/apollo/queries/page/page";
 
 export default {
   components: { VueSlickCarousel },
+  head() {
+    return {
+      title: this.deepFind(this.pages, "0.seo.title"),
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: this.deepFind(this.pages, "0.seo.description")
+        },
+        {
+          hid: "keywords",
+          name: "keywords",
+          content: this.deepFind(this.pages, "0.seo.keywords")
+        }
+      ]
+    };
+  },
   apollo: {
     services: {
       prefetch: true,
@@ -278,11 +293,11 @@ export default {
         });
       }
     },
-    page: {
+    pages: {
       prefetch: true,
       query: pageQuery,
       variables() {
-        return { id: 1 };
+        return { slug: "home", locale: this.$i18n.locale };
       },
       watchLoading: function(isLoading) {
         this.$nextTick(() => {
@@ -397,7 +412,8 @@ export default {
   },
   mounted() {
     console.log(this.services);
-    console.log(this.page);
+    console.log(this.pages);
+    console.log(this.$i18n.localeProperties.dir);
 
     setTimeout(() => {
       this.projects = [{ id: 1 }, { id: 2 }, { id: 3 }];
@@ -794,6 +810,12 @@ section {
     }
   }
   @media (max-width: 767px) {
+    background: linear-gradient(
+        to bottom,
+        rgba(22, 19, 19, 0.52),
+        rgba(255, 237, 237, 0)
+      ),
+      url("~static/img/ideaToSolutionSm.jpg") no-repeat;
     .itsDesc {
       width: calc(100% - 2rem) !important;
     }

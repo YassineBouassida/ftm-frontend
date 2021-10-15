@@ -19,7 +19,8 @@
     <VueSlickCarousel
       v-bind="servicesSlickSettings"
       class="flex wrap center mobile"
-      v-if="services.length"
+      v-if="services"
+      key="services"
     >
       <serviceCard
         v-for="(service, index) in services"

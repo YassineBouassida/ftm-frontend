@@ -20,16 +20,25 @@ export default {
       }
     ],
     link: [{
-      rel: 'icon',
-      type: 'image/x-icon',
-      href: 'favicon/favicon.ico'
-    }]
+        rel: 'icon',
+        type: 'image/x-icon',
+        href: 'favicon/favicon.ico'
+      },
+
+    ]
   },
+  // render: {
+  //   bundleRenderer: {
+  //     shouldPreload: (file, type) => {
+  //       return ['script', 'style', 'font'].includes(type)
+  //     }
+  //   }
+  // },
   env: {
     strapiBaseUri: process.env.NODE_ENV == 'production' ? process.env.API_URL : "http://localhost:1337"
   },
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: ["~static/fonts/font.css", "~static/css/global.css"],
+  css: ["~static/css/global.css"],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
@@ -48,7 +57,7 @@ export default {
   ],
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: ['@nuxtjs/style-resources', ],
+  buildModules: ['@nuxtjs/style-resources', 'nuxt-compress'],
   styleResources: {
     scss: [
 
@@ -68,8 +77,110 @@ export default {
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
     '@nuxtjs/apollo',
+    'nuxt-compress',
+    '@nuxtjs/i18n',
+    ['@nuxtjs/html-minifier', {
+      log: 'once',
+      logHtml: true
+    }],
+    ['nuxt-font-loader-strategy', {
+      ignoreLighthouse: true,
+      ignoredEffectiveTypes: ['2g', 'slow-2g'],
+      fonts: [
+        // Font
+        {
+          fileExtensions: ['ttf'],
+          fontFamily: 'Open Sans Regular',
+          fontFaces: [
+            // Font-Face
+            {
+              preload: true,
+              local: ['Regular'],
+              src: '@/static/fonts/OpenSans-Regular',
+
+            },
+          ]
+        },
+        {
+          fileExtensions: ['ttf'],
+          fontFamily: 'Open Sans SemiBold',
+          fontFaces: [
+            // Font-Face
+            {
+              preload: true,
+              local: ['SemiBold'],
+              src: '@/static/fonts/OpenSans-SemiBold',
+
+            },
+          ]
+        },
+        {
+          fileExtensions: ['ttf'],
+          fontFamily: 'Open Sans Bold',
+          fontFaces: [
+            // Font-Face
+            {
+              preload: true,
+              local: ['Bold'],
+              src: '@/static/fonts/OpenSans-Bold',
+
+            },
+          ]
+        },
+        {
+          fileExtensions: ['ttf'],
+          fontFamily: 'Open Sans Light',
+          fontFaces: [
+            // Font-Face
+            {
+              preload: true,
+              local: ['Light'],
+              src: '@/static/fonts/OpenSans-Light',
+
+            },
+          ]
+        },
+
+      ]
+    }],
+
 
   ],
+  //Module nuxt compress
+  'nuxt-compress': {
+    gzip: {
+      threshold: 8192,
+    },
+    brotli: {
+      threshold: 8192,
+    },
+  },
+  //I18N Module
+  i18n: {
+    strategy: 'prefix',
+    defaultLocale: 'en',
+    langDir: 'locales/',
+    locales: [{
+        code: 'en',
+        iso: 'en-US',
+        file: 'en.json',
+        dir: 'ltr'
+      },
+      {
+        code: 'ar',
+        iso: 'ar-EG',
+        file: 'ar.json',
+        dir: 'rtl'
+      },
+      {
+        code: 'fr',
+        iso: 'fr-FR',
+        file: 'fr.json',
+        dir: 'ltr'
+      }, // Make sure that default locale is the last one!
+    ]
+  },
+  //Apollo module
   apollo: {
     clientConfigs: {
       default: {
@@ -88,5 +199,18 @@ export default {
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {}
+  build: {
+    optimization: {
+      splitChunks: {
+        chunks: 'async',
+      }
+    },
+    splitChunks: {
+      pages: false,
+      vendor: false,
+      commons: false,
+      runtime: false,
+      layouts: false
+    },
+  }
 }

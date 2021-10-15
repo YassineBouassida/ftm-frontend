@@ -16,12 +16,19 @@
     <div class="right_side flex" :class="{opened:openMenu}">
       <close class="close_sign" :reverse="!openMenu" @click.native="openMenu=false"></close>
       <div class="links flex align_center center">
-        <nuxt-link class="f_link mr-4" to="/">Home</nuxt-link>
-        <nuxt-link class="f_link mx-4" to="/about">About</nuxt-link>
-        <nuxt-link class="f_link mx-4" to="/#projects">Portfolio</nuxt-link>
-        <nuxt-link class="f_link ml-4" to="/#services">Services</nuxt-link>
+        <nuxt-link class="f_link mr-4" :to="localePath('/')">Home</nuxt-link>
+        <nuxt-link class="f_link mx-4" :to="localePath('/about')">About</nuxt-link>
+        <nuxt-link class="f_link mx-4" :to="localePath('/#projects')">Portfolio</nuxt-link>
+        <nuxt-link class="f_link ml-4" :to="localePath('/#services')">Services</nuxt-link>
       </div>
       <div class="flex social_part end">
+        <a
+          href="#"
+          class="mx-2"
+          v-for="locale in laguages"
+          :key="locale.code"
+          @click.prevent.stop="$i18n.setLocale(locale.val)"
+        >{{locale.text}}</a>
         <fBtn link :flat="true" to="/" class="mr-3 social_btn bg_primary flex align_center center">
           <img
             :src="require(`~/static/img/icons/social/facebook${openMenu?'_r':''}.png`)"
@@ -45,7 +52,12 @@
 export default {
   data() {
     return {
-      openMenu: false
+      openMenu: false,
+      laguages: [
+        { text: "en", val: "en" },
+        { text: "fr", val: "fr" },
+        { text: "ar", val: "ar" }
+      ]
     };
   },
   watch: {
