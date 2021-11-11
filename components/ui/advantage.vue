@@ -5,7 +5,12 @@
   >
     <div class="cover bg_primary absolute fill_height fill_width flex center column align_center">
       <div class>
-        <img :src="api_url+deepFind(advantage, 'image.url')" alt="tech providers" />
+        <img
+          width="auto"
+          height="auto"
+          :src="api_url+deepFind(advantage, 'image.url')"
+          alt="tech providers"
+        />
       </div>
       <h2 class="mt-2 text_white">{{deepFind(advantage, 'title')}}</h2>
     </div>
@@ -15,7 +20,7 @@
       </div>
       <div class="adv_desc ml-3">
         <h2 class="text_primary">{{deepFind(advantage, 'title')}}</h2>
-        <h4>{{deepFind(advantage, 'description')}}</h4>
+        <p class="h4">{{deepFind(advantage, 'description')}}</p>
       </div>
     </div>
   </div>
@@ -66,6 +71,13 @@ export default {
 @media (max-width: 1024px) {
   .advantage {
     width: 98%;
+  }
+}
+
+@media (max-width: 767px) {
+  
+  h2 {
+    font-size: 1.2rem;
   }
 }
 </style>

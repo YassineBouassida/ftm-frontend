@@ -1,11 +1,17 @@
 <template>
   <div class="tech_card flex column align_center">
     <div class="tech_image my-3">
-      <img class="w-90" :src="api_url+deepFind(stack, 'image.url')" alt="frontend" />
+      <img
+        width="auto"
+        height="auto"
+        class="w-90"
+        :src="api_url+deepFind(stack, 'image.url')"
+        alt="frontend"
+      />
     </div>
     <div>
       <h2 class="text_primary mb-2">{{stack.title}}</h2>
-      <h4>{{stack.description}}</h4>
+      <p class="h4">{{stack.description}}</p>
     </div>
   </div>
 </template>

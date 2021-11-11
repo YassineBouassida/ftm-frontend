@@ -5,27 +5,30 @@
       <div class="hero flex container align_center">
         <div class="desc">
           <h1 class="hero_text mb-3 desktop">
-            We are focused on
-            <br />your success!
+            {{$t('We are focused on')}}
+            <br />
+            {{$t('your success!')}}
           </h1>
-          <p class="my-5">
-            Your project is complete but misses something?
-            <br />You only have an idea but still not concreted?
-          </p>
-          <h2 class="my-5">
-            Get ready for your next adventure
-            with Fiction To Mission!
-          </h2>
+          <p
+            v-tr
+            class="my-5"
+          >Your project is complete but misses something? You only have an idea but still not concreted?</p>
+          <h2 v-tr class="my-5">Get ready for your next adventure with Fiction To Mission!</h2>
           <div class="flex ml-5 call_to_action_container">
-            <fBtn link to="/contact" class="w-60 call_to_action bg_primary f_link text_white">
-              <h3 class="text_white">GET APPOINTMENT</h3>
+            <fBtn
+              link
+              :to="localePath('/contact')"
+              class="w-60 call_to_action bg_primary f_link text_white"
+            >
+              <h3 v-tr class="text_white">GET APPOINTMENT</h3>
             </fBtn>
           </div>
         </div>
         <div>
           <h1 class="hero_text mb-3 mobile">
-            We are focused on
-            <br />your success!
+            {{$t('We are focused on')}}
+            <br />
+            {{$t('your success!')}}
           </h1>
           <hero class="image"></hero>
         </div>
@@ -34,49 +37,65 @@
     <!-- Cases section -->
     <section class="cases container flex column small_container">
       <div class="c_head txt_center">
-        <h1>We exist to help you improve your business</h1>
-        <p>Whether you are in the process of creating a website or you are looking to boost the attendance of your site, Fiction To Mission can offer you a personalized solution, adapted to your needs.</p>
+        <h1 v-tr>We exist to help you improve your business</h1>
+        <p
+          v-tr
+        >Whether you are in the process of creating a website or you are looking to boost the attendance of your site, Fiction To Mission can offer you a personalized solution, adapted to your needs.</p>
       </div>
       <!-- First Case  -->
 
       <div class="case txt_right flex1 flex align_center space_between" id="case1">
         <div class="text_side mr-4">
           <div class="desc">
-            <h2 class="text_primary mb-3">In case of not having a website</h2>
-            <h4>
-              Your website can be available 24/7/365 even when you’re not, it will attract new customers
-              to your business, make you more money and add instant credibility to your project.
-            </h4>
+            <h2 class="text_primary mb-3" v-tr>In case of not having a website</h2>
+            <p
+              class="h4"
+              v-tr
+            >Your website can be available 24/7/365 even when you’re not, it will attract new customers to your business, make you more money and add instant credibility to your project.</p>
           </div>
           <div class="desktop notice bg_lightGrey pa-3 flex align_center">
             <p
               class="subheading pr-4"
+              v-tr
             >Did you know that 81% of people research a business or service on the internet prior to making a purchase decision ! If you don’t have a website, you have no chance at capturing a share of this market.</p>
             <img src="~static/img/notice.png" alt="notice" />
           </div>
         </div>
         <div>
-          <img src="~static/img/case1.png" alt="no website" class="fill_width img" />
+          <img
+            width="auto"
+            height="auto"
+            src="~static/img/case1.png"
+            alt="no website"
+            class="fill_width img"
+          />
         </div>
       </div>
       <!-- Second Case  -->
       <div class="case flex flex2 txt_left align_center center" id="case2">
         <div>
-          <img src="~static/img/case2.png" alt="no website" class="fill_width img" />
+          <img
+            width="auto"
+            height="auto"
+            src="~static/img/case2.png"
+            alt="no website"
+            class="fill_width img"
+          />
         </div>
         <div class="text_side ml-4">
           <div class="desc">
-            <h2 class="text_primary mb-3">In case of not having a website</h2>
-            <h4>
-              Your website can be available 24/7/365 even when you’re not, it will attract new customers
-              to your business, make you more money and add instant credibility to your project.
-            </h4>
+            <h2 class="text_primary mb-3" v-tr>In case of having a website</h2>
+            <p
+              class="h4"
+              v-tr
+            >Than it is time to adapt your website with the latest trends in web design and development. Our mission is to bring life to your website again and help your organization build momentum; making your efforts easier and creating new opportunities.</p>
           </div>
           <div class="desktop notice bg_lightGrey pa-3 flex align_center">
             <img src="~static/img/notice.png" alt="notice" />
             <p
               class="subheading pl-4"
-            >Did you know that 81% of people research a business or service on the internet prior to making a purchase decision ! If you don’t have a website, you have no chance at capturing a share of this market.</p>
+              v-tr
+            >Do you think that your website isn’t good enough for your business ? Do you believe that your underperforming website can leave your company in the dust ?</p>
           </div>
         </div>
       </div>
@@ -85,8 +104,10 @@
     <section class="about bg_lightGrey">
       <div class="container">
         <div class="c_head txt_center">
-          <h1>About Us</h1>
-          <p>Our mission is to find optimal and innovative solutions for the greatest satisfaction of our clients with the help of our highly qualified and experienced team that combines passion, know-how and professionalism.</p>
+          <h1 v-tr>About Us</h1>
+          <p
+            v-tr
+          >Our mission is to find optimal and innovative solutions for the greatest satisfaction of our clients with the help of our highly qualified and experienced team that combines passion, know-how and professionalism.</p>
         </div>
         <div class="about_table flex">
           <div class="w-50 p1">
@@ -96,18 +117,20 @@
               </div>
               <div class="w-50 h-100 p12 part bg_white pa-3 tablette_and_down">
                 <div class="text">
-                  <h2>Research Team</h2>
+                  <h2 v-tr>Research Team</h2>
                   <p
                     class="subheading"
+                    v-tr
                   >Do not worry about TOMORROW. Our team is committed to keep up to date and develop creative ideas every day to offer you customizable, scalable and flexible websites.</p>
                 </div>
               </div>
               <!-- Only on small mobiles -->
               <div class="w-50 h-100 p13 part bg_white pa-3 tablette_and_up">
                 <div class="text">
-                  <h2>Experience</h2>
+                  <h2 v-tr>Experience</h2>
                   <p
                     class="subheading"
+                    v-tr
                   >Fiction To Mission has a Tunisian nationality and an international passport ! Here’s some of the projects we worked on and check out our most exciting experiences.</p>
                 </div>
               </div>
@@ -116,18 +139,20 @@
             <div class="flex h-50">
               <div class="w-50 h-100 p13 part bg_white pa-3 tablette_and_down">
                 <div class="text">
-                  <h2>Experience</h2>
+                  <h2 v-tr>Experience</h2>
                   <p
                     class="subheading"
+                    v-tr
                   >Fiction To Mission has a Tunisian nationality and an international passport ! Here’s some of the projects we worked on and check out our most exciting experiences.</p>
                 </div>
               </div>
               <!-- Only on small mobiles -->
               <div class="w-50 h-100 p12 part bg_white pa-3 tablette_and_up">
                 <div class="text">
-                  <h2>Research Team</h2>
+                  <h2 v-tr>Research Team</h2>
                   <p
                     class="subheading"
+                    v-tr
                   >Do not worry about TOMORROW. Our team is committed to keep up to date and develop creative ideas every day to offer you customizable, scalable and flexible websites.</p>
                 </div>
               </div>
@@ -144,6 +169,7 @@
             <div class="fill_width p22 h-20 part bg_white pa-3">
               <p
                 class="subheading"
+                v-tr
               >Today, Fiction To Mission operates in various activities ranging from website creation to mobile app development and social media communication.</p>
             </div>
           </div>
@@ -153,8 +179,10 @@
     <!-- Services section -->
     <section class="services container" id="services">
       <div class="c_head txt_center">
-        <h1>Services we provide</h1>
-        <p>We offer the full spectrum of digital services to help your business grow successfully.</p>
+        <h1 v-tr>Services we provide</h1>
+        <p
+          v-tr
+        >We offer the full spectrum of digital services to help your business grow successfully.</p>
       </div>
       <fServicesCarousel :services="services"></fServicesCarousel>
     </section>
@@ -162,25 +190,26 @@
     <section class="howItWorks bg_lightGrey">
       <div class="container">
         <div class="c_head txt_center">
-          <h2>How we do it ?</h2>
-          <h1 class="my-4">TECHNOLOGIES THAT WILL MOVE YOU TO THE TOP</h1>
-          <p>
+          <h2 v-tr>How we do it ?</h2>
+          <h1 class="my-4" v-tr>TECHNOLOGIES THAT WILL MOVE YOU TO THE TOP</h1>
+          <p v-tr>
             Fiction To Mission advises you and guides you towards the best web strategy to adopt according to your
             industry, the values ​​of your company and your target.
           </p>
         </div>
-        <fStepper :steps="deepFind(page,'Section.0.steps')"></fStepper>
+        <fStepper :steps="deepFind(pages,'0.Section.0.steps')"></fStepper>
       </div>
     </section>
     <!-- Idea To Solution -->
     <section class="ideaToSolution relative flex column">
       <div class="spark container relative flex2">
         <div class="w-50 absolute itsDesc">
-          <h1 class="text_white mb-4">Fiction To Mission - Idea to solution</h1>
-          <h2 class="text_white mb-3">Spark an idea and build a fire</h2>
-          <h4
-            class="text_white"
-          >We turn your ideas into successful projects by incorporating your vision. We like challenges that require technical solutions and original content. Our company develops both turnkey and custom solutions. Both are acceptable, depending on your goals and your budget.</h4>
+          <h1 class="text_white mb-4" v-tr>Fiction To Mission - Idea to solution</h1>
+          <h2 class="text_white mb-3" v-tr>Spark an idea and build a fire</h2>
+          <p
+            class="h4 text_white"
+            v-tr
+          >We turn your ideas into successful projects by incorporating your vision. We like challenges that require technical solutions and original content. Our company develops both turnkey and custom solutions. Both are acceptable, depending on your goals and your budget.</p>
         </div>
         <div class="absolute features flex column align_center">
           <div
@@ -191,7 +220,7 @@
           >
             <img src="~static/img/key.png" alt="key" />
             <h3 class="text_white my-2 mt-4">{{idea.title}}</h3>
-            <h4 class="px-2 text_white txt_center my-2">{{idea.desc}}</h4>
+            <p class="h4 px-2 text_white txt_center my-2">{{idea.desc}}</p>
           </div>
           <div class="indicators flex align_center center mt-3">
             <span
@@ -207,10 +236,10 @@
     </section>
     <!-- Technologies Section -->
     <section class="technologies container small_container flex align_center wrap">
-      <h2 class="flex0 fill_width txt_center mr-4">Technologies</h2>
+      <h2 class="flex0 fill_width txt_center mr-4" v-tr>Technologies</h2>
       <VueSlickCarousel
         v-bind="slickSettings"
-        v-if="technologies.length"
+        v-if="deepFind(technologies,'length')"
         class="flex2 tech_list flex align_center end"
       >
         <div
@@ -219,31 +248,46 @@
           :key="index"
           :title="tech.title"
         >
-          <img :src="require(`~/static/img/icons/techs/${tech.icon}`)" :alt="tech.title" />
+          <img
+            width="auto"
+            height="auto"
+            :src="require(`~/static/img/icons/techs/${tech.icon}`)"
+            :alt="tech.title"
+          />
         </div>
       </VueSlickCarousel>
     </section>
     <!-- Projects Section -->
-    <section class="projects bg_lightGrey relative flex" id="projects">
+    <section
+      v-if="deepFind(pages,'0.cases.length')"
+      class="projects bg_lightGrey relative flex"
+      id="projects"
+    >
       <div class="vertical_name flex align_baseline">
-        <h1 class="text_white">#PORTFOLIO</h1>
+        <h1 class="text_white" v-tr>#PORTFOLIO</h1>
       </div>
       <div class="projects_body">
         <div class="project_head w-50 mb-5">
-          <h1>Our latest cases</h1>
-          <p>The success of our partners is what truly defines us, but most importantly their TRUST. Check out some of our Tunisian and international partners we worked with.</p>
+          <h1 v-tr>Our latest cases</h1>
+          <p
+            v-tr
+          >The success of our partners is what truly defines us, but most importantly their TRUST. Check out some of our Tunisian and international partners we worked with.</p>
         </div>
-        <fProjects ref="projects" @projectChanged="selectedProject=$event" :projects="projects"></fProjects>
+        <fProjects
+          ref="projects"
+          @projectChanged="selectedProject=$event"
+          :projects="deepFind(pages,'0.cases')"
+        ></fProjects>
         <div class="project_footer flex mt-2">
           <div class="empty flex2"></div>
           <div class="mr-5 footer_desc flex align_center space_between flex1">
-            <h3>Want to be one of them ? Join us !</h3>
+            <h3 v-tr>Want to be one of them ? Join us !</h3>
             <div class="indicators flex align_center center">
               <span
                 @click="changeProjectSlick(index)"
                 :class="{active:selectedProject==index}"
                 class="mr-2 pointer"
-                v-for="(project, index) in projects"
+                v-for="(project, index) in deepFind(pages,'0.cases')"
                 :key="index"
               ></span>
             </div>
@@ -263,7 +307,25 @@ import servicesQuery from "~/apollo/queries/home/services";
 import pageQuery from "~/apollo/queries/page/page";
 
 export default {
+  name: "homePage",
   components: { VueSlickCarousel },
+  head() {
+    return {
+      title: this.deepFind(this.pages, "0.seo.title"),
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: this.deepFind(this.pages, "0.seo.description")
+        },
+        {
+          hid: "keywords",
+          name: "keywords",
+          content: this.deepFind(this.pages, "0.seo.keywords")
+        }
+      ]
+    };
+  },
   apollo: {
     services: {
       prefetch: true,
@@ -278,11 +340,11 @@ export default {
         });
       }
     },
-    page: {
+    pages: {
       prefetch: true,
       query: pageQuery,
       variables() {
-        return { id: 1 };
+        return { slug: "home", locale: this.$i18n.locale };
       },
       watchLoading: function(isLoading) {
         this.$nextTick(() => {
@@ -304,14 +366,16 @@ export default {
 
       ideas: [
         {
-          title: "turnKey",
-          desc:
+          title: this.$t("turnKey"),
+          desc: this.$t(
             "Ready-to-go, full package solutions which are easily deployed or implemented in your business. They are quickly built and they meet most of your needs with lower risks."
+          )
         },
         {
-          title: "From scratch",
-          desc:
+          title: this.$t("From scratch"),
+          desc: this.$t(
             "Personalized solution for your business through new technologies just to provide a cohesive solution to a your problem."
+          )
         }
       ],
       technologies: [
@@ -396,8 +460,9 @@ export default {
     }
   },
   mounted() {
-    console.log(this.services);
-    console.log(this.page);
+    // console.log(this.services);
+    // console.log(this.pages);
+    // console.log(this.$i18n.localeProperties.dir);
 
     setTimeout(() => {
       this.projects = [{ id: 1 }, { id: 2 }, { id: 3 }];
@@ -458,7 +523,7 @@ section {
       }
     }
     .call_to_action {
-      min-width: 60%;
+      min-width: 75%;
       margin-top: 5rem;
     }
     @media (max-width: 1024px) {
@@ -493,7 +558,7 @@ section {
       }
     }
     @media (max-width: 767px) {
-      min-height: calc(80vh - 60px);
+      min-height: auto;
     }
   }
 }
@@ -767,9 +832,9 @@ section {
       rgba(255, 237, 237, 0)
     ),
     url("~static/img/ideaToSolution.jpg") no-repeat;
-  background-position: center center;
-  background-size: cover;
-  background-attachment: fixed;
+  background-position: center center !important;
+  background-size: cover !important;
+  background-attachment: fixed !important;
   .features {
     width: 45rem;
     left: calc(50% - 22.5rem);
@@ -794,6 +859,12 @@ section {
     }
   }
   @media (max-width: 767px) {
+    background: linear-gradient(
+        to bottom,
+        rgba(22, 19, 19, 0.52),
+        rgba(255, 237, 237, 0)
+      ),
+      url("~static/img/ideaToSolutionSm.jpg") no-repeat;
     .itsDesc {
       width: calc(100% - 2rem) !important;
     }

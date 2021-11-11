@@ -1,5 +1,5 @@
 <template>
-  <button v-if="!link" class="btn" :disabled="disabled" :class="{flat:flat}">
+  <button aria-label="btn" v-if="!link" class="btn" :disabled="disabled" :class="{flat:flat}">
     <span v-if="!loading">
       <slot></slot>
     </span>

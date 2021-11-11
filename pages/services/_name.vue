@@ -8,7 +8,14 @@
         alt="elipse top"
         id="elipseTop"
       />
-      <img src="~static/img/services/path_top.svg" class="deco absolute" alt="path" id="pathLeft" />
+      <img
+        width="auto"
+        height="auto"
+        src="~static/img/services/path_top.svg"
+        class="deco absolute"
+        alt="path"
+        id="pathLeft"
+      />
       <img
         src="~static/img/services/elipse_bottom.svg"
         class="deco absolute"
@@ -17,14 +24,16 @@
       />
       <div class="flex container align_center relative fill_height hero_content">
         <div class="desc w-50">
-          <h1 class="hero_text mb-3 text_white">
-            We are focused on
-            <br class="br" />your success!
-          </h1>
+          <h1 class="hero_text mb-3 text_white" v-html="deepFind(this.serviceBySlug, 'hero.title')"></h1>
           <p class="my-5 text_white">{{deepFind(this.serviceBySlug, "hero.description")}}</p>
         </div>
         <div class="image flex1 flex align_center center">
-          <img :src="api_url+deepFind(this.serviceBySlug, 'hero.image.url')" alt />
+          <img
+            width="auto"
+            height="auto"
+            :src="api_url+deepFind(this.serviceBySlug, 'hero.image.url')"
+            alt
+          />
         </div>
       </div>
     </section>
@@ -41,9 +50,9 @@
             <h1 class="txt_right">{{deepFind(this.serviceBySlug, "cycle.title")}}</h1>
             <p class="txt_right">{{deepFind(this.serviceBySlug, "cycle.description")}}</p>
           </div>
-          <h4
-            class="notice text_white bg_primary txt_right py-2 px-5 mt-4"
-          >{{deepFind(this.serviceBySlug, "cycle.notice")}}</h4>
+          <p
+            class="h4 notice text_white bg_primary txt_right py-2 px-5 mt-4"
+          >{{deepFind(this.serviceBySlug, "cycle.notice")}}</p>
         </div>
         <div class="body flex flex2 pa-5 wrap">
           <subService
@@ -92,6 +101,7 @@
         <div class="c_head">
           <h2>WHY-FTM?</h2>
           <h1>{{deepFind(this.serviceBySlug, 'advantages.title')}}</h1>
+          <p v-html="deepFind(this.serviceBySlug, 'advantages.description')"></p>
         </div>
         <!-- Show only on desktop -->
         <div class="advantages my-4 flex wrap center desktop">
@@ -108,25 +118,17 @@
           ref="advantageSlick"
           @afterChange="afterAdvantageChange"
           v-bind="advantagesSlickSettings"
+          v-if="deepFind(this.serviceBySlug, 'advantages.list.length')"
           class="advantages my-4 flex wrap center mobile"
         >
-          <advantage
+          <externalAdvantage
             :advantage="advantage"
             v-for="(advantage, index) in deepFind(this.serviceBySlug, 'advantages.list')"
             :key="index"
             class="advantage mr-3 mt-3"
             :selected="selectedAdv==index"
-          ></advantage>
-          <template #prevArrow>
-            <div class="custom-arrow prev_arrow">
-              <img src="~static/img/icons/arrow_left.png" alt />
-            </div>
-          </template>
-          <template #nextArrow>
-            <div class="custom-arrow next_arrow">
-              <img src="~static/img/icons/arrow_right.png" alt />
-            </div>
-          </template>
+          ></externalAdvantage>
+
           <template #customPaging>
             <div class="custom-dot my-2"></div>
           </template>
@@ -153,7 +155,7 @@
                 :key="index"
               >
                 <img src="~static/img/icons/tick.svg" alt="tick" />
-                <h4 class="text_white ml-3">{{standard.text}}</h4>
+                <p class="h4 text_white ml-3">{{standard.text}}</p>
               </div>
             </div>
             <div class="standards_footer">
@@ -169,23 +171,23 @@
                 <h2 class="ml-3 text_white">{{deepFind(serviceBySlug, 'packages.0.details.title')}}</h2>
               </div>
               <div class="pack_body flex1 py-5">
-                <h4
-                  class="text_white my-3"
+                <p
+                  class="h4 text_white my-3"
                   v-html="deepFind(serviceBySlug, 'packages.0.details.descriptionHtml')"
-                ></h4>
+                ></p>
 
                 <div class="features_list py-2 px-3 bg_white mt-5">
-                  <h4 v-for="(item, index) in 5" :key="index">-5 pages</h4>
+                  <p class="h4" v-for="(item, index) in 5" :key="index">-5 pages</p>
                 </div>
               </div>
               <div class="pack_footer">
                 <div class="more_details flex space_between align_center">
-                  <h4
-                    class="text_white"
-                  >{{deepFind(serviceBySlug, 'packages.0.details.delivery')}} Days Delivery</h4>
-                  <h4
-                    class="text_white"
-                  >{{deepFind(serviceBySlug, 'packages.0.details.revisions') }} Revisions</h4>
+                  <p
+                    class="h4 text_white"
+                  >{{deepFind(serviceBySlug, 'packages.0.details.delivery')}} Days Delivery</p>
+                  <p
+                    class="h4 text_white"
+                  >{{deepFind(serviceBySlug, 'packages.0.details.revisions') }} Revisions</p>
                 </div>
                 <fBtn link to="/" class="fill_width mt-4 mb-3">
                   <h3>($ {{deepFind(serviceBySlug, 'packages.0.details.price')}}) Continue</h3>
@@ -244,6 +246,7 @@
   </div>
 </template>
 <script>
+import externalAdvantage from "~/components/ui/advantage";
 import VueSlickCarousel from "vue-slick-carousel";
 import serviceQuery from "~/apollo/queries/service/services";
 
@@ -265,7 +268,7 @@ export default {
       ]
     };
   },
-  components: { VueSlickCarousel },
+  components: { VueSlickCarousel, externalAdvantage },
   mounted() {
     console.log(this.serviceBySlug);
     console.log(this.deepFind(this.serviceBySlug, "hero.image.url"));
@@ -275,108 +278,9 @@ export default {
       expanded: false,
       selectedAdv: 0,
 
-      steps: [
-        {
-          title: "Planning",
-          description:
-            "It is the art of fulfilling successfully the different activities of your digital campaigns. That’s how we achieve goals in an efficient way. ",
-          icon: "planning",
-          link: "#"
-        },
-        {
-          title: " Content creation",
-          description: "We transform your ideas into resonant stories. ",
-          icon: "content",
-          link: "#"
-        },
-        {
-          title: "Prototyping",
-          description:
-            "We aim to create prototypes as realistic as possible, faithfully executed to the pixel.",
-          icon: "proto",
-          link: "#"
-        },
-        {
-          title: "Web Design",
-          description:
-            "We assure high quality web design that makes of your web pages respect your values and your digital identity.",
-          icon: "design",
-          link: "#"
-        },
-        {
-          title: "Coding",
-          description:
-            "Our strong coding skills contribute to a consistent client experience while ensuring high quality digital product.",
-          icon: "coding",
-          link: "#",
-          skills: [
-            {
-              name: "Experienced team",
-              description:
-                "We are focused on bringing value to our customers and on helping them succeed in the marketplace."
-            },
-            {
-              name: "Full-service web",
-              description:
-                "We are committed to supporting you over the long term: before, during and after the entire software development process."
-            },
-            {
-              name: "High quality service ",
-              description:
-                "You take advantage of our experiences, high quality IT solutions, and the most exciting experience with a long term partner."
-            }
-          ]
-        },
-        {
-          title: "Quality assurance",
-          description:
-            "Our exceptional and rigorous quality assurance methods, guarantee you the excellence of your digital products.",
-          icon: "quality",
-          link: "#"
-        },
-        {
-          title: "Presentation & launch",
-          description:
-            "We offer you exclusive and original presentations and launches ideas.",
-          icon: "launch",
-          link: "#"
-        },
-        {
-          title: "Support",
-          description:
-            "We support you with solutions before, throughout and after the whole process.",
-          icon: "support",
-          link: "#"
-        }
-      ],
-      services: [
-        {
-          title: "Digital Marketing",
-          desc:
-            "Social medias are also tools to make you known and allow you to create a dynamic with your customers by adding a participatory concept.",
-          icon: "marketing",
-          link: "#"
-        },
-
-        {
-          title: "Design",
-          desc:
-            "We help keeping your design and branding up to speed with what your target expects to see and make it more engaged.",
-          icon: "design",
-          link: "#"
-        },
-
-        {
-          title: "Ecommerce",
-          desc:
-            "We help allow you to quickly and simply offer online sales to your customers through innovative and interactive ecommerce websites.",
-          icon: "ecommerce",
-          link: "#"
-        }
-      ],
       advantagesSlickSettings: {
-        dots: false,
-        arrows: true,
+        dots: true,
+        arrows: false,
         dotsClass: "slick-dots custom-dot-class",
         edgeFriction: 0.35,
         infinite: true,
@@ -385,7 +289,7 @@ export default {
         slidesToScroll: 1,
         responsive: [
           {
-            breakpoint: 480,
+            breakpoint: 767,
             settings: {
               arrows: false,
               dots: true
@@ -596,9 +500,12 @@ export default {
     .intro {
       width: 80% !important;
     }
-    .sub_cat {
-      max-width: 20rem !important;
+    .body {
       justify-content: center;
+      .sub_cat {
+        max-width: 50% !important;
+        justify-content: center;
+      }
     }
   }
   @media (max-width: 767px) {
@@ -626,9 +533,11 @@ export default {
     .body {
       justify-content: center;
       text-align: center;
+      padding: 1.5rem !important;
       .sub_cat {
         box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16) !important;
         margin-bottom: 1rem;
+        max-width: 100% !important;
       }
     }
     .footer {
@@ -731,21 +640,21 @@ export default {
     }
   }
   @media (max-width: 1024px) {
+    min-height: auto;
     .advantage {
       width: 98%;
     }
   }
   @media (max-width: 767px) {
-    min-height: auto;
+    .advantage {
+      height: 22rem;
+    }
   }
   @media (max-width: 480px) {
     .c_head {
       h1 {
         font-size: 1.6rem !important;
       }
-    }
-    .advantage {
-      height: 18.75rem;
     }
   }
 }

@@ -19,9 +19,10 @@
     <VueSlickCarousel
       v-bind="servicesSlickSettings"
       class="flex wrap center mobile"
-      v-if="services.length"
+      v-if="deepFind(services,'length')"
+      key="services"
     >
-      <serviceCard
+      <externalServiceCard
         v-for="(service, index) in services"
         :key="index"
         :alwaysActive="true"
@@ -32,7 +33,7 @@
         :icon="service.icon.url"
         :iconHover="service.iconHover.url"
         :slug="service.slug"
-      ></serviceCard>
+      ></externalServiceCard>
       <template #prevArrow>
         <div class="custom-arrow prev_arrow">
           <img src="~static/img/icons/arrow_left.png" alt />
@@ -49,8 +50,9 @@
 </template>
 <script>
 import VueSlickCarousel from "vue-slick-carousel";
+import externalServiceCard from "~/components/ui/service-card";
 export default {
-  components: { VueSlickCarousel },
+  components: { VueSlickCarousel, externalServiceCard },
   data() {
     return {
       servicesSlickSettings: {
@@ -76,6 +78,9 @@ export default {
 .service_card {
   @media (max-width: 1641px) {
     width: 370px;
+  }
+  @media (max-width: 1200px) {
+    width: 315px;
   }
   @media (max-width: 1024px) {
     transition: none;

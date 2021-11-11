@@ -7,18 +7,15 @@
       </div>
     </div>
     <div class="answer bg_white pa-3" v-show="expanded">
-      <h4>
-       {{faq.answer}}
-      </h4>
+      <p class="h4" v-html="faq.answer"></p>
     </div>
   </div>
 </template>
 <script>
 export default {
-  props:{
-
-    faq:{
-      type:Object
+  props: {
+    faq: {
+      type: Object
     }
   },
   data() {

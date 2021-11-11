@@ -4,6 +4,16 @@
     locale
     title
     id
+    techStack {
+      id
+     
+      stacks {
+        id
+        title
+       
+        
+      }
+    }
     icon{url}
     iconHover{url}
     slug

@@ -25,10 +25,10 @@
                   class="hero_text text_white"
                   :class="{'text_small_to_big':!mission,'text_big_to_small':mission}"
                 >Mission</h1>
-                <h4
-                  class="subheading text_white"
+                <p
+                  class="h4 subheading text_white"
                   :class="{'text_small_to_big':mission,'text_big_to_small':!mission}"
-                >Vision</h4>
+                >Vision</p>
               </div>
             </div>
             <div class="w-50 flex end paragraph">
@@ -61,15 +61,21 @@
       <!-- First Case  -->
       <div class="case flex flex1 txt_left align_center center" id="case2">
         <div class="w-50">
-          <img src="~static/img/about/who_are_you.svg" alt="no website" class="fill_width img" />
+          <img
+            width="auto"
+            height="auto"
+            src="~static/img/about/who_are_you.svg"
+            alt="no website"
+            class="fill_width img"
+          />
         </div>
         <div class="text_side ml-4 w-50">
           <div class="desc">
             <h1 class="mb-3">In case of not having a website</h1>
-            <h4>
+            <p class="h4">
               Your website can be available 24/7/365 even when you’re not, it will attract new customers
               to your business, make you more money and add instant credibility to your project.
-            </h4>
+            </p>
           </div>
         </div>
       </div>
@@ -78,14 +84,20 @@
         <div class="text_side mr-4 w-50">
           <div class="desc">
             <h1 class="mb-3">In case of not having a website</h1>
-            <h4>
+            <p class="h4">
               Your website can be available 24/7/365 even when you’re not, it will attract new customers
               to your business, make you more money and add instant credibility to your project.
-            </h4>
+            </p>
           </div>
         </div>
         <div class="w-50">
-          <img src="~static/img/about/our_values.svg" alt="no website" class="fill_width img" />
+          <img
+            width="auto"
+            height="auto"
+            src="~static/img/about/our_values.svg"
+            alt="no website"
+            class="fill_width img"
+          />
         </div>
       </div>
     </section>
@@ -116,6 +128,8 @@
 </template>
 <script>
 export default {
+  name: "aboutPage",
+
   data() {
     return {
       mission: true
@@ -163,6 +177,7 @@ export default {
         font-size: initial;
         padding-left: 0.8rem;
         order: 2;
+        margin: 0;
       }
       .text_small_to_big {
         animation: text_small_to_big 2s forwards;

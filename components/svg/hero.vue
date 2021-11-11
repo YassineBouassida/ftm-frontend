@@ -3,8 +3,8 @@
     <svg
       xmlns="http://www.w3.org/2000/svg"
       xmlns:xlink="http://www.w3.org/1999/xlink"
-      width="1083.568"
-      height="806.013"
+      width="100%"
+      height="100%"
       viewBox="0 0 1083.568 806.013"
       class="hero"
     >

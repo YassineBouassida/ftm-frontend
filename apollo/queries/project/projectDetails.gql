@@ -1,0 +1,112 @@
+# Write your query or mutation here
+query Project($locale: String!, $slug: String!) {
+  projects(locale: $locale, where: { slug: $slug }, limit: 1) {
+    id
+    header {
+      id
+      cover {
+        name
+        url
+        previewUrl
+      }
+       logo {
+        name
+        url
+        previewUrl
+      }
+      title
+      description
+      start_date
+      finish_date
+      website
+      industries {
+        id
+        name
+        description
+      }
+    }
+    footer {
+      cases {
+        title
+        description
+        id
+      }
+      tags {
+        text
+        id
+      }
+      stafs {
+        position
+        displayname
+        social_url
+      }
+      tools {
+        id
+        name
+        image {
+          name
+          url
+          previewUrl
+        }
+      }
+    }
+    title
+    slug
+    preview_link
+     seo {
+      title
+      description
+      keywords
+      
+    }
+    component {
+      ... videoPart
+      ... EntityPart
+      ... CarouselPart
+    }
+  }
+}
+
+
+
+ fragment  CarouselPart  on ComponentProjectPartsCarousel {
+        __typename
+        id
+        carouselItem {
+          title
+          description
+          media {
+            name
+            url
+            previewUrl
+          }
+        }
+        title
+        description
+      }
+ fragment  videoPart on ComponentProjectPartsVideo {
+        __typename
+        id
+        video {
+          name
+          url
+          previewUrl
+        }
+        title
+        poster {
+          name
+          url
+          previewUrl
+        }
+      }
+ fragment  EntityPart on ComponentProjectPartsEntity {
+        __typename
+        id
+        title
+        description
+        media {
+          name
+          url
+          previewUrl
+        }
+      }

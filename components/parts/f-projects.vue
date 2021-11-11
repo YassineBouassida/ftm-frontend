@@ -3,21 +3,24 @@
     @beforeChange="beforeProjectChange"
     ref="projectSlick"
     v-bind="projectSlickSettings"
-    v-if="projects.length>1"
+    v-if="deepFind(projects,'length')"
     class="align_center flex projects_list"
+    key="projects"
   >
-    <fProject v-for="(project, index) in projects" :key="index"></fProject>
+    <externalFtmProject v-for="(project, index) in projects" :key="index" :project="project"></externalFtmProject>
   </VueSlickCarousel>
 </template>
 <script>
 import VueSlickCarousel from "vue-slick-carousel";
+import externalFtmProject from "~/components/parts/f-project"
 export default {
-  components: { VueSlickCarousel },
+  components: { VueSlickCarousel ,externalFtmProject},
   props: {
     projects: {
       type: [Array, Object]
     }
   },
+
   data() {
     return {
       projectSlickSettings: {

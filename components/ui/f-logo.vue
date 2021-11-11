@@ -1,7 +1,6 @@
 <template>
-  <div class="logo">
+  <div class="logo" :class="{dark:dark}">
     <svg xmlns="http://www.w3.org/2000/svg" width="143.999" height="40" viewBox="0 0 143.999 40">
-     
       <g transform="translate(-233 -51.223)">
         <g transform="translate(42.409 -337.543)">
           <path
@@ -33,10 +32,17 @@
   </div>
 </template>
 <script>
-export default {};
+export default {
+  props: {
+    dark: Boolean
+  }
+};
 </script>
 <style lang="scss" scoped>
- .logo .a {
-    fill: map-get($map: $colors, $key:primary );
-  }
+.logo .a {
+  fill: map-get($map: $colors, $key: primary);
+}
+.dark .a {
+  fill: map-get($map: $colors, $key: white) !important;
+}
 </style>
