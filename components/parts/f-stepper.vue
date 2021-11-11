@@ -28,7 +28,7 @@
       <h3 class="txt_right mb-2">A cocktail of skills !</h3>
       <div class="step_content elevate_1 bg_white pa-4">
         <!-- ***************Only on desktop************** -->
-        <VueSlickCarousel v-bind="slickSettings" @beforeChange="beforeSlideChange" class="mobile">
+        <VueSlickCarousel v-bind="slickSettings" v-if="deepFind(steps,'length')" @beforeChange="beforeSlideChange" class="mobile">
           <div
             class="flex pointer step align_center space_around"
             v-for="(step, index) in steps"
@@ -58,7 +58,7 @@
         </VueSlickCarousel>
         <!-- ***************************** -->
         <h2 class="text_primary">{{activeStep+1}}. {{steps[activeStep].title}}</h2>
-        <p>{{steps[activeStep].description}}</p>
+        <p v-html="steps[activeStep].description"></p>
         <div v-if="steps[activeStep].skills.length>0" class="divider my-4 bg_text2"></div>
         <div class="skills" v-if="steps[activeStep].skills.length>0">
           <div class="skills_toolbar flex">

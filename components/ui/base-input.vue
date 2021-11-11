@@ -5,6 +5,7 @@
       <strong class="text_primary" v-if="required">*</strong>
     </label>
     <input
+      @input="$emit('input', $event.target.value)"
       v-if="dataField=='input'"
       class="text data_field"
       :type="iType"
@@ -12,6 +13,7 @@
       :placeholder="placeholder"
     />
     <textarea
+      @input="$emit('input', $event.target.value)"
       :res="false"
       v-if="dataField=='textarea'"
       class="text data_field"
@@ -19,7 +21,7 @@
       :id="label"
       :placeholder="placeholder"
     ></textarea>
-    <select class="text data_field" v-if="dataField=='select'" :name="label" :id="label">
+    <select class="text data_field" v-if="dataField=='select'" :name="label" :id="label" @change="$emit('input', $event.target.value)" >
       <option :value="option.text" v-for="(option, index) in options" :key="index">{{option.text}}</option>
     </select>
   </div>

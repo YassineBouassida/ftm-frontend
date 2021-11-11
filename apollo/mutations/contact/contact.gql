@@ -1,0 +1,34 @@
+mutation createMessage(
+  $name: String!
+  $email: String!
+  $job: String!
+  $budget: String!
+  $deadline: String!
+  $industry: String!
+  $subject: String!
+) {
+  createMessage(
+    input: {
+      data: {
+        name: $name
+        email: $email
+        job_position: $job
+        budget: $budget
+        deadline: $deadline
+        industry: $industry
+        subject: $subject
+      }
+    }
+  ) {
+    message {
+      id
+      name
+      job_position
+      budget
+      industry
+      subject
+      email
+      deadline
+    }
+  }
+}

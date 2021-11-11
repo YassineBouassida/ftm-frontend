@@ -9,6 +9,7 @@ query Pages($locale:String!,$slug:String!) {
     }
     url
     name
+    cases{id image{name url} name quote preview_link client{name avatar{url name}} project_link }
     Section {
       ... on ComponentPartsProcess {
         id
@@ -23,6 +24,9 @@ query Pages($locale:String!,$slug:String!) {
             url
             __typename
           }
+           iconHover {
+          url
+        }
           skills {
             id
             name

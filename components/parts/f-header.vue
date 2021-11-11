@@ -2,33 +2,59 @@
   <div class="fill_width flex toolbar align_center">
     <!-- Brand side -->
     <div class="brand">
-      <fLogo class="logo"></fLogo>
+      <router-link tag="span" :to="localePath('/')" class="pointer">
+        <fLogo class="logo"></fLogo>
+      </router-link>
     </div>
-    <!-- Burger menu <1024px -->
-    <fBtn class="bg_primary burger" @click.native="openMenu=true">
-      <div class="flex column fill_height center">
-        <div class="line bg_white"></div>
-        <div class="line bg_white"></div>
-        <div class="line bg_white"></div>
+    <div class="flex align_center fill_height">
+      <div class="languages mr-4 flex">
+        <h3
+          class="mobile pointer flex align_center center mx-2 t-14"
+          :class="{'text_primary':locale.val==$i18n.locale,'text_text2':locale.val!=$i18n.locale}"
+          @click="$root.$i18n.setLocale(locale.val)"
+          v-for="locale in laguages"
+          :key="locale.code"
+        >
+          <span>{{locale.text}}</span>
+        </h3>
       </div>
-    </fBtn>
+      <!-- Burger menu <1024px -->
+      <fBtn class="bg_primary burger" @click.native="openMenu=true">
+        <div class="flex column fill_height center">
+          <div class="line bg_white"></div>
+          <div class="line bg_white"></div>
+          <div class="line bg_white"></div>
+        </div>
+      </fBtn>
+    </div>
     <!-- Right side and menu side <1024-->
     <div class="right_side flex" :class="{opened:openMenu}">
       <close class="close_sign" :reverse="!openMenu" @click.native="openMenu=false"></close>
       <div class="links flex align_center center">
-        <nuxt-link class="f_link mr-4" :to="localePath('/')">Home</nuxt-link>
-        <nuxt-link class="f_link mx-4" :to="localePath('/about')">About</nuxt-link>
-        <nuxt-link class="f_link mx-4" :to="localePath('/#projects')">Portfolio</nuxt-link>
-        <nuxt-link class="f_link ml-4" :to="localePath('/#services')">Services</nuxt-link>
+        <nuxt-link class="f_link mr-4" :to="localePath('/')" v-tr>Home</nuxt-link>
+        <nuxt-link class="f_link mx-4" :to="localePath('/about')" v-tr>About</nuxt-link>
+        <nuxt-link class="f_link mx-4" :to="localePath('/#projects')" v-tr>Portfolio</nuxt-link>
+        <nuxt-link class="f_link ml-4" :to="localePath('/services')" v-tr>Services</nuxt-link>
+      </div>
+      <div class="flex align_center relative desktop">
+        <h3
+          class="pointer flex align_center center"
+          :alt="$i18n.locale"
+          @click="dropdownOpened=!dropdownOpened"
+        >
+          <span>{{$i18n.locale.toUpperCase()}}</span>
+        </h3>
+        <div class="flex column dropdown" v-if="dropdownOpened">
+          <a
+            href="#"
+            class="my-2 flex align_center text_text3"
+            v-for="locale in laguages"
+            :key="locale.code"
+            @click.prevent.stop="$root.$i18n.setLocale(locale.val);"
+          >{{locale.text}}</a>
+        </div>
       </div>
       <div class="flex social_part end">
-        <a
-          href="#"
-          class="mx-2"
-          v-for="locale in laguages"
-          :key="locale.code"
-          @click.prevent.stop="$i18n.setLocale(locale.val)"
-        >{{locale.text}}</a>
         <fBtn link :flat="true" to="/" class="mr-3 social_btn bg_primary flex align_center center">
           <img
             :src="require(`~/static/img/icons/social/facebook${openMenu?'_r':''}.png`)"
@@ -41,8 +67,8 @@
             alt="instagram"
           />
         </fBtn>
-        <fBtn link to="/contact" class="quote_btn bg_primary f_link">
-          <h3 class="text_white">GET A QUOTE</h3>
+        <fBtn link :to="localePath('/contact')" class="quote_btn bg_primary f_link">
+          <h3 class="text_white" v-tr>GET A QUOTE</h3>
         </fBtn>
       </div>
     </div>
@@ -53,10 +79,11 @@ export default {
   data() {
     return {
       openMenu: false,
+      dropdownOpened: false,
       laguages: [
-        { text: "en", val: "en" },
-        { text: "fr", val: "fr" },
-        { text: "ar", val: "ar" }
+        { text: "EN", val: "en", icon: "en.svg" },
+        { text: "FR", val: "fr", icon: "fr.svg" }
+        // { text: "ar", val: "ar", icon: "ar.svg" }
       ]
     };
   },
@@ -64,6 +91,16 @@ export default {
     $route: {
       handler: function(route) {
         this.openMenu = false;
+        this.dropdownOpened = false;
+      },
+      deep: true,
+      immediate: false
+    },
+    "$i18n.locale": {
+      handler: function(locale) {
+        setTimeout(() => {
+          window.location.reload(true);
+        }, 500);
       },
       deep: true,
       immediate: false
@@ -72,6 +109,11 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+.languages {
+  h3 {
+    text-transform: uppercase;
+  }
+}
 .toolbar {
   height: 80px;
   @media (max-width: 1024px) {
@@ -121,7 +163,7 @@ export default {
     background: map-get($map: $colors, $key: primary);
     flex-direction: column;
     justify-content: space-between;
-    z-index: 5;
+    z-index: 200;
     transition: 1s all;
     &.opened {
       right: 0;
@@ -203,5 +245,22 @@ export default {
   .quote_btn {
     width: 200px;
   }
+}
+.flag {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  border: 2px solid #333333;
+}
+.dropdown {
+  position: absolute;
+  bottom: -230%;
+  left: -2.2rem;
+  width: 6rem;
+  align-items: center;
+  background: map-get($map: $colors, $key: lightGrey);
+  border-radius: 0 0 9px 9px;
+  transition: 0.5s all;
+  z-index: 999;
 }
 </style>

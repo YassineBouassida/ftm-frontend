@@ -128,6 +128,8 @@
 </template>
 <script>
 export default {
+  name: "aboutPage",
+
   data() {
     return {
       mission: true
@@ -175,6 +177,7 @@ export default {
         font-size: initial;
         padding-left: 0.8rem;
         order: 2;
+        margin: 0;
       }
       .text_small_to_big {
         animation: text_small_to_big 2s forwards;

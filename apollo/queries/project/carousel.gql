@@ -1,0 +1,15 @@
+ fragment  carousel on ComponentProjectPartsVideo {
+        __typename
+        id
+        video {
+          name
+          url
+          previewUrl
+        }
+        title
+        poster {
+          name
+          url
+          previewUrl
+        }
+      }

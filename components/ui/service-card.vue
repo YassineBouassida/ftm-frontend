@@ -32,7 +32,7 @@
     </div>
     <div class="s_footer txt_right">
       <nuxt-link
-        :to="`/services/${slug}`"
+        :to="localePath(`/services/${slug}`)"
         class="a text_primary mr-3"
         :style="{visibility:!(serviceHovered||alwaysActive)?'hidden':'visible'}"
       >Load more</nuxt-link>

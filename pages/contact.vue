@@ -70,6 +70,7 @@
           </div>
           <form class="w-50">
             <base-input
+              v-model="form.name"
               iType="text"
               data-field="input"
               class="my-2"
@@ -78,6 +79,7 @@
               placeholder="Full name"
             ></base-input>
             <base-input
+              v-model="form.email"
               iType="email"
               class="my-2"
               label="Email"
@@ -86,6 +88,7 @@
               data-field="input"
             ></base-input>
             <base-input
+              v-model="form.job"
               class="my-2"
               data-field="select"
               :options="industries"
@@ -94,6 +97,7 @@
               placeholder="Please select"
             ></base-input>
             <base-input
+              v-model="form.budget"
               iType="text"
               class="my-2"
               label="Budget"
@@ -102,6 +106,7 @@
               data-field="input"
             ></base-input>
             <base-input
+              v-model="form.deadline"
               class="my-2"
               data-field="input"
               label="Deadline"
@@ -110,6 +115,7 @@
               placeholder="12/31/1996"
             ></base-input>
             <base-input
+              v-model="form.industry"
               class="my-2"
               data-field="select"
               :options="industries"
@@ -118,6 +124,7 @@
               placeholder="Please select"
             ></base-input>
             <base-input
+              v-model="form.subject"
               iType="textarea"
               class="my-2"
               label="Subject"
@@ -125,6 +132,11 @@
               placeholder="Full name"
               data-field="textarea"
             ></base-input>
+            <div class="flex align_center end mt-4">
+              <fBtn @click.native="submitForm" class="call_to_action bg_primary f_link text_white">
+                <h3 class="text_white px-5 w-40">Submit</h3>
+              </fBtn>
+            </div>
           </form>
         </div>
       </div>
@@ -132,9 +144,19 @@
   </div>
 </template>
 <script>
+import createMessage from "~/apollo/mutations/contact/contact";
 export default {
   data() {
     return {
+      form: {
+        name: "",
+        email: "",
+        job: "",
+        budget: "",
+        deadline: "",
+        industry: "",
+        subject: ""
+      },
       industries: [
         { text: "Please select", val: "" },
         { text: "Agriculture, forestry and fishing", val: "" },
@@ -181,6 +203,21 @@ export default {
         }
       ]
     };
+  },
+  methods: {
+    submitForm() {
+      this.$apollo.mutate({
+        mutation: createMessage,
+        variables: {
+          ...this.form
+        },
+        update: (cache, { data: { message } }) => {
+          // Read the data from our cache for this query.
+          // eslint-disable-next-line
+          console.log(message);
+        }
+      });
+    }
   }
 };
 </script>

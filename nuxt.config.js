@@ -17,12 +17,45 @@ export default {
       {
         name: 'format-detection',
         content: 'telephone=no'
+      },
+      {
+        name: 'msapplication-TileColor',
+        content: '#ffffff'
+      },
+      {
+        name: 'theme-color',
+        content: '#ffffff'
       }
     ],
     link: [{
         rel: 'icon',
         type: 'image/x-icon',
         href: 'favicon/favicon.ico'
+      },
+      {
+        rel: 'apple-touch-icon',
+        type: 'image/png',
+        href: 'favicon/apple-touch-icon.png',
+        sizes: "144x144"
+      },
+      {
+        rel: 'icon',
+        type: 'image/png',
+        href: 'favicon/favicon-32x32.png',
+        sizes: "32x32"
+      },
+      {
+        rel: 'icon',
+        type: 'image/png',
+        href: 'favicon/favicon-16x16.png',
+        sizes: "16x16"
+      },
+
+      {
+        rel: 'mask-icon',
+        href: 'favicon/safari-pinned-tab.svg',
+        color: '#DF2B2C'
+
       },
 
     ]
@@ -79,6 +112,8 @@ export default {
     '@nuxtjs/apollo',
     'nuxt-compress',
     '@nuxtjs/i18n',
+    '@nuxtjs/sentry',
+    'nuxt-i18n-easy',
     ['@nuxtjs/html-minifier', {
       log: 'once',
       logHtml: true
@@ -160,32 +195,46 @@ export default {
     strategy: 'prefix',
     defaultLocale: 'en',
     langDir: 'locales/',
+    skipSettingLocaleOnNavigate: true,
+    skipNuxtState: true,
+    detectBrowserLanguage: {
+      useCookie: true,
+      alwaysRedirect: true
+    },
     locales: [{
         code: 'en',
         iso: 'en-US',
-        file: 'en.json',
+        file: 'en.js',
         dir: 'ltr'
       },
       {
         code: 'ar',
         iso: 'ar-EG',
-        file: 'ar.json',
+        file: 'ar.js',
         dir: 'rtl'
       },
       {
         code: 'fr',
         iso: 'fr-FR',
-        file: 'fr.json',
+        file: 'fr.js',
         dir: 'ltr'
       }, // Make sure that default locale is the last one!
     ]
   },
+  i18nEasy: {
+    directories: [ // default directories for search
+      './layouts',
+      './pages',
+      './components'
+    ],
+    files: ['*.vue', '*.js'], // default files
+    sourceLanguage: 'en', // default source language
+  },
   //Apollo module
   apollo: {
+    includeNodeModules: true,
     clientConfigs: {
-      default: {
-        httpEndpoint: 'http://localhost:1337/graphql'
-      }
+      default: '@/apollo/configs/default.js'
     }
   },
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -194,12 +243,18 @@ export default {
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
     manifest: {
-      lang: 'en'
+      lang: 'en',
     }
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+
+    extend(config, ctx) {
+      config.node = {
+        fs: 'empty'
+      }
+    },
     optimization: {
       splitChunks: {
         chunks: 'async',

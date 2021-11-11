@@ -171,6 +171,10 @@ body {
   align-items: center;
 }
 
+.align_end {
+  align-items: end;
+}
+
 .align_baseline {
   align-items: baseline;
 }
@@ -272,12 +276,32 @@ body {
 
   }
 
-  @media (min-width: 768px) and (max-width: 1024px) {
+  @media (min-width: 975px) and (max-width: 1024px) {
+    width: 930px !important;
+
+  }
+
+  @media (min-width: 870px) and (max-width: 975px) {
+    width: 830px !important;
+
+  }
+
+  @media (min-width: 768px) and (max-width: 870px) {
     width: 730px !important;
 
   }
 
-  @media (min-width: 481px) and (max-width: 767px) {
+  @media (min-width: 660px) and (max-width: 767px) {
+    width: 620px !important;
+
+  }
+
+  @media (min-width: 560px) and (max-width: 660px) {
+    width: 520px !important;
+
+  }
+
+  @media (min-width: 481px) and (max-width: 560px) {
     width: 440px !important;
 
   }
@@ -316,7 +340,7 @@ body {
 
 html {
   font-size: 16px;
-  background: #FBFBFB;
+  background: map-get($map: $colors, $key:lightGrey);
 
   @media (max-width: 1440px) {
     font-size: 15px;

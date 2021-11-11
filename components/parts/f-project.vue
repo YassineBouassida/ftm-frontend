@@ -1,20 +1,28 @@
 <template>
   <div class="project flex align_center">
     <div class="p_cover flex2">
-      <img src="~static/img/ideaToSolution.png" alt />
+      <img :src="api_url+project.image.url" :alt="project.image.name" />
     </div>
     <div class="p_content flex1">
       <h2 class="flex align_baseline space_between mr-5 ml-4">
         Not Just Clients. Partners & Friends.
-        <span class="subheading pointer">View</span>
+        <router-link
+          :to="localePath(project.project_link)"
+          tag="span"
+          class="subheading pointer"
+        >View</router-link>
       </h2>
       <div class="p_card elevate_1 pa-3 relative flex align_center bg_white">
         <div class="flex align_center fill_height p_card_container">
-          <div class="p_avatar mr-3"></div>
+          <div
+            class="p_avatar mr-3"
+            :style="{backgroundImage:`url(${api_url + project.client.avatar.url})`}"
+          ></div>
           <div>
-            <h2 class="text_primary mb-2">Project Name</h2>
+            <h2 class="text_primary mb-2">{{project.name}}</h2>
             <p class="mt-2">
-              <strong>Tarek Meslameni</strong>: of our partners is what truly defines us, but most importantly their TRUST. Check out some of our Tunisian and international partners we worked with.
+              <strong>{{project.client.name}}</strong>
+              : {{project.quote}}
             </p>
           </div>
         </div>
@@ -23,7 +31,11 @@
   </div>
 </template>
 <script>
-export default {};
+export default {
+  props: {
+    project: Object
+  }
+};
 </script>
 <style lang="scss" scoped>
 .project {
@@ -53,6 +65,9 @@ export default {};
     }
   }
   .p_avatar {
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
     width: 9.5rem;
     height: 9.5rem;
     @media (max-width: 1440px) {

@@ -7,7 +7,7 @@
       </div>
     </div>
     <div class="answer bg_white pa-3" v-show="expanded">
-      <p class="h4">{{faq.answer}}</p>
+      <p class="h4" v-html="faq.answer"></p>
     </div>
   </div>
 </template>
