@@ -19,7 +19,14 @@
             :style="{backgroundImage:`url(${api_url + project.client.avatar.url})`}"
           ></div>
           <div>
-            <h2 class="text_primary mb-2">{{project.name}}</h2>
+            <h2 class="text_primary mb-2 flex align_center space_between">
+              {{project.name}}
+              <router-link
+                :to="localePath(project.project_link)"
+                tag="span"
+                class="subheading pointer view_link"
+              >View</router-link>
+            </h2>
             <p class="mt-2">
               <strong>{{project.client.name}}</strong>
               : {{project.quote}}
@@ -39,6 +46,9 @@ export default {
 </script>
 <style lang="scss" scoped>
 .project {
+  .view_link {
+    visibility: hidden;
+  }
   .p_content {
     & > h2 {
       position: relative;
@@ -108,6 +118,11 @@ export default {
   }
 }
 @media (max-width: 767px) {
+  .project {
+    .view_link {
+      visibility: visible;
+    }
+  }
   .p_content {
     & > h2 {
       display: none !important;

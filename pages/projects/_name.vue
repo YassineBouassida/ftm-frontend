@@ -70,20 +70,14 @@ export default {
   }
 };
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 section {
   border-radius: 9px;
+  &:last-of-type {
+    border-radius: 9px 9px 0 0;
+  }
 }
-.overlay_light {
-  background: rgba(0, 0, 0, 0.5);
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border-radius: inherit;
-  top: 0;
-  left: 0;
-  z-index: 5;
-}
+
 
 .body {
   padding-right: 3rem !important;

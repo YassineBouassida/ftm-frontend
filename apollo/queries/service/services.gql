@@ -1,6 +1,6 @@
 # Write your query or mutation here
-query Service($slug: String!) {
-  serviceBySlug(slug: $slug) {
+query Service($locale:String!,$slug: String!) {
+  services(locale:$locale where: {slug:$slug} limit:1) {
     services {
       locale
       title

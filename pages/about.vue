@@ -142,7 +142,7 @@ export default {
   }
 };
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 .hero {
   min-height: calc(100vh - 80px);
   background: linear-gradient(#fff 0%, #f2f2f2 100%);

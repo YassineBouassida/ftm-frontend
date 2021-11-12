@@ -62,8 +62,5 @@ export default {
   'Our mission is to find optimal and innovative solutions for the greatest satisfaction of our clients with the help of our highly qualified': 'Notre mission est de trouver des solutions optimales et innovantes pour la plus grande satisfaction de nos clients avec l\'aide de notre personnel hautement qualifié.',
   'Request Free Consultation Here.': 'Demandez une consultation gratuite ici.',
   'Useful links': 'Liens utiles',
-  'help figuring it out? We can help!': 'aider à le comprendre? Nous pouvons aider!',
-  'Don\'t worry, we are here to help': 'Ne vous inquiétez pas, nous sommes là pour vous aider',
-  'Home page': 'Page d\'accueil',
-  'Something went wrong': 'Quelque chose s\'est mal passé'
+  'help figuring it out? We can help!': 'aider à le comprendre? Nous pouvons aider!'
 }

@@ -5,7 +5,6 @@
       @beforeChange="beforeSlideChange"
       v-if="deepFind(variables,'carouselItem.length')"
       v-bind="settings"
-      class="flex wrap center"
     >
       <div
         v-for="(item, index) in deepFind(variables,'carouselItem')"

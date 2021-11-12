@@ -1,7 +1,7 @@
 <template>
   <div
     class="service flex column start"
-    :class="{elevate_1:serviceHovered ||alwaysActive}"
+    :class="{elevate_1:serviceHovered ||alwaysActive,bg_white:serviceHovered ||alwaysActive}"
     @mouseenter="serviceHovered=true"
     @mouseleave="serviceHovered=false"
   >

@@ -28,6 +28,7 @@
     <div class="flex align_center space_between my-3 column_container">
       <div class="footer_cases w-40 footer_column">
         <h2>CASES</h2>
+        <div class="step_separator bg_text1"></div>
         <div class="steps_caroussel">
           <VueSlickCarousel
             @beforeChange="beforeSlideChange"
@@ -37,8 +38,7 @@
             ref="casesSlick"
           >
             <div v-for="(cas, index) in deepFind(variables,'cases')" :key="index">
-              <div class="steps_head flex align_center space_between">
-                <div class="step_separator bg_text1"></div>
+              <div class="steps_head flex align_center end">
                 <h3 class="text_primary">{{cas.title}}</h3>
               </div>
               <div class="step_body">
@@ -61,7 +61,7 @@
         <h2>CREDITS</h2>
         <p class="h4" v-for="(staf, index) in deepFind(variables,'stafs')" :key="index">
           <span>{{staf.position}}</span>:
-          <span>{{staf.displayname}}</span>
+          <a :href="staf.social_url" target="blank" class="text_text1">{{staf.displayname}}</a>
         </p>
       </div>
       <div class="tools footer_column w-30" v-if="deepFind(variables,'tools')">
@@ -103,8 +103,8 @@ export default {
     }
   },
   methods: {
-    beforeSlideChange(newVal,next) {
-      console.log(newVal,next);
+    beforeSlideChange(newVal, next) {
+      console.log(newVal, next);
 
       this.activeSlide = next;
     },

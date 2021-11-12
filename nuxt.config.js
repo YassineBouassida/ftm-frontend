@@ -25,35 +25,54 @@ export default {
       {
         name: 'theme-color',
         content: '#ffffff'
+      },
+      {
+        name: "facebook-domain-verification",
+        content: "t9erw8clhkri7tsm3y7djmszq4heel"
       }
     ],
     link: [{
         rel: 'icon',
         type: 'image/x-icon',
-        href: 'favicon/favicon.ico'
+        href: '/favicon/favicon-32x32.png'
       },
       {
         rel: 'apple-touch-icon',
         type: 'image/png',
-        href: 'favicon/apple-touch-icon.png',
+        href: '/favicon/apple-touch-icon.png',
         sizes: "144x144"
       },
       {
         rel: 'icon',
         type: 'image/png',
-        href: 'favicon/favicon-32x32.png',
-        sizes: "32x32"
+        href: '/favicon/favicon-32x32.png',
+        sizes: "32x32",
+
       },
       {
         rel: 'icon',
         type: 'image/png',
-        href: 'favicon/favicon-16x16.png',
+        href: '/favicon/favicon-16x16.png',
         sizes: "16x16"
+      },
+      {
+        rel: 'shortcut icon',
+        type: 'image/png',
+        href: '/favicon/favicon.ico',
+        sizes: "32x32",
+
+      },
+      {
+        rel: 'manifest',
+
+        href: '/favicon/manifest.json',
+
+
       },
 
       {
         rel: 'mask-icon',
-        href: 'favicon/safari-pinned-tab.svg',
+        href: '/favicon/safari-pinned-tab.svg',
         color: '#DF2B2C'
 
       },
@@ -243,8 +262,76 @@ export default {
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
     manifest: {
+
       lang: 'en',
-    }
+      "icons": [{
+          "source": "~/static/favicon/favicon-96x96.png",
+          "sizes": "96x96",
+          "type": "image/png",
+          "purpose": "any maskable"
+        },
+        {
+          "source": "~/static/favicon/favicon-32x32.png",
+          "sizes": "32x32",
+          "type": "image/png",
+          "purpose": "any maskable"
+        },
+        {
+          "source": "~/static/favicon/favicon-16x16.png",
+          "sizes": "16x16",
+          "type": "image/png",
+          "purpose": "any maskable"
+        },
+        {
+          "source": "~/static/favicon/apple-icon-57x57.png",
+          "sizes": "57x57",
+          "type": "image/png",
+          "purpose": "apple-touch-icon"
+        },
+        {
+          "source": "~/static/favicon/apple-icon-60x60.png",
+          "sizes": "60x60",
+          "type": "image/png",
+          "purpose": "apple-touch-icon"
+        },
+        {
+          "source": "~/static/favicon/apple-icon-72x72.png",
+          "sizes": "72x72",
+          "type": "image/png",
+          "purpose": "apple-touch-icon"
+        },
+        {
+          "source": "~/static/favicon/apple-icon-76x76.png",
+          "sizes": "76x76",
+          "type": "image/png",
+          "purpose": "apple-touch-icon"
+        },
+        {
+          "source": "~/static/favicon/apple-icon-120x120.png",
+          "sizes": "120x120",
+          "type": "image/png",
+          "purpose": "apple-touch-icon"
+        },
+        {
+          "source": "~/static/favicon/apple-icon-144x144.png",
+          "sizes": "144x144",
+          "type": "image/png",
+          "purpose": "apple-touch-icon"
+        },
+        {
+          "source": "~/static/favicon/apple-icon-152x152.png",
+          "sizes": "152x152",
+          "type": "image/png",
+          "purpose": "apple-touch-icon"
+        },
+        {
+          "source": "~/static/favicon/apple-icon-180x180.png",
+          "sizes": "180x180",
+          "type": "image/png",
+          "purpose": "apple-touch-icon"
+        },
+      ],
+    },
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
