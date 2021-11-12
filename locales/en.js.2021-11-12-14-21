@@ -59,8 +59,5 @@ export default {
   'Our mission is to find optimal and innovative solutions for the greatest satisfaction of our clients with the help of our highly qualified': 'Our mission is to find optimal and innovative solutions for the greatest satisfaction of our clients with the help of our highly qualified',
   'Request Free Consultation Here.': 'Request Free Consultation Here.',
   'Useful links': 'Useful links',
-  'help figuring it out? We can help!': 'help figuring it out? We can help!',
-  'Don\'t worry, we are here to help': 'Don\'t worry, we are here to help',
-  'Home page': 'Home page',
-  'Something went wrong': 'Something went wrong'
+  'help figuring it out? We can help!': 'help figuring it out? We can help!'
 }

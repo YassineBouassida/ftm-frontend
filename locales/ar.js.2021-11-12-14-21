@@ -62,8 +62,5 @@ export default {
   'Our mission is to find optimal and innovative solutions for the greatest satisfaction of our clients with the help of our highly qualified': 'مهمتنا هي إيجاد الحلول المثلى والمبتكرة لتحقيق أكبر قدر من الرضا لعملائنا بمساعدة من لدينا المؤهلين تأهيلا عاليا',
   'Request Free Consultation Here.': 'اطلب استشارة مجانية هنا.',
   'Useful links': 'روابط مفيدة',
-  'help figuring it out? We can help!': 'تساعد في معرفة ذلك؟ نستطيع المساعدة!',
-  'Don\'t worry, we are here to help': 'لا تقلق ، نحن هنا للمساعدة',
-  'Home page': 'الصفحة الرئيسية',
-  'Something went wrong': 'هناك خطأ ما'
+  'help figuring it out? We can help!': 'تساعد في معرفة ذلك؟ نستطيع المساعدة!'
 }

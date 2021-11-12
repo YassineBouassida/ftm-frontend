@@ -113,17 +113,16 @@
       <div class="c_body">
         <div class="services_list flex space_between wrap">
           <div class="service w-25 my-4" v-for="(service, key) in services" :key="key">
-            <h2 class="text_primary txt_center">{{deepFind(service, 'title')}}</h2>
+            <router-link
+              :to="`services/${deepFind(service, 'slug')}`"
+              tag="h2"
+              class="text_primary txt_center pointer"
+            >{{deepFind(service, 'title')}}</router-link>
             <h4
               v-for="(stack, index) in deepFind(service, 'techStack.stacks')"
               :key="index"
               class="txt_center my-3"
             >{{stack.title}}</h4>
-            <router-link
-              :to="`services/${deepFind(service, 'slug')}`"
-              class="txt_center my-3 text_primary pointer"
-              tag="h4"
-            >Visit</router-link>
           </div>
         </div>
       </div>

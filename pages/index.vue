@@ -177,7 +177,7 @@
       </div>
     </section>
     <!-- Services section -->
-    <section class="services container" id="services">
+    <section class="services container flex column" id="services">
       <div class="c_head txt_center">
         <h1 v-tr>Services we provide</h1>
         <p
@@ -236,11 +236,11 @@
     </section>
     <!-- Technologies Section -->
     <section class="technologies container small_container flex align_center wrap">
-      <h2 class="flex0 fill_width txt_center mr-4" v-tr>Technologies</h2>
+      <h2 class="flex1 fill_width txt_center mr-4" v-tr>Technologies</h2>
       <VueSlickCarousel
         v-bind="slickSettings"
         v-if="deepFind(technologies,'length')"
-        class="flex2 tech_list flex align_center end"
+        class="flex2 tech_list"
       >
         <div
           class="tech bg_lightGrey flex align_center center ml-4"
@@ -565,10 +565,8 @@ section {
 
 //**Cases */
 .cases {
-  min-height: 200vh;
-  @media (min-height: 1080px) {
-    min-height: 1600px;
-  }
+  min-height: 1600px;
+
   .c_head {
     width: 50rem;
     margin-right: auto;
@@ -714,9 +712,9 @@ section {
 }
 //How it works part
 .howItWorks {
-  min-height: 100vh;
+  min-height: auto;
   @media (min-height: 1080px) {
-    min-height: 1080px;
+    min-height: auto;
   }
   .c_head {
     width: 50rem;
@@ -912,10 +910,8 @@ section {
 }
 //projects part
 .projects {
-  min-height: calc(100vh - 300px);
-  @media (min-height: 1080px) {
-    min-height: 780px;
-  }
+  min-height: 620px;
+
   padding-right: 8.75rem;
   @media (max-width: 1640px) {
     padding-bottom: 4rem;
@@ -941,6 +937,9 @@ section {
   }
   .projects_list {
     overflow: hidden;
+  }
+  ::v-deep .slick-list {
+    width: 100%;
   }
   .project_footer {
     position: relative;

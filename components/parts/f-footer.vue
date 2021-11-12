@@ -8,19 +8,22 @@
       <div class="flex1 links_block useful_link">
         <h2 class="text_text2" v-tr>Useful links</h2>
         <div class="usefull_links">
-          <nuxt-link to="#" class="a text_text2 my-3" tag="div">Home</nuxt-link>
-          <nuxt-link to="#" class="a text_text2 my-3" tag="div">About</nuxt-link>
-          <nuxt-link to="#" class="a text_text2 my-3" tag="div">Portfolio</nuxt-link>
-          <nuxt-link to="#" class="a text_text2 my-3" tag="div">Services</nuxt-link>
+          <nuxt-link :to="localePath('/')" class="a text_text2 my-3" tag="div">Home</nuxt-link>
+          <nuxt-link :to="localePath('/about')" class="a text_text2 my-3" tag="div">About</nuxt-link>
+          <nuxt-link :to="localePath('/#projects')" class="a text_text2 my-3" tag="div">Portfolio</nuxt-link>
+          <nuxt-link :to="localePath('/services')" class="a text_text2 my-3" tag="div">Services</nuxt-link>
         </div>
       </div>
       <div class="flex1 links_block services">
         <h2 class="text_text2" v-tr>Services</h2>
         <div class="usefull_links">
-          <nuxt-link to="#" class="a text_text2 my-3" tag="div">Home</nuxt-link>
-          <nuxt-link to="#" class="a text_text2 my-3" tag="div">About</nuxt-link>
-          <nuxt-link to="#" class="a text_text2 my-3" tag="div">Portfolio</nuxt-link>
-          <nuxt-link to="#" class="a text_text2 my-3" tag="div">Services</nuxt-link>
+          <nuxt-link
+            :to="localePath(`/services/${service.slug}`)"
+            class="a text_text2 my-3"
+            tag="div"
+            v-for="(service, index) in services"
+            :key="index"
+          >{{service.title}}</nuxt-link>
         </div>
       </div>
       <div class="flex1 links_block contact_us">
@@ -126,15 +129,36 @@
       <div class="flex align_center space_between container fill_height">
         <h3 class="text_white">Fiction To Mission</h3>
         <div class="static_links flex align_center">
-          <nuxt-link to="#" tag="h3" class="pointer text_white mr-4">Privacy policy</nuxt-link>
-          <nuxt-link to="#" tag="h3" class="pointer text_white mr-4">Cookies</nuxt-link>
+          <nuxt-link
+            :to="localePath('/privacy-policy')"
+            tag="h3"
+            class="pointer text_white mr-4"
+          >Privacy policy</nuxt-link>
+          <nuxt-link :to="localePath('/cookies')" tag="h3" class="pointer text_white mr-4">Cookies</nuxt-link>
         </div>
       </div>
     </div>
   </footer>
 </template>
 <script>
+import servicesQuery from "~/apollo/queries/home/services";
+
 export default {
+  apollo: {
+    services: {
+      prefetch: true,
+      query: servicesQuery,
+      watchLoading: function(isLoading) {
+        this.$nextTick(() => {
+          if (this.$nuxt && this.$nuxt.$loading) {
+            isLoading
+              ? this.$nuxt.$loading.start()
+              : setTimeout(() => this.$nuxt.$loading.finish(), 1500);
+          }
+        });
+      }
+    }
+  },
   head() {
     return {
       __dangerouslyDisableSanitizers: ["script"],
@@ -217,6 +241,9 @@ export default {
       order: 2;
     }
     .services {
+      .usefull_links {
+        flex-wrap: wrap;
+      }
       order: 4;
     }
     .contact_us {

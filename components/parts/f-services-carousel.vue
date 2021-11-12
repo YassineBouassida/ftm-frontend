@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="services_wrapper">
     <!-- ***************Only on desktop and tablet************** -->
     <div class="flex wrap center desktop mt-5">
       <serviceCard
@@ -75,6 +75,11 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+.services_wrapper {
+  display: flex;
+  align-items: center;
+  flex: 2;
+}
 .service_card {
   @media (max-width: 1641px) {
     width: 370px;
@@ -104,6 +109,9 @@ export default {
   .slick-slider {
     display: block !important;
   }
+  .services_wrapper {
+    display: block;
+  }
 }
 .custom-arrow {
   border-radius: 50%;
@@ -114,6 +122,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 99;
   &::before {
     display: none !important;
   }

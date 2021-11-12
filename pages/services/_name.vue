@@ -217,7 +217,10 @@
     </section>
     <!-- ********************************* -->
     <!-- Related Services -->
-    <section class="related_services bg_white py-4">
+    <section
+      class="related_services bg_white py-4"
+      v-if=" deepFind(serviceBySlug, 'services.length')"
+    >
       <div class="container">
         <div class="c_head">
           <h1 class="mb-2">We offer you more</h1>
@@ -273,6 +276,11 @@ export default {
     console.log(this.serviceBySlug);
     console.log(this.deepFind(this.serviceBySlug, "hero.image.url"));
   },
+  computed: {
+    serviceBySlug() {
+      return this.deepFind(this.services, "0");
+    }
+  },
   data() {
     return {
       expanded: false,
@@ -300,11 +308,11 @@ export default {
     };
   },
   apollo: {
-    serviceBySlug: {
+    services: {
       prefetch: true,
       query: serviceQuery,
       variables() {
-        return { slug: this.$route.params.name };
+        return { slug: this.$route.params.name, locale: this.$i18n.locale };
       },
       watchLoading: function(isLoading) {
         this.$nextTick(() => {
