@@ -34,72 +34,20 @@
         </div>
       </div>
     </section>
-    <!-- Cases section -->
-    <section class="cases container flex column small_container">
-      <div class="c_head txt_center">
-        <h1 v-tr>We exist to help you improve your business</h1>
-        <p
-          v-tr
-        >Whether you are in the process of creating a website or you are looking to boost the attendance of your site, Fiction To Mission can offer you a personalized solution, adapted to your needs.</p>
-      </div>
-      <!-- First Case  -->
 
-      <div class="case txt_right flex1 flex align_center space_between" id="case1">
-        <div class="text_side mr-4">
-          <div class="desc">
-            <h2 class="text_primary mb-3" v-tr>In case of not having a website</h2>
-            <p
-              class="h4"
-              v-tr
-            >Your website can be available 24/7/365 even when you’re not, it will attract new customers to your business, make you more money and add instant credibility to your project.</p>
-          </div>
-          <div class="desktop notice bg_lightGrey pa-3 flex align_center">
-            <p
-              class="subheading pr-4"
-              v-tr
-            >Did you know that 81% of people research a business or service on the internet prior to making a purchase decision ! If you don’t have a website, you have no chance at capturing a share of this market.</p>
-            <img src="~static/img/notice.png" alt="notice" />
-          </div>
+    <!-- Services section -->
+    <section class="services bg_white" id="services">
+      <div class="container flex column">
+        <div class="c_head txt_center">
+          <h1 v-tr>Services we provide</h1>
+          <p
+            v-tr
+          >We offer the full spectrum of digital services to help your business grow successfully.</p>
         </div>
-        <div>
-          <img
-            width="auto"
-            height="auto"
-            src="~static/img/case1.png"
-            alt="no website"
-            class="fill_width img"
-          />
-        </div>
-      </div>
-      <!-- Second Case  -->
-      <div class="case flex flex2 txt_left align_center center" id="case2">
-        <div>
-          <img
-            width="auto"
-            height="auto"
-            src="~static/img/case2.png"
-            alt="no website"
-            class="fill_width img"
-          />
-        </div>
-        <div class="text_side ml-4">
-          <div class="desc">
-            <h2 class="text_primary mb-3" v-tr>In case of having a website</h2>
-            <p
-              class="h4"
-              v-tr
-            >Than it is time to adapt your website with the latest trends in web design and development. Our mission is to bring life to your website again and help your organization build momentum; making your efforts easier and creating new opportunities.</p>
-          </div>
-          <div class="desktop notice bg_lightGrey pa-3 flex align_center">
-            <img src="~static/img/notice.png" alt="notice" />
-            <p
-              class="subheading pl-4"
-              v-tr
-            >Do you think that your website isn’t good enough for your business ? Do you believe that your underperforming website can leave your company in the dust ?</p>
-          </div>
-        </div>
+        <fServicesCarousel :services="services"></fServicesCarousel>
       </div>
     </section>
+
     <!-- About us section -->
     <section class="about bg_lightGrey">
       <div class="container">
@@ -176,15 +124,73 @@
         </div>
       </div>
     </section>
-    <!-- Services section -->
-    <section class="services container flex column" id="services">
-      <div class="c_head txt_center">
-        <h1 v-tr>Services we provide</h1>
-        <p
-          v-tr
-        >We offer the full spectrum of digital services to help your business grow successfully.</p>
+    <!-- Cases section -->
+    <section class="cases bg_white">
+      <div class="container flex column small_container">
+        <div class="c_head txt_center">
+          <h1 v-tr>We exist to help you improve your business</h1>
+          <p
+            v-tr
+          >Whether you are in the process of creating a website or you are looking to boost the attendance of your site, Fiction To Mission can offer you a personalized solution, adapted to your needs.</p>
+        </div>
+        <!-- First Case  -->
+
+        <div class="case txt_right flex1 flex align_center space_between" id="case1">
+          <div class="text_side mr-4">
+            <div class="desc">
+              <h2 class="text_primary mb-3" v-tr>In case of not having a website</h2>
+              <p
+                class="h4"
+                v-tr
+              >Your website can be available 24/7/365 even when you’re not, it will attract new customers to your business, make you more money and add instant credibility to your project.</p>
+            </div>
+            <div class="desktop notice bg_lightGrey pa-3 flex align_center">
+              <p
+                class="subheading pr-4"
+                v-tr
+              >Did you know that 81% of people research a business or service on the internet prior to making a purchase decision ! If you don’t have a website, you have no chance at capturing a share of this market.</p>
+              <img src="~static/img/notice.png" alt="notice" />
+            </div>
+          </div>
+          <div>
+            <img
+              width="auto"
+              height="auto"
+              src="~static/img/case1.png"
+              alt="no website"
+              class="fill_width img"
+            />
+          </div>
+        </div>
+        <!-- Second Case  -->
+        <div class="case flex flex2 txt_left align_center center" id="case2">
+          <div>
+            <img
+              width="auto"
+              height="auto"
+              src="~static/img/case2.png"
+              alt="no website"
+              class="fill_width img"
+            />
+          </div>
+          <div class="text_side ml-4">
+            <div class="desc">
+              <h2 class="text_primary mb-3" v-tr>In case of having a website</h2>
+              <p
+                class="h4"
+                v-tr
+              >Than it is time to adapt your website with the latest trends in web design and development. Our mission is to bring life to your website again and help your organization build momentum; making your efforts easier and creating new opportunities.</p>
+            </div>
+            <div class="desktop notice bg_lightGrey pa-3 flex align_center">
+              <img src="~static/img/notice.png" alt="notice" />
+              <p
+                class="subheading pl-4"
+                v-tr
+              >Do you think that your website isn’t good enough for your business ? Do you believe that your underperforming website can leave your company in the dust ?</p>
+            </div>
+          </div>
+        </div>
       </div>
-      <fServicesCarousel :services="services"></fServicesCarousel>
     </section>
     <!-- How we do it section -->
     <section class="howItWorks bg_lightGrey">
@@ -270,6 +276,7 @@
         <div class="project_head w-50 mb-5">
           <h1 v-tr>Our latest cases</h1>
           <p
+            class="px-2"
             v-tr
           >The success of our partners is what truly defines us, but most importantly their TRUST. Check out some of our Tunisian and international partners we worked with.</p>
         </div>
@@ -330,6 +337,9 @@ export default {
     services: {
       prefetch: true,
       query: servicesQuery,
+      variables() {
+        return { locale: this.$i18n.locale };
+      },
       watchLoading: function(isLoading) {
         this.$nextTick(() => {
           if (this.$nuxt && this.$nuxt.$loading) {
@@ -439,8 +449,8 @@ export default {
           {
             breakpoint: 480,
             settings: {
-              slidesToShow: 2,
-              slidesToScroll: 2,
+              slidesToShow: 3,
+              slidesToScroll: 3,
               dots: false
             }
           }

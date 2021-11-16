@@ -10,8 +10,8 @@
       />
     </div>
     <div>
-      <h2 class="text_primary mb-2">{{stack.title}}</h2>
-      <p class="h4">{{stack.description}}</p>
+      <h2 class="text_primary mb-2" v-html="stack.title"></h2>
+      <p class="h4" v-html="stack.description"></p>
     </div>
   </div>
 </template>

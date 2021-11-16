@@ -12,6 +12,7 @@
         :icon="service.icon.url"
         :iconHover="service.iconHover.url"
         :slug="service.slug"
+        @click.native="redirectToService(service.slug)"
       ></serviceCard>
     </div>
     <!-- ***************************** -->
@@ -33,8 +34,12 @@
         :icon="service.icon.url"
         :iconHover="service.iconHover.url"
         :slug="service.slug"
+        @click.native="redirectToService(service.slug)"
       ></externalServiceCard>
-      <template #prevArrow>
+      <template #customPaging>
+        <div class="custom-dot my-2"></div>
+      </template>
+      <!-- <template #prevArrow>
         <div class="custom-arrow prev_arrow">
           <img src="~static/img/icons/arrow_left.png" alt />
         </div>
@@ -43,7 +48,7 @@
         <div class="custom-arrow next_arrow">
           <img src="~static/img/icons/arrow_right.png" alt />
         </div>
-      </template>
+      </template>-->
     </VueSlickCarousel>
     <!-- ***************************** -->
   </div>
@@ -56,11 +61,11 @@ export default {
   data() {
     return {
       servicesSlickSettings: {
-        dots: false,
-        arrows: true,
+        dots: true,
+        arrows: false,
         dotsClass: "slick-dots custom-dot-class",
         edgeFriction: 0.35,
-        speed: 500,
+        speed: 1000,
         slidesToShow: 1,
         slidesToScroll: 1,
         infinite: true
@@ -70,6 +75,11 @@ export default {
   props: {
     services: {
       type: [Array, Object]
+    }
+  },
+  methods: {
+    redirectToService(slug) {
+      this.$router.push(this.localePath(`/services/${slug}`));
     }
   }
 };
@@ -111,6 +121,20 @@ export default {
   }
   .services_wrapper {
     display: block;
+  }
+}
+::v-deep .custom-dot-class.slick-dots {
+  margin: 8px 0;
+}
+.custom-dot {
+  border-radius: 50%;
+  width: 1rem;
+  height: 1rem;
+  border: 3px solid map-get($map: $colors, $key: lightGrey);
+}
+.slick-active {
+  .custom-dot {
+    background: map-get($map: $colors, $key: primary);
   }
 }
 .custom-arrow {

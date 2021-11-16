@@ -1,6 +1,6 @@
 <template>
   <div
-    class="service flex column start"
+    class="service flex column space_around"
     :class="{elevate_1:serviceHovered ||alwaysActive,bg_white:serviceHovered ||alwaysActive}"
     @mouseenter="serviceHovered=true"
     @mouseleave="serviceHovered=false"
@@ -30,12 +30,17 @@
         :style="{visibility:!(serviceHovered||alwaysActive)?'hidden':'visible'}"
       >{{desc}}</p>
     </div>
-    <div class="s_footer txt_right">
+    <div class="s_footer txt_right flex align_center end">
       <nuxt-link
         :to="localePath(`/services/${slug}`)"
-        class="a text_primary mr-3"
+        class="a bg_primary mr-3 load_more_btn flex align_center center"
         :style="{visibility:!(serviceHovered||alwaysActive)?'hidden':'visible'}"
-      >Load more</nuxt-link>
+      >
+        <span v-tr class="text_white">Load more</span>
+        <span class="circle_load flex align_center center ml-2">
+          <img src="~static/img/icons/feather-arrow-right.png" alt />
+        </span>
+      </nuxt-link>
     </div>
   </div>
 </template>
@@ -75,7 +80,29 @@ export default {
 <style lang="scss" scoped>
 .service {
   @media (max-width: 1024px) {
-    justify-content: center;
+    justify-content: space-around;
+    .s_footer {
+      justify-content: center;
+      .load_more_btn {
+        width: 80%;
+        margin-right: 0 !important;
+      }
+    }
+  }
+}
+.load_more_btn {
+  height: 30px;
+  width: 10rem;
+  border-radius: 5px;
+  .circle_load {
+    width: 20px;
+    height: 20px;
+    // border: 2px solid map-get($map: $colors, $key: white);
+    border-radius: 50%;
+    overflow: hidden;
+    img {
+      animation: lineUp 1.5s both infinite cubic-bezier(0, 0.6, 1, 0.4);
+    }
   }
 }
 .s_icon {
@@ -114,6 +141,14 @@ export default {
         max-height: 100%;
       }
     }
+  }
+}
+@keyframes lineUp {
+  0% {
+    transform: translateX(-30px);
+  }
+  100% {
+    transform: translateX(40px);
   }
 }
 </style>

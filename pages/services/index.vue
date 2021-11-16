@@ -7,7 +7,7 @@
           <h1 class="hero_text text_white">
             <span v-tr>OUR SERVICES</span>
             <br />
-            <span class="flex align_baseline">
+            <span class="flex align_baseline" v-tr>
               <div class="separator bg_text1 mr-3"></div>EFFECTIVELY
             </span>
           </h1>
@@ -21,6 +21,7 @@
               <h1 v-tr class="w-50 txt_right">WHY WORK WITH US</h1>
               <p
                 class="w-50 txt_right"
+                v-tr
               >Your business needs to look professional & coherent so it can be perceived as serious as it deserves, this means clearly more opportunities & higher revenue.</p>
             </div>
             <div class="voices flex align_center space_between w-90">
@@ -28,19 +29,19 @@
                 <div class="voice flex align_center center">
                   <img src="~/static/img/services/precession.png" alt="precession" />
                 </div>
-                <h2 class="text_primary mt-3">PRECESSION</h2>
+                <h2 class="text_primary mt-3" v-tr>PRECESSION</h2>
               </div>
               <div class="flex align_center column">
                 <div class="voice flex align_center center">
                   <img src="~static/img/services/management.png" alt="precession" />
                 </div>
-                <h2 class="text_primary mt-3">TEAM-MANAGEMENT</h2>
+                <h2 class="text_primary mt-3" v-tr>TEAM-MANAGEMENT</h2>
               </div>
               <div class="flex align_center column">
                 <div class="voice flex align_center center">
                   <img src="~static/img/services/perfection.png" alt="precession" />
                 </div>
-                <h2 class="text_primary mt-3">PERFECTION</h2>
+                <h2 class="text_primary mt-3" v-tr>PERFECTION</h2>
               </div>
             </div>
           </div>
@@ -164,16 +165,37 @@ import servicesQuery from "~/apollo/queries/home/services";
 
 export default {
   name: "servicesPage",
+  head() {
+    return {
+      title: "Services",
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content:
+            "Your business needs to look professional & coherent so it can be perceived as serious as it deserves, this means clearly more opportunities & higher revenue."
+        },
+        {
+          hid: "keywords",
+          name: "keywords",
+          content: "precession,team-management,perfection"
+        }
+      ]
+    };
+  },
   apollo: {
     services: {
       prefetch: true,
       query: servicesQuery,
+      variables() {
+        return { locale: this.$i18n.locale };
+      },
       watchLoading: function(isLoading) {
         this.$nextTick(() => {
           if (this.$nuxt && this.$nuxt.$loading) {
             isLoading
               ? this.$nuxt.$loading.start()
-              : setTimeout(() => this.$nuxt.$loading.finish(), 1500);
+              : this.$nuxt.$loading.finish();
           }
         });
       }

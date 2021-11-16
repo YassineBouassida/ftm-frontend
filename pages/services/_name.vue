@@ -25,7 +25,7 @@
       <div class="flex container align_center relative fill_height hero_content">
         <div class="desc w-50">
           <h1 class="hero_text mb-3 text_white" v-html="deepFind(this.serviceBySlug, 'hero.title')"></h1>
-          <p class="my-5 text_white">{{deepFind(this.serviceBySlug, "hero.description")}}</p>
+          <p class="my-5 text_white" v-html="deepFind(this.serviceBySlug, 'hero.description')"></p>
         </div>
         <div class="image flex1 flex align_center center">
           <img
@@ -47,12 +47,12 @@
             <div class="separator bg_primary relative"></div>
           </div>
           <div class="title_part pr-5">
-            <h1 class="txt_right">{{deepFind(this.serviceBySlug, "cycle.title")}}</h1>
-            <p class="txt_right">{{deepFind(this.serviceBySlug, "cycle.description")}}</p>
+            <h1 class="txt_right" v-html="deepFind(this.serviceBySlug, 'cycle.title')"></h1>
+            <p class="txt_right" v-html="deepFind(this.serviceBySlug, 'cycle.description')"></p>
           </div>
           <p
             class="h4 notice text_white bg_primary txt_right py-2 px-5 mt-4"
-          >{{deepFind(this.serviceBySlug, "cycle.notice")}}</p>
+          v-html="deepFind(this.serviceBySlug, 'cycle.notice')" ></p>
         </div>
         <div class="body flex flex2 pa-5 wrap">
           <subService
@@ -63,7 +63,7 @@
           ></subService>
         </div>
         <div class="footer mx-5">
-          <p>{{deepFind(this.serviceBySlug, "cycle.footer")}}</p>
+          <p v-html="deepFind(this.serviceBySlug, 'cycle.footer')"></p>
         </div>
       </div>
     </section>
@@ -71,8 +71,8 @@
     <!-- Technology stack section -->
     <section class="tech_stack container">
       <div class="tech_desc">
-        <h1>{{deepFind(this.serviceBySlug, 'techStack.title')}}</h1>
-        <p>{{deepFind(this.serviceBySlug, 'techStack.description')}}</p>
+        <h1 v-html="deepFind(this.serviceBySlug, 'techStack.title')"></h1>
+        <p v-html="deepFind(this.serviceBySlug, 'techStack.description')"></p>
       </div>
       <div class="tech_content mt-5 flex align_center space_between wrap">
         <serviceTech
@@ -100,7 +100,7 @@
       <div class="container">
         <div class="c_head">
           <h2>WHY-FTM?</h2>
-          <h1>{{deepFind(this.serviceBySlug, 'advantages.title')}}</h1>
+          <h1 v-html="deepFind(this.serviceBySlug, 'advantages.title')"></h1>
           <p v-html="deepFind(this.serviceBySlug, 'advantages.description')"></p>
         </div>
         <!-- Show only on desktop -->

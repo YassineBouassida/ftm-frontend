@@ -12,15 +12,15 @@
           alt="tech providers"
         />
       </div>
-      <h2 class="mt-2 text_white">{{deepFind(advantage, 'title')}}</h2>
+      <h2 class="mt-2 text_white" v-html="deepFind(advantage, 'title')"></h2>
     </div>
     <div class="flex relative adv_content pa-3">
       <div class="tick bg_redLight flex align_center center">
         <img src="~static/img/icons/tick.svg" alt />
       </div>
       <div class="adv_desc ml-3">
-        <h2 class="text_primary">{{deepFind(advantage, 'title')}}</h2>
-        <p class="h4">{{deepFind(advantage, 'description')}}</p>
+        <h2 class="text_primary" v-html="deepFind(advantage, 'title')"></h2>
+        <p class="h4" v-html="deepFind(advantage, 'description')"></p>
       </div>
     </div>
   </div>
@@ -75,7 +75,6 @@ export default {
 }
 
 @media (max-width: 767px) {
-  
   h2 {
     font-size: 1.2rem;
   }

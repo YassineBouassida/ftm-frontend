@@ -146,6 +146,24 @@
 <script>
 import createMessage from "~/apollo/mutations/contact/contact";
 export default {
+  head() {
+    return {
+      title: "Contact us",
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content:
+            "Fiction to mission is based in Sfax, Tunisia. Our in-house team is made up of creative professionals that work closely with more than 50 creatives all around the globe to create out-of-the-box multimedia content, customized for your needs."
+        },
+        {
+          hid: "keywords",
+          name: "keywords",
+          content: "Tunisia,sfax"
+        }
+      ]
+    };
+  },
   data() {
     return {
       form: {

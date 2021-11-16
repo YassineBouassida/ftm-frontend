@@ -427,6 +427,9 @@ html {
 }
 
 .btn {
+  &a {
+    display: block;
+  }
 
   border-radius: 5px;
   border: none;

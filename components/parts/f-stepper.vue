@@ -25,10 +25,15 @@
     </div>
     <!-- ***************************** -->
     <div class="steps_body mt-5">
-      <h3 class="txt_right mb-2">A cocktail of skills !</h3>
+      <h3 class="txt_right mb-2" v-tr>A cocktail of skills !</h3>
       <div class="step_content elevate_1 bg_white pa-4">
         <!-- ***************Only on desktop************** -->
-        <VueSlickCarousel v-bind="slickSettings" v-if="deepFind(steps,'length')" @beforeChange="beforeSlideChange" class="mobile">
+        <VueSlickCarousel
+          v-bind="slickSettings"
+          v-if="deepFind(steps,'length')"
+          @beforeChange="beforeSlideChange"
+          class="mobile"
+        >
           <div
             class="flex pointer step align_center space_around"
             v-for="(step, index) in steps"
@@ -45,15 +50,8 @@
               />
             </div>
           </div>
-          <template #prevArrow>
-            <div class="custom-arrow prev_arrow">
-              <img src="~static/img/icons/arrow_left.png" alt />
-            </div>
-          </template>
-          <template #nextArrow>
-            <div class="custom-arrow next_arrow">
-              <img src="~static/img/icons/arrow_right.png" alt />
-            </div>
+          <template #customPaging>
+            <div class="custom-dot my-2"></div>
           </template>
         </VueSlickCarousel>
         <!-- ***************************** -->
@@ -91,12 +89,12 @@ export default {
       selectedTab: 0,
       activeStep: 0,
       slickSettings: {
-        dots: false,
-        arrows: true,
+        dots: true,
+        arrows: false,
         dotsClass: "slick-dots custom-dot-class",
         edgeFriction: 0.35,
         infinite: false,
-        speed: 500,
+        speed: 2000,
         slidesToShow: 1,
         slidesToScroll: 1,
         infinite: true
@@ -182,14 +180,20 @@ export default {
     height: 7rem;
     box-shadow: none;
   }
-  .custom-arrow {
-    top: calc(50% - 1.5rem);
-    z-index: 99999;
-    &.next_arrow {
-      right: calc(50% - 8.5rem);
-    }
-    &.prev_arrow {
-      left: calc(50% - 8.5rem);
+  ::v-deep .custom-dot-class.slick-dots {
+    position: relative;
+    bottom: 0;
+    margin: 8px 0;
+  }
+  .custom-dot {
+    border-radius: 50%;
+    width: 1rem;
+    height: 1rem;
+    border: 3px solid map-get($map: $colors, $key: lightGrey);
+  }
+  .slick-active {
+    .custom-dot {
+      background: map-get($map: $colors, $key: primary);
     }
   }
 }

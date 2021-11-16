@@ -13,6 +13,7 @@ export default ({
   app
 }) => {
 
+
   return {
     httpEndpoint: process.env.strapiBaseUri + '/graphql',
 

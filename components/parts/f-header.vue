@@ -31,10 +31,30 @@
     <div class="right_side flex" :class="{opened:openMenu}">
       <close class="close_sign" :reverse="!openMenu" @click.native="openMenu=false"></close>
       <div class="links flex align_center center">
-        <nuxt-link class="f_link mr-4" :to="localePath('/')" v-tr>Home</nuxt-link>
-        <nuxt-link class="f_link mx-4" :to="localePath('/about')" v-tr>About</nuxt-link>
-        <nuxt-link class="f_link mx-4" :to="localePath('/#projects')" v-tr>Portfolio</nuxt-link>
-        <nuxt-link class="f_link ml-4" :to="localePath('/services')" v-tr>Services</nuxt-link>
+        <nuxt-link
+          class="f_link mr-4"
+          :to="localePath('/')"
+          @click.native="openMenu=false"
+          v-tr
+        >Home</nuxt-link>
+        <nuxt-link
+          class="f_link mx-4"
+          :to="localePath('/about')"
+          v-tr
+          @click.native="openMenu=false"
+        >About</nuxt-link>
+        <nuxt-link
+          class="f_link mx-4"
+          :to="localePath('/#projects')"
+          v-tr
+          @click.native="openMenu=false"
+        >Portfolio</nuxt-link>
+        <nuxt-link
+          class="f_link ml-4"
+          :to="localePath('/services')"
+          v-tr
+          @click.native="openMenu=false"
+        >Services</nuxt-link>
       </div>
       <div class="flex align_center relative desktop">
         <h3
@@ -55,13 +75,25 @@
         </div>
       </div>
       <div class="flex social_part end">
-        <fBtn link :flat="true" to="/" class="mr-3 social_btn bg_primary flex align_center center">
+        <fBtn
+          external
+          link
+          flat
+          to="https://www.facebook.com/FictionToMission/"
+          class="mr-3 social_btn bg_primary flex align_center center"
+        >
           <img
             :src="require(`~/static/img/icons/social/facebook${openMenu?'_r':''}.png`)"
             alt="facebook"
           />
         </fBtn>
-        <fBtn link flat to="/" class="mr-3 social_btn bg_primary flex align_center center">
+        <fBtn
+          external
+          link
+          flat
+          to="https://www.instagram.com/fictiontomission/"
+          class="mr-3 social_btn bg_primary flex align_center center"
+        >
           <img
             :src="require(`~/static/img/icons/social/instagram${openMenu?'_r':''}.png`)"
             alt="instagram"
@@ -183,7 +215,7 @@ export default {
         justify-content: center;
         .quote_btn {
           background: map-get($map: $colors, $key: white) !important;
-          width: 150px;
+          width: 180px;
           h3 {
             font-size: 1rem;
             color: map-get($map: $colors, $key: primary) !important;
@@ -192,12 +224,15 @@ export default {
         .social_btn {
           background: map-get($map: $colors, $key: white) !important;
           &::v-deep span {
-            width: 1.7rem;
-            height: 1.7rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 1.4rem;
+            height: 1.4rem;
           }
           img {
-            max-width: 1.7rem;
-            max-height: 1.7rem;
+            max-width: 1.4rem;
+            max-height: 1.4rem;
           }
         }
       }
@@ -234,12 +269,15 @@ export default {
     width: 2.5rem;
     height: 2.5rem;
     &::v-deep span {
-      width: 1.7rem;
-      height: 1.7rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 1.4rem;
+      height: 1.4rem;
     }
     img {
-      max-width: 1.7rem;
-      max-height: 1.7rem;
+      max-width: 1.4rem;
+      max-height: 1.4rem;
     }
   }
   .quote_btn {

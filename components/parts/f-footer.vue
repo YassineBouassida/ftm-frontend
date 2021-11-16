@@ -88,7 +88,7 @@
       <div class="flex1 links_block about_us">
         <fLogo></fLogo>
         <p
-          class="subheading text_text2"
+          class="subheading text_text2 px-2"
           v-tr
         >Our mission is to find optimal and innovative solutions for the greatest satisfaction of our clients with the help of our highly qualified</p>
         <div class="flex column f_link_container">

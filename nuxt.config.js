@@ -254,7 +254,8 @@ export default {
     includeNodeModules: true,
     clientConfigs: {
       default: '@/apollo/configs/default.js'
-    }
+    },
+    errorHandler: '@/apollo/configs/error.js'
   },
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},

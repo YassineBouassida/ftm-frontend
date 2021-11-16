@@ -7,11 +7,16 @@
       <div class="load open"></div>
     </span>
   </button>
-  <router-link v-else :to="to" class="btn" tag="button" :class="{flat:flat}">
+  <router-link v-else-if="link&&!external" :to="to" class="btn" tag="button" :class="{flat:flat}">
     <span>
       <slot></slot>
     </span>
   </router-link>
+  <a :href="to" v-else class="btn" target="blank" :class="{flat:flat}">
+    <span>
+      <slot></slot>
+    </span>
+  </a>
 </template>
 
 <script>
@@ -23,6 +28,11 @@ export default {
       default: "dark"
     },
     link: {
+      type: Boolean,
+      required: false,
+      default: false
+    },
+    external: {
       type: Boolean,
       required: false,
       default: false
