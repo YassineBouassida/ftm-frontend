@@ -1,4 +1,6 @@
+const axios = require('axios');
 export default {
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'ftm',
@@ -7,7 +9,7 @@ export default {
       },
       {
         name: 'viewport',
-        content: 'width=device-width, initial-scale=1'
+        content: 'width=device-width, initial-scale=1,maximum-scale=1.0, user-scalable=no'
       },
       {
         hid: 'description',
@@ -109,7 +111,7 @@ export default {
   ],
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: ['@nuxtjs/style-resources', 'nuxt-compress'],
+  buildModules: ['@nuxtjs/style-resources', 'nuxt-compress', 'nuxt-gsap-module'],
   styleResources: {
     scss: [
 
@@ -131,8 +133,8 @@ export default {
     '@nuxtjs/apollo',
     'nuxt-compress',
     '@nuxtjs/i18n',
-    '@nuxtjs/sentry',
     'nuxt-i18n-easy',
+    '@nuxtjs/sitemap',
     ['@nuxtjs/html-minifier', {
       log: 'once',
       logHtml: true
@@ -200,6 +202,83 @@ export default {
 
 
   ],
+  //Sitemap
+  sitemap: {
+    hostname: 'http://localhost:3000',
+    // shortcut notation (basic)
+    i18n: true,
+    // nuxt-i18n notation (advanced)
+    i18n: {
+      locales: ['en', 'fr'],
+      routesNameSeparator: '___'
+    },
+    routes: async () => {
+      const {
+        data
+      } = await axios.get('https://server.fictiontomission.com/services');
+      const projects = await axios.get('https://server.fictiontomission.com/projects');
+      let locales = ['en', 'fr'];
+      let servicesRoutes = [];
+      let projectRoutes = [];
+      locales.forEach(locale => {
+        servicesRoutes = [...servicesRoutes, ...data.map((service) => {
+          return {
+            url: `/${locale}/services/${service.slug}`,
+            changefreq: 'daily',
+            priority: 1,
+            lastmod: Date.now()
+          }
+        })];
+        projectRoutes = [...projectRoutes, ...projects.data.map((project) => {
+          return {
+            url: `/${locale}/projects/${project.slug}`,
+            changefreq: 'daily',
+            priority: 1,
+            lastmod: Date.now()
+          }
+        })];
+      });
+      return [...servicesRoutes, ...projectRoutes]
+    }
+  },
+  //Green sock module
+  gsap: {
+    /* Module Options */
+  },
+  // Add global page transition
+  pageTransition: {
+    name: 'page',
+    mode: 'out-in',
+    css: false,
+
+    beforeEnter(el) {
+      this.$gsap.set(el, {
+        x: '-100%',
+        opacity: 0,
+      })
+    },
+
+    enter(el, done) {
+      this.$gsap.to(el, {
+        x: 0,
+        opacity: 1,
+        duration: 0.5,
+        ease: 'power2.inOut',
+        onComplete: done
+      })
+    },
+
+    leave(el, done) {
+      this.$gsap.to(el, {
+        opacity: 0,
+        y: '100%',
+        duration: 0.2,
+        ease: 'power2.inOut',
+        onComplete: done
+      })
+    }
+  },
+
   //Module nuxt compress
   'nuxt-compress': {
     gzip: {

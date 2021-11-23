@@ -62,5 +62,15 @@ export default {
   'help figuring it out? We can help!': 'help figuring it out? We can help!',
   'Don\'t worry, we are here to help': 'Don\'t worry, we are here to help',
   'Home page': 'Home page',
-  'Something went wrong': 'Something went wrong'
+  'Something went wrong': 'Something went wrong',
+  'A cocktail of skills !': 'A cocktail of skills !',
+  'Load more': 'Load more',
+  PERFECTION: 'PERFECTION',
+  PRECESSION: 'PRECESSION',
+  'TEAM-MANAGEMENT': 'TEAM-MANAGEMENT',
+  'Your business needs to look professional & coherent so it can be perceived as serious as it deserves, this means clearly more opportunities & higher revenue.': 'Your business needs to look professional & coherent so it can be perceived as serious as it deserves, this means clearly more opportunities & higher revenue.',
+  'Experienced team': 'Experienced team',
+  'Full-service web Development company': 'Full-service web Development company', // UNUSED
+  'High quality service': 'High quality service',
+  'Full-service': 'Full-service'
 }

@@ -345,7 +345,7 @@ export default {
           if (this.$nuxt && this.$nuxt.$loading) {
             isLoading
               ? this.$nuxt.$loading.start()
-              : setTimeout(() => this.$nuxt.$loading.finish(), 1500);
+              : this.$nuxt.$loading.finish();
           }
         });
       }
@@ -1007,6 +1007,18 @@ section {
 
     .project_footer {
       top: -40px;
+    }
+  }
+}
+.rtl {
+  #case1 {
+    .text_side {
+      margin-left: 1.5rem !important;
+    }
+  }
+  #case2 {
+    .text_side {
+      margin-right: 1.5rem !important;
     }
   }
 }

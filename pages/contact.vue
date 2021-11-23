@@ -148,7 +148,7 @@ import createMessage from "~/apollo/mutations/contact/contact";
 export default {
   head() {
     return {
-      title: "Contact us",
+      title: this.$t('Contact us'),
       meta: [
         {
           hid: "description",

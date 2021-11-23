@@ -129,19 +129,20 @@
 <script>
 export default {
   name: "aboutPage",
- head() {
+  head() {
     return {
-      title: 'About us',
+      title: this.$t("About Us"),
       meta: [
         {
           hid: "description",
           name: "description",
-          content: 'Fiction To Mission is 100% committed to a growth strategy to provide companies with a comprehensive solution for better digital businesses.'
+          content:
+            "Fiction To Mission is 100% committed to a growth strategy to provide companies with a comprehensive solution for better digital businesses."
         },
         {
           hid: "keywords",
           name: "keywords",
-          content: this.deepFind(this.pages, "0.seo.keywords")
+          content: "vision,mission"
         }
       ]
     };

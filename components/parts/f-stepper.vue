@@ -39,15 +39,9 @@
             v-for="(step, index) in steps"
             :key="index"
           >
-            <div
-              class="step_btn elevate_2 bg_white flex align_center center relative"
-              :class="{fixing_step:index==steps.length-1}"
-            >
-              <div class="circle_deco" v-show="activeStep==index"></div>
-              <img
-                :src="activeStep!=index? api_url+deepFind(step, 'icon.url'):api_url+deepFind(step, 'iconHover.url')"
-                :alt="step.title"
-              />
+            <div class="step_btn elevate_2 bg_white flex align_center center relative">
+              <div class="circle_deco"></div>
+              <img :src="api_url+deepFind(step, 'iconHover.url')" :alt="step.title" />
             </div>
           </div>
           <template #customPaging>
@@ -57,12 +51,12 @@
         <!-- ***************************** -->
         <h2 class="text_primary">{{activeStep+1}}. {{steps[activeStep].title}}</h2>
         <p v-html="steps[activeStep].description"></p>
-        <div v-if="steps[activeStep].skills.length>0" class="divider my-4 bg_text2"></div>
-        <div class="skills" v-if="steps[activeStep].skills.length>0">
+        <div class="divider my-4 bg_text2"></div>
+        <div class="skills">
           <div class="skills_toolbar flex">
             <h3
               @click="selectedTab=i"
-              v-for="(skill, i) in steps[activeStep].skills"
+              v-for="(skill, i) in skills"
               :key="i"
               class="pointer tab pa-3 txt_center"
               :class="{bg_primary:selectedTab==i, text_white:selectedTab==i}"
@@ -72,7 +66,7 @@
             <div class="tommpon bg_white flex align_center center">
               <img src="~static/img/icons/tompon.svg" alt />
             </div>
-            <p class="subheading px-4">{{steps[activeStep].skills[selectedTab].description}}</p>
+            <p class="subheading px-4">{{skills[selectedTab].description}}</p>
           </div>
         </div>
       </div>
@@ -94,13 +88,36 @@ export default {
         dotsClass: "slick-dots custom-dot-class",
         edgeFriction: 0.35,
         infinite: false,
-        speed: 2000,
+
+        speed: 1000,
+
         slidesToShow: 1,
         slidesToScroll: 1,
         infinite: true
-      }
+      },
+      skills: [
+        {
+          name: this.$t("Experienced team"),
+          description: this.$t(
+            "We are focused on bringing value to our customers and on helping them succeed in the marketplace."
+          )
+        },
+        {
+          name: this.$t("Full-service"),
+          description: this.$t(
+            "We are committed to supporting you over the long term: before, during and after the entire software development process."
+          )
+        },
+        {
+          name: this.$t("High quality service"),
+          description: this.$t(
+            "You take advantage of our experiences, high quality IT solutions, and the most exciting experience with a long term partner."
+          )
+        }
+      ]
     };
   },
+
   props: {
     steps: {
       type: [Array, Object]

@@ -5,7 +5,7 @@
       <serviceCard
         v-for="(service, index) in services"
         :key="index"
-        class="service_card pointer pa-2"
+        class="service_card pointer pa-2 my-3 mx-2"
         :size="114"
         :title="service.title"
         :desc="service.description"
@@ -92,12 +92,15 @@ export default {
 }
 .service_card {
   @media (max-width: 1641px) {
-    width: 370px;
+    width: 360px;
   }
   @media (max-width: 1200px) {
-    width: 315px;
+    width: 300px;
+    justify-content: flex-start;
+    height: 380px;
   }
   @media (max-width: 1024px) {
+    justify-content: space-around;
     transition: none;
     margin: 1rem auto;
     max-width: 450px;
@@ -110,7 +113,7 @@ export default {
     max-width: 90%;
     min-height: 300px;
   }
-  width: 390px;
+  width: 374px;
   height: 340px;
   border-radius: 5px;
   transition: 0.5s all;
@@ -124,17 +127,20 @@ export default {
   }
 }
 ::v-deep .custom-dot-class.slick-dots {
-  margin: 8px 0;
+  margin: 4px 0;
+  position: relative;
+  bottom: 0;
 }
 .custom-dot {
   border-radius: 50%;
   width: 1rem;
   height: 1rem;
-  border: 3px solid map-get($map: $colors, $key: lightGrey);
+  padding: 1px;
+  border: 1px solid map-get($map: $colors, $key: text1);
 }
 .slick-active {
   .custom-dot {
-    background: map-get($map: $colors, $key: primary);
+    background: map-get($map: $colors, $key: text1);
   }
 }
 .custom-arrow {

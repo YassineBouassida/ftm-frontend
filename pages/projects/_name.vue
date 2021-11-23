@@ -78,7 +78,6 @@ section {
   }
 }
 
-
 .body {
   padding-right: 3rem !important;
   padding-left: 3rem !important;

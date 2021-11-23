@@ -52,7 +52,8 @@
           </div>
           <p
             class="h4 notice text_white bg_primary txt_right py-2 px-5 mt-4"
-          v-html="deepFind(this.serviceBySlug, 'cycle.notice')" ></p>
+            v-html="deepFind(this.serviceBySlug, 'cycle.notice')"
+          ></p>
         </div>
         <div class="body flex flex2 pa-5 wrap">
           <subService
@@ -84,6 +85,23 @@
       </div>
     </section>
     <!-- ********************************* -->
+    <!-- Technologies Section -->
+    <section
+      v-if="deepFind(serviceBySlug, 'technologies.length')"
+      class="technologies container small_container flex align_center wrap"
+    >
+      <h2 class="flex1 fill_width txt_center mr-4" v-tr>Technologies</h2>
+      <VueSlickCarousel v-bind="slickSettings" class="flex2 tech_list">
+        <div
+          class="tech bg_lightGrey flex align_center center ml-4"
+          v-for="(tech, index) in deepFind(serviceBySlug, 'technologies')"
+          :key="index"
+          :title="tech.name"
+        >
+          <img width="auto" height="auto" :src="api_url+tech.image.url" :alt="tech.name" />
+        </div>
+      </VueSlickCarousel>
+    </section>
     <!-- Our process -->
     <section class="our_process bg_white py-5">
       <div class="container">
@@ -177,20 +195,24 @@
                 ></p>
 
                 <div class="features_list py-2 px-3 bg_white mt-5">
-                  <p class="h4" v-for="(item, index) in 5" :key="index">-5 pages</p>
+                  <p
+                    class="h4"
+                    v-for="(feature, index) in deepFind(serviceBySlug, 'packages.0.features')"
+                    :key="index"
+                  >{{feature.text}}</p>
                 </div>
               </div>
               <div class="pack_footer">
                 <div class="more_details flex space_between align_center">
                   <p
                     class="h4 text_white"
-                  >{{deepFind(serviceBySlug, 'packages.0.details.delivery')}} Days Delivery</p>
+                  >{{deepFind(serviceBySlug, 'packages.0.details.delivery')}}</p>
                   <p
                     class="h4 text_white"
-                  >{{deepFind(serviceBySlug, 'packages.0.details.revisions') }} Revisions</p>
+                  >{{deepFind(serviceBySlug, 'packages.0.details.revisions') }}</p>
                 </div>
                 <fBtn link to="/" class="fill_width mt-4 mb-3">
-                  <h3>($ {{deepFind(serviceBySlug, 'packages.0.details.price')}}) Continue</h3>
+                  <h3>( {{deepFind(serviceBySlug, 'packages.0.details.price')}}) Continue</h3>
                 </fBtn>
                 <div class="a text_white txt_center">
                   <u>Do you have any special requirements?</u>
@@ -205,7 +227,7 @@
     <!-- ********************************* -->
     <!-- Faq's section -->
     <section class="faqs py-5 bg_white">
-      <div class="container">
+      <div class="container" itemtype="https://schema.org/FAQPage">
         <h1 class="txt_right mb-4">Frequently Asked Questions</h1>
         <faq
           class="faq bg_lightGrey pa-2 my-4"
@@ -257,6 +279,13 @@ export default {
   head() {
     return {
       title: this.deepFind(this.serviceBySlug, "title"),
+      __dangerouslyDisableSanitizers: ["script"],
+      script: [
+        {
+          innerHTML: JSON.stringify(this.structuredData),
+          type: "application/ld+json"
+        }
+      ],
       meta: [
         {
           hid: "description",
@@ -267,6 +296,12 @@ export default {
           hid: "keywords",
           name: "keywords",
           content: this.deepFind(this.serviceBySlug, "keywords")
+        },
+        {
+          hid: "og:image",
+          property: "og:image",
+          content:
+            this.api_url + this.deepFind(this.serviceBySlug, "hero.image.url")
         }
       ]
     };
@@ -279,13 +314,89 @@ export default {
   computed: {
     serviceBySlug() {
       return this.deepFind(this.services, "0");
+    },
+    structuredData() {
+      let mainEntity = [];
+      let faqs = this.deepFind(this.serviceBySlug, "faqs");
+      if (faqs) {
+        mainEntity = faqs.map(faq => {
+          return {
+            "@type": "Question",
+            name: faq.question,
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: faq.answer
+            }
+          };
+        });
+      }
+      return {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: mainEntity
+      };
     }
   },
   data() {
     return {
       expanded: false,
       selectedAdv: 0,
+      slickSettings: {
+        dots: true,
+        infinite: true,
 
+        slidesToShow: 6,
+        slidesToScroll: 6,
+        initialSlide: 0,
+        autoplay: true,
+        speed: 5000,
+        autoplaySpeed: 2000,
+        responsive: [
+          {
+            breakpoint: 1200,
+            settings: {
+              slidesToShow: 4,
+              slidesToScroll: 4,
+              infinite: true,
+              dots: true
+            }
+          },
+          {
+            breakpoint: 1640,
+            settings: {
+              slidesToShow: 5,
+              slidesToScroll: 5,
+              infinite: true,
+              dots: true
+            }
+          },
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 3,
+              infinite: true,
+              dots: true
+            }
+          },
+          {
+            breakpoint: 767,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 3,
+              initialSlide: 3
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 3,
+              dots: false
+            }
+          }
+        ]
+      },
       advantagesSlickSettings: {
         dots: true,
         arrows: false,
@@ -587,6 +698,41 @@ export default {
   @media (max-width: 767px) {
     .tech_card {
       width: 100% !important;
+    }
+  }
+}
+//Technologies Part
+.technologies {
+  min-height: 300px;
+  .tech_list {
+    overflow: hidden;
+    .tech {
+      height: 9rem !important;
+      width: 9rem !important;
+      display: flex !important;
+      border-radius: 50%;
+      flex-shrink: 0;
+      img {
+        max-width: 80%;
+        max-height: 50%;
+      }
+    }
+  }
+  @media (max-width: 1640px) {
+    min-height: 220px;
+    .tech_list {
+      .tech {
+        height: 7rem !important;
+        width: 7rem !important;
+      }
+    }
+  }
+  @media (max-width: 767px) {
+    &h2 {
+      flex: 2;
+    }
+    .tech_list {
+      flex: auto;
     }
   }
 }

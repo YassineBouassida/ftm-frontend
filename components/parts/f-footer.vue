@@ -8,10 +8,10 @@
       <div class="flex1 links_block useful_link">
         <h2 class="text_text2" v-tr>Useful links</h2>
         <div class="usefull_links">
-          <nuxt-link :to="localePath('/')" class="a text_text2 my-3" tag="div">Home</nuxt-link>
-          <nuxt-link :to="localePath('/about')" class="a text_text2 my-3" tag="div">About</nuxt-link>
-          <nuxt-link :to="localePath('/#projects')" class="a text_text2 my-3" tag="div">Portfolio</nuxt-link>
-          <nuxt-link :to="localePath('/services')" class="a text_text2 my-3" tag="div">Services</nuxt-link>
+          <nuxt-link :to="localePath('/')" class="a text_text2 my-3" tag="div" v-tr>Home</nuxt-link>
+          <nuxt-link :to="localePath('/about')" class="a text_text2 my-3" tag="div" v-tr>About</nuxt-link>
+          <nuxt-link :to="localePath('/#projects')" class="a text_text2 my-3" tag="div" v-tr>Portfolio</nuxt-link>
+          <nuxt-link :to="localePath('/services')" class="a text_text2 my-3" tag="div" v-tr>Services</nuxt-link>
         </div>
       </div>
       <div class="flex1 links_block services">
@@ -88,7 +88,7 @@
       <div class="flex1 links_block about_us">
         <fLogo></fLogo>
         <p
-          class="subheading text_text2 px-2"
+          class="subheading text_text2"
           v-tr
         >Our mission is to find optimal and innovative solutions for the greatest satisfaction of our clients with the help of our highly qualified</p>
         <div class="flex column f_link_container">
@@ -236,6 +236,9 @@ export default {
     .about_us {
       order: 1;
       min-width: 100%;
+      .subheading {
+        padding: 0 8px;
+      }
     }
     .useful_link {
       order: 2;

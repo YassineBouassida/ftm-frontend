@@ -98,7 +98,20 @@
             facilitating their successful navigation in a marketplace filled with multi-national brands they compete with daily.
           </p>
         </div>
-        <div class="brands_list"></div>
+        <div class="brands_list flex align_center wrap space_between">
+          <div
+            class="brand_item flex column align_center end"
+            v-for="(brand, index) in brands"
+            :key="index"
+          >
+            <img
+              class="mb-3"
+              :src="require(`~/static/img/icons/brands/${brand.image}`)"
+              :alt="brand.text"
+            />
+            <h2 class="txt_center">{{brand.text}}</h2>
+          </div>
+        </div>
       </div>
     </section>
     <!-- Services section part -->
@@ -165,6 +178,22 @@ import servicesQuery from "~/apollo/queries/home/services";
 
 export default {
   name: "servicesPage",
+  data() {
+    return {
+      brands: [
+        { image: "consultancy.svg", text: "Consultancy" },
+        { image: "e-commerce.svg", text: "E-commerce" },
+        { image: "education.svg", text: "Education" },
+        { image: "fintech.svg", text: "Fintch" },
+        { image: "healthcare.svg", text: "Health care" },
+        { image: "it-service.svg", text: "IT services" },
+        { image: "realestate.svg", text: "Real estate" },
+        { image: "retail.svg", text: "Retail" },
+        { image: "socialmedia.svg", text: "Social media" },
+        { image: "start-up.svg", text: "Start-ups" }
+      ]
+    };
+  },
   head() {
     return {
       title: "Services",
@@ -351,6 +380,36 @@ export default {
 .brands {
   .brands_list {
     min-height: 500px;
+    justify-content: center;
+    .brand_item {
+      width: 300px;
+      height: 120px;
+      margin: 1rem 0;
+      @media (max-width: 1640px) {
+        width: 215px;
+      }
+      @media (max-width: 1200px) {
+        width: 190px;
+        img {
+          max-width: 60px;
+        }
+        h2 {
+          font-size: 1.3rem;
+        }
+      }
+      @media (max-width: 1024px) {
+        width: 160px;
+        img {
+          max-width: 50px;
+        }
+        h2 {
+          font-size: 1.2rem;
+        }
+      }
+      @media (max-width: 870px) {
+        width: 140px;
+      }
+    }
   }
 }
 .services {

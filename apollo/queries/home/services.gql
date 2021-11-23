@@ -1,22 +1,18 @@
 # Write your query or mutation here
-{
-  services {
-    locale
-    title
-    id
-    techStack {
+query Service($locale:String) {
+  services(locale:$locale ) {
+   
+      locale
+      title
       id
-     
-      stacks {
-        id
-        title
-       
-        
+      icon {
+        url
       }
-    }
-    icon{url}
-    iconHover{url}
-    slug
-    description
+      iconHover {
+        url
+      }
+      slug
+      description
+    
   }
 }

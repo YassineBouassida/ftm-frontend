@@ -115,7 +115,7 @@ export default {
       laguages: [
         { text: "EN", val: "en", icon: "en.svg" },
         { text: "FR", val: "fr", icon: "fr.svg" }
-        // { text: "ar", val: "ar", icon: "ar.svg" }
+        //{ text: "AR", val: "ar", icon: "ar.svg" }
       ]
     };
   },
@@ -141,6 +141,12 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+.rtl {
+  .social_btn {
+    margin-left: 1rem !important;
+    margin-right: 0rem !important;
+  }
+}
 .languages {
   h3 {
     text-transform: uppercase;

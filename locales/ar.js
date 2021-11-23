@@ -65,5 +65,15 @@ export default {
   'help figuring it out? We can help!': 'تساعد في معرفة ذلك؟ نستطيع المساعدة!',
   'Don\'t worry, we are here to help': 'لا تقلق ، نحن هنا للمساعدة',
   'Home page': 'الصفحة الرئيسية',
-  'Something went wrong': 'هناك خطأ ما'
+  'Something went wrong': 'هناك خطأ ما',
+  'A cocktail of skills !': 'مزيج من المهارات!',
+  'Load more': 'تحميل المزيد',
+  PERFECTION: 'حد الكمال',
+  PRECESSION: 'الضغط',
+  'TEAM-MANAGEMENT': 'ادارة فريق',
+  'Your business needs to look professional & coherent so it can be perceived as serious as it deserves, this means clearly more opportunities & higher revenue.': 'يجب أن يبدو عملك احترافيًا ومتماسكًا حتى يمكن اعتباره جادًا كما يستحق ، وهذا يعني بوضوح المزيد من الفرص وزيادة الإيرادات.',
+  'Experienced team': 'فريق من ذوي الخبرة',
+  'Full-service web Development company': 'شركة تطوير مواقع ويب كاملة الخدمات', // UNUSED
+  'High quality service': 'خدمة عالية الجودة',
+  'Full-service': 'خدمة شاملة'
 }

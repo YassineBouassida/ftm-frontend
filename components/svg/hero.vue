@@ -66,7 +66,7 @@
           transform="translate(-767 -121.167)"
         />
         <g transform="translate(142 261.938)">
-          <rect class="f" width="732" height="459.895" rx="12.153" />
+          <rect class="f_rect" width="732" height="459.895" rx="12.153" />
           <g class="g">
             <g transform="translate(433.166 154.895)">
               <path
@@ -196,7 +196,7 @@
                     d="M 1104.025512695312 569.4581298828125 L 1154.0986328125 619.53125 L 1167.925170898438 631.324462890625 L 1110.912963867188 573.590576171875 L 1104.025512695312 569.4581298828125 M 1097.574462890625 564.4213256835938 L 1111.535766601562 572.798095703125 L 1185.065063476562 647.2581787109375 L 1153.419555664062 620.2664184570312 L 1097.574462890625 564.4213256835938 Z"
                   />
                 </g>
-                <g transform="translate(6.981 14.427)">
+                <g transform="translate(6.981 14.427)" id="windowsL">
                   <g class="h">
                     <rect class="hz" width="32.576" height="32.576" />
                     <rect class="b" x="0.5" y="0.5" width="31.576" height="31.576" />
@@ -236,7 +236,7 @@
           transform="translate(-767 -121.167)"
         />
         <ellipse class="a" cx="102" cy="17" rx="102" ry="17" transform="translate(406.5 617.333)" />
-        <g class="n" transform="translate(212.5)">
+        <g class="n" transform="translate(212.5)" id="lampe">
           <ellipse class="o" cx="102" cy="17" rx="102" ry="17" transform="translate(194 617.333)" />
           <ellipse
             class="p"
@@ -1846,8 +1846,8 @@
           d="M1228.5,756V452s0-104.5-104.5-104.5"
           transform="translate(-767 -121.167)"
         />
-        <line class="m" y1="432.5" transform="translate(490.5 125.833)" />
-        <line class="m" y1="379" transform="translate(517.5 179.833)" />
+        <line class="m" y1="432.5" transform="translate(490.5 125.833)" id="RLL" />
+        <line class="m" y1="379" transform="translate(517.5 179.833)" id="RLR" />
         <g transform="translate(231.994 98.184)">
           <path
             class="a"
@@ -2291,7 +2291,7 @@
               </g>
             </g>
           </g>
-          <g transform="translate(55.163 8.817)">
+          <g transform="translate(55.163 8.817)" id="topGirlHead">
             <path
               class="hi"
               d="M1038.78,245.36c-1.623-4.689,0-14.376,7.637-17.97s18.192-2.39,22.462-.449a15.57,15.57,0,0,1,7.637,8.535c.449,1.348,10.781,5.84,11.231,7.637s-1.348,3.145-1.348,3.145,6.735,14.214-1.8,18.868c-4.942,2.7-7.637.9-7.637.9l13.028,20.216s9.988,3.607,10.332,8.086c.449,5.84-11.231,17.97-11.231,17.97s-8.086-18.419-22.911-21.564l-4.492-9.434-1.348-20.215S1042.823,257.04,1038.78,245.36Z"
@@ -2416,6 +2416,7 @@
           />
           <path
             class="c"
+            id="tgh"
             d="M1038.591,231.279c-.446-.056-18.025-22.382-38.219-12.959,0,0-20.1-2.2-15.64,12.823s-7.228,17.964,1.164,19.643c0,0,3.683,13.984,18.218,13.6a13.427,13.427,0,0,0,9.962-.011c5.252-2.173,12.442-19.827,22-20.2Z"
             transform="translate(-982.774 -216)"
           />
@@ -2844,8 +2845,8 @@
         <circle class="i" cx="8" cy="8" r="8" transform="translate(819 268.833)" />
         <circle class="i" cx="8" cy="8" r="8" transform="translate(840.5 269.333)" />
         <circle class="a" cx="30" cy="30" r="30" transform="translate(473.5 556.333)" />
-        <circle class="a" cx="29" cy="29" r="29" transform="translate(461.5 67.333)" />
-        <circle class="l" cx="9" cy="9" r="9" transform="translate(508.5 171.333)" />
+        <circle class="a" cx="29" cy="29" r="29" transform="translate(461.5 67.333)" id="WCL" />
+        <circle class="l" cx="9" cy="9" r="9" transform="translate(508.5 171.333)" id="RCR" />
         <circle class="l" cx="9" cy="9" r="9" transform="translate(581 385.833)" />
         <rect class="l" width="88.696" height="35.478" transform="translate(580 321.833)" />
         <rect class="l" width="88.696" height="35.478" transform="translate(697.087 354.355)" />
@@ -2854,7 +2855,7 @@
         <rect class="l" width="88.696" height="35.478" transform="translate(804.087 433.355)" />
         <line class="hu" y2="19" transform="translate(590 361.833)" />
         <rect class="hv" width="10" height="10" transform="translate(813.5 438.333)" />
-        <g transform="translate(703.5 348.333)">
+        <g transform="translate(703.5 348.333)" id="LGraph">
           <rect class="hv" width="5" height="16" transform="translate(0 21)" />
           <rect class="hv" width="5" height="27" transform="translate(7 8)" />
           <rect class="hv" width="5" height="27" transform="translate(13 1)" />
@@ -2926,11 +2927,89 @@
     </svg>
   </div>
 </template>
+<script>
+export default {
+  mounted() {
+    this.$gsap.set("#lampe ellipse", {
+      css: { fill: "#fff" }
+    });
+
+    let tl = this.$gsap.timeline({ repeat: -1 });
+    tl.to(
+      ".hero .f",
+      {
+        scaleY: 0.5,
+        transformOrigin: "center",
+        stagger: 0.1,
+        repeat: -1,
+        yoyo: true
+      },
+      0
+    )
+      .to(
+        ".hero .f",
+        {
+          scaleY: 1,
+          transformOrigin: "center",
+          stagger: 0.1,
+          repeat: -1,
+          yoyo: true
+        },
+        0.5
+      )
+      .addLabel("graphAnimation")
+      .to(
+        ".hero #windowsL rect",
+        {
+          css: { fill: "#fff", stroke: "#e02b2b" },
+          stagger: 0.3,
+          repeat: -1,
+          yoyo: true
+        },
+        0.5
+      )
+      .to(
+        ".hero #lampe ellipse",
+        {
+          css: { fill: "#ff7676" },
+          stagger: 0.01,
+          repeat: -1,
+          yoyo: true
+        },
+        "graphAnimation"
+      )
+      .to(
+        ".hero #LGraph .hv",
+        {
+          scaleY: 1.2,
+          transformOrigin: "center",
+          stagger: 0.1,
+          repeat: -1,
+          yoyo: true
+        },
+        0.5
+      )
+
+      .to(
+        ".hero #tgh",
+        2,
+        {
+          scaleX: 1.4,
+          rotationZ: "-20deg",
+          transformOrigin: "right"
+        },
+        0.5
+      );
+    tl.play();
+  }
+};
+</script>
 <style lang="scss" scoped>
 .hero {
   .a,
   .f,
-  .hw {
+  .hw,
+  .f_rect {
     fill: #f4f4f4;
   }
   .a,
@@ -3861,6 +3940,3 @@
   }
 }
 </style>
-<script>
-export default {};
-</script>

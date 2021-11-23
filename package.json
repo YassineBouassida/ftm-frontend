@@ -15,6 +15,7 @@
     "@nuxtjs/i18n": "^7.0.3",
     "@nuxtjs/pwa": "^3.3.5",
     "@nuxtjs/sentry": "^5.1.5",
+    "@nuxtjs/sitemap": "^2.4.0",
     "core-js": "^3.15.1",
     "fs": "^0.0.1-security",
     "graphql-tag": "^2.12.5",
@@ -23,12 +24,14 @@
     "nuxt-font-loader-strategy": "^1.1.10",
     "nuxt-i18n-easy": "^1.5.1",
     "nuxt-precompress": "^0.5.9",
-    "vue-slick-carousel": "^1.0.6"
+    "vue-slick-carousel": "^1.0.6",
+    "whatwg-url": "^11.0.0"
   },
   "devDependencies": {
     "@nuxtjs/style-resources": "^1.2.1",
     "fibers": "^5.0.0",
     "node-sass": "^6.0.1",
+    "nuxt-gsap-module": "^1.5.0",
     "sass-loader": "^10.2.0"
   }
 }

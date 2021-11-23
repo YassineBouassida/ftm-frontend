@@ -1,6 +1,6 @@
 # Write your query or mutation here
-query Service($locale:String!,$slug: String!) {
-  services(locale:$locale where: {slug:$slug} limit:1) {
+query Service($locale: String!, $slug: String!) {
+  services(locale: $locale, where: { slug: $slug }, limit: 1) {
     services {
       locale
       title
@@ -13,6 +13,13 @@ query Service($locale:String!,$slug: String!) {
       }
       slug
       description
+    }
+    technologies {
+      name
+      image {
+        url
+        name
+      }
     }
     locale
     title
@@ -103,16 +110,17 @@ query Service($locale:String!,$slug: String!) {
         icon {
           url
         }
-        features {
-          id
-          text
-        }
+
         link
         delivery
         revisions
         price
         requirmentsLink
         descriptionHtml
+      }
+      features {
+        id
+        text
       }
     }
     keywords

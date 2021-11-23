@@ -1,5 +1,5 @@
 <template>
-  <div class="flex column app" :class="{rtl:rtl}">
+  <div class="flex column app" :class="{rtl:rtl,ltr:!rtl}">
     <fHeader class="container" />
     <nuxt class="main" />
     <fFooter></fFooter>
@@ -9,6 +9,7 @@
 @import "~/static/scss/global.scss";
 @import "vue-slick-carousel/dist/vue-slick-carousel-theme.css";
 @import "vue-slick-carousel/dist/vue-slick-carousel.css";
+
 .app {
   min-height: 100vh;
 }
