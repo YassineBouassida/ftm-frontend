@@ -5,6 +5,16 @@ query Service($locale:String) {
       locale
       title
       id
+       techStack {
+      id
+     
+      stacks {
+        id
+        title
+       
+        
+      }
+    }
       icon {
         url
       }

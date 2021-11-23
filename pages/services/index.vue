@@ -136,7 +136,9 @@
               v-for="(stack, index) in deepFind(service, 'techStack.stacks')"
               :key="index"
               class="txt_center my-3"
-            >{{stack.title}}</h4>
+            >
+              <span v-if="index<4">{{stack.title}}</span>
+            </h4>
           </div>
         </div>
       </div>
