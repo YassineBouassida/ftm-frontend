@@ -7,7 +7,7 @@
         :key="index"
         class="service_card pointer pa-2 my-3 mx-2"
         :size="114"
-        :title="service.title"
+        :title="service.titleDisplay"
         :desc="service.description"
         :icon="service.icon.url"
         :iconHover="service.iconHover.url"

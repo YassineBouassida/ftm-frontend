@@ -4,6 +4,7 @@ query Service($locale: String!, $slug: String!) {
     services {
       locale
       title
+      titleDisplay
       id
       icon {
         url
@@ -21,6 +22,7 @@ query Service($locale: String!, $slug: String!) {
         name
       }
     }
+    titleDisplay
     locale
     title
     id

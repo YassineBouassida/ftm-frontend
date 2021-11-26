@@ -1,11 +1,12 @@
 mutation createMessage(
   $name: String!
   $email: String!
-  $job: String!
+  $job: String
   $budget: String!
-  $deadline: String!
-  $industry: String!
+  $deadline: String
+  $industry: String
   $subject: String!
+  $company: String!
 ) {
   createMessage(
     input: {
@@ -17,6 +18,7 @@ mutation createMessage(
         deadline: $deadline
         industry: $industry
         subject: $subject
+        company: $company
       }
     }
   ) {
@@ -29,6 +31,7 @@ mutation createMessage(
       subject
       email
       deadline
+      company
     }
   }
 }

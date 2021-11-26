@@ -79,19 +79,19 @@ export default {
   'Accounting and Finance': 'المحاسبة والتمويل',
   'Administrative and Clerical': 'إداري وكتابي',
   'CEO / C-Level / VP': 'الرئيس التنفيذي / C-Level / VP',
-  Construction: 'بناء',
+  Construction: 'بناء', // إنشاءات
   'Creative and Design': 'الإبداع والتصميم',
-  'Customer Service': 'خدمة الزبائن',
-  Education: 'تعليم',
+  'Customer Service': 'خدمة الزبائن', // خدمة الزبائن
+  Education: 'تعليم', // تعليم // تربية // تدريس // ثقافة // تعلم // معرفة // علم التربية
   'Energy and Utilities': 'الطاقة والمرافق',
-  Engineering: 'هندسة',
+  Engineering: 'هندسة', // هندسة // وجه
   'Financial Manager': 'مدير مالي',
   'Financial Services': 'الخدمات المالية',
   Healthcare: 'الرعاىة الصحية',
-  Hospitality: 'حسن الضيافة',
+  Hospitality: 'حسن الضيافة', // ضيافة // حسن الضيافة // كرم // تضييف // كرم المعاملة
   IT: 'هو - هي',
-  Labor: 'طلق',
-  Legal: 'قانوني',
+  Labor: 'طلق', // عمل // جهد // كدح // غرفة الولادة // كادح // ألم الولاده // ثمرة جهد // مهمة مضنية
+  Legal: 'قانوني', // قانوني // شرعي // تشريعي // جائز شرعا
   'Maintenance and Repair': 'الصيانة والإصلاح',
   Management: 'إدارة',
   'Manufacturing and Industrial': 'التصنيع والصناعية',
@@ -99,7 +99,7 @@ export default {
   'Marketing and Advertising': 'التسويق والإعلان',
   'Need a quote for your project? Have a question about our work or services?        Just let us know.': 'بحاجة الى اقتباس لمشروعك؟ هل لديك سؤال حول عملنا أو خدماتنا؟ فقط اسمحوا لنا أن نعرف.',
   'Operations Manager': 'مدير العمليات',
-  Other: 'آخر',
+  Other: 'آخر', // آخر // ثان
   'Other Marketing Position': 'موقف تسويق آخر',
   'Pharmaceutical and Research': 'الصيدلة والبحوث',
   'Please select': 'الرجاء التحديد',
@@ -107,30 +107,12 @@ export default {
   'Production Manager': 'مدير الانتاج',
   Professional: 'احترافي',
   'Restaurant and Food Service': 'مطعم وخدمة الطعام',
-  Retail: 'التجزئه',
+  Retail: 'التجزئه', // بيع بالتجزئة // بيع بالمفرق // مفرق
   SaaS: 'SaaS',
-  Sales: 'مبيعات',
-  Security: 'حماية',
-  Student: 'طالب',
+  Sales: 'مبيعات', // مبيعات
+  Security: 'حماية', // أمن // حماية // ضمانة // كفالة // سند مالي // سلام أمن
+  Student: 'طالب', // طالب // طالبة // تلميذ // الدارس // طالب في المدرسة الثانوية
   Telecommunications: 'الإتصالات',
-  Transportation: 'مواصلات',
-  Warehouse: 'مستودع',
-  '+216 99 999 999 ': '+216 99999999 ',
-  Address: 'عنوان',
-  Budget: 'الدخل',
-  Company: 'شركة',
-  'Company name': 'اسم الشركة',
-  Deadline: 'الموعد النهائي', // الموعد الأخير // الحد الاخير
-  'Estimated budget': 'الميزانية التقديرية',
-  'Fiction to mission is based in Sfax, Tunisia. Our in-house team is made up of creative professionals that work closely with more than 50 creatives all around the globe to create out-of-the-box multimedia content, customized for your needs.': 'يقع مقر Fiction to Mission في صفاقس ، تونس. يتكون فريقنا الداخلي من محترفين مبدعين يعملون عن كثب مع أكثر من 50 مبدعًا من جميع أنحاء العالم لإنشاء محتوى وسائط متعددة خارج الصندوق ومخصص لاحتياجاتك.',
-  'Full name': 'الاسم بالكامل', // بدر تام
-  Industry: 'صناعة', // صناعة // جد // مثابرة // كد // مواظبة
-  'Job position': 'وظيفه',
-  Name: 'اسم',
-  'Our offices': 'مكاتبنا',
-  Phone: 'هاتف', // هاتف // صوت // صوت كلامي // المسماع
-  'Phone number': 'رقم الهاتف', // رقم الهاتف
-  Subject: 'موضوعات', // موضوع // تابع // موضوع دراسي // رعية // مسند // المرؤوس // باب // التابع // مرؤوس // مأمور // شخص تدرس إنفعالات
-  Submit: 'يقدم', // عرض // قدم // سلم // خضع // اقترح // استسلم // رافع
-  'Your message': 'رسالتك'
+  Transportation: 'مواصلات', // نقل // أجرة النقل // سفر // نقليات // تذكرة النقل // إيصال // منقول // جواز نقل // إبعاد // نفي // جواز النقل // وسيلة نقل
+  Warehouse: 'مستودع' // مستودع // مخزن // عنبر
 }

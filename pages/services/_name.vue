@@ -24,7 +24,10 @@
       />
       <div class="flex container align_center relative fill_height hero_content">
         <div class="desc w-50">
-          <h1 class="hero_text mb-3 text_white" v-html="deepFind(this.serviceBySlug, 'hero.title')"></h1>
+          <h1
+            class="hero_text mb-3 text_white"
+            v-html="deepFind(this.serviceBySlug, 'titleDisplay')"
+          ></h1>
           <p class="my-5 text_white" v-html="deepFind(this.serviceBySlug, 'hero.description')"></p>
         </div>
         <div class="image flex1 flex align_center center">
@@ -168,7 +171,7 @@
             </div>
             <div class="standards_list">
               <div
-                class="flex my-3"
+                class="flex"
                 v-for="(standard, index) in deepFind(serviceBySlug, 'packages.0.standards.standardsList')"
                 :key="index"
               >
@@ -194,32 +197,42 @@
                   v-html="deepFind(serviceBySlug, 'packages.0.details.descriptionHtml')"
                 ></p>
 
-                <div class="features_list py-2 px-3 bg_white mt-5">
+                <div class="features_list py-2 px-3 bg_white mt-5 scrollable">
                   <p
                     class="h4"
                     v-for="(feature, index) in deepFind(serviceBySlug, 'packages.0.features')"
                     :key="index"
-                  >{{feature.text}}</p>
+                    v-html="feature.text"
+                  ></p>
                 </div>
               </div>
               <div class="pack_footer">
                 <div class="more_details flex space_between align_center">
                   <p
                     class="h4 text_white"
-                  >{{deepFind(serviceBySlug, 'packages.0.details.delivery')}}</p>
+                    v-html="deepFind(serviceBySlug, 'packages.0.details.delivery')"
+                  ></p>
                   <p
                     class="h4 text_white"
-                  >{{deepFind(serviceBySlug, 'packages.0.details.revisions') }}</p>
+                    v-html="deepFind(serviceBySlug, 'packages.0.details.revisions')"
+                  ></p>
                 </div>
                 <fBtn link to="/" class="fill_width mt-4 mb-3">
-                  <h3>( {{deepFind(serviceBySlug, 'packages.0.details.price')}}) Continue</h3>
+                  <h3>
+                    (
+                    <span v-html="deepFind(serviceBySlug, 'packages.0.details.price')"></span>) Continue
+                  </h3>
                 </fBtn>
                 <div class="a text_white txt_center">
                   <u>Do you have any special requirements?</u>
                 </div>
               </div>
             </div>
-            <nuxt-link to="/" tag="h3" class="mt-3 text_white pointer txt_right">View Portfolio</nuxt-link>
+            <nuxt-link
+              :to="localePath('/projects')"
+              tag="h3"
+              class="mt-3 text_white pointer txt_right"
+            >View Samples</nuxt-link>
           </div>
         </div>
       </div>
@@ -254,7 +267,7 @@
             :key="index"
             class="service_card pointer pa-2 my-2"
             :size="114"
-            :title="service.title"
+            :title="service.titleDisplay"
             :desc="service.description"
             :icon="service.icon.url"
             :iconHover="service.iconHover.url"
@@ -832,6 +845,10 @@ export default {
         border-bottom: 1px solid map-get($map: $colors, $key: white);
       }
     }
+    .features_list {
+      overflow-y: auto;
+      max-height: 200px;
+    }
   }
   @media (max-width: 1200px) {
     .pack_standards {
@@ -845,6 +862,7 @@ export default {
     .package {
       flex-wrap: wrap;
       .pack_standards {
+        order: 2;
         width: 100% !important;
         text-align: center;
         .hero_text {

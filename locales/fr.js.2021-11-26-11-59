@@ -114,23 +114,5 @@ export default {
   Student: 'Étudiant',
   Telecommunications: 'Télécommunications',
   Transportation: 'Transport',
-  Warehouse: 'Dépot',
-  '+216 99 999 999 ': '+216 99 999 999 ',
-  Address: 'Adresse',
-  Budget: 'Budget',
-  Company: 'Société',
-  'Company name': 'Nom de la compagnie', // raison sociale
-  Deadline: 'Date limite', // date limite // dernière limite // dernière date
-  'Estimated budget': 'Budget estimé',
-  'Fiction to mission is based in Sfax, Tunisia. Our in-house team is made up of creative professionals that work closely with more than 50 creatives all around the globe to create out-of-the-box multimedia content, customized for your needs.': 'Fiction to mission est basé à Sfax, en Tunisie. Notre équipe interne est composée de professionnels de la création qui travaillent en étroite collaboration avec plus de 50 créatifs du monde entier pour créer du contenu multimédia prêt à l\'emploi, personnalisé selon vos besoins.',
-  'Full name': 'Nom et prénom', // nom et prénom
-  Industry: 'Industrie', // industrie
-  'Job position': 'Poste',
-  Name: 'Nom',
-  'Our offices': 'Nos bureaux',
-  Phone: 'Téléphone', // téléphone // phone
-  'Phone number': 'Numéro de téléphone', // numéro de téléphone
-  Subject: 'Sujet', // assujettir // exposer // soumettre à // faire subir
-  Submit: 'Soumettre', // soumettre // se soumettre // suggérer // plaider // se plier à // se courber
-  'Your message': 'Votre message'
+  Warehouse: 'Dépot'
 }

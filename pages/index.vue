@@ -208,6 +208,7 @@
     </section>
     <!-- Idea To Solution -->
     <section class="ideaToSolution relative flex column">
+      <ideaToSolution class="absolute background_img"></ideaToSolution>
       <div class="spark container relative flex2">
         <div class="w-50 absolute itsDesc">
           <h1 class="text_white mb-4" v-tr>Fiction To Mission - Idea to solution</h1>
@@ -830,16 +831,18 @@ section {
 }
 //Idea to solution part
 .ideaToSolution {
+  .background_img {
+    top: -40%;
+    left: -10%;
+    height: 140%;
+    min-width: 120%;
+  }
+  overflow: hidden;
   min-height: 100vh;
   @media (min-height: 1080px) {
     min-height: 1080px;
   }
-  background: linear-gradient(
-      to bottom,
-      rgba(22, 19, 19, 0.52),
-      rgba(255, 237, 237, 0)
-    ),
-    url("~static/img/ideaToSolution.jpg") no-repeat;
+  background: linear-gradient(#333 15.1%, #875454 100%);
   background-position: center center !important;
   background-size: cover !important;
   background-attachment: fixed !important;
@@ -867,12 +870,7 @@ section {
     }
   }
   @media (max-width: 767px) {
-    background: linear-gradient(
-        to bottom,
-        rgba(22, 19, 19, 0.52),
-        rgba(255, 237, 237, 0)
-      ),
-      url("~static/img/ideaToSolutionSm.jpg") no-repeat;
+    background: linear-gradient(#333 15.1%, #875454 100%);
     .itsDesc {
       width: calc(100% - 2rem) !important;
     }

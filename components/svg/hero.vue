@@ -1860,7 +1860,7 @@
             transform="translate(-998.994 -219.351)"
           />
         </g>
-        <g transform="translate(0.155 437.074)">
+        <g transform="translate(0.155 437.074)" id="girlWithCircle">
           <circle class="d" cx="111.897" cy="111.897" r="111.897" transform="translate(0 145.145)" />
           <path
             class="c"
@@ -2186,7 +2186,7 @@
             transform="translate(-767.155 -558.241)"
           />
         </g>
-        <g transform="translate(215.774 94.834)">
+        <g transform="translate(215.774 94.834)" id="topGirl">
           <g transform="translate(117.243 212.464)">
             <path
               class="hi"
@@ -2930,8 +2930,15 @@
 <script>
 export default {
   mounted() {
-    this.$gsap.set("#lampe ellipse", {
-      css: { fill: "#fff" }
+    // this.$gsap.set("#lampe ellipse", {
+    //   css: { fill: "#fff" }
+    // });
+
+    this.$gsap.to("#girlWithCircle", 4, {
+      y: "-=15%",
+      yoyo: true,
+      ease: "none",
+      repeat: -1
     });
 
     let tl = this.$gsap.timeline({ repeat: -1 });
@@ -2962,22 +2969,22 @@ export default {
         ".hero #windowsL rect",
         {
           css: { fill: "#fff", stroke: "#e02b2b" },
-          stagger: 0.3,
+          stagger: 0.5,
           repeat: -1,
           yoyo: true
         },
         0.5
       )
-      .to(
-        ".hero #lampe ellipse",
-        {
-          css: { fill: "#ff7676" },
-          stagger: 0.01,
-          repeat: -1,
-          yoyo: true
-        },
-        "graphAnimation"
-      )
+      // .to(
+      //   ".hero #lampe ellipse",
+      //   {
+      //     css: { fill: "#ff7676" },
+      //     stagger: 0.01,
+      //     repeat: -1,
+      //     yoyo: true
+      //   },
+      //   "graphAnimation"
+      // )
       .to(
         ".hero #LGraph .hv",
         {
@@ -2986,17 +2993,6 @@ export default {
           stagger: 0.1,
           repeat: -1,
           yoyo: true
-        },
-        0.5
-      )
-
-      .to(
-        ".hero #tgh",
-        2,
-        {
-          scaleX: 1.4,
-          rotationZ: "-20deg",
-          transformOrigin: "right"
         },
         0.5
       );

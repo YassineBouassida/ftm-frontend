@@ -131,9 +131,9 @@
               :to="`services/${deepFind(service, 'slug')}`"
               tag="h2"
               class="text_primary txt_center pointer"
-            >{{deepFind(service, 'title')}}</router-link>
+            >{{deepFind(service, 'titleDisplay')}}</router-link>
             <h4
-              v-for="(stack, index) in deepFind(service, 'techStack.stacks')"
+              v-for="(stack, index) in subDivisions(service)"
               :key="index"
               class="txt_center my-3"
             >
@@ -153,26 +153,7 @@
       </div>
     </section>
     <!-- services footer -->
-    <section class="services_footer flex align_center">
-      <div class="container flex column align_end">
-        <h1 v-tr class="text_white">Let’s Work Together</h1>
-        <p v-tr class="text_white w-50 txt_right">
-          Need a quote for your project? Have a question about our work or services?
-          Just let us know.
-        </p>
-        <p
-          class="text_white w-50 txt_right"
-          v-tr
-        >Whether you’re a small business or a large corporation, we look forward to working with you on your next creative endeavor</p>
-        <fBtn
-          link
-          :to="localePath('/contact')"
-          class="px-4 call_to_action bg_white f_link text_white"
-        >
-          <h3 v-tr class="text_text1">Contact us</h3>
-        </fBtn>
-      </div>
-    </section>
+    <contact-bloc></contact-bloc>
   </div>
 </template>
 <script>
@@ -195,6 +176,25 @@ export default {
         { image: "start-up.svg", text: "Start-ups" }
       ]
     };
+  },
+  methods: {
+    subDivisions(service) {
+      console.log(service);
+
+      if (
+        this.deepFind(service, "techStack.stacks") &&
+        this.deepFind(service, "techStack.showAsSubdivisions")
+      ) {
+        return this.deepFind(service, "techStack.stacks");
+      } else if (
+        this.deepFind(service, "cycle.subCategory") &&
+        this.deepFind(service, "cycle.showAsSubdivisions")
+      ) {
+        return this.deepFind(service, "cycle.subCategory");
+      } else {
+        return null;
+      }
+    }
   },
   head() {
     return {
@@ -316,13 +316,16 @@ export default {
         margin-bottom: 2rem;
         & > .flex {
           margin-bottom: 1.5rem;
+          width: 100%;
         }
         .voice {
-          width: 15rem;
-          height: 15rem;
+          width: 8rem;
+          height: 8rem;
         }
       }
     }
+  }
+  @media (max-width: 480px) {
   }
 }
 //Promises section
@@ -454,24 +457,6 @@ export default {
         p {
           text-align: center !important;
         }
-      }
-    }
-  }
-}
-//Services footer
-.services_footer {
-  background: url("~static/img/services/footer_services.png");
-  min-height: 28.875rem;
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  @media (max-width: 767px) {
-    & > .container {
-      align-items: center !important;
-      h1,
-      p {
-        width: 100% !important;
-        text-align: center !important;
       }
     }
   }

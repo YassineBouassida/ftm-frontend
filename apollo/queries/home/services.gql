@@ -1,28 +1,34 @@
 # Write your query or mutation here
-query Service($locale:String) {
-  services(locale:$locale ) {
-   
-      locale
-      title
+query Service($locale: String) {
+  services(locale: $locale) {
+    locale
+    title
+    titleDisplay
+    id
+    techStack {
       id
-       techStack {
-      id
-     
+
       stacks {
         id
         title
-       
-        
       }
+      showAsSubdivisions
     }
-      icon {
-        url
+    cycle {
+      id
+      subCategory {
+        title
+        id
       }
-      iconHover {
-        url
-      }
-      slug
-      description
-    
+      showAsSubdivisions
+    }
+    icon {
+      url
+    }
+    iconHover {
+      url
+    }
+    slug
+    description
   }
 }

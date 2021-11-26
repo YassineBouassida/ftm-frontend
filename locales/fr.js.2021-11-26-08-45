@@ -50,7 +50,7 @@ export default {
   'Get a Quote': 'Obtenez un devis',
   'Let’s Work Together': 'Travaillons ensemble',
   'Live preview': 'Aperçu en direct',
-  'Need a quote for your project? Have a question about our work or services?          Just let us know.': 'Besoin d\'un devis pour votre projet ? Vous avez une question sur notre travail ou nos services ? Faites le nous savoir.', // UNUSED
+  'Need a quote for your project? Have a question about our work or services?          Just let us know.': 'Besoin d\'un devis pour votre projet ? Vous avez une question sur notre travail ou nos services ? Faites le nous savoir.',
   'OUR SERVICES': 'NOS SERVICES',
   'Our Promise': 'Notre promesse',
   'WHY WORK WITH US': 'POURQUOI TRAVAILLER AVEC NOUS',
@@ -75,62 +75,5 @@ export default {
   'Experienced team': 'Équipe expérimentée',
   'Full-service web Development company': 'Société de développement web à service complet', // UNUSED
   'High quality service': 'Service de haute qualité',
-  'Full-service': 'Service complet',
-  'Accounting and Finance': 'Comptabilité et finance',
-  'Administrative and Clerical': 'Administratif et de bureau',
-  'CEO / C-Level / VP': 'PDG / C-Level / VP',
-  Construction: 'Construction',
-  'Creative and Design': 'Création et conception',
-  'Customer Service': 'Service Clients',
-  Education: 'Éducation',
-  'Energy and Utilities': 'Énergie et services publics',
-  Engineering: 'Ingénierie',
-  'Financial Manager': 'Manager financier',
-  'Financial Services': 'Services financiers',
-  Healthcare: 'Soins de santé',
-  Hospitality: 'Hospitalité',
-  IT: 'CE',
-  Labor: 'La main d\'oeuvre',
-  Legal: 'Légal',
-  'Maintenance and Repair': 'Entretien et réparation',
-  Management: 'La gestion',
-  'Manufacturing and Industrial': 'Fabrication et Industriel',
-  'Marketing Manager / Marketing Director': 'Responsable marketing / Directeur marketing',
-  'Marketing and Advertising': 'Marketing et publicité',
-  'Need a quote for your project? Have a question about our work or services?        Just let us know.': 'Besoin d\'un devis pour votre projet ? Vous avez une question sur notre travail ou nos services ? Faites le nous savoir.',
-  'Operations Manager': 'directeur des opérations',
-  Other: 'Autre',
-  'Other Marketing Position': 'Autre poste en marketing',
-  'Pharmaceutical and Research': 'Pharmaceutique et recherche',
-  'Please select': 'Veuillez sélectionner',
-  'Production Animation Agency': 'Agence de Production Animation',
-  'Production Manager': 'Directeur de production',
-  Professional: 'Professionnel',
-  'Restaurant and Food Service': 'Restauration et service alimentaire',
-  Retail: 'Vendre au détail',
-  SaaS: 'SaaS',
-  Sales: 'Ventes',
-  Security: 'Sécurité',
-  Student: 'Étudiant',
-  Telecommunications: 'Télécommunications',
-  Transportation: 'Transport',
-  Warehouse: 'Dépot',
-  '+216 99 999 999 ': '+216 99 999 999 ',
-  Address: 'Adresse',
-  Budget: 'Budget',
-  Company: 'Société',
-  'Company name': 'Nom de la compagnie', // raison sociale
-  Deadline: 'Date limite', // date limite // dernière limite // dernière date
-  'Estimated budget': 'Budget estimé',
-  'Fiction to mission is based in Sfax, Tunisia. Our in-house team is made up of creative professionals that work closely with more than 50 creatives all around the globe to create out-of-the-box multimedia content, customized for your needs.': 'Fiction to mission est basé à Sfax, en Tunisie. Notre équipe interne est composée de professionnels de la création qui travaillent en étroite collaboration avec plus de 50 créatifs du monde entier pour créer du contenu multimédia prêt à l\'emploi, personnalisé selon vos besoins.',
-  'Full name': 'Nom et prénom', // nom et prénom
-  Industry: 'Industrie', // industrie
-  'Job position': 'Poste',
-  Name: 'Nom',
-  'Our offices': 'Nos bureaux',
-  Phone: 'Téléphone', // téléphone // phone
-  'Phone number': 'Numéro de téléphone', // numéro de téléphone
-  Subject: 'Sujet', // assujettir // exposer // soumettre à // faire subir
-  Submit: 'Soumettre', // soumettre // se soumettre // suggérer // plaider // se plier à // se courber
-  'Your message': 'Votre message'
+  'Full-service': 'Service complet'
 }

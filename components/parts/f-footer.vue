@@ -10,7 +10,7 @@
         <div class="usefull_links">
           <nuxt-link :to="localePath('/')" class="a text_text2 my-3" tag="div" v-tr>Home</nuxt-link>
           <nuxt-link :to="localePath('/about')" class="a text_text2 my-3" tag="div" v-tr>About</nuxt-link>
-          <nuxt-link :to="localePath('/#projects')" class="a text_text2 my-3" tag="div" v-tr>Portfolio</nuxt-link>
+          <nuxt-link :to="localePath('/#projects')" class="a text_text2 my-3" tag="div" v-tr>Samples</nuxt-link>
           <nuxt-link :to="localePath('/services')" class="a text_text2 my-3" tag="div" v-tr>Services</nuxt-link>
         </div>
       </div>
@@ -127,7 +127,10 @@
     </div>
     <div class="bottom_part bg_text1">
       <div class="flex align_center space_between container fill_height">
-        <h3 class="text_white">Fiction To Mission</h3>
+        <router-link :to="localePath('/')" tag="h3" class="text_white">Fiction To Mission</router-link>
+        <p>
+          <span class="text_white">© Copyright {{new Date().getFullYear()}} FTM</span>
+        </p>
         <div class="static_links flex align_center">
           <nuxt-link
             :to="localePath('/privacy-policy')"
@@ -300,10 +303,7 @@ export default {
       justify-content: center;
     }
   }
-  @media (max-width: 480px) {
-    .bottom_part > .flex {
-      justify-content: center;
-    }
+  @media (max-width: 660px) {
     .static_links {
       display: none !important;
     }

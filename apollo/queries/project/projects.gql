@@ -1,0 +1,28 @@
+# Write your query or mutation here
+query Project($locale:String) {
+  projects(locale:$locale ) {
+   
+      slug
+    
+    header {
+      id
+      cover {
+        name
+        url
+        previewUrl
+      }
+      
+      title
+      
+      
+      finish_date
+      
+      industries {
+        id
+        name
+        description
+      }
+    }
+    
+  }
+}

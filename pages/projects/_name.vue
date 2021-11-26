@@ -24,6 +24,7 @@
     <project-footer
       :preview="deepFind(projects,'0.preview_link')"
       :variables="deepFind(projects,'0.footer')"
+      class="mb-4"
     ></project-footer>
   </div>
   <div v-else class="bg_lightGrey loading_page flex align_center center">
@@ -73,9 +74,6 @@ export default {
 <style lang="scss" scoped>
 section {
   border-radius: 9px;
-  &:last-of-type {
-    border-radius: 9px 9px 0 0;
-  }
 }
 
 .body {

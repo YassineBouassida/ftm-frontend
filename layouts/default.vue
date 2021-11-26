@@ -1,6 +1,6 @@
 <template>
   <div class="flex column app" :class="{rtl:rtl,ltr:!rtl}">
-    <fHeader class="container" />
+    <fHeader class="bg_white headerContainer" :class="{sticky:sticky}" />
     <nuxt class="main" />
     <fFooter></fFooter>
   </div>
@@ -9,6 +9,11 @@
 @import "~/static/scss/global.scss";
 @import "vue-slick-carousel/dist/vue-slick-carousel-theme.css";
 @import "vue-slick-carousel/dist/vue-slick-carousel.css";
+.sticky {
+  position: sticky;
+  top: 0;
+  z-index: 9999999;
+}
 
 .app {
   min-height: 100vh;
@@ -30,7 +35,28 @@ export default {
       }
     };
   },
-
+  data() {
+    return {
+      lastScrollY: 0,
+      sticky: false
+    };
+  },
+  beforeMount() {
+    window.addEventListener("scroll", this.handleScroll);
+  },
+  beforeDestroy() {
+    window.removeEventListener("scroll", this.handleScroll);
+  },
+  methods: {
+    handleScroll(y) {
+      if (this.lastScrollY > window.scrollY && window.scrollY > 150) {
+        this.sticky = true;
+      } else {
+        this.sticky = false;
+      }
+      this.lastScrollY = window.scrollY;
+    }
+  },
   computed: {
     rtl() {
       return this.$i18n.localeProperties.dir == "rtl";

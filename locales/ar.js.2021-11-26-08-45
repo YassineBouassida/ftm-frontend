@@ -50,7 +50,7 @@ export default {
   'Get a Quote': 'إقتبس',
   'Let’s Work Together': 'دعونا نعمل معا',
   'Live preview': 'المعاينة الحية',
-  'Need a quote for your project? Have a question about our work or services?          Just let us know.': 'بحاجة الى اقتباس لمشروعك؟ هل لديك سؤال حول عملنا أو خدماتنا؟ فقط اسمحوا لنا أن نعرف.', // UNUSED
+  'Need a quote for your project? Have a question about our work or services?          Just let us know.': 'بحاجة الى اقتباس لمشروعك؟ هل لديك سؤال حول عملنا أو خدماتنا؟ فقط اسمحوا لنا أن نعرف.',
   'OUR SERVICES': 'خدماتنا',
   'Our Promise': 'عهدنا',
   'WHY WORK WITH US': 'لماذا تعمل معنا',
@@ -75,62 +75,5 @@ export default {
   'Experienced team': 'فريق من ذوي الخبرة',
   'Full-service web Development company': 'شركة تطوير مواقع ويب كاملة الخدمات', // UNUSED
   'High quality service': 'خدمة عالية الجودة',
-  'Full-service': 'خدمة شاملة',
-  'Accounting and Finance': 'المحاسبة والتمويل',
-  'Administrative and Clerical': 'إداري وكتابي',
-  'CEO / C-Level / VP': 'الرئيس التنفيذي / C-Level / VP',
-  Construction: 'بناء',
-  'Creative and Design': 'الإبداع والتصميم',
-  'Customer Service': 'خدمة الزبائن',
-  Education: 'تعليم',
-  'Energy and Utilities': 'الطاقة والمرافق',
-  Engineering: 'هندسة',
-  'Financial Manager': 'مدير مالي',
-  'Financial Services': 'الخدمات المالية',
-  Healthcare: 'الرعاىة الصحية',
-  Hospitality: 'حسن الضيافة',
-  IT: 'هو - هي',
-  Labor: 'طلق',
-  Legal: 'قانوني',
-  'Maintenance and Repair': 'الصيانة والإصلاح',
-  Management: 'إدارة',
-  'Manufacturing and Industrial': 'التصنيع والصناعية',
-  'Marketing Manager / Marketing Director': 'مدير تسويق / مدير تسويق',
-  'Marketing and Advertising': 'التسويق والإعلان',
-  'Need a quote for your project? Have a question about our work or services?        Just let us know.': 'بحاجة الى اقتباس لمشروعك؟ هل لديك سؤال حول عملنا أو خدماتنا؟ فقط اسمحوا لنا أن نعرف.',
-  'Operations Manager': 'مدير العمليات',
-  Other: 'آخر',
-  'Other Marketing Position': 'موقف تسويق آخر',
-  'Pharmaceutical and Research': 'الصيدلة والبحوث',
-  'Please select': 'الرجاء التحديد',
-  'Production Animation Agency': 'وكالة إنتاج الرسوم المتحركة',
-  'Production Manager': 'مدير الانتاج',
-  Professional: 'احترافي',
-  'Restaurant and Food Service': 'مطعم وخدمة الطعام',
-  Retail: 'التجزئه',
-  SaaS: 'SaaS',
-  Sales: 'مبيعات',
-  Security: 'حماية',
-  Student: 'طالب',
-  Telecommunications: 'الإتصالات',
-  Transportation: 'مواصلات',
-  Warehouse: 'مستودع',
-  '+216 99 999 999 ': '+216 99999999 ',
-  Address: 'عنوان',
-  Budget: 'الدخل',
-  Company: 'شركة',
-  'Company name': 'اسم الشركة',
-  Deadline: 'الموعد النهائي', // الموعد الأخير // الحد الاخير
-  'Estimated budget': 'الميزانية التقديرية',
-  'Fiction to mission is based in Sfax, Tunisia. Our in-house team is made up of creative professionals that work closely with more than 50 creatives all around the globe to create out-of-the-box multimedia content, customized for your needs.': 'يقع مقر Fiction to Mission في صفاقس ، تونس. يتكون فريقنا الداخلي من محترفين مبدعين يعملون عن كثب مع أكثر من 50 مبدعًا من جميع أنحاء العالم لإنشاء محتوى وسائط متعددة خارج الصندوق ومخصص لاحتياجاتك.',
-  'Full name': 'الاسم بالكامل', // بدر تام
-  Industry: 'صناعة', // صناعة // جد // مثابرة // كد // مواظبة
-  'Job position': 'وظيفه',
-  Name: 'اسم',
-  'Our offices': 'مكاتبنا',
-  Phone: 'هاتف', // هاتف // صوت // صوت كلامي // المسماع
-  'Phone number': 'رقم الهاتف', // رقم الهاتف
-  Subject: 'موضوعات', // موضوع // تابع // موضوع دراسي // رعية // مسند // المرؤوس // باب // التابع // مرؤوس // مأمور // شخص تدرس إنفعالات
-  Submit: 'يقدم', // عرض // قدم // سلم // خضع // اقترح // استسلم // رافع
-  'Your message': 'رسالتك'
+  'Full-service': 'خدمة شاملة'
 }

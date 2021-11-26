@@ -1,107 +1,121 @@
 <template>
-  <div class="fill_width flex toolbar align_center">
-    <!-- Brand side -->
-    <div class="brand">
-      <router-link tag="span" :to="localePath('/')" class="pointer">
-        <fLogo class="logo"></fLogo>
-      </router-link>
-    </div>
-    <div class="flex align_center fill_height">
-      <div class="languages mr-4 flex">
-        <h3
-          class="mobile pointer flex align_center center mx-2 t-14"
-          :class="{'text_primary':locale.val==$i18n.locale,'text_text2':locale.val!=$i18n.locale}"
-          @click="$root.$i18n.setLocale(locale.val)"
-          v-for="locale in laguages"
-          :key="locale.code"
-        >
-          <span>{{locale.text}}</span>
-        </h3>
+  <div>
+    <div class="fill_width flex toolbar align_center container">
+      <!-- Brand side -->
+      <div class="brand">
+        <router-link tag="span" :to="localePath('/')" class="pointer">
+          <fLogo class="logo"></fLogo>
+        </router-link>
       </div>
-      <!-- Burger menu <1024px -->
-      <fBtn class="bg_primary burger" @click.native="openMenu=true">
-        <div class="flex column fill_height center">
-          <div class="line bg_white"></div>
-          <div class="line bg_white"></div>
-          <div class="line bg_white"></div>
-        </div>
-      </fBtn>
-    </div>
-    <!-- Right side and menu side <1024-->
-    <div class="right_side flex" :class="{opened:openMenu}">
-      <close class="close_sign" :reverse="!openMenu" @click.native="openMenu=false"></close>
-      <div class="links flex align_center center">
-        <nuxt-link
-          class="f_link mr-4"
-          :to="localePath('/')"
-          @click.native="openMenu=false"
-          v-tr
-        >Home</nuxt-link>
-        <nuxt-link
-          class="f_link mx-4"
-          :to="localePath('/about')"
-          v-tr
-          @click.native="openMenu=false"
-        >About</nuxt-link>
-        <nuxt-link
-          class="f_link mx-4"
-          :to="localePath('/#projects')"
-          v-tr
-          @click.native="openMenu=false"
-        >Portfolio</nuxt-link>
-        <nuxt-link
-          class="f_link ml-4"
-          :to="localePath('/services')"
-          v-tr
-          @click.native="openMenu=false"
-        >Services</nuxt-link>
-      </div>
-      <div class="flex align_center relative desktop">
-        <h3
-          class="pointer flex align_center center"
-          :alt="$i18n.locale"
-          @click="dropdownOpened=!dropdownOpened"
-        >
-          <span>{{$i18n.locale.toUpperCase()}}</span>
-        </h3>
-        <div class="flex column dropdown" v-if="dropdownOpened">
-          <a
-            href="#"
-            class="my-2 flex align_center text_text3"
+      <div class="flex align_center fill_height">
+        <div class="languages mr-4 flex">
+          <h3
+            class="mobile pointer flex align_center center mx-2 t-14"
+            :class="{'text_primary':locale.val==$i18n.locale,'text_text2':locale.val!=$i18n.locale}"
+            @click="$root.$i18n.setLocale(locale.val)"
             v-for="locale in laguages"
             :key="locale.code"
-            @click.prevent.stop="$root.$i18n.setLocale(locale.val);"
-          >{{locale.text}}</a>
+          >
+            <span>{{locale.text}}</span>
+          </h3>
         </div>
+        <!-- Burger menu <1024px -->
+        <fBtn class="bg_primary burger" @click.native="openMenu=true">
+          <div class="flex column fill_height center">
+            <div class="line bg_white"></div>
+            <div class="line bg_white"></div>
+            <div class="line bg_white"></div>
+          </div>
+        </fBtn>
       </div>
-      <div class="flex social_part end">
-        <fBtn
-          external
-          link
-          flat
-          to="https://www.facebook.com/FictionToMission/"
-          class="mr-3 social_btn bg_primary flex align_center center"
-        >
-          <img
-            :src="require(`~/static/img/icons/social/facebook${openMenu?'_r':''}.png`)"
-            alt="facebook"
-          />
-        </fBtn>
-        <fBtn
-          external
-          link
-          flat
-          to="https://www.instagram.com/fictiontomission/"
-          class="mr-3 social_btn bg_primary flex align_center center"
-        >
-          <img
-            :src="require(`~/static/img/icons/social/instagram${openMenu?'_r':''}.png`)"
-            alt="instagram"
-          />
-        </fBtn>
-        <fBtn link :to="localePath('/contact')" class="quote_btn bg_primary f_link">
-          <h3 class="text_white" v-tr>GET A QUOTE</h3>
-        </fBtn>
+      <!-- Right side and menu side <1024-->
+      <div class="right_side flex" :class="{opened:openMenu}">
+        <close class="close_sign" :reverse="!openMenu" @click.native="openMenu=false"></close>
+        <div class="links flex align_center center">
+          <nuxt-link
+            class="f_link mr-4"
+            :to="localePath('/')"
+            @click.native="openMenu=false"
+            v-tr
+          >Home</nuxt-link>
+          <nuxt-link
+            class="f_link mx-4"
+            :to="localePath('/about')"
+            v-tr
+            @click.native="openMenu=false"
+          >About</nuxt-link>
+          <nuxt-link
+            class="f_link mx-4"
+            :to="localePath('/projects')"
+            v-tr
+            @click.native="openMenu=false"
+          >Samples</nuxt-link>
+          <nuxt-link
+            class="f_link ml-4"
+            :to="localePath('/services')"
+            v-tr
+            @click.native="openMenu=false"
+          >Services</nuxt-link>
+          <nuxt-link
+            class="f_link ml-4 mobile"
+            :to="localePath('/services')"
+            v-tr
+            @click.native="openMenu=false"
+          >Privacy policy</nuxt-link>
+          <nuxt-link
+            class="f_link ml-4 mobile"
+            :to="localePath('/services')"
+            v-tr
+            @click.native="openMenu=false"
+          >Cookies</nuxt-link>
+        </div>
+        <div class="flex align_center relative desktop">
+          <h3
+            class="pointer flex align_center center"
+            :alt="$i18n.locale"
+            @click="dropdownOpened=!dropdownOpened"
+          >
+            <span>{{$i18n.locale.toUpperCase()}}</span>
+          </h3>
+          <div class="flex column dropdown" v-if="dropdownOpened">
+            <a
+              href="#"
+              class="my-2 flex align_center text_text3"
+              v-for="locale in laguages"
+              :key="locale.code"
+              @click.prevent.stop="$root.$i18n.setLocale(locale.val);"
+            >{{locale.text}}</a>
+          </div>
+        </div>
+        <div class="flex social_part end">
+          <fBtn
+            external
+            link
+            flat
+            to="https://www.facebook.com/FictionToMission/"
+            class="mr-3 social_btn bg_primary flex align_center center"
+          >
+            <img
+              :src="require(`~/static/img/icons/social/facebook${openMenu?'_r':''}.png`)"
+              alt="facebook"
+            />
+          </fBtn>
+          <fBtn
+            external
+            link
+            flat
+            to="https://www.instagram.com/fictiontomission/"
+            class="mr-3 social_btn bg_primary flex align_center center"
+          >
+            <img
+              :src="require(`~/static/img/icons/social/instagram${openMenu?'_r':''}.png`)"
+              alt="instagram"
+            />
+          </fBtn>
+          <fBtn link :to="localePath('/contact')" class="quote_btn bg_primary f_link">
+            <h3 class="text_white" v-tr>GET A QUOTE</h3>
+          </fBtn>
+        </div>
       </div>
     </div>
   </div>
@@ -119,6 +133,7 @@ export default {
       ]
     };
   },
+
   watch: {
     $route: {
       handler: function(route) {

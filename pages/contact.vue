@@ -30,13 +30,15 @@
     <section class="bg_lightGrey">
       <div class="contact_form container bg_white relative">
         <div class="c_head w-50">
-          <h1>Our offices</h1>
-          <p>Fiction to mission is based in Sfax, Tunisia. Our in-house team is made up of creative professionals that work closely with more than 50 creatives all around the globe to create out-of-the-box multimedia content, customized for your needs.</p>
+          <h1 v-tr>Our offices</h1>
+          <p
+            v-tr
+          >Fiction to mission is based in Sfax, Tunisia. Our in-house team is made up of creative professionals that work closely with more than 50 creatives all around the globe to create out-of-the-box multimedia content, customized for your needs.</p>
         </div>
         <div class="c_body flex">
           <div class="form_contact w-50">
             <div class="cellule">
-              <h2>Contact us</h2>
+              <h2 v-tr>Contact us</h2>
               <h3 class="mt-2 text_primary">
                 <a
                   href="mailto:contact@fictiontomission.com"
@@ -45,7 +47,7 @@
               </h3>
             </div>
             <div class="cellule mt-2">
-              <h2>Address</h2>
+              <h2 v-tr>Address</h2>
               <h3 class="mt-2 text_primary">
                 <a
                   href="https://g.page/fictiontomission?share"
@@ -60,7 +62,7 @@
               </h3>
             </div>
             <div class="cellule mt-2">
-              <h2>Phone</h2>
+              <h2 v-tr>Phone</h2>
               <h3 class="mt-2 text_primary">
                 <a class="text_primary" href="tel:+216 92 24 33 33">(+216) 92 10 13 33</a>
                 <br />
@@ -68,15 +70,18 @@
               </h3>
             </div>
           </div>
-          <form class="w-50">
+          <form class="w-50" @submit.prevent>
             <base-input
               v-model="form.name"
               iType="text"
               data-field="input"
               class="my-2"
-              label="Name"
+              :label="$t('Name')"
               required
-              placeholder="Full name"
+              :placeholder="$t('Full name')"
+              :error="errors.name"
+              @errorField="errors.name=$event;"
+              ref="name"
             ></base-input>
             <base-input
               v-model="form.email"
@@ -84,57 +89,100 @@
               class="my-2"
               label="Email"
               required
-              placeholder="Compagny's email"
+              placeholder="email@company.com"
               data-field="input"
+              :error="errors.email"
+              @errorField="errors.email=$event"
+              ref="email"
             ></base-input>
             <base-input
-              v-model="form.job"
+              v-model="form.company"
+              iType="text"
+              data-field="input"
               class="my-2"
-              data-field="select"
-              :options="industries"
-              label="Job position"
+              :label="$t('Company')"
               required
-              placeholder="Please select"
+              :placeholder="$t('Company name')"
+              :error="errors.company"
+              @errorField="errors.company=$event"
+              ref="company"
+            ></base-input>
+            <base-input
+              v-model="form.phone"
+              iType="number"
+              class="my-2"
+              :label="$t('Phone number')"
+              required
+              :placeholder="$t('+216 99 999 999 ')"
+              data-field="input"
+              :error="errors.phone"
+              @errorField="errors.phone=$event"
+              ref="phone"
             ></base-input>
             <base-input
               v-model="form.budget"
               iType="text"
               class="my-2"
-              label="Budget"
+              :label="$t('Budget')"
               required
-              placeholder="Estimated budget"
+              :placeholder="$t('Estimated budget')"
               data-field="input"
+              :error="errors.budget"
+              @errorField="errors.budget=$event"
+              ref="budget"
             ></base-input>
+            <base-input
+              v-model="form.job"
+              class="my-2"
+              data-field="select"
+              :options="positions"
+              :label="$t('Job position')"
+              placeholder="Please select"
+              :error="errors.job"
+              @errorField="errors.job=$event"
+              ref="job"
+            ></base-input>
+
             <base-input
               v-model="form.deadline"
               class="my-2"
               data-field="input"
-              label="Deadline"
+              :label="$t('Deadline')"
               iType="datetime-local"
-              required
               placeholder="12/31/1996"
+              :error="errors.deadline"
+              @errorField="errors.deadline=$event"
+              ref="deadline"
             ></base-input>
             <base-input
               v-model="form.industry"
               class="my-2"
               data-field="select"
               :options="industries"
-              label="Industry"
-              required
+              :label="$t('Industry')"
               placeholder="Please select"
+              :error="errors.industry"
+              @errorField="errors.industry=$event"
+              ref="industry"
             ></base-input>
             <base-input
               v-model="form.subject"
               iType="textarea"
               class="my-2"
-              label="Subject"
+              :label="$t('Subject')"
               required
-              placeholder="Full name"
+              :placeholder="$t('Your message')"
               data-field="textarea"
+              :error="errors.subject"
+              @errorField="errors.subject=$event"
+              ref="subject"
             ></base-input>
+            <div class="flex align_center center mt-2" v-if="checkForm">
+              <h4 class="text_primary" v-tr>Please check required fields</h4>
+            </div>
             <div class="flex align_center end mt-4">
               <fBtn @click.native="submitForm" class="call_to_action bg_primary f_link text_white">
-                <h3 class="text_white px-5 w-40">Submit</h3>
+                <h3 class="text_white px-5 w-40" v-tr>Submit</h3>
               </fBtn>
             </div>
           </form>
@@ -148,7 +196,7 @@ import createMessage from "~/apollo/mutations/contact/contact";
 export default {
   head() {
     return {
-      title: this.$t('Contact us'),
+      title: this.$t("Contact us"),
       meta: [
         {
           hid: "description",
@@ -166,6 +214,7 @@ export default {
   },
   data() {
     return {
+      checkForm: false,
       form: {
         name: "",
         email: "",
@@ -173,68 +222,155 @@ export default {
         budget: "",
         deadline: "",
         industry: "",
-        subject: ""
+        subject: "",
+        company: "",
+        phone: ""
+      },
+      errors: {
+        name: "",
+        email: "",
+        job: "",
+        budget: "",
+        deadline: "",
+        industry: "",
+        subject: "",
+        company: "",
+        phone: "",
+        total: 6
       },
       industries: [
-        { text: "Please select", val: "" },
-        { text: "Agriculture, forestry and fishing", val: "" },
-        { text: "Mining and quarrying", val: "" },
-        { text: "Manufacturing", val: "" },
+        { text: this.$t("Please select"), val: "" },
         {
-          text: "Electricity, gas, steam and air conditioning supply",
-          val: ""
+          text: this.$t("Accounting and Finance"),
+          val: "Accounting and Finance"
         },
         {
-          text:
-            "Water supply; sewerage, waste management and remediation activities",
-          val: ""
+          text: this.$t("Administrative and Clerical"),
+          val: "Administrative and Clerical"
         },
-        { text: "Construction", val: "" },
+        { text: this.$t("Construction"), val: "Construction" },
         {
-          text:
-            "Wholesale and retail trade; repair of motor vehicles and motorcycles",
-          val: ""
-        },
-        { text: "Transportation and storage", val: "" },
-        { text: "Accommodation and food service activities", val: "" },
-        { text: "Information and communication", val: "" },
-        { text: "Financial and insurance activities", val: "" },
-        { text: "Real estate activities", val: "" },
-        { text: "Professional, scientific and technical activities", val: "" },
-        { text: "Administrative and support service activities", val: "" },
-        {
-          text: "Public administration and defence; compulsory social security",
-          val: ""
-        },
-        { text: "Education", val: "" },
-        { text: "Human health and social work activities", val: "" },
-        { text: "Arts, entertainment and recreation", val: "" },
-        { text: "Other service activities", val: "" },
-        {
-          text:
-            "Activities of households as employers; undifferentiated goods- and services-producing activities of households for own use",
-          val: ""
+          text: this.$t("Creative and Design"),
+          val: "Creative and Design"
         },
         {
-          text: "Activities of extraterritorial organizations and bodies",
-          val: ""
+          text: this.$t("Customer Service"),
+          val: "Customer Service"
+        },
+        { text: this.$t("Education"), val: "Education" },
+        {
+          text: this.$t("Energy and Utilities"),
+          val: "Energy and Utilities"
+        },
+        { text: this.$t("Engineering"), val: "Engineering" },
+        { text: this.$t("Financial Services"), val: "Financial Services" },
+        { text: this.$t("Healthcare"), val: "Healthcare" },
+        { text: this.$t("Hospitality"), val: "Hospitality" },
+        { text: this.$t("IT"), val: "IT" },
+        { text: this.$t("Labor"), val: "Labor" },
+        { text: this.$t("Legal"), val: "Legal" },
+        {
+          text: this.$t("Maintenance and Repair"),
+          val: "Maintenance and Repair"
+        },
+        { text: this.$t("Management"), val: "Management" },
+        {
+          text: this.$t("Manufacturing and Industrial"),
+          val: "Manufacturing and Industrial"
+        },
+        {
+          text: this.$t("Marketing and Advertising"),
+          val: "Marketing and Advertising"
+        },
+        { text: this.$t("Pharmaceutical and Research"), val: "" },
+        {
+          text: this.$t("Production Animation Agency"),
+          val: "Production Animation Agency"
+        },
+        {
+          text: this.$t("Professional"),
+          val: "Professional"
+        },
+        {
+          text: this.$t("Restaurant and Food Service"),
+          val: "Restaurant and Food Service"
+        },
+        {
+          text: this.$t("Retail"),
+          val: "Retail"
+        },
+        {
+          text: this.$t("SaaS"),
+          val: "SaaS"
+        },
+        {
+          text: this.$t("Sales"),
+          val: "Sales"
+        },
+        {
+          text: this.$t("Security"),
+          val: "Security"
+        },
+        {
+          text: this.$t("Telecommunications"),
+          val: "Telecommunications"
+        },
+        {
+          text: this.$t("Transportation"),
+          val: "Transportation"
+        },
+        {
+          text: this.$t("Warehouse"),
+          val: "Warehouse"
         }
+      ],
+      positions: [
+        { text: this.$t("Please select"), val: "" },
+        { text: this.$t("CEO / C-Level / VP"), val: "CEO" },
+        {
+          text: this.$t("Marketing Manager / Marketing Director"),
+          val: "Marketing"
+        },
+        { text: this.$t("Operations Manager"), val: "Operations" },
+        { text: this.$t("Financial Manager"), val: "Financial" },
+        { text: this.$t("Production Manager"), val: "Production" },
+        {
+          text: this.$t("Other Marketing Position"),
+          val: "Other Marketing Position"
+        },
+        { text: this.$t("Student"), val: "Student" },
+        { text: this.$t("Other"), val: "Other" }
       ]
     };
   },
+
   methods: {
     submitForm() {
-      this.$apollo.mutate({
-        mutation: createMessage,
-        variables: {
-          ...this.form
-        },
-        update: (cache, { data: { message } }) => {
-          // Read the data from our cache for this query.
-          // eslint-disable-next-line
-          console.log(message);
-        }
+      if (this.verifyForm()) {
+        // this.$apollo.mutate({
+        //   mutation: createMessage,
+        //   variables: {
+        //     ...this.form
+        //   },
+        //   update: (cache, { data: { message } }) => {
+        //     // Read the data from our cache for this query.
+        //     // eslint-disable-next-line
+        //     console.log(message);
+        //   }
+        // });
+        this.checkForm = false;
+      } else {
+        this.checkForm = true;
+      }
+    },
+    verifyForm() {
+      console.log(Object.keys(this.$refs));
+      let verifier = 1;
+      Object.keys(this.$refs).map(refKey => {
+        let ref = this.$refs[refKey];
+        verifier = verifier * ref.verifyAndEmit(this.form[refKey]);
       });
+      return verifier;
     }
   }
 };
