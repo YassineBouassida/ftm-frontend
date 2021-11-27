@@ -165,7 +165,7 @@
           <div class="pack_standards py-5 w-45 flex column space_between">
             <div class="standards_head">
               <h1
-                class="hero_text text_white"
+                class="hero_text text_white desktop"
               >{{deepFind(serviceBySlug, 'packages.0.standards.title')}}</h1>
               <p class="text_white">{{deepFind(serviceBySlug, 'packages.0.standards.description')}}</p>
             </div>
@@ -180,12 +180,15 @@
               </div>
             </div>
             <div class="standards_footer">
-              <fBtn link to="/contact" class="talk_btn">
+              <fBtn link :to="localePath('/contact')" class="talk_btn">
                 <h3 class="text_white">Let's talk</h3>
               </fBtn>
             </div>
           </div>
           <div class="pack_details w-35">
+            <h1
+              class="hero_text text_white pb-3 txt_center mobile"
+            >{{deepFind(serviceBySlug, 'packages.0.standards.title')}}</h1>
             <div class="pack_holder pa-3 flex column">
               <div class="pack_head flex align_center pb-2">
                 <img src="~static/img/icons/packBadge.svg" alt="tick" />
@@ -217,15 +220,20 @@
                     v-html="deepFind(serviceBySlug, 'packages.0.details.revisions')"
                   ></p>
                 </div>
-                <fBtn link to="/" class="fill_width mt-4 mb-3">
+                <fBtn
+                  link
+                  external
+                  to="https://fb.com/book/FictionToMission/"
+                  class="fill_width mt-4 mb-3 d_block bg_white flex align_center center text_text1"
+                >
                   <h3>
                     (
                     <span v-html="deepFind(serviceBySlug, 'packages.0.details.price')"></span>) Continue
                   </h3>
                 </fBtn>
-                <div class="a text_white txt_center">
+                <router-link tag="div" :to="localePath('/contact')" class="a text_white txt_center">
                   <u>Do you have any special requirements?</u>
-                </div>
+                </router-link>
               </div>
             </div>
             <nuxt-link
@@ -247,6 +255,8 @@
           :faq="faq"
           v-for="(faq, index) in deepFind(serviceBySlug, 'faqs')"
           :key="index"
+          :expanded="expanded==index"
+          @expand="expanded=index"
         ></faq>
       </div>
     </section>
@@ -352,7 +362,7 @@ export default {
   },
   data() {
     return {
-      expanded: false,
+      expanded: null,
       selectedAdv: 0,
       slickSettings: {
         dots: true,
@@ -858,7 +868,7 @@ export default {
       width: 45% !important;
     }
   }
-  @media (max-width: 767px) {
+  @media (max-width: 1024px) {
     .package {
       flex-wrap: wrap;
       .pack_standards {

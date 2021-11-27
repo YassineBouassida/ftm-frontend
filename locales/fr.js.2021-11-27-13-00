@@ -43,7 +43,7 @@ export default {
   'Did you know that 81% of people research a business or service on the internet prior to making a purchase decision ! If you don’t have a website, you have no chance at capturing a share of this market.': 'Saviez-vous que 81% des personnes recherchent une entreprise ou un service sur Internet avant de prendre une décision d\'achat ! Si vous n\'avez pas de site Web, vous n\'avez aucune chance de conquérir une part de ce marché.',
   'GET A QUOTE': 'OBTENIR UN DEVIS',
   Home: 'Accueil',
-  Portfolio: 'Portfolio', // UNUSED
+  Portfolio: 'Portfolio',
   Services: 'services',
   'your success!': 'Résultat atteint!',
   'Contact us': 'Contactez-nous',
@@ -119,23 +119,18 @@ export default {
   Address: 'Adresse',
   Budget: 'Budget',
   Company: 'Société',
-  'Company name': 'Nom de la compagnie',
-  Deadline: 'Date limite',
+  'Company name': 'Nom de la compagnie', // raison sociale
+  Deadline: 'Date limite', // date limite // dernière limite // dernière date
   'Estimated budget': 'Budget estimé',
   'Fiction to mission is based in Sfax, Tunisia. Our in-house team is made up of creative professionals that work closely with more than 50 creatives all around the globe to create out-of-the-box multimedia content, customized for your needs.': 'Fiction to mission est basé à Sfax, en Tunisie. Notre équipe interne est composée de professionnels de la création qui travaillent en étroite collaboration avec plus de 50 créatifs du monde entier pour créer du contenu multimédia prêt à l\'emploi, personnalisé selon vos besoins.',
-  'Full name': 'Nom et prénom',
-  Industry: 'Industrie',
+  'Full name': 'Nom et prénom', // nom et prénom
+  Industry: 'Industrie', // industrie
   'Job position': 'Poste',
   Name: 'Nom',
   'Our offices': 'Nos bureaux',
-  Phone: 'Téléphone',
-  'Phone number': 'Numéro de téléphone',
-  Subject: 'Sujet',
-  Submit: 'Soumettre',
-  'Your message': 'Votre message',
-  Cookies: 'Biscuits', // cookies
-  'Please check required fields': 'Veuillez vérifier les champs obligatoires',
-  'Privacy policy': 'Politique de confidentialité',
-  'Required Field': 'Champs requis',
-  Samples: 'Échantillons'
+  Phone: 'Téléphone', // téléphone // phone
+  'Phone number': 'Numéro de téléphone', // numéro de téléphone
+  Subject: 'Sujet', // assujettir // exposer // soumettre à // faire subir
+  Submit: 'Soumettre', // soumettre // se soumettre // suggérer // plaider // se plier à // se courber
+  'Your message': 'Votre message'
 }

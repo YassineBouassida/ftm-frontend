@@ -114,7 +114,7 @@ export default {
     min-height: 300px;
   }
   width: 374px;
-  height: 340px;
+  height: 390px;
   border-radius: 5px;
   transition: 0.5s all;
 }

@@ -130,7 +130,7 @@
             <router-link
               :to="`services/${deepFind(service, 'slug')}`"
               tag="h2"
-              class="text_primary txt_center pointer"
+              class="text_primary txt_center pointer title_link"
             >{{deepFind(service, 'titleDisplay')}}</router-link>
             <h4
               v-for="(stack, index) in subDivisions(service)"

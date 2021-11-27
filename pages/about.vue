@@ -71,10 +71,10 @@
         </div>
         <div class="text_side ml-4 w-50">
           <div class="desc">
-            <h1 class="mb-3">In case of not having a website</h1>
+            <h1 class="mb-3">Who we are</h1>
             <p class="h4">
-              Your website can be available 24/7/365 even when you’re not, it will attract new customers
-              to your business, make you more money and add instant credibility to your project.
+              Founded in 2019, Fiction To Mission is a full-service web design and digital marketing based in Tunisia.
+              It’s main mission is to find optimal and innovative solutions for the greatest satisfaction of its clients with the help of a highly qualified and experienced team that operates in various activities ranging from website and app creation to community management, copywriting, SEO, branding … and constantly supports the customers in their web strategies.
             </p>
           </div>
         </div>
@@ -83,11 +83,10 @@
       <div class="case txt_right flex1 flex align_center space_between" id="case1">
         <div class="text_side mr-4 w-50">
           <div class="desc">
-            <h1 class="mb-3">In case of not having a website</h1>
-            <p class="h4">
-              Your website can be available 24/7/365 even when you’re not, it will attract new customers
-              to your business, make you more money and add instant credibility to your project.
-            </p>
+            <h1 class="mb-3">Our values</h1>
+            <p
+              class="h4"
+            >Fiction To Mission is 100% committed to a growth strategy to provide companies with a comprehensive solution for better digital businesses.</p>
           </div>
         </div>
         <div class="w-50">
@@ -111,7 +110,7 @@
         <div class="member flex align_center">
           <div class="avatar"></div>
           <div class="ml-3">
-            <h1>Yassine Bouassida</h1>
+            <h1>Oussama Kriaa</h1>
             <p class="my-1">co-founder/ fullstack developper</p>
           </div>
         </div>
@@ -395,9 +394,9 @@ export default {
     width: 20rem;
     height: 20rem;
     border-radius: 50%;
-    background: url("~static/img/about/avatar.jpg") no-repeat;
-    background-position-y: top;
-    background-position-x: 38%;
+    background: #fff url("~static/img/about/avatar.jpg") no-repeat;
+    background-position-y: 26%;
+    background-position-x: -21px;
     background-size: cover;
     flex-shrink: 0;
   }

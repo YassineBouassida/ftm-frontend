@@ -6,9 +6,9 @@
   display: none;
 }
 
-* {
-  user-select: none;
-}
+// * {
+//   user-select: none;
+// }
 
 :root {
   --font-size: 9rem
@@ -452,6 +452,10 @@ html {
 
     fill: url(#logoGradient);
   }
+}
+
+.d_block {
+  display: block;
 }
 
 .btn {

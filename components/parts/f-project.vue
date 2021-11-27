@@ -9,7 +9,7 @@
         <router-link
           :to="localePath(project.project_link)"
           tag="span"
-          class="subheading pointer"
+          class="subheading pointer view_project text_primary"
         >View</router-link>
       </h2>
       <div class="p_card elevate_1 pa-3 relative flex align_center bg_white">
@@ -24,7 +24,7 @@
               <router-link
                 :to="localePath(project.project_link)"
                 tag="span"
-                class="subheading pointer view_link"
+                class="subheading pointer view_link text_primary"
               >View</router-link>
             </h2>
             <p class="mt-2">
@@ -87,6 +87,10 @@ export default {
     border-radius: 50%;
     border: 1px solid map-get($map: $colors, $key: primary);
     flex-shrink: 0;
+  }
+  .view_project,
+  .view_link {
+    text-decoration: underline;
   }
 }
 @media (max-width: 1200px) {

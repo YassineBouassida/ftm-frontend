@@ -8,10 +8,25 @@
       <div class="flex1 links_block useful_link">
         <h2 class="text_text2" v-tr>Useful links</h2>
         <div class="usefull_links">
-          <nuxt-link :to="localePath('/')" class="a text_text2 my-3" tag="div" v-tr>Home</nuxt-link>
-          <nuxt-link :to="localePath('/about')" class="a text_text2 my-3" tag="div" v-tr>About</nuxt-link>
-          <nuxt-link :to="localePath('/#projects')" class="a text_text2 my-3" tag="div" v-tr>Samples</nuxt-link>
-          <nuxt-link :to="localePath('/services')" class="a text_text2 my-3" tag="div" v-tr>Services</nuxt-link>
+          <nuxt-link :to="localePath('/')" class="a text_text2 my-3 pointer" tag="div" v-tr>Home</nuxt-link>
+          <nuxt-link
+            :to="localePath('/about')"
+            class="a text_text2 my-3 pointer"
+            tag="div"
+            v-tr
+          >About</nuxt-link>
+          <nuxt-link
+            :to="localePath('/projects')"
+            class="a text_text2 my-3 pointer"
+            tag="div"
+            v-tr
+          >Samples</nuxt-link>
+          <nuxt-link
+            :to="localePath('/services')"
+            class="a text_text2 my-3 pointer"
+            tag="div"
+            v-tr
+          >Services</nuxt-link>
         </div>
       </div>
       <div class="flex1 links_block services">
@@ -19,7 +34,7 @@
         <div class="usefull_links">
           <nuxt-link
             :to="localePath(`/services/${service.slug}`)"
-            class="a text_text2 my-3"
+            class="a text_text2 my-3 pointer"
             tag="div"
             v-for="(service, index) in services"
             :key="index"
@@ -42,7 +57,7 @@
           <a
             class="mr-3"
             aria-label="social"
-            href="http://facebook.com"
+            href="https://www.facebook.com/FictionToMission"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -51,7 +66,7 @@
           <a
             class="mr-3"
             aria-label="social"
-            href="http://facebook.com"
+            href="https://www.instagram.com/fictiontomission/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -60,7 +75,7 @@
           <a
             class="mr-3"
             aria-label="social"
-            href="http://facebook.com"
+            href="https://twitter.com/fiction2mission"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -69,7 +84,7 @@
           <a
             class="mr-3"
             aria-label="social"
-            href="http://facebook.com"
+            href="https://www.linkedin.com/company/fictiontomission"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -77,7 +92,7 @@
           </a>
           <a
             aria-label="social"
-            href="http://facebook.com"
+            href="https://www.youtube.com/channel/UChHAp1oCk8idA7TQ3uD4ndQ"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -127,7 +142,7 @@
     </div>
     <div class="bottom_part bg_text1">
       <div class="flex align_center space_between container fill_height">
-        <router-link :to="localePath('/')" tag="h3" class="text_white">Fiction To Mission</router-link>
+        <router-link :to="localePath('/')" tag="h3" class="text_white pointer">Fiction To Mission</router-link>
         <p>
           <span class="text_white">© Copyright {{new Date().getFullYear()}} FTM</span>
         </p>

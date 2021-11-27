@@ -1,0 +1,21 @@
+# Write your query or mutation here
+query Cases($locale: String) {
+  cases(locale: $locale) {
+    id
+    image {
+      name
+      url
+    }
+    name
+    quote
+    preview_link
+    client {
+      name
+      avatar {
+        url
+        name
+      }
+    }
+    project_link
+  }
+}

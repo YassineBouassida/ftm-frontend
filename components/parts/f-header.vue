@@ -139,9 +139,14 @@ export default {
       handler: function(route) {
         this.openMenu = false;
         this.dropdownOpened = false;
+       
+
+        if (this.$ga) {
+          this.$ga.page(route.path);
+        }
       },
       deep: true,
-      immediate: false
+      immediate: true
     },
     "$i18n.locale": {
       handler: function(locale) {

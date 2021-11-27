@@ -43,7 +43,7 @@ export default {
   'Did you know that 81% of people research a business or service on the internet prior to making a purchase decision ! If you don’t have a website, you have no chance at capturing a share of this market.': 'هل تعلم أن 81٪ من الأشخاص يبحثون عن شركة أو خدمة على الإنترنت قبل اتخاذ قرار الشراء! إذا لم يكن لديك موقع ويب ، فليس لديك فرصة للاستحواذ على حصة من هذا السوق.',
   'GET A QUOTE': 'إقتبس',
   Home: 'الصفحة الرئيسية',
-  Portfolio: 'ملف', // UNUSED
+  Portfolio: 'ملف',
   Services: 'خدمات',
   'your success!': 'نجاحك!',
   'Contact us': 'اتصل بنا',
@@ -120,22 +120,17 @@ export default {
   Budget: 'الدخل',
   Company: 'شركة',
   'Company name': 'اسم الشركة',
-  Deadline: 'الموعد النهائي',
+  Deadline: 'الموعد النهائي', // الموعد الأخير // الحد الاخير
   'Estimated budget': 'الميزانية التقديرية',
   'Fiction to mission is based in Sfax, Tunisia. Our in-house team is made up of creative professionals that work closely with more than 50 creatives all around the globe to create out-of-the-box multimedia content, customized for your needs.': 'يقع مقر Fiction to Mission في صفاقس ، تونس. يتكون فريقنا الداخلي من محترفين مبدعين يعملون عن كثب مع أكثر من 50 مبدعًا من جميع أنحاء العالم لإنشاء محتوى وسائط متعددة خارج الصندوق ومخصص لاحتياجاتك.',
-  'Full name': 'الاسم بالكامل',
-  Industry: 'صناعة',
+  'Full name': 'الاسم بالكامل', // بدر تام
+  Industry: 'صناعة', // صناعة // جد // مثابرة // كد // مواظبة
   'Job position': 'وظيفه',
   Name: 'اسم',
   'Our offices': 'مكاتبنا',
-  Phone: 'هاتف',
-  'Phone number': 'رقم الهاتف',
-  Subject: 'موضوعات',
-  Submit: 'يقدم',
-  'Your message': 'رسالتك',
-  Cookies: 'بسكويت', // بسكويت
-  'Please check required fields': 'يرجى التحقق من الحقول المطلوبة',
-  'Privacy policy': 'سياسة خاصة',
-  'Required Field': 'يتطلب حقلا',
-  Samples: 'عينات'
+  Phone: 'هاتف', // هاتف // صوت // صوت كلامي // المسماع
+  'Phone number': 'رقم الهاتف', // رقم الهاتف
+  Subject: 'موضوعات', // موضوع // تابع // موضوع دراسي // رعية // مسند // المرؤوس // باب // التابع // مرؤوس // مأمور // شخص تدرس إنفعالات
+  Submit: 'يقدم', // عرض // قدم // سلم // خضع // اقترح // استسلم // رافع
+  'Your message': 'رسالتك'
 }

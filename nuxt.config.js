@@ -95,7 +95,10 @@ export default {
   css: ["~static/css/global.css"],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: [{
+    src: '~/plugins/vue-fb-customer-chat.js',
+    ssr: false
+  }],
   loading: {
     color: '#E02B2B',
     height: '3px'
@@ -126,6 +129,9 @@ export default {
   },
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    ['@nuxtjs/google-analytics', {
+      id: 'UA-211276768-1'
+    }],
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
@@ -245,6 +251,7 @@ export default {
   gsap: {
     /* Module Options */
   },
+
   // Add global page transition
   pageTransition: {
     name: 'page',

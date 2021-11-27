@@ -17,8 +17,9 @@
           <div class="flex ml-5 call_to_action_container">
             <fBtn
               link
-              :to="localePath('/contact')"
-              class="w-60 call_to_action bg_primary f_link text_white"
+              external
+              to="https://fb.com/book/FictionToMission/"
+              class="w-60 call_to_action bg_primary flex align_center center f_link text_white"
             >
               <h3 v-tr class="text_white">GET APPOINTMENT</h3>
             </fBtn>
@@ -266,7 +267,7 @@
     </section>
     <!-- Projects Section -->
     <section
-      v-if="deepFind(pages,'0.cases.length')"
+      v-if="deepFind(cases,'length')"
       class="projects bg_lightGrey relative flex"
       id="projects"
     >
@@ -281,11 +282,7 @@
             v-tr
           >The success of our partners is what truly defines us, but most importantly their TRUST. Check out some of our Tunisian and international partners we worked with.</p>
         </div>
-        <fProjects
-          ref="projects"
-          @projectChanged="selectedProject=$event"
-          :projects="deepFind(pages,'0.cases')"
-        ></fProjects>
+        <fProjects ref="projects" @projectChanged="selectedProject=$event" :projects="cases"></fProjects>
         <div class="project_footer flex mt-2">
           <div class="empty flex2"></div>
           <div class="mr-5 footer_desc flex align_center space_between flex1">
@@ -295,7 +292,7 @@
                 @click="changeProjectSlick(index)"
                 :class="{active:selectedProject==index}"
                 class="mr-2 pointer"
-                v-for="(project, index) in deepFind(pages,'0.cases')"
+                v-for="(project, index) in cases"
                 :key="index"
               ></span>
             </div>
@@ -313,6 +310,7 @@
 import VueSlickCarousel from "vue-slick-carousel";
 import servicesQuery from "~/apollo/queries/home/services";
 import pageQuery from "~/apollo/queries/page/page";
+import casesQuery from "~/apollo/queries/page/cases";
 
 export default {
   name: "homePage",
@@ -356,6 +354,22 @@ export default {
       query: pageQuery,
       variables() {
         return { slug: "home", locale: this.$i18n.locale };
+      },
+      watchLoading: function(isLoading) {
+        this.$nextTick(() => {
+          if (this.$nuxt && this.$nuxt.$loading) {
+            isLoading
+              ? this.$nuxt.$loading.start()
+              : this.$nuxt.$loading.finish();
+          }
+        });
+      }
+    },
+    cases: {
+      prefetch: true,
+      query: casesQuery,
+      variables() {
+        return { locale: this.$i18n.locale };
       },
       watchLoading: function(isLoading) {
         this.$nextTick(() => {

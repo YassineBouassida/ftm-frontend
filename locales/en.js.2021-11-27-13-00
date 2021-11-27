@@ -40,7 +40,7 @@ export default {
   'Did you know that 81% of people research a business or service on the internet prior to making a purchase decision ! If you don’t have a website, you have no chance at capturing a share of this market.': 'Did you know that 81% of people research a business or service on the internet prior to making a purchase decision ! If you don’t have a website, you have no chance at capturing a share of this market.',
   'GET A QUOTE': 'GET A QUOTE',
   Home: 'Home',
-  Portfolio: 'Portfolio', // UNUSED
+  Portfolio: 'Portfolio',
   Services: 'Services',
   'your success!': 'your success!',
   'Contact us': 'Contact us',
@@ -129,10 +129,5 @@ export default {
   Phone: 'Phone',
   'Phone number': 'Phone number',
   Subject: 'Subject',
-  Submit: 'Submit',
-  Cookies: 'Cookies',
-  'Please check required fields': 'Please check required fields',
-  'Privacy policy': 'Privacy policy',
-  'Required Field': 'Required Field',
-  Samples: 'Samples'
+  Submit: 'Submit'
 }
