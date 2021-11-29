@@ -210,7 +210,7 @@ export default {
   ],
   //Sitemap
   sitemap: {
-    hostname: 'http://localhost:3000',
+    hostname: process.env.NODE_ENV == 'production' ? 'https://fictiontomission.com' : "http://localhost:3000",
     // shortcut notation (basic)
     i18n: true,
     // nuxt-i18n notation (advanced)

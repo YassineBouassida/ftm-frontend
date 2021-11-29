@@ -4,18 +4,17 @@
     <section class="hero">
       <div class="container">
         <h1 class="text_white txt_center">Fiction To Mission</h1>
-        <h2 class="text_white txt_center">we refectlect the world through our projection!</h2>
+        <h2 class="text_white txt_center" v-tr>we refectlect the world through our projection!</h2>
       </div>
     </section>
     <!-- Projects list section  -->
     <section class="projects_list bg_white py-5">
       <div class="container">
         <div class="c_head">
-          <h1>Projects made with love</h1>
-          <p>
-            FTM has worked with some of the most respected global brands, but we love designing for smaller companies. We believe small business is a big deal, and we thrive on
-            facilitating their successful navigation in a marketplace filled with multi-national brands they compete with daily.
-          </p>
+          <h1 v-tr>Projects made with love</h1>
+          <p
+            v-tr
+          >Our portfolio crosses the Tunisian borders. Get to know a collection of our favorite projects that we have proudly made with love. We cannot wait to start what can be done.</p>
         </div>
         <div class="c_body flex wrap fill_width space_between">
           <div
@@ -60,23 +59,25 @@
             <div class="icon_box bg_redLight flex align_center center">
               <img src="~/static/img/icons/projects/time.png" alt="time icon" />
             </div>
-            <h2 class="txt_center my-4">Any Time Zone</h2>
+            <h2 class="txt_center my-4" v-tr>Any Time Zone</h2>
             <p
               class="txt_center my-0"
-            >We’re available around the clock to attend to your needs, any time of day. Wherever you are, whenever you are, we are ready for you!</p>
+              v-tr
+            >No matter where you are, we can work remotely and be available around the clock to attend to your needs</p>
           </div>
           <div class="flex column center align_center w-40">
             <div class="icon_box bg_redLight flex align_center center">
               <img src="~/static/img/icons/projects/globe.png" alt="time icon" />
             </div>
-            <h2 class="txt_center my-4">Any Language</h2>
+            <h2 class="txt_center my-4" v-tr>Any Language</h2>
             <p
+              v-tr
               class="txt_center my-0"
-            >Do your target audience speak another language? No problem, we can produce projects in whatever language you require.</p>
+            >No need to worry about your audience’s language, we can match it! We are able to produce projects in whatever language you require.</p>
           </div>
         </div>
         <div class="features_footer flex center">
-          <p class="txt_center w-70">
+          <p class="txt_center w-70" v-tr>
             Making you feel valued and looked after is a priority, hence customer service is the core of our business.
             You’ll be involved at every stage of your project’s journey.
           </p>

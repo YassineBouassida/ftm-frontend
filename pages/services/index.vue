@@ -4,25 +4,30 @@
     <section class="hero bg_primary">
       <div class="container flex column px-0 fill_height">
         <div class="flex align_center space_between hero_container">
-          <h1 class="hero_text text_white">
-            <span v-tr>OUR SERVICES</span>
-            <br />
-            <span class="flex align_baseline" v-tr>
-              <div class="separator bg_text1 mr-3"></div>EFFECTIVELY
-            </span>
-          </h1>
+          <div class="text_head">
+            <h1 class="hero_text text_white">
+              <span v-tr>OUR SERVICES</span>
+              <br />
+              <span class="flex align_baseline" v-tr>
+                <div class="separator bg_text1 mr-3"></div>EFFECTIVELY
+              </span>
+            </h1>
+            <p
+              class="text_white"
+            >We offer a spectrum of services that helps you grow your business and enhance your online presence.</p>
+          </div>
           <div class="w-50 image flex end">
             <img src="~static/img/services/services.png" alt />
           </div>
         </div>
         <div class="why_us bg_white flex center flex2">
           <div class="container w-90 flex column align_center">
-            <div class="mb-4 c_head py-5 flex column align_end">
+            <div class="mb-4 c_head py-5 flex column align_end w-100">
               <h1 v-tr class="w-50 txt_right">WHY WORK WITH US</h1>
               <p
                 class="w-50 txt_right"
                 v-tr
-              >Your business needs to look professional & coherent so it can be perceived as serious as it deserves, this means clearly more opportunities & higher revenue.</p>
+              >In order to maximize their benefits, clients from the entire world collaborate with us because of our</p>
             </div>
             <div class="voices flex align_center space_between w-90">
               <div class="flex align_center column">
@@ -55,10 +60,10 @@
           <h1 v-tr>Our Promise</h1>
           <p
             v-tr
-          >What we promise is not simply code but rather a solution. You get a W3C fully compliant markup with no compromise on quality. We know you look for positive attitude, timely reactions, and flexibility. We are here to listen and give the utmost of our capabilities.</p>
-          <h2>
-            Here is some information about
-            <span class="text_primary">FTM</span> in numbers:
+          >We embrace the challenges and create innovative ideas. We will always provide web strategies and solutions that will drive business results. We are here to listen and give the utmost of our capabilities.</p>
+          <h2 >
+            <span v-tr>Here is some information about</span>
+            <span class="text_primary">FTM</span> <span v-tr>in numbers:</span>
           </h2>
         </div>
       </div>
@@ -72,14 +77,14 @@
             </h1>
           </div>
           <div class="promise flex align_center">
-            <h1 class="hero_text text_white mr-3">5K</h1>
+            <h1 class="hero_text text_white mr-3">1K</h1>
             <h1 class="text_white">
               PROJECTS
               <br />COMPLETED
             </h1>
           </div>
           <div class="promise flex align_center">
-            <h1 class="hero_text text_white mr-3">5M</h1>
+            <h1 class="hero_text text_white mr-3">2M</h1>
             <h1 class="text_white">
               CUPS OF
               <br />COFFEE
@@ -93,9 +98,9 @@
       <div class="py-5">
         <div class="c_head my-5">
           <h1 class="txt_center">Brands and Small Business</h1>
-          <p class="txt_center">
-            FTM has worked with some of the most respected global brands, but we love designing for smaller companies. We believe small business is a big deal, and we thrive on
-            facilitating their successful navigation in a marketplace filled with multi-national brands they compete with daily.
+          <p class="txt_center" v-tr>
+            FTM’s clients range in size, fields and countries. But we love designing for smaller companies and facilitating their successful navigation in a competitive multi-national marketplace.
+            Check out some of the fileds we’ve had the pleasure of working in:
           </p>
         </div>
         <div class="brands_list flex align_center wrap space_between">
@@ -118,10 +123,11 @@
     <section class="services bg_white container">
       <div class="c_head flex end mb-5">
         <div class="w-50">
-          <h1 class="txt_right">THIS IS OUR KNOWLEDGE</h1>
+          <h1 class="txt_right" v-tr>THIS IS OUR KNOWLEDGE</h1>
           <p
+          v-tr
             class="txt_right"
-          >creative design studio that will delivry the creative design studio that will delivry the creative design studio that will delivry the</p>
+          >Here are the main services we offer, depending on your needs, goals and aspirations.</p>
         </div>
       </div>
       <div class="c_body">
@@ -144,10 +150,10 @@
       </div>
       <div class="c_footer flex end mb-5">
         <div class="w-70">
-          <h1 class="txt_right">AND MUCH-MORE</h1>
-          <p class="txt_right">
-            We reinforce your presence and visibility on the web, we help strengthen your brand image and reputation with potential customers by creating fascinating showcase websitesWe turn your ideas into successful projects by incorporating your vision. We like challenges that require technical solutions and original content. Our company develops both turnkey and custom solutions. Both are acceptable, depending on your goals and your budget.
-            .
+          <h1 class="txt_right" v-tr>AND MUCH-MORE</h1>
+          <p class="txt_right" v-tr>
+            Still looking for something else? NO WORRIES, we’ve got you.
+            Getting in touch with us, explaining your needs and goals and trusting us is all you need to do.
           </p>
         </div>
       </div>
@@ -167,7 +173,7 @@ export default {
         { image: "consultancy.svg", text: "Consultancy" },
         { image: "e-commerce.svg", text: "E-commerce" },
         { image: "education.svg", text: "Education" },
-        { image: "fintech.svg", text: "Fintch" },
+        { image: "fintech.svg", text: "Fintech" },
         { image: "healthcare.svg", text: "Health care" },
         { image: "it-service.svg", text: "IT services" },
         { image: "realestate.svg", text: "Real estate" },
@@ -179,8 +185,6 @@ export default {
   },
   methods: {
     subDivisions(service) {
-      console.log(service);
-
       if (
         this.deepFind(service, "techStack.stacks") &&
         this.deepFind(service, "techStack.showAsSubdivisions")
@@ -283,6 +287,9 @@ export default {
       .image,
       .hero_text {
         width: 100% !important;
+      }
+      .text_head {
+        text-align: center;
       }
       .hero_text {
         text-align: center;

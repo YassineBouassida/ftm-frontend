@@ -50,11 +50,11 @@ export default {
   'Get a Quote': 'Obtenez un devis',
   'Let’s Work Together': 'Travaillons ensemble',
   'Live preview': 'Aperçu en direct',
-  'Need a quote for your project? Have a question about our work or services?Just let us know.': 'Besoin d\'un devis pour votre projet ? Vous avez une question sur notre travail ou nos services ? Faites le nous savoir.', // UNUSED
+  'Need a quote for your project? Have a question about our work or services?          Just let us know.': 'Besoin d\'un devis pour votre projet ? Vous avez une question sur notre travail ou nos services ? Faites le nous savoir.', // UNUSED
   'OUR SERVICES': 'NOS SERVICES',
   'Our Promise': 'Notre promesse',
   'WHY WORK WITH US': 'POURQUOI TRAVAILLER AVEC NOUS',
-  'What we promise is not simply code but rather a solution. You get a W3C fully compliant markup with no compromise on quality. We know you look for positive attitude, timely reactions, and flexibility. We are here to listen and give the utmost of our capabilities.': 'Ce que nous promettons n\'est pas simplement du code mais plutôt une solution. Vous obtenez un balisage entièrement conforme au W3C sans compromis sur la qualité. Nous savons que vous recherchez une attitude positive, des réactions opportunes et de la flexibilité. Nous sommes là pour écouter et donner le maximum de nos capacités.', // UNUSED
+  'What we promise is not simply code but rather a solution. You get a W3C fully compliant markup with no compromise on quality. We know you look for positive attitude, timely reactions, and flexibility. We are here to listen and give the utmost of our capabilities.': 'Ce que nous promettons n\'est pas simplement du code mais plutôt une solution. Vous obtenez un balisage entièrement conforme au W3C sans compromis sur la qualité. Nous savons que vous recherchez une attitude positive, des réactions opportunes et de la flexibilité. Nous sommes là pour écouter et donner le maximum de nos capacités.',
   'Whether you’re a small business or a large corporation, we look forward to working with you on your next creative endeavor': 'Que vous soyez une petite entreprise ou une grande entreprise, nous sommes impatients de travailler avec vous sur votre prochaine entreprise créative',
   'Contact Us': 'Nous contacter',
   'Do you want to build something?            Need': 'Envie de découvrir davantage nos services ? Contactez-nous et nous vous expliquerons tout !',
@@ -71,7 +71,7 @@ export default {
   PERFECTION: 'LA PERFECTION',
   PRECESSION: 'PRÉCESSION',
   'TEAM-MANAGEMENT': 'GESTION D\'ÉQUIPE',
-  'Your business needs to look professional & coherent so it can be perceived as serious as it deserves, this means clearly more opportunities & higher revenue.': 'Votre entreprise doit avoir l\'air professionnelle et cohérente afin qu\'elle puisse être perçue aussi sérieuse qu\'elle le mérite, cela signifie clairement plus d\'opportunités et des revenus plus élevés.', // UNUSED
+  'Your business needs to look professional & coherent so it can be perceived as serious as it deserves, this means clearly more opportunities & higher revenue.': 'Votre entreprise doit avoir l\'air professionnelle et cohérente afin qu\'elle puisse être perçue aussi sérieuse qu\'elle le mérite, cela signifie clairement plus d\'opportunités et des revenus plus élevés.',
   'Experienced team': 'Équipe expérimentée',
   'Full-service web Development company': 'Société de développement web à service complet', // UNUSED
   'High quality service': 'Service de haute qualité',
@@ -133,47 +133,9 @@ export default {
   Subject: 'Sujet',
   Submit: 'Soumettre',
   'Your message': 'Votre message',
-  Cookies: 'Biscuits',
+  Cookies: 'Biscuits', // cookies
   'Please check required fields': 'Veuillez vérifier les champs obligatoires',
   'Privacy policy': 'Politique de confidentialité',
   'Required Field': 'Champs requis',
-  Samples: 'Échantillons',
-  'AND MUCH-MORE': 'ET BEAUCOUP PLUS',
-  'Any Language': 'N\'importe quel langage',
-  'Any Time Zone': 'Tout fuseau horaire',
-  'Do you have any special requirements?': 'Avez-vous des exigences particulières?',
-  'FTM’s clients range in size, fields and countries. But we love designing for smaller companies and facilitating their successful navigation in a competitive multi-national marketplace.            Check out some of the fileds we’ve had the pleasure of working in:': 'Les clients de FTM varient en taille, en domaines et en pays. Mais nous aimons concevoir pour les petites entreprises et faciliter leur navigation réussie dans un marché multinational concurrentiel. Découvrez quelques-uns des domaines dans lesquels nous avons eu le plaisir de travailler :',
-  'Fiction To Mission is 100% committed to a growth strategy to provide companies with a comprehensive solution for better digital businesses.': 'Fiction To Mission s\'engage à 100 % dans une stratégie de croissance visant à fournir aux entreprises une solution complète pour de meilleures entreprises numériques.',
-  'Founded in 2019, Fiction To Mission is a full-service web design and digital marketing based in Tunisia.              It’s main mission is to find optimal and innovative solutions for the greatest satisfaction of its clients with the help of a highly qualified and experienced team that operates in various activities ranging from website and app creation to community management, copywriting, SEO, branding … and constantly supports the customers in their web strategies.': 'Fondée en 2019, Fiction To Mission est un service complet de conception de sites Web et de marketing numérique basé en Tunisie. Sa mission principale est de trouver des solutions optimales et innovantes pour la plus grande satisfaction de ses clients avec l\'aide d\'une équipe hautement qualifiée et expérimentée qui opère dans diverses activités allant de la création de sites Web et d\'applications à la gestion de communauté, la rédaction, le référencement, le branding… et en permanence accompagne les clients dans leurs stratégies web.',
-  'Frequently Asked Questions': 'Questions fréquemment posées',
-  'Here are the main services we offer, depending on your needs, goals and aspirations.': 'Voici les principaux services que nous offrons, selon vos besoins, vos objectifs et vos aspirations.',
-  'Here is some information about': 'Voici quelques informations sur',
-  'In order to maximize their benefits, clients from the entire world collaborate with us because of our': 'Afin de maximiser leurs avantages, des clients du monde entier collaborent avec nous en raison de notre',
-  'Meet the founders': 'Rencontrez les fondateurs',
-  Mission: 'Mission', // mission
-  'No matter where you are, we can work remotely and be available around the clock to attend to your needs': 'Peu importe où vous êtes, nous pouvons travailler à distance et être disponibles 24 heures sur 24 pour répondre à vos besoins.',
-  'No need to worry about your audience’s language, we can match it! We are able to produce projects in whatever language you require.': 'Pas besoin de vous soucier de la langue de votre public, nous pouvons l\'adapter ! Nous sommes en mesure de produire des projets dans la langue dont vous avez besoin.',
-  'Our mission is to develop high quality and affordable web solutions that create value and competitive advantage for our worldwide clients.': 'Notre mission est de développer des solutions Web de haute qualité et abordables qui créent de la valeur et un avantage concurrentiel pour nos clients du monde entier.',
-  'Our portfolio crosses the Tunisian borders. Get to know a collection of our favorite projects that we have proudly made with love. We cannot wait to start what can be done.': 'Notre portefeuille traverse les frontières tunisiennes. Découvrez une collection de nos projets préférés que nous avons fièrement réalisés avec amour. Nous avons hâte de commencer ce qui peut être fait.',
-  'Our values': 'Nos valeurs',
-  'Our vision is to be a global name in the arena of website development, digital marketing and software solutions in the competitive international market place.': "Notre vision est d'être une référence internationale dans le domaine du développement de sites Web, du marketing digital et des solutions logicielles sur le marché mondial.",
-  'Projects made with love': 'Des projets faits avec amour',
-  'Still looking for something else? NO WORRIES, we’ve got you.            Getting in touch with us, explaining your needs and goals and trusting us is all you need to do.': 'Vous cherchez toujours autre chose ? PAS DE SOUCIS, nous vous avons. Il vous suffit de nous contacter, de nous expliquer vos besoins et vos objectifs et de nous faire confiance.',
-  'THIS IS OUR KNOWLEDGE': 'C\'EST NOTRE CONNAISSANCE',
-  'View Samples': 'Voir des échantillons',
-  Vision: 'Vision', // vision // vue // image // apparition // prévoyance
-  'WHY WORK': 'POURQUOI TRAVAILLER',
-  'WHY-FTM?': 'POURQUOI-FTM ?',
-  'WITH US': 'AVEC NOUS',
-  'We can help you in many other ways': 'Nous pouvons vous aider de bien d\'autres façons',
-  'We embrace the challenges and create innovative ideas. We will always provide web strategies and solutions that will drive business results. We are here to listen and give the utmost of our capabilities.': 'Nous relevons les défis et créons des idées innovantes. Nous fournirons toujours des stratégies et des solutions Web qui généreront des résultats commerciaux. Nous sommes là pour écouter et donner le maximum de nos capacités.',
-  'We offer you more': 'Nous vous offrons plus',
-  'We’re available around the clock to attend to your needs, any time of day. Wherever you are, whenever you are, we are ready for you!': 'Nous sommes disponibles 24 heures sur 24 pour répondre à vos besoins, à tout moment de la journée. Où que vous soyez, où que vous soyez, nous sommes prêts pour vous !',
-  'Who we are': 'Qui nous sommes',
-  'You only have an idea but still not concreted?': 'Vous n\'avez qu\'une idée mais toujours pas concrétisée ?',
-  'Your project is complete but misses something?': 'Votre projet est terminé mais manque quelque chose ?',
-  'co-founder/ fullstack developper': 'co-fondateur / développeur fullstack',
-  'in numbers:': 'en chiffres:',
-  'we provide': 'nous fournissons',
-  'we refectlect the world through our projection!': 'nous reflétons le monde à travers notre projection !'
+  Samples: 'Échantillons'
 }
