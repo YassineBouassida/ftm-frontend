@@ -4,7 +4,7 @@
     <section class="hero relative">
       <div class="flex container align_center relative fill_height">
         <div class="image flex1 flex align_center start">
-          <img src="~static/img/contact/hero.svg" alt />
+          <img width="auto" height="auto" src="~static/img/contact/hero.svg" alt="hero" />
         </div>
         <div class="desc w-50 flex column center">
           <h1 class="hero_text mb-3">CONTACT US</h1>

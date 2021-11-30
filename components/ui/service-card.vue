@@ -38,7 +38,7 @@
       >
         <span v-tr class="text_white">Load more</span>
         <span class="circle_load flex align_center center ml-2">
-          <img src="~static/img/icons/feather-arrow-right.png" alt />
+          <img src="~static/img/icons/feather-arrow-right.png" alt="right arrow" width="auto" height="auto" />
         </span>
       </nuxt-link>
     </div>

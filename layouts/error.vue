@@ -3,7 +3,7 @@
     <div class="container">
       <div class="flex align_center space_between wrap">
         <div class="img_404 w-50">
-          <img src="~static/img/404.png" alt="404 error" />
+          <img width="auto" height="auto" src="~static/img/404.png" alt="404 error" />
         </div>
         <div class="w-45 flex column align_center">
           <h1 class="hero_text txt_center">Oops</h1>

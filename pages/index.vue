@@ -150,7 +150,7 @@
                 class="subheading pr-4"
                 v-tr
               >Did you know that 81% of people research a business or service on the internet prior to making a purchase decision ! If you don’t have a website, you have no chance at capturing a share of this market.</p>
-              <img src="~static/img/notice.png" alt="notice" />
+              <img width="auto" height="auto" src="~static/img/notice.png" alt="notice" />
             </div>
           </div>
           <div>
@@ -183,7 +183,7 @@
               >Than it is time to adapt your website with the latest trends in web design and development. Our mission is to bring life to your website again and help your organization build momentum; making your efforts easier and creating new opportunities.</p>
             </div>
             <div class="desktop notice bg_lightGrey pa-3 flex align_center">
-              <img src="~static/img/notice.png" alt="notice" />
+              <img width="auto" height="auto" src="~static/img/notice.png" alt="notice" />
               <p
                 class="subheading pl-4"
                 v-tr
@@ -226,7 +226,7 @@
             v-for="(idea, i) in ideas"
             :key="i"
           >
-            <img src="~static/img/key.png" alt="key" />
+            <img width="auto" height="auto" src="~static/img/key.png" alt="key" />
             <h3 class="text_white my-2 mt-4">{{idea.title}}</h3>
             <p class="h4 px-2 text_white txt_center my-2">{{idea.desc}}</p>
           </div>

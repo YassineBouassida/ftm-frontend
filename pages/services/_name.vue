@@ -175,7 +175,7 @@
                 v-for="(standard, index) in deepFind(serviceBySlug, 'packages.0.standards.standardsList')"
                 :key="index"
               >
-                <img src="~static/img/icons/tick.svg" alt="tick" />
+                <img width="auto" height="auto" src="~static/img/icons/tick.svg" alt="tick" />
                 <p class="h4 text_white ml-3">{{standard.text}}</p>
               </div>
             </div>
@@ -191,7 +191,7 @@
             >{{deepFind(serviceBySlug, 'packages.0.standards.title')}}</h1>
             <div class="pack_holder pa-3 flex column">
               <div class="pack_head flex align_center pb-2">
-                <img src="~static/img/icons/packBadge.svg" alt="tick" />
+                <img width="auto" height="auto" src="~static/img/icons/packBadge.svg" alt="tick" />
                 <h2 class="ml-3 text_white">{{deepFind(serviceBySlug, 'packages.0.details.title')}}</h2>
               </div>
               <div class="pack_body flex1 py-5">

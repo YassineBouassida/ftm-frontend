@@ -11,7 +11,7 @@
           </h1>
         </div>
         <div class="w-50 flex end pr-5">
-          <img src="~static/img/about/hero.svg" alt="hero" />
+          <img width="auto" height="auto" src="~static/img/about/hero.svg" alt="hero" />
         </div>
       </div>
       <div class="about_text bg_primary">

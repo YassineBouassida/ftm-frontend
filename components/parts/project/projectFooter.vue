@@ -72,7 +72,7 @@
             v-for="(tool, index) in deepFind(variables,'tools')"
             :key="index"
           >
-            <img :src="api_url+tool.image.url" :alt="tool.name" title="Adobe illustrator" />
+            <img width="auto" height="auto" :src="api_url+tool.image.url" :alt="tool.name" title="Adobe illustrator" />
           </div>
         </div>
         <div class="creative_fields my-3">

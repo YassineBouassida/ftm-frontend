@@ -61,7 +61,7 @@
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src="~static/img/icons/social/facebook_dark.png" alt />
+            <img width="auto" height="auto" src="~static/img/icons/social/facebook_dark.png" alt />
           </a>
           <a
             class="mr-3"
@@ -70,7 +70,7 @@
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src="~static/img/icons/social/instagram_dark.png" alt />
+            <img width="auto" height="auto" src="~static/img/icons/social/instagram_dark.png" alt />
           </a>
           <a
             class="mr-3"
@@ -79,7 +79,7 @@
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src="~static/img/icons/social/twitter_dark.png" alt />
+            <img width="auto" height="auto" src="~static/img/icons/social/twitter_dark.png" alt />
           </a>
           <a
             class="mr-3"
@@ -88,7 +88,7 @@
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src="~static/img/icons/social/linkedin_dark.png" alt />
+            <img width="auto" height="auto" src="~static/img/icons/social/linkedin_dark.png" alt />
           </a>
           <a
             aria-label="social"
@@ -96,7 +96,7 @@
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src="~static/img/icons/social/youtube_dark.png" alt />
+            <img width="auto" height="auto" src="~static/img/icons/social/youtube_dark.png" alt />
           </a>
         </div>
       </div>

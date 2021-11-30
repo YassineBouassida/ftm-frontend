@@ -41,7 +41,7 @@
           >
             <div class="step_btn elevate_2 bg_white flex align_center center relative">
               <div class="circle_deco"></div>
-              <img :src="api_url+deepFind(step, 'iconHover.url')" :alt="step.title" />
+              <img width="auto" height="auto" :src="api_url+deepFind(step, 'iconHover.url')" :alt="step.title" />
             </div>
           </div>
           <template #customPaging>
@@ -64,7 +64,7 @@
           </div>
           <div class="skills_content flex align_center pa-3 bg_roseLight">
             <div class="tommpon bg_white flex align_center center">
-              <img src="~static/img/icons/tompon.svg" alt />
+              <img src="~static/img/icons/tompon.svg" alt="tompon" width="auto" height="auto" />
             </div>
             <p class="subheading px-4">{{skills[selectedTab].description}}</p>
           </div>

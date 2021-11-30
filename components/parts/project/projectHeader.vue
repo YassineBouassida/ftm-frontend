@@ -6,7 +6,13 @@
       :style="{backgroundImage:`url(${api_url}${ deepFind(variables,'cover.url')})`}"
     >
       <div class="overlay_light flex align_center center">
-        <img class="project_logo" :src="api_url+deepFind(variables,'logo.url')" alt="logo" />
+        <img
+          class="project_logo"
+          :src="api_url+deepFind(variables,'logo.url')"
+          alt="logo"
+          width="auto"
+          height="auto"
+        />
       </div>
     </div>
     <div class="flex align_start space_between pa-5 project_details">
@@ -58,7 +64,7 @@ export default {
     border-radius: 25px;
   }
   .project_logo {
-    min-height: 12rem;
+    height: 12rem;
   }
 
   @media (max-width: 767px) {

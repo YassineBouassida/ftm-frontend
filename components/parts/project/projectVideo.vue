@@ -80,14 +80,16 @@ export default {
     width: 100%;
     object-fit: cover;
   }
-  .video_btn:hover {
-    opacity: 0.9;
+  .video_btn {
+    pointer-events: auto !important ;
+    &:hover {
+      opacity: 0.9;
+    }
   }
   @media (max-width: 767px) {
     .video_btn {
       width: 10rem !important;
     }
   }
- 
 }
 </style>

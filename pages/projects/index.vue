@@ -57,7 +57,7 @@
         <div class="flex align_center space_between mb-5 boxes">
           <div class="flex column center align_center w-40">
             <div class="icon_box bg_redLight flex align_center center">
-              <img src="~/static/img/icons/projects/time.png" alt="time icon" />
+              <img width="auto" height="auto" src="~/static/img/icons/projects/time.png" alt="time icon" />
             </div>
             <h2 class="txt_center my-4" v-tr>Any Time Zone</h2>
             <p
@@ -67,7 +67,7 @@
           </div>
           <div class="flex column center align_center w-40">
             <div class="icon_box bg_redLight flex align_center center">
-              <img src="~/static/img/icons/projects/globe.png" alt="time icon" />
+              <img width="auto" height="auto" src="~/static/img/icons/projects/globe.png" alt="time icon" />
             </div>
             <h2 class="txt_center my-4" v-tr>Any Language</h2>
             <p

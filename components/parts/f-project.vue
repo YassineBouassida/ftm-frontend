@@ -1,7 +1,7 @@
 <template>
   <div class="project flex align_center">
     <div class="p_cover flex2">
-      <img :src="api_url+project.image.url" :alt="project.image.name" />
+      <img width="auto" height="auto" :src="api_url+project.image.url" :alt="project.image.name" />
     </div>
     <div class="p_content flex1">
       <h2 class="flex align_baseline space_between mr-5 ml-4">

@@ -11,17 +11,16 @@
         :key="index"
         class="mx-3 pointer caroussel_item relative"
       >
-        <img :src="api_url+deepFind(item,'media.url')" :alt="item.title" />
-        <div class="overlay_light flex align_center center"></div>
+        <img :src="api_url+deepFind(item,'media.url')" :alt="item.title" width="auto" height="auto" />
       </div>
       <template #prevArrow>
         <div class="custom-arrow prev_arrow">
-          <img src="~static/img/icons/arrow_left.png" alt />
+          <img src="~static/img/icons/arrow_left.png" alt="left arrow" width="auto" height="auto" />
         </div>
       </template>
       <template #nextArrow>
         <div class="custom-arrow next_arrow">
-          <img src="~static/img/icons/arrow_right.png" alt />
+          <img src="~static/img/icons/arrow_right.png" alt="right arrow" width="auto" height="auto" />
         </div>
       </template>
     </VueSlickCarousel>

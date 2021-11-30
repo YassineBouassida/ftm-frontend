@@ -17,7 +17,7 @@
             >We offer a spectrum of services that helps you grow your business and enhance your online presence.</p>
           </div>
           <div class="w-50 image flex end">
-            <img src="~static/img/services/services.png" alt />
+            <img width="auto" height="auto" src="~static/img/services/services.png" alt="hero" />
           </div>
         </div>
         <div class="why_us bg_white flex center flex2">
@@ -32,19 +32,34 @@
             <div class="voices flex align_center space_between w-90">
               <div class="flex align_center column">
                 <div class="voice flex align_center center">
-                  <img src="~/static/img/services/precession.png" alt="precession" />
+                  <img
+                    width="auto"
+                    height="auto"
+                    src="~/static/img/services/precession.png"
+                    alt="precession"
+                  />
                 </div>
                 <h2 class="text_primary mt-3" v-tr>PRECESSION</h2>
               </div>
               <div class="flex align_center column">
                 <div class="voice flex align_center center">
-                  <img src="~static/img/services/management.png" alt="precession" />
+                  <img
+                    width="auto"
+                    height="auto"
+                    src="~static/img/services/management.png"
+                    alt="precession"
+                  />
                 </div>
                 <h2 class="text_primary mt-3" v-tr>TEAM-MANAGEMENT</h2>
               </div>
               <div class="flex align_center column">
                 <div class="voice flex align_center center">
-                  <img src="~static/img/services/perfection.png" alt="precession" />
+                  <img
+                    width="auto"
+                    height="auto"
+                    src="~static/img/services/perfection.png"
+                    alt="precession"
+                  />
                 </div>
                 <h2 class="text_primary mt-3" v-tr>PERFECTION</h2>
               </div>
@@ -61,9 +76,10 @@
           <p
             v-tr
           >We embrace the challenges and create innovative ideas. We will always provide web strategies and solutions that will drive business results. We are here to listen and give the utmost of our capabilities.</p>
-          <h2 >
+          <h2>
             <span v-tr>Here is some information about</span>
-            <span class="text_primary">FTM</span> <span v-tr>in numbers:</span>
+            <span class="text_primary">FTM</span>
+            <span v-tr>in numbers:</span>
           </h2>
         </div>
       </div>
@@ -125,7 +141,7 @@
         <div class="w-50">
           <h1 class="txt_right" v-tr>THIS IS OUR KNOWLEDGE</h1>
           <p
-          v-tr
+            v-tr
             class="txt_right"
           >Here are the main services we offer, depending on your needs, goals and aspirations.</p>
         </div>

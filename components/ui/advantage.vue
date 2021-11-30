@@ -16,7 +16,7 @@
     </div>
     <div class="flex relative adv_content pa-3">
       <div class="tick bg_redLight flex align_center center">
-        <img src="~static/img/icons/tick.svg" alt />
+        <img src="~static/img/icons/tick.svg" alt="tick" width="auto" height="auto" />
       </div>
       <div class="adv_desc ml-3">
         <h2 class="text_primary" v-html="deepFind(advantage, 'title')"></h2>
