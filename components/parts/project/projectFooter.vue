@@ -104,7 +104,6 @@ export default {
   },
   methods: {
     beforeSlideChange(newVal, next) {
-      console.log(newVal, next);
 
       this.activeSlide = next;
     },

@@ -522,10 +522,14 @@ section {
 }
 //**Hero */
 .hero_container {
+  padding-top: 0rem;
+  padding-bottom: 0rem;
   background: linear-gradient(#fff 0%, #f2f2f2 100%);
   .hero {
-    @media (min-height: 1080px) {
-      min-height: 1000px;
+    max-height: 1000px;
+    @media (max-height: 900px) {
+      min-height: 600px;
+      height: calc(100vh - 80px);
     }
     min-height: calc(100vh - 80px);
     .image {
@@ -552,6 +556,9 @@ section {
       margin-top: 5rem;
     }
     @media (max-width: 1024px) {
+      max-height: auto;
+      height: auto;
+      min-height: calc(100vh - 60px);
       flex-wrap: wrap;
       flex-direction: column-reverse;
       & > div {
@@ -586,11 +593,15 @@ section {
       min-height: auto;
     }
   }
+  @media (max-width: 1024px) {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
 }
 
 //**Cases */
 .cases {
-  min-height: 1600px;
+  min-height: auto;
 
   .c_head {
     width: 50rem;
@@ -612,7 +623,7 @@ section {
     }
   }
   @media (max-width: 1024px) {
-    min-height: 150vh;
+    min-height: auto;
     .c_head {
       width: 90%;
       margin-right: auto;

@@ -89,7 +89,8 @@ export default {
   //   }
   // },
   env: {
-    strapiBaseUri: process.env.NODE_ENV == 'production' ? process.env.API_URL : "http://localhost:1337"
+    strapiBaseUri: process.env.NODE_ENV == 'production' ? process.env.API_URL : "http://localhost:1337",
+    hostname: process.env.NODE_ENV == 'production' ? process.env.HOST_URL : "http://localhost:3000",
   },
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: ["~static/css/global.css"],
@@ -210,7 +211,7 @@ export default {
   ],
   //Sitemap
   sitemap: {
-    hostname: process.env.NODE_ENV == 'production' ? 'https://fictiontomission.com' : "http://localhost:3000",
+    hostname: process.env.hostname,
     // shortcut notation (basic)
     i18n: true,
     // nuxt-i18n notation (advanced)
@@ -350,8 +351,15 @@ export default {
   pwa: {
     manifest: {
 
-      lang: 'en',
+      "name": "ftm",
+      "short_name": "ftm",
       "icons": [{
+          "source": "~/static/favicon/favicon-512x512.png",
+          "sizes": "512x512",
+          "type": "image/png",
+          "purpose": "any maskable"
+        },
+        {
           "source": "~/static/favicon/favicon-96x96.png",
           "sizes": "96x96",
           "type": "image/png",
@@ -418,6 +426,10 @@ export default {
           "purpose": "apple-touch-icon"
         },
       ],
+      "start_url": "/?standalone=true",
+      "display": "standalone",
+      "background_color": "#ffffff",
+      "lang": "en"
     },
   },
 

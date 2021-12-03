@@ -61,7 +61,7 @@ export default {
     },
     onEnd() {
       this.ended = true;
-      console.log("ended");
+      
     },
     onReload() {
       this.$refs.video.load();

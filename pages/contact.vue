@@ -364,7 +364,7 @@ export default {
       }
     },
     verifyForm() {
-      console.log(Object.keys(this.$refs));
+     
       let verifier = 1;
       Object.keys(this.$refs).map(refKey => {
         let ref = this.$refs[refKey];

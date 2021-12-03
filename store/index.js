@@ -4,7 +4,6 @@ import fs from 'fs';
 
 
 const createStore = () => {
-  console.log('create store');
 
   return new Vuex.Store({
     actions: {
@@ -13,7 +12,6 @@ const createStore = () => {
       }, {
         app
       }) {
-        console.log('create nuxtServerInit', process.env.NODE_ENV);
 
         // only update fragements locally
         if (process.env.NODE_ENV == 'development') {

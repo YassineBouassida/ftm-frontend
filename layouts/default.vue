@@ -32,7 +32,15 @@ export default {
     return {
       htmlAttrs: {
         lang: this.$i18n.locale
-      }
+      },
+      link: [
+        {
+          hid: "canonical",
+          rel: "canonical",
+          href: `${process.env.hostname}${this.$route.path}`
+
+        }
+      ]
     };
   },
   data() {

@@ -301,8 +301,9 @@ import serviceQuery from "~/apollo/queries/service/services";
 
 export default {
   head() {
+  
     return {
-      title: this.deepFind(this.serviceBySlug, "title"),
+      title: this.deepFind(this.serviceBySlug, "titleDisplay"),
       __dangerouslyDisableSanitizers: ["script"],
       script: [
         {
@@ -331,10 +332,7 @@ export default {
     };
   },
   components: { VueSlickCarousel, externalAdvantage },
-  mounted() {
-    console.log(this.serviceBySlug);
-    console.log(this.deepFind(this.serviceBySlug, "hero.image.url"));
-  },
+  
   computed: {
     serviceBySlug() {
       return this.deepFind(this.services, "0");
