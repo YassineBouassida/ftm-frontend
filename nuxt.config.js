@@ -211,7 +211,7 @@ export default {
   ],
   //Sitemap
   sitemap: {
-    hostname: process.env.hostname,
+    hostname: 'https://fictiontomission.com',
     // shortcut notation (basic)
     i18n: true,
     // nuxt-i18n notation (advanced)
