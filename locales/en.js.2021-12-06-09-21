@@ -8,7 +8,7 @@ export default {
   Experience: 'Experience',
   'Fiction To Mission - Idea to solution': 'Fiction To Mission - Idea to solution',
   'Fiction To Mission advises you and guides you towards the best web strategy to adopt according to your            industry, the values ​​of your company and your target.': 'Fiction To Mission advises you and guides you towards the best web strategy to adopt according to your            industry, the values ​​of your company and your target.',
-  'Fiction To Mission has a Tunisian nationality and an international passport ! Here’s some of the projects we worked on and check out our most exciting experiences.': 'Fiction To Mission has a Tunisian nationality and an international passport ! Here’s some projects we worked on and check out our most exciting experiences.',
+  'Fiction To Mission has a Tunisian nationality and an international passport ! Here’s some of the projects we worked on and check out our most exciting experiences.': "Fiction To Mission has a Tunisian nationality and an international passport ! Here’s some projects we worked on and check out our most exciting experiences.",
   'GET APPOINTMENT': 'GET APPOINTMENT',
   'Get ready for your next adventure with Fiction To Mission!': 'Get ready for your next adventure with Fiction To Mission!',
   'How we do it ?': 'How we do it ?',
@@ -23,7 +23,7 @@ export default {
   Technologies: 'Technologies',
   'Than it is time to adapt your website with the latest trends in web design and development. Our mission is to bring life to your website again and help your organization build momentum; making your efforts easier and creating new opportunities.': 'Than it is time to adapt your website with the latest trends in web design and development. Our mission is to bring life to your website again and help your organization build momentum; making your efforts easier and creating new opportunities.',
   'The success of our partners is what truly defines us, but most importantly their TRUST. Check out some of our Tunisian and international partners we worked with.': 'The success of our partners is what truly defines us, but most importantly their TRUST. Check out some of our Tunisian and international partners we worked with.',
-  'Today, Fiction To Mission operates in various activities ranging from website creation to mobile app development and social media communication.': 'Today, FTM is engaged in various activities ranging from website creation to digital marketing.',
+  'Today, Fiction To Mission operates in various activities ranging from website creation to mobile app development and social media communication.': "Today, FTM is engaged in various activities ranging from website creation to digital marketing.",
   'Want to be one of them ? Join us !': 'Want to be one of them ? Join us !',
   'We are focused on': 'We focus on',
   'We exist to help you improve your business': 'We exist to help you improve your business',
@@ -53,7 +53,7 @@ export default {
   'WHY WORK WITH US': 'WHY WORK WITH US',
   'What we promise is not simply code but rather a solution. You get a W3C fully compliant markup with no compromise on quality. We know you look for positive attitude, timely reactions, and flexibility. We are here to listen and give the utmost of our capabilities.': 'What we promise is not simply code but rather a solution. You get a W3C fully compliant markup with no compromise on quality. We know you look for positive attitude, timely reactions, and flexibility. We are here to listen and give the utmost of our capabilities.', // UNUSED
   'Whether you’re a small business or a large corporation, we look forward to working with you on your next creative endeavor': 'Whether you’re a small business or a large corporation, we look forward to working with you on your next creative endeavor',
-  'Contact Us': 'Contact Us', // UNUSED
+  'Contact Us': 'Contact Us',
   'Do you want to build something?            Need': 'Do you want to build something?            Need',
   'Follow us': 'Follow us',
   'Our mission is to find optimal and innovative solutions for the greatest satisfaction of our clients with the help of our highly qualified': 'Our mission is to find optimal and innovative solutions for the greatest satisfaction of our clients with the help of our highly qualified',
@@ -165,14 +165,12 @@ export default {
   'We can help you in many other ways': 'We can help you in many other ways',
   'We embrace the challenges and create innovative ideas. We will always provide web strategies and solutions that will drive business results. We are here to listen and give the utmost of our capabilities.': 'We embrace the challenges and create innovative ideas. We will always provide web strategies and solutions that will drive business results. We are here to listen and give the utmost of our capabilities.',
   'We offer you more': 'We offer you more',
-  'We’re available around the clock to attend to your needs, any time of day. Wherever you are, whenever you are, we are ready for you!': 'We’re available around the clock to attend to your needs, any time of day. Wherever you are, whenever you are, we are ready for you!', // UNUSED
+  'We’re available around the clock to attend to your needs, any time of day. Wherever you are, whenever you are, we are ready for you!': 'We’re available around the clock to attend to your needs, any time of day. Wherever you are, whenever you are, we are ready for you!',
   'Who we are': 'Who we are',
   'You only have an idea but still not concreted?': 'You only have an idea but still not concreted?',
   'Your project is complete but misses something?': 'Your project is complete but misses something?',
   'co-founder/ fullstack developper': 'co-founder/ fullstack developper',
   'in numbers:': 'in numbers:',
   'we provide': 'we provide',
-  'we refectlect the world through our projection!': 'we refectlect the world through our projection!',
-  'Keep in touch': 'Keep in touch',
-  'Making you feel valued and looked after is a priority, hence customer service is the core of our business.            You’ll be involved at every stage of your project’s journey.': 'Making you feel valued and looked after is a priority, hence customer service is the core of our business.            You’ll be involved at every stage of your project’s journey.'
+  'we refectlect the world through our projection!': 'we refectlect the world through our projection!'
 }

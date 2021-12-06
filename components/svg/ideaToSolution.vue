@@ -510,72 +510,7 @@ export default {
       repeat: -1,
       paused: false
     });
-    let cloudTl = gsap.timeline({ repeat: -1, paused: false });
-    cloudTl
-
-      .fromTo(
-        "#cloud1",
-        25,
-        {
-          x: "100%",
-          ease: "none",
-          paused: false
-        },
-        {
-          x: "-250%",
-          ease: "none",
-          paused: false
-        }
-      )
-      .to(
-        "#cloud2",
-        2,
-        {
-          y: "-50",
-          ease: "power1.in",
-          paused: false
-        },
-
-        8
-      )
-      .to(
-        "#paths_line",
-        1,
-        {
-          y: "120",
-
-          ease: "power1.in",
-          paused: false
-        },
-        8
-      )
-      .to(
-        "#paths_line",
-        2,
-        {
-          x: "500%",
-          ease: "power1.in",
-          paused: false
-        },
-        9
-      )
-      .to("#cloud2", 2, {
-        y: "0",
-        ease: "power1.in",
-        paused: false
-      })
-
-      //   .from(
-      //     "#cloud2",
-      //     25,
-      //     {
-      //       x: "250%",
-      //       ease: "none",
-      //       paused: false
-      //     },
-      //     10
-      //   )
-      .addLabel("cloudOut");
+   
   }
 };
 </script>

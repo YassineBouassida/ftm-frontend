@@ -42,7 +42,7 @@
         </div>
       </div>
       <div class="flex1 links_block contact_us">
-        <h2 class="text_text2" v-tr>Contact Us</h2>
+        <h2 class="text_text2" v-tr>Keep in touch</h2>
         <p class="text_text2 subheading">
           <span v-tr>
             Do you want to build something?

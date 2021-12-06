@@ -2933,70 +2933,23 @@ export default {
     // this.$gsap.set("#lampe ellipse", {
     //   css: { fill: "#fff" }
     // });
-
     this.$gsap.to("#girlWithCircle", 4, {
       y: "-=15%",
       yoyo: true,
       ease: "none",
       repeat: -1
     });
-
-    let tl = this.$gsap.timeline({ repeat: -1 });
-    tl.to(
-      ".hero .f",
+    this.$gsap.to(
+      "#topGirl",
+      4,
       {
-        scaleY: 0.5,
-        transformOrigin: "center",
-        stagger: 0.1,
-        repeat: -1,
-        yoyo: true
+        rotation: "+=5%",
+        yoyo: true,
+        ease: "none",
+        repeat: -1
       },
-      0
-    )
-      .to(
-        ".hero .f",
-        {
-          scaleY: 1,
-          transformOrigin: "center",
-          stagger: 0.1,
-          repeat: -1,
-          yoyo: true
-        },
-        0.5
-      )
-      .addLabel("graphAnimation")
-      .to(
-        ".hero #windowsL rect",
-        {
-          css: { fill: "#fff", stroke: "#e02b2b" },
-          stagger: 0.5,
-          repeat: -1,
-          yoyo: true
-        },
-        0.5
-      )
-      // .to(
-      //   ".hero #lampe ellipse",
-      //   {
-      //     css: { fill: "#ff7676" },
-      //     stagger: 0.01,
-      //     repeat: -1,
-      //     yoyo: true
-      //   },
-      //   "graphAnimation"
-      // )
-      .to(
-        ".hero #LGraph .hv",
-        {
-          scaleY: 1.2,
-          transformOrigin: "center",
-          stagger: 0.1,
-          repeat: -1,
-          yoyo: true
-        },
-        0.5
-      );
-    tl.play();
+      4
+    );
   }
 };
 </script>

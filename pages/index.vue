@@ -204,7 +204,10 @@
             industry, the values ​​of your company and your target.
           </p>
         </div>
-        <fStepper :steps="deepFind(pages,'0.Section.0.steps')"></fStepper>
+        <fStepper
+          :steps="deepFind(pages,'0.Section.0.steps')"
+          v-if="deepFind(pages,'0.Section.0.steps')"
+        ></fStepper>
       </div>
     </section>
     <!-- Idea To Solution -->
@@ -334,6 +337,7 @@ export default {
   },
   apollo: {
     services: {
+      fetchPolicy: "no-cache",
       prefetch: true,
       query: servicesQuery,
       variables() {
@@ -350,6 +354,7 @@ export default {
       }
     },
     pages: {
+      fetchPolicy: "no-cache",
       prefetch: true,
       query: pageQuery,
       variables() {
@@ -870,7 +875,6 @@ section {
   background: linear-gradient(#333 15.1%, #875454 100%);
   background-position: center center !important;
   background-size: cover !important;
-  background-attachment: fixed !important;
   .features {
     width: 45rem;
     left: calc(50% - 22.5rem);

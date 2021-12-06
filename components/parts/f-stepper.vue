@@ -99,13 +99,13 @@ export default {
         {
           name: this.$t("Experienced team"),
           description: this.$t(
-            "We are focused on bringing value to our customers and on helping them succeed in the marketplace."
+            "We focus on bringing value to our customers and on helping them succeed in the marketplace."
           )
         },
         {
           name: this.$t("Full-service"),
           description: this.$t(
-            "We are committed to supporting you over the long term: before, during and after the entire software development process."
+            "We are committed to support you over the long terms: before, during and after the entire software development process."
           )
         },
         {
