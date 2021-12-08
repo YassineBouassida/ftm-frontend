@@ -7,7 +7,7 @@ export default {
   'Do you think that your website isn’t good enough for your business ? Do you believe that your underperforming website can leave your company in the dust ?': 'Do you think that your website isn’t good enough for your business ? Do you believe that your underperforming website can leave your company in the dust ?',
   Experience: 'Experience',
   'Fiction To Mission - Idea to solution': 'Fiction To Mission - Idea to solution',
-  'Fiction To Mission advises you and guides you towards the best web strategy to adopt according to your            industry, the values ​​of your company and your target.': 'Fiction To Mission advises you and guides you towards the best web strategy to adopt according to your            industry, the values ​​of your company and your target.', // UNUSED
+  'Fiction To Mission advises you and guides you towards the best web strategy to adopt according to your            industry, the values ​​of your company and your target.': 'Fiction To Mission advises you and guides you towards the best web strategy to adopt according to your            industry, the values ​​of your company and your target.',
   'Fiction To Mission has a Tunisian nationality and an international passport ! Here’s some of the projects we worked on and check out our most exciting experiences.': 'Fiction To Mission has a Tunisian nationality and an international passport ! Here’s some projects we worked on and check out our most exciting experiences.',
   'GET APPOINTMENT': 'GET APPOINTMENT',
   'Get ready for your next adventure with Fiction To Mission!': 'Get ready for your next adventure with Fiction To Mission!',
@@ -19,7 +19,7 @@ export default {
   'Research Team': 'Research Team',
   'Services we provide': 'Services we provide',
   'Spark an idea and build a fire': 'Spark an idea and build a fire',
-  'TECHNOLOGIES THAT WILL MOVE YOU TO THE TOP': 'TECHNOLOGIES THAT WILL MOVE YOU TO THE TOP', // UNUSED
+  'TECHNOLOGIES THAT WILL MOVE YOU TO THE TOP': 'TECHNOLOGIES THAT WILL MOVE YOU TO THE TOP',
   Technologies: 'Technologies',
   'Than it is time to adapt your website with the latest trends in web design and development. Our mission is to bring life to your website again and help your organization build momentum; making your efforts easier and creating new opportunities.': 'Than it is time to adapt your website with the latest trends in web design and development. Our mission is to bring life to your website again and help your organization build momentum; making your efforts easier and creating new opportunities.',
   'The success of our partners is what truly defines us, but most importantly their TRUST. Check out some of our Tunisian and international partners we worked with.': 'The success of our partners is what truly defines us, but most importantly their TRUST. Check out some of our Tunisian and international partners we worked with.',
@@ -54,7 +54,7 @@ export default {
   'What we promise is not simply code but rather a solution. You get a W3C fully compliant markup with no compromise on quality. We know you look for positive attitude, timely reactions, and flexibility. We are here to listen and give the utmost of our capabilities.': 'What we promise is not simply code but rather a solution. You get a W3C fully compliant markup with no compromise on quality. We know you look for positive attitude, timely reactions, and flexibility. We are here to listen and give the utmost of our capabilities.', // UNUSED
   'Whether you’re a small business or a large corporation, we look forward to working with you on your next creative endeavor': 'Whether you’re a small business or a large corporation, we look forward to working with you on your next creative endeavor',
   'Contact Us': 'Contact Us', // UNUSED
-  'Do you want to build something?            Need': 'Do you want to build something?            Need', // UNUSED
+  'Do you want to build something?            Need': 'Do you want to build something?            Need',
   'Follow us': 'Follow us',
   'Our mission is to find optimal and innovative solutions for the greatest satisfaction of our clients with the help of our highly qualified': 'Our mission is to find optimal and innovative solutions for the greatest satisfaction of our clients with the help of our highly qualified',
   'Request Free Consultation Here.': 'Request Free Consultation Here.',
@@ -94,7 +94,7 @@ export default {
   'Manufacturing and Industrial': 'Manufacturing and Industrial',
   'Marketing Manager / Marketing Director': 'Marketing Manager / Marketing Director',
   'Marketing and Advertising': 'Marketing and Advertising',
-  'Need a quote for your project? Have a question about our work or services?        Just let us know.': 'Need a quote for your project? Have a question about our work or services?        Just let us know.', // UNUSED
+  'Need a quote for your project? Have a question about our work or services?        Just let us know.': 'Need a quote for your project? Have a question about our work or services?        Just let us know.',
   'Operations Manager': 'Operations Manager',
   Other: 'Other',
   'Other Marketing Position': 'Other Marketing Position',
@@ -139,9 +139,9 @@ export default {
   'Any Language': 'Any Language',
   'Any Time Zone': 'Any Time Zone',
   'Do you have any special requirements?': 'Do you have any special requirements?',
-  'FTM’s clients range in size, fields and countries. But we love designing for smaller companies and facilitating their successful navigation in a competitive multi-national marketplace.            Check out some of the fileds we’ve had the pleasure of working in:': 'FTM’s clients range in size, fields and countries. But we love designing for smaller companies and facilitating their successful navigation in a competitive multi-national marketplace.            Check out some of the fileds we’ve had the pleasure of working in:', // UNUSED
+  'FTM’s clients range in size, fields and countries. But we love designing for smaller companies and facilitating their successful navigation in a competitive multi-national marketplace.            Check out some of the fileds we’ve had the pleasure of working in:': 'FTM’s clients range in size, fields and countries. But we love designing for smaller companies and facilitating their successful navigation in a competitive multi-national marketplace.            Check out some of the fileds we’ve had the pleasure of working in:',
   'Fiction To Mission is 100% committed to a growth strategy to provide companies with a comprehensive solution for better digital businesses.': 'Fiction To Mission is 100% committed to a growth strategy to provide companies with a comprehensive solution for better digital businesses.',
-  'Founded in 2019, Fiction To Mission is a full-service web design and digital marketing based in Tunisia.              It’s main mission is to find optimal and innovative solutions for the greatest satisfaction of its clients with the help of a highly qualified and experienced team that operates in various activities ranging from website and app creation to community management, copywriting, SEO, branding … and constantly supports the customers in their web strategies.': 'Founded in 2019, Fiction To Mission is a full-service web design and digital marketing based in Tunisia.              It’s main mission is to find optimal and innovative solutions for the greatest satisfaction of its clients with the help of a highly qualified and experienced team that operates in various activities ranging from website and app creation to community management, copywriting, SEO, branding … and constantly supports the customers in their web strategies.', // UNUSED
+  'Founded in 2019, Fiction To Mission is a full-service web design and digital marketing based in Tunisia.              It’s main mission is to find optimal and innovative solutions for the greatest satisfaction of its clients with the help of a highly qualified and experienced team that operates in various activities ranging from website and app creation to community management, copywriting, SEO, branding … and constantly supports the customers in their web strategies.': 'Founded in 2019, Fiction To Mission is a full-service web design and digital marketing based in Tunisia.              It’s main mission is to find optimal and innovative solutions for the greatest satisfaction of its clients with the help of a highly qualified and experienced team that operates in various activities ranging from website and app creation to community management, copywriting, SEO, branding … and constantly supports the customers in their web strategies.',
   'Frequently Asked Questions': 'Frequently Asked Questions',
   'Here are the main services we offer, depending on your needs, goals and aspirations.': 'Here are the main services we offer, depending on your needs, goals and aspirations.',
   'Here is some information about': 'Here is some information about',
@@ -155,7 +155,7 @@ export default {
   'Our values': 'Our values',
   'Our vision is to be a global name in the arena of website development, digital marketing and software solutions in the competitive international market place.': 'Our vision is to be a global name in the arena of website development, digital marketing and software solutions in the competitive international market place.',
   'Projects made with love': 'Projects made with love',
-  'Still looking for something else? NO WORRIES, we’ve got you.            Getting in touch with us, explaining your needs and goals and trusting us is all you need to do.': 'Still looking for something else? NO WORRIES, we’ve got you.            Getting in touch with us, explaining your needs and goals and trusting us is all you need to do.', // UNUSED
+  'Still looking for something else? NO WORRIES, we’ve got you.            Getting in touch with us, explaining your needs and goals and trusting us is all you need to do.': 'Still looking for something else? NO WORRIES, we’ve got you.            Getting in touch with us, explaining your needs and goals and trusting us is all you need to do.',
   'THIS IS OUR KNOWLEDGE': 'THIS IS OUR KNOWLEDGE',
   'View Samples': 'View Samples',
   Vision: 'Vision',
@@ -174,28 +174,5 @@ export default {
   'we provide': 'we provide',
   'we refectlect the world through our projection!': 'we refectlect the world through our projection!',
   'Keep in touch': 'Keep in touch',
-  'Making you feel valued and looked after is a priority, hence customer service is the core of our business.            You’ll be involved at every stage of your project’s journey.': 'Making you feel valued and looked after is a priority, hence customer service is the core of our business.            You’ll be involved at every stage of your project’s journey.', // UNUSED
-  Consultancy: 'Consultancy',
-  'Do you want to build something? Need': 'Do you want to build something? Need',
-  'E-commerce': 'E-commerce',
-  EFFECTIVELY: 'EFFECTIVELY',
-  'FTM’s clients range in size, fields and countries. But we love designing for smaller companies and facilitating their successful navigation in a competitive multi-national marketplace. Check out some of the fileds we’ve had the pleasure of working in:': 'FTM’s clients range in size, fields and countries. But we love designing for smaller companies and facilitating their successful navigation in a competitive multi-national marketplace. Check out some of the fileds we’ve had the pleasure of working in:',
-  Fintech: 'Fintech',
-  'Founded in 2019, Fiction To Mission is a full-service web design and digital marketing based in Tunisia. It’s main mission is to find optimal and innovative solutions for the greatest satisfaction of its clients with the help of a highly qualified and experienced team that operates in various activities ranging from website and app creation to community management, copywriting, SEO, branding … and constantly supports the customers in their web strategies.': 'Founded in 2019, Fiction To Mission is a full-service web design and digital marketing based in Tunisia. It’s main mission is to find optimal and innovative solutions for the greatest satisfaction of its clients with the help of a highly qualified and experienced team that operates in various activities ranging from website and app creation to community management, copywriting, SEO, branding … and constantly supports the customers in their web strategies.',
-  'Health care': 'Health care',
-  'IT services': 'IT services',
-  'Industry experience': 'Industry experience',
-  'Making you feel valued and looked after is a priority, hence customer service is the core of our business. You’ll be involved at every stage of your project’s journey.': 'Making you feel valued and looked after is a priority, hence customer service is the core of our business. You’ll be involved at every stage of your project’s journey.',
-  'Need a quote for your project? Have a question about our work or services? Just let us know.': 'Need a quote for your project? Have a question about our work or services? Just let us know.',
-  'Not Just Clients. Partners & Friends.': 'Not Just Clients. Partners & Friends.',
-  'Real estate': 'Real estate',
-  'Social media': 'Social media',
-  'Start-ups': 'Start-ups',
-  'Still looking for something else? NO WORRIES, we’ve got you. Getting in touch with us, explaining your needs and goals and trusting us is all you need to do.': 'Still looking for something else? NO WORRIES, we’ve got you. Getting in touch with us, explaining your needs and goals and trusting us is all you need to do.',
-  View: 'View',
-  'We offer a spectrum of services that helps you grow your business and enhance your online presence.': 'We offer a spectrum of services that helps you grow your business and enhance your online presence.',
-  'CONTACT US': 'CONTACT US',
-  'FILL-NEEDS': 'FILL-NEEDS',
-  'Tell us about your project': 'Tell us about your project',
-  'We want to know what you’re up to. Tell us a bit about your project needs (timeline, budget, etc) so we can create a workflow that makes sense to your company needs.': 'We want to know what you’re up to. Tell us a bit about your project needs (timeline, budget, etc) so we can create a workflow that makes sense to your company needs.'
+  'Making you feel valued and looked after is a priority, hence customer service is the core of our business.            You’ll be involved at every stage of your project’s journey.': 'Making you feel valued and looked after is a priority, hence customer service is the core of our business.            You’ll be involved at every stage of your project’s journey.'
 }

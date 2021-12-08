@@ -128,8 +128,8 @@ export default {
       dropdownOpened: false,
       laguages: [
         { text: "EN", val: "en", icon: "en.svg" },
-        { text: "FR", val: "fr", icon: "fr.svg" }
-        //{ text: "AR", val: "ar", icon: "ar.svg" }
+        { text: "FR", val: "fr", icon: "fr.svg" },
+        { text: "AR", val: "ar", icon: "ar.svg" }
       ]
     };
   },
@@ -139,7 +139,6 @@ export default {
       handler: function(route) {
         this.openMenu = false;
         this.dropdownOpened = false;
-       
 
         if (this.$ga) {
           this.$ga.page(route.path);
@@ -165,6 +164,16 @@ export default {
   .social_btn {
     margin-left: 1rem !important;
     margin-right: 0rem !important;
+  }
+  @media (min-width: 1025px) {
+    .social_btn {
+      margin-left: 0rem !important;
+      margin-right: 1rem !important;
+    }
+    .f_link {
+      margin-right: 1.5rem;
+      margin-left: 1.5rem;
+    }
   }
 }
 .languages {
@@ -318,7 +327,7 @@ export default {
 }
 .dropdown {
   position: absolute;
-  bottom: -230%;
+  bottom: -330%;
   left: -2.2rem;
   width: 6rem;
   align-items: center;

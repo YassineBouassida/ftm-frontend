@@ -17,7 +17,7 @@ export default {
   'Do not worry about TOMORROW. Our team is committed to keep up to date and develop creative ideas every day to offer you customizable, scalable and flexible websites.': 'لا تقلق بشأن الغد. يلتزم فريقنا بمواكبة التحديثات وتطوير الأفكار الإبداعية كل يوم لنقدم لك مواقع ويب مرنة وقابلة للتخصيص .',
   Experience: 'خبرة',
   'Fiction To Mission - Idea to solution': 'من الخيال إلى المهمة - من فكرة إلى حل',
-  'Fiction To Mission advises you and guides you towards the best web strategy to adopt according to your industry, the values ​​of your company and your target.': 'تنصحك FTM وتوجهك نحو أفضل استراتيجية ويب لاعتمادها وفقًا لمجال عملك وقيم شركتك وهدفك.', // UNUSED
+  'Fiction To Mission advises you and guides you towards the best web strategy to adopt according to your industry, the values ​​of your company and your target.': 'تنصحك FTM وتوجهك نحو أفضل استراتيجية ويب لاعتمادها وفقًا لمجال عملك وقيم شركتك وهدفك.',
   'Fiction To Mission has a Tunisian nationality and an international passport ! Here’s some of the projects we worked on and check out our most exciting experiences.': 'FTM يحمل جنسية تونسية وجواز سفر دولي! إليك بعض المشاريع التي عملنا عليها واطلع على تجاربنا الأكثر إثارة.',
   'How we do it ?': 'كيف نشتغل؟',
   'In case of not having a website': 'في حالة عدم وجود موقع الكتروني',
@@ -26,7 +26,7 @@ export default {
   'Research Team': 'فريق البحث',
   'Services we provide': 'الخدمات التي نقدمها',
   'Spark an idea and build a fire': 'أطلق فكرة وأشعل النار',
-  'TECHNOLOGIES THAT WILL MOVE YOU TO THE TOP': 'التقنيات التي ستنقلك إلى القمة', // UNUSED
+  'TECHNOLOGIES THAT WILL MOVE YOU TO THE TOP': 'التقنيات التي ستنقلك إلى القمة',
   Technologies: 'التقنيات',
   'The success of our partners is what truly defines us, but most importantly their TRUST. Check out some of our Tunisian and international partners we worked with.': 'إن نجاح شركائنا هو ما يميزنا حقًا ، ولكن الأهم من ذلك هو ثقتهم. تحقق من بعض شركائنا التونسيين والدوليين الذين عملنا معهم.',
   'Today, Fiction To Mission operates in various activities ranging from website creation to mobile app development and social media communication.': 'اليوم ، تعمل FTM في مجالات مختلفة من إنشاء مواقع الويب إلى تطوير تطبيقات الأجهزة المحمولة وتطوير حسابات التواصل الاجتماعي.',
@@ -41,26 +41,23 @@ export default {
   turnKey: 'مفتاح',
   About: 'من نحن',
   'Did you know that 81% of people research a business or service on the internet prior to making a purchase decision ! If you don’t have a website, you have no chance at capturing a share of this market.': 'هل تعلم أن 81٪ من الأشخاص يبحثون عن شركة أو خدمة على الإنترنت قبل اتخاذ قرار الشراء! إذا لم يكن لديك موقع ويب ، فليس لديك فرصة للاستحواذ على حصة من هذا السوق.',
-  'GET A QUOTE': 'إتصل بنا',
+  'GET A QUOTE': 'إقتبس',
   Home: 'الصفحة الرئيسية',
   Portfolio: 'ملف', // UNUSED
   Services: 'خدمات',
   'your success!': 'نجاحك!',
   'Contact us': 'اتصل بنا',
-  'Get a Quote': 'إتصل بنا',
+  'Get a Quote': 'إقتبس',
   'Let’s Work Together': 'دعونا نعمل معا',
   'Live preview': 'المعاينة الحية',
-  'Need a quote for your project? Have a question about our work or services? Just let us know.': 'بحاجة الى تسعيرة لمشروعك؟ هل لديك سؤال حول عملنا أو خدماتنا؟ فقط اسمحوا لنا أن نعرف.',
+  'Need a quote for your project? Have a question about our work or services? Just let us know.': 'بحاجة الى تسعيرة لمشروعك؟ هل لديك سؤال حول عملنا أو خدماتنا؟ فقط اسمحوا لنا أن نعرف.', // UNUSED
   'OUR SERVICES': 'خدماتنا',
   'Our Promise': 'عهدنا',
   'WHY WORK WITH US': 'لماذا تعمل معنا',
   'What we promise is not simply code but rather a solution. You get a W3C fully compliant markup with no compromise on quality. We know you look for positive attitude, timely reactions, and flexibility. We are here to listen and give the utmost of our capabilities.': 'ما نعد به ليس مجرد كود بل هو حل. تحصل على ترميز متوافق تمامًا مع W3C دون المساومة على الجودة. نحن نعلم أنك تبحث عن المواقف الإيجابية وردود الفعل في الوقت المناسب والمرونة. نحن هنا للاستماع وإعطاء أقصى قدر من قدراتنا.', // UNUSED
   'Whether you’re a small business or a large corporation, we look forward to working with you on your next creative endeavor': 'سواء كنت شركة صغيرة أو شركة كبيرة ، فإننا نتطلع إلى العمل معك في مسعاك الإبداعي القادم',
-  'FILL-NEEDS': 'أكمل الإستمارة',
-  'Tell us about your project':'أخبرنا عن مشروعك',
-  'We want to know what you’re up to. Tell us a bit about your project needs (timeline, budget, etc) so we can create a workflow that makes sense to your company needs.':'نريد أن نعرف ما أنت بصدد القيام به. أخبرنا قليلاً عن احتياجات مشروعك (الجدول الزمني والميزانية وما إلى ذلك) حتى نتمكن من إنشاء سير عمل يتناسب مع احتياجات شركتك.',
-  'CONTACT US': 'اتصل بنا',
-  'Do you want to build something?            Need': 'هل تريد بناء شيء ما؟ يحتاج', // UNUSED
+  'Contact Us': 'اتصل بنا', // UNUSED
+  'Do you want to build something?            Need': 'هل تريد بناء شيء ما؟ يحتاج',
   'Follow us': 'تابعنا',
   'Our mission is to find optimal and innovative solutions for the greatest satisfaction of our clients with the help of our highly qualified': 'مهمتنا هي إيجاد الحلول المثلى والمبتكرة لتحقيق أكبر قدر من الرضا لعملائنا، بمساعدة فريقنا ذو الخبرة والذي يجمع بين الشغف والمعرفة والاحتراف.',
   'Request Free Consultation Here.': 'اطلب استشارة مجانية هنا.',
@@ -100,7 +97,7 @@ export default {
   'Manufacturing and Industrial': 'التصنيع والصناعية',
   'Marketing Manager / Marketing Director': 'مدير تسويق / مدير تسويق',
   'Marketing and Advertising': 'التسويق والإعلان',
-  'Need a quote for your project? Have a question about our work or services?        Just let us know.': 'بحاجة الى اقتباس لمشروعك؟ هل لديك سؤال حول عملنا أو خدماتنا؟ فقط اسمحوا لنا أن نعرف.', // UNUSED
+  'Need a quote for your project? Have a question about our work or services?        Just let us know.': 'بحاجة الى اقتباس لمشروعك؟ هل لديك سؤال حول عملنا أو خدماتنا؟ فقط اسمحوا لنا أن نعرف.',
   'Operations Manager': 'مدير العمليات',
   Other: 'آخر',
   'Other Marketing Position': 'موقف تسويق آخر',
@@ -179,20 +176,6 @@ export default {
   'in numbers:': 'بالأرقام:',
   'we provide': 'نحن نقدم',
   'we refectlect the world through our projection!': 'نحن نعكس العالم من خلال أفكارنا!',
-  'Keep in touch': 'أبق على اتصال',
-  'Making you feel valued and looked after is a priority, hence customer service is the core of our business. You’ll be involved at every stage of your project’s journey.': 'إن جعلك تشعر بالتقدير والاعتناء بك هو أولوية ، وبالتالي فإن خدمة العملاء هي جوهر عملنا. ستشارك في كل مرحلة من مراحل رحلة مشروعك.',
-  Consultancy: 'الاستشارات',
-  'Do you want to build something? Need': 'هل تريد بناء شيء ما؟ يحتاج',
-  'E-commerce': 'التجارة الإلكترونية',
-  EFFECTIVELY: 'على نحو فعال',
-  Fintech: 'التكنولوجيا المالية',
-  'Health care': 'الرعاىة الصحية',
-  'IT services': 'خدمات تكنولوجيا المعلومات',
-  'Industry experience': 'خبرة صناعية',
-  'Not Just Clients. Partners & Friends.': 'ليس فقط العملاء. الشركاء والأصدقاء.',
-  'Real estate': 'العقارات',
-  'Social media': 'وسائل التواصل الاجتماعي',
-  'Start-ups': 'الشركات الناشئة',
-  View: 'رأي',
-  'We offer a spectrum of services that helps you grow your business and enhance your online presence.': 'نحن نقدم مجموعة من الخدمات التي تساعدك على تنمية أعمالك وتعزيز وجودك على الإنترنت.'
+  'Keep in touch': 'أبق على اتصال', // بقي علي الإتصال المستمر
+  'Making you feel valued and looked after is a priority, hence customer service is the core of our business. You’ll be involved at every stage of your project’s journey.': 'إن جعلك تشعر بالتقدير والاعتناء بك هو أولوية ، وبالتالي فإن خدمة العملاء هي جوهر عملنا. ستشارك في كل مرحلة من مراحل رحلة مشروعك.'
 }

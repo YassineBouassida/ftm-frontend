@@ -78,8 +78,7 @@
         </div>
         <div class="features_footer flex center">
           <p class="txt_center w-70" v-tr>
-            Making you feel valued and looked after is a priority, hence customer service is the core of our business.
-            You’ll be involved at every stage of your project’s journey.
+            Making you feel valued and looked after is a priority, hence customer service is the core of our business. You’ll be involved at every stage of your project’s journey.
           </p>
         </div>
       </div>

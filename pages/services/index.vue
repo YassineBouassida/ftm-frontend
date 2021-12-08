@@ -8,12 +8,14 @@
             <h1 class="hero_text text_white">
               <span v-tr>OUR SERVICES</span>
               <br />
-              <span class="flex align_baseline" v-tr>
-                <div class="separator bg_text1 mr-3"></div>EFFECTIVELY
+              <span class="flex align_baseline">
+                <div class="separator bg_text1 mr-3"></div>
+                <span v-tr>EFFECTIVELY</span>
               </span>
             </h1>
             <p
               class="text_white"
+              v-tr
             >We offer a spectrum of services that helps you grow your business and enhance your online presence.</p>
           </div>
           <div class="w-50 image flex end">
@@ -113,10 +115,9 @@
     <section class="brands container bg_white">
       <div class="py-5">
         <div class="c_head my-5">
-          <h1 class="txt_center">Brands and Small Business</h1>
+          <h1 class="txt_center" v-tr>Industry experience</h1>
           <p class="txt_center" v-tr>
-            FTM’s clients range in size, fields and countries. But we love designing for smaller companies and facilitating their successful navigation in a competitive multi-national marketplace.
-            Check out some of the fileds we’ve had the pleasure of working in:
+            FTM’s clients range in size, fields and countries. But we love designing for smaller companies and facilitating their successful navigation in a competitive multi-national marketplace. Check out some of the fileds we’ve had the pleasure of working in:
           </p>
         </div>
         <div class="brands_list flex align_center wrap space_between">
@@ -168,8 +169,7 @@
         <div class="w-70">
           <h1 class="txt_right" v-tr>AND MUCH-MORE</h1>
           <p class="txt_right" v-tr>
-            Still looking for something else? NO WORRIES, we’ve got you.
-            Getting in touch with us, explaining your needs and goals and trusting us is all you need to do.
+            Still looking for something else? NO WORRIES, we’ve got you. Getting in touch with us, explaining your needs and goals and trusting us is all you need to do.
           </p>
         </div>
       </div>
@@ -186,16 +186,16 @@ export default {
   data() {
     return {
       brands: [
-        { image: "consultancy.svg", text: "Consultancy" },
-        { image: "e-commerce.svg", text: "E-commerce" },
-        { image: "education.svg", text: "Education" },
-        { image: "fintech.svg", text: "Fintech" },
-        { image: "healthcare.svg", text: "Health care" },
-        { image: "it-service.svg", text: "IT services" },
-        { image: "realestate.svg", text: "Real estate" },
-        { image: "retail.svg", text: "Retail" },
-        { image: "socialmedia.svg", text: "Social media" },
-        { image: "start-up.svg", text: "Start-ups" }
+        { image: "consultancy.svg", text: this.$t("Consultancy") },
+        { image: "e-commerce.svg", text: this.$t("E-commerce") },
+        { image: "education.svg", text: this.$t("Education") },
+        { image: "fintech.svg", text: this.$t("Fintech") },
+        { image: "healthcare.svg", text: this.$t("Health care") },
+        { image: "it-service.svg", text: this.$t("IT services") },
+        { image: "realestate.svg", text: this.$t("Real estate") },
+        { image: "retail.svg", text: this.$t("Retail") },
+        { image: "socialmedia.svg", text: this.$t("Social media") },
+        { image: "start-up.svg", text: this.$t("Start-ups") }
       ]
     };
   },
@@ -255,6 +255,26 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+.rtl{
+  .hero{
+    .c_head{
+      align-items: flex-start;
+    }
+  }
+  .promise{
+    h1{
+      text-align: end;
+    }
+  }
+  .services{
+    .c_head{
+      justify-content: start;
+    }
+  }
+  .c_footer{
+    justify-content: start;
+  }
+}
 .hero {
   height: calc(100vh - 80px);
   min-height: 1000px;

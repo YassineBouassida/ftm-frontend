@@ -193,9 +193,5 @@ export default {
   'Start-ups': 'Start-ups',
   'Still looking for something else? NO WORRIES, we’ve got you. Getting in touch with us, explaining your needs and goals and trusting us is all you need to do.': 'Still looking for something else? NO WORRIES, we’ve got you. Getting in touch with us, explaining your needs and goals and trusting us is all you need to do.',
   View: 'View',
-  'We offer a spectrum of services that helps you grow your business and enhance your online presence.': 'We offer a spectrum of services that helps you grow your business and enhance your online presence.',
-  'CONTACT US': 'CONTACT US',
-  'FILL-NEEDS': 'FILL-NEEDS',
-  'Tell us about your project': 'Tell us about your project',
-  'We want to know what you’re up to. Tell us a bit about your project needs (timeline, budget, etc) so we can create a workflow that makes sense to your company needs.': 'We want to know what you’re up to. Tell us a bit about your project needs (timeline, budget, etc) so we can create a workflow that makes sense to your company needs.'
+  'We offer a spectrum of services that helps you grow your business and enhance your online presence.': 'We offer a spectrum of services that helps you grow your business and enhance your online presence.'
 }

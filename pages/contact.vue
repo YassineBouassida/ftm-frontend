@@ -7,20 +7,19 @@
           <img width="auto" height="auto" src="~static/img/contact/hero.svg" alt="hero" />
         </div>
         <div class="desc w-50 flex column center">
-          <h1 class="hero_text mb-3">CONTACT US</h1>
+          <h1 class="hero_text mb-3" v-tr>CONTACT US</h1>
           <div class="flex align_center">
             <div class="separator bg_primary relative mr-3"></div>
-            <h1 class="text_right">FILL-NEEDS</h1>
+            <h1 class="text_right" v-tr>FILL-NEEDS</h1>
           </div>
         </div>
       </div>
       <div class="hero_content">
         <div class="container flex end align_center fill_height">
           <div class="w-50">
-            <h1 class="text_white txt_right">Tell us about your project</h1>
-            <p class="text_white txt_right">
-              We want to know what you’re up to. Tell us a bit about your project needs (timeline, budget, etc) so
-              we can create a workflow that makes sense to your company needs.
+            <h1 class="text_white txt_right" v-tr>Tell us about your project</h1>
+            <p class="text_white txt_right" v-tr>
+              We want to know what you’re up to. Tell us a bit about your project needs (timeline, budget, etc) so we can create a workflow that makes sense to your company needs.
             </p>
           </div>
         </div>

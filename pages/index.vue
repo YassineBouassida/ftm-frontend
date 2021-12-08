@@ -45,7 +45,7 @@
             v-tr
           >We offer the full spectrum of digital services to help your business grow successfully.</p>
         </div>
-        <fServicesCarousel :services="services"></fServicesCarousel>
+        <fServicesCarousel :services="services" v-if="deepFind(services,'length')"></fServicesCarousel>
       </div>
     </section>
 
@@ -198,11 +198,8 @@
       <div class="container">
         <div class="c_head txt_center">
           <h2 v-tr>How we do it ?</h2>
-          <h1 class="my-4" v-tr>TECHNOLOGIES THAT WILL MOVE YOU TO THE TOP</h1>
-          <p v-tr>
-            Fiction To Mission advises you and guides you towards the best web strategy to adopt according to your
-            industry, the values ​​of your company and your target.
-          </p>
+          <h1 class="my-4">{{deepFind(pages,'0.Section.0.title')}}</h1>
+          <p>{{deepFind(pages,'0.Section.0.description')}}</p>
         </div>
         <fStepper
           :steps="deepFind(pages,'0.Section.0.steps')"
@@ -1046,6 +1043,13 @@ section {
   #case2 {
     .text_side {
       margin-right: 1.5rem !important;
+    }
+  }
+  .projects {
+    padding-left: 8.75rem;
+    padding-right: 0;
+    .vertical_name {
+      align-items: center;
     }
   }
 }

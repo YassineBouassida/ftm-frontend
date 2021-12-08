@@ -56,10 +56,8 @@ export default {
   'WHY WORK WITH US': 'لماذا تعمل معنا',
   'What we promise is not simply code but rather a solution. You get a W3C fully compliant markup with no compromise on quality. We know you look for positive attitude, timely reactions, and flexibility. We are here to listen and give the utmost of our capabilities.': 'ما نعد به ليس مجرد كود بل هو حل. تحصل على ترميز متوافق تمامًا مع W3C دون المساومة على الجودة. نحن نعلم أنك تبحث عن المواقف الإيجابية وردود الفعل في الوقت المناسب والمرونة. نحن هنا للاستماع وإعطاء أقصى قدر من قدراتنا.', // UNUSED
   'Whether you’re a small business or a large corporation, we look forward to working with you on your next creative endeavor': 'سواء كنت شركة صغيرة أو شركة كبيرة ، فإننا نتطلع إلى العمل معك في مسعاك الإبداعي القادم',
-  'FILL-NEEDS': 'أكمل الإستمارة',
-  'Tell us about your project':'أخبرنا عن مشروعك',
-  'We want to know what you’re up to. Tell us a bit about your project needs (timeline, budget, etc) so we can create a workflow that makes sense to your company needs.':'نريد أن نعرف ما أنت بصدد القيام به. أخبرنا قليلاً عن احتياجات مشروعك (الجدول الزمني والميزانية وما إلى ذلك) حتى نتمكن من إنشاء سير عمل يتناسب مع احتياجات شركتك.',
-  'CONTACT US': 'اتصل بنا',
+   'FILL-NEEDS':'أكمل الإستمارة',
+  'CONTACT US': 'اتصل بنا', // UNUSED
   'Do you want to build something?            Need': 'هل تريد بناء شيء ما؟ يحتاج', // UNUSED
   'Follow us': 'تابعنا',
   'Our mission is to find optimal and innovative solutions for the greatest satisfaction of our clients with the help of our highly qualified': 'مهمتنا هي إيجاد الحلول المثلى والمبتكرة لتحقيق أكبر قدر من الرضا لعملائنا، بمساعدة فريقنا ذو الخبرة والذي يجمع بين الشغف والمعرفة والاحتراف.',
@@ -190,9 +188,9 @@ export default {
   'IT services': 'خدمات تكنولوجيا المعلومات',
   'Industry experience': 'خبرة صناعية',
   'Not Just Clients. Partners & Friends.': 'ليس فقط العملاء. الشركاء والأصدقاء.',
-  'Real estate': 'العقارات',
+  'Real estate': 'العقارات', // عقار // أملاك ثابتة أراضى
   'Social media': 'وسائل التواصل الاجتماعي',
   'Start-ups': 'الشركات الناشئة',
-  View: 'رأي',
+  View: 'رأي', // رأي // معاينة // رؤية // منظر // مشهد // مرأى // فكرة // تمحيص // هدف
   'We offer a spectrum of services that helps you grow your business and enhance your online presence.': 'نحن نقدم مجموعة من الخدمات التي تساعدك على تنمية أعمالك وتعزيز وجودك على الإنترنت.'
 }

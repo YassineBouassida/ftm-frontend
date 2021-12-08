@@ -3,8 +3,7 @@
     <div class="container flex column align_end">
       <h1 v-tr class="text_white">Let’s Work Together</h1>
       <p v-tr class="text_white w-50 txt_right">
-        Need a quote for your project? Have a question about our work or services?
-        Just let us know.
+        Need a quote for your project? Have a question about our work or services? Just let us know.
       </p>
       <p
         class="text_white w-50 txt_right"
@@ -24,6 +23,11 @@
 export default {};
 </script>
 <style lang="scss" scoped>
+.rtl{
+  .services_footer>.container{
+    align-items: start;
+  }
+}
 //Services footer
 .services_footer {
   background: url("~static/img/services/footer_services.png");

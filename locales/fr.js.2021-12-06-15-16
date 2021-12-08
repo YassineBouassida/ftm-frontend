@@ -181,7 +181,7 @@ export default {
   Consultancy: 'Conseil',
   'Do you want to build something? Need': 'Vous voulez construire quelque chose ? Avoir besoin',
   'E-commerce': 'Commerce électronique',
-  EFFECTIVELY: 'EFFECTIVEMENT',
+  EFFECTIVELY: 'EFFECTIVEMENT', // efficacement // effectivement
   'FTM’s clients range in size, fields and countries. But we love designing for smaller companies and facilitating their successful navigation in a competitive multi-national marketplace. Check out some of the fileds we’ve had the pleasure of working in:': 'Les clients de FTM varient en taille, en domaines et en pays. Mais nous aimons concevoir pour les petites entreprises et faciliter leur navigation réussie dans un marché multinational concurrentiel. Découvrez quelques-uns des domaines dans lesquels nous avons eu le plaisir de travailler :',
   Fintech: 'Fintech',
   'Founded in 2019, Fiction To Mission is a full-service web design and digital marketing based in Tunisia. It’s main mission is to find optimal and innovative solutions for the greatest satisfaction of its clients with the help of a highly qualified and experienced team that operates in various activities ranging from website and app creation to community management, copywriting, SEO, branding … and constantly supports the customers in their web strategies.': 'Fondée en 2019, Fiction To Mission est un service complet de conception de sites Web et de marketing numérique basé en Tunisie. Sa mission principale est de trouver des solutions optimales et innovantes pour la plus grande satisfaction de ses clients avec l\'aide d\'une équipe hautement qualifiée et expérimentée qui opère dans diverses activités allant de la création de sites Web et d\'applications à la gestion de communauté, la rédaction, le référencement, le branding… et en permanence accompagne les clients dans leurs stratégies web.',
@@ -191,10 +191,10 @@ export default {
   'Making you feel valued and looked after is a priority, hence customer service is the core of our business. You’ll be involved at every stage of your project’s journey.': 'Vous faire sentir valorisé et soigné est une priorité, c\'est pourquoi le service client est au cœur de notre activité. Vous serez impliqué à chaque étape du cheminement de votre projet.',
   'Need a quote for your project? Have a question about our work or services? Just let us know.': 'Besoin d\'un devis pour votre projet ? Vous avez une question sur notre travail ou nos services ? Faites le nous savoir.',
   'Not Just Clients. Partners & Friends.': 'Pas seulement des clients. Partenaires et amis.',
-  'Real estate': 'Immobilier',
+  'Real estate': 'Immobilier', // immobiliers // biens immobiliers // biens fonciers
   'Social media': 'Des médias sociaux',
   'Start-ups': 'Start-up',
   'Still looking for something else? NO WORRIES, we’ve got you. Getting in touch with us, explaining your needs and goals and trusting us is all you need to do.': 'Vous cherchez toujours autre chose ? PAS DE SOUCIS, nous vous avons. Il vous suffit de nous contacter, de nous expliquer vos besoins et vos objectifs et de nous faire confiance.',
-  View: 'Vue',
+  View: 'Vue', // vue // avis // vision // opinion // point de vue // but // regard // idée // panorama
   'We offer a spectrum of services that helps you grow your business and enhance your online presence.': 'Nous offrons une gamme de services qui vous aident à développer votre entreprise et à améliorer votre présence en ligne.'
 }

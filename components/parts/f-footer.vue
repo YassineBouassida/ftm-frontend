@@ -38,16 +38,13 @@
             tag="div"
             v-for="(service, index) in services"
             :key="index"
-          >{{service.title}}</nuxt-link>
+          >{{service.titleDisplay}}</nuxt-link>
         </div>
       </div>
       <div class="flex1 links_block contact_us">
         <h2 class="text_text2" v-tr>Keep in touch</h2>
         <p class="text_text2 subheading">
-          <span v-tr>
-            Do you want to build something?
-            Need
-          </span>
+          <span v-tr>Do you want to build something? Need</span>
           <br />
           <span v-tr>help figuring it out? We can help!</span>
         </p>
@@ -165,6 +162,9 @@ export default {
   apollo: {
     services: {
       prefetch: true,
+      variables() {
+        return { locale: this.$i18n.locale };
+      },
       query: servicesQuery,
       watchLoading: function(isLoading) {
         this.$nextTick(() => {
@@ -219,6 +219,11 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+.rtl{
+  .social_links a:last-of-type{
+    margin-right: 1rem;
+  }
+}
 .footer {
   min-height: 350px;
   & > .flex {

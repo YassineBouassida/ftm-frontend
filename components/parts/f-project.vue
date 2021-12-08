@@ -5,11 +5,12 @@
     </div>
     <div class="p_content flex1">
       <h2 class="flex align_baseline space_between mr-5 ml-4">
-        Not Just Clients. Partners & Friends.
+        <span v-tr>Not Just Clients. Partners & Friends.</span>
         <router-link
           :to="localePath(project.project_link)"
           tag="span"
           class="subheading pointer view_project text_primary"
+          v-tr
         >View</router-link>
       </h2>
       <div class="p_card elevate_1 pa-3 relative flex align_center bg_white">
@@ -45,6 +46,13 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+.rtl {
+  .project {
+    .p_card {
+      left: 2rem;
+    }
+  }
+}
 .project {
   .view_link {
     visibility: hidden;

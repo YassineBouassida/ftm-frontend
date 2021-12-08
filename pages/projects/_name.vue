@@ -1,7 +1,7 @@
 <template>
   <div v-if="!this.$apollo.loading">
     <!-- Project hero section -->
-    <project-header :variables="deepFind(projects,'0.header')"></project-header>
+    <project-header :variables="deepFind(projects,'0.header')" class="mt-4"></project-header>
     <!-- Project body part -->
     <section class="body container bg_white py-3 mb-4">
       <div v-for="(component, index) in deepFind(projects,'0.component')" :key="index">

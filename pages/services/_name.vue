@@ -301,7 +301,6 @@ import serviceQuery from "~/apollo/queries/service/services";
 
 export default {
   head() {
-  
     return {
       title: this.deepFind(this.serviceBySlug, "titleDisplay"),
       __dangerouslyDisableSanitizers: ["script"],
@@ -332,7 +331,7 @@ export default {
     };
   },
   components: { VueSlickCarousel, externalAdvantage },
-  
+
   computed: {
     serviceBySlug() {
       return this.deepFind(this.services, "0");
@@ -466,6 +465,18 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+.rtl {
+  .cycle {
+    .sub_services {
+      .intro {
+        align-self: flex-start;
+        .top_part {
+          justify-content: start;
+        }
+      }
+    }
+  }
+}
 //hero part
 .hero {
   min-height: 40rem;
@@ -767,7 +778,7 @@ export default {
 //********************* */
 //Why FTM
 .why_us {
-  min-height: 100vh;
+  min-height: auto;
   .advantage {
     height: 13.75rem;
     width: 32.23%;
@@ -842,6 +853,7 @@ export default {
   min-height: 100vh;
   background: linear-gradient(#333 15.06%, #875454 100%);
   .package {
+    width: 100%;
     .talk_btn {
       background: transparent;
       border: 1px solid map-get($map: $colors, $key: white);

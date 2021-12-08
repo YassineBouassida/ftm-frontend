@@ -17,7 +17,7 @@ export default {
   'Do not worry about TOMORROW. Our team is committed to keep up to date and develop creative ideas every day to offer you customizable, scalable and flexible websites.': 'Ne vous inquiétez pas pour DEMAIN. Notre équipe s\'engage à se tenir à jour et à développer des idées créatives chaque jour pour vous offrir des sites Web personnalisables, évolutifs et flexibles.',
   Experience: 'Expérience',
   'Fiction To Mission - Idea to solution': 'Fiction To Mission - Créativité de haut niveau',
-  'Fiction To Mission advises you and guides you towards the best web strategy to adopt according to your            industry, the values ​​of your company and your target.': 'Fiction To Mission vous conseille et vous oriente vers la meilleure stratégie web à adopter en fonction de votre secteur d\'activité, des valeurs de votre entreprise et de votre cible.', // UNUSED
+  'Fiction To Mission advises you and guides you towards the best web strategy to adopt according to your            industry, the values ​​of your company and your target.': 'Fiction To Mission vous conseille et vous oriente vers la meilleure stratégie web à adopter en fonction de votre secteur d\'activité, des valeurs de votre entreprise et de votre cible.',
   'Fiction To Mission has a Tunisian nationality and an international passport ! Here’s some of the projects we worked on and check out our most exciting experiences.': 'Fiction To Mission a la nationalité tunisienne et un passeport international ! Voici quelques projets sur lesquels nous avons travaillé et découvrez nos expériences les plus excitantes.',
   'How we do it ?': 'Comment fait-on ?',
   'In case of not having a website': 'Vous ne détenez PAS encore un site web ?',
@@ -26,7 +26,7 @@ export default {
   'Research Team': 'Équipe de recherche',
   'Services we provide': 'Services que nous offrons',
   'Spark an idea and build a fire': 'Laissons libre cours à notre imagination !',
-  'TECHNOLOGIES THAT WILL MOVE YOU TO THE TOP': 'DES TECHNOLOGIES QUI VOUS PORTERONT AU SOMMET', // UNUSED
+  'TECHNOLOGIES THAT WILL MOVE YOU TO THE TOP': 'DES TECHNOLOGIES QUI VOUS PORTERONT AU SOMMET',
   Technologies: 'Les technologies',
   'The success of our partners is what truly defines us, but most importantly their TRUST. Check out some of our Tunisian and international partners we worked with.': 'Le succès de nos partenaires est ce qui nous définit vraiment, mais surtout leur CONFIANCE. Découvrez quelques-uns de nos partenaires tunisiens et internationaux avec lesquels nous avons travaillé.',
   'Today, Fiction To Mission operates in various activities ranging from website creation to mobile app development and social media communication.': 'Aujourd\'hui, FTM est engagée dans diverses activités allant de la création de sites Web au marketing numérique.',
@@ -57,7 +57,7 @@ export default {
   'What we promise is not simply code but rather a solution. You get a W3C fully compliant markup with no compromise on quality. We know you look for positive attitude, timely reactions, and flexibility. We are here to listen and give the utmost of our capabilities.': 'Ce que nous promettons n\'est pas simplement du code mais plutôt une solution. Vous obtenez un balisage entièrement conforme au W3C sans compromis sur la qualité. Nous savons que vous recherchez une attitude positive, des réactions opportunes et de la flexibilité. Nous sommes là pour écouter et donner le maximum de nos capacités.', // UNUSED
   'Whether you’re a small business or a large corporation, we look forward to working with you on your next creative endeavor': 'Que vous soyez une petite entreprise ou une grande entreprise, nous sommes impatients de travailler avec vous sur votre prochaine entreprise créative',
   'Contact Us': 'Nous contacter', // UNUSED
-  'Do you want to build something?            Need': 'Envie de découvrir davantage nos services ? Contactez-nous et nous vous expliquerons tout !', // UNUSED
+  'Do you want to build something?            Need': 'Envie de découvrir davantage nos services ? Contactez-nous et nous vous expliquerons tout !',
   'Follow us': 'Suivez-nous',
   'Our mission is to find optimal and innovative solutions for the greatest satisfaction of our clients with the help of our highly qualified': 'Notre mission est de trouver des solutions optimales et innovantes pour la plus grande satisfaction de nos clients avec l\'aide de notre personnel hautement qualifié.',
   'Request Free Consultation Here.': 'Demandez une consultation gratuite ici.',
@@ -97,7 +97,7 @@ export default {
   'Manufacturing and Industrial': 'Fabrication et Industriel',
   'Marketing Manager / Marketing Director': 'Responsable marketing / Directeur marketing',
   'Marketing and Advertising': 'Marketing et publicité',
-  'Need a quote for your project? Have a question about our work or services?        Just let us know.': 'Besoin d\'un devis pour votre projet ? Vous avez une question sur notre travail ou nos services ? Faites le nous savoir.', // UNUSED
+  'Need a quote for your project? Have a question about our work or services?        Just let us know.': 'Besoin d\'un devis pour votre projet ? Vous avez une question sur notre travail ou nos services ? Faites le nous savoir.',
   'Operations Manager': 'directeur des opérations',
   Other: 'Autre',
   'Other Marketing Position': 'Autre poste en marketing',
@@ -142,9 +142,9 @@ export default {
   'Any Language': 'N\'importe quel langage',
   'Any Time Zone': 'Tout fuseau horaire',
   'Do you have any special requirements?': 'Avez-vous des exigences particulières?',
-  'FTM’s clients range in size, fields and countries. But we love designing for smaller companies and facilitating their successful navigation in a competitive multi-national marketplace.            Check out some of the fileds we’ve had the pleasure of working in:': 'Les clients de FTM varient en taille, en domaines et en pays. Mais nous aimons concevoir pour les petites entreprises et faciliter leur navigation réussie dans un marché multinational concurrentiel. Découvrez quelques-uns des domaines dans lesquels nous avons eu le plaisir de travailler :', // UNUSED
+  'FTM’s clients range in size, fields and countries. But we love designing for smaller companies and facilitating their successful navigation in a competitive multi-national marketplace.            Check out some of the fileds we’ve had the pleasure of working in:': 'Les clients de FTM varient en taille, en domaines et en pays. Mais nous aimons concevoir pour les petites entreprises et faciliter leur navigation réussie dans un marché multinational concurrentiel. Découvrez quelques-uns des domaines dans lesquels nous avons eu le plaisir de travailler :',
   'Fiction To Mission is 100% committed to a growth strategy to provide companies with a comprehensive solution for better digital businesses.': 'Fiction To Mission s\'engage à 100 % dans une stratégie de croissance visant à fournir aux entreprises une solution complète pour de meilleures entreprises numériques.',
-  'Founded in 2019, Fiction To Mission is a full-service web design and digital marketing based in Tunisia.              It’s main mission is to find optimal and innovative solutions for the greatest satisfaction of its clients with the help of a highly qualified and experienced team that operates in various activities ranging from website and app creation to community management, copywriting, SEO, branding … and constantly supports the customers in their web strategies.': 'Fondée en 2019, Fiction To Mission est un service complet de conception de sites Web et de marketing numérique basé en Tunisie. Sa mission principale est de trouver des solutions optimales et innovantes pour la plus grande satisfaction de ses clients avec l\'aide d\'une équipe hautement qualifiée et expérimentée qui opère dans diverses activités allant de la création de sites Web et d\'applications à la gestion de communauté, la rédaction, le référencement, le branding… et en permanence accompagne les clients dans leurs stratégies web.', // UNUSED
+  'Founded in 2019, Fiction To Mission is a full-service web design and digital marketing based in Tunisia.              It’s main mission is to find optimal and innovative solutions for the greatest satisfaction of its clients with the help of a highly qualified and experienced team that operates in various activities ranging from website and app creation to community management, copywriting, SEO, branding … and constantly supports the customers in their web strategies.': 'Fondée en 2019, Fiction To Mission est un service complet de conception de sites Web et de marketing numérique basé en Tunisie. Sa mission principale est de trouver des solutions optimales et innovantes pour la plus grande satisfaction de ses clients avec l\'aide d\'une équipe hautement qualifiée et expérimentée qui opère dans diverses activités allant de la création de sites Web et d\'applications à la gestion de communauté, la rédaction, le référencement, le branding… et en permanence accompagne les clients dans leurs stratégies web.',
   'Frequently Asked Questions': 'Questions fréquemment posées',
   'Here are the main services we offer, depending on your needs, goals and aspirations.': 'Voici les principaux services que nous offrons, selon vos besoins, vos objectifs et vos aspirations.',
   'Here is some information about': 'Voici quelques informations sur',
@@ -158,7 +158,7 @@ export default {
   'Our values': 'Nos valeurs',
   'Our vision is to be a global name in the arena of website development, digital marketing and software solutions in the competitive international market place.': 'Notre vision est d\'être une référence internationale dans le domaine du développement de sites Web, du marketing digital et des solutions logicielles sur le marché mondial.',
   'Projects made with love': 'Des projets faits avec amour',
-  'Still looking for something else? NO WORRIES, we’ve got you.            Getting in touch with us, explaining your needs and goals and trusting us is all you need to do.': 'Vous cherchez toujours autre chose ? PAS DE SOUCIS, nous vous avons. Il vous suffit de nous contacter, de nous expliquer vos besoins et vos objectifs et de nous faire confiance.', // UNUSED
+  'Still looking for something else? NO WORRIES, we’ve got you.            Getting in touch with us, explaining your needs and goals and trusting us is all you need to do.': 'Vous cherchez toujours autre chose ? PAS DE SOUCIS, nous vous avons. Il vous suffit de nous contacter, de nous expliquer vos besoins et vos objectifs et de nous faire confiance.',
   'THIS IS OUR KNOWLEDGE': 'C\'EST NOTRE CONNAISSANCE',
   'View Samples': 'Voir des échantillons',
   Vision: 'Vision',
@@ -176,25 +176,6 @@ export default {
   'in numbers:': 'en chiffres:',
   'we provide': 'nous fournissons',
   'we refectlect the world through our projection!': 'nous reflétons le monde à travers notre projection !',
-  'Keep in touch': 'Rester en contact',
-  'Making you feel valued and looked after is a priority, hence customer service is the core of our business.            You’ll be involved at every stage of your project’s journey.': 'Vous faire sentir valorisé et soigné est une priorité, c\'est pourquoi le service client est au cœur de notre activité. Vous serez impliqué à chaque étape du cheminement de votre projet.', // UNUSED
-  Consultancy: 'Conseil',
-  'Do you want to build something? Need': 'Vous voulez construire quelque chose ? Avoir besoin',
-  'E-commerce': 'Commerce électronique',
-  EFFECTIVELY: 'EFFECTIVEMENT',
-  'FTM’s clients range in size, fields and countries. But we love designing for smaller companies and facilitating their successful navigation in a competitive multi-national marketplace. Check out some of the fileds we’ve had the pleasure of working in:': 'Les clients de FTM varient en taille, en domaines et en pays. Mais nous aimons concevoir pour les petites entreprises et faciliter leur navigation réussie dans un marché multinational concurrentiel. Découvrez quelques-uns des domaines dans lesquels nous avons eu le plaisir de travailler :',
-  Fintech: 'Fintech',
-  'Founded in 2019, Fiction To Mission is a full-service web design and digital marketing based in Tunisia. It’s main mission is to find optimal and innovative solutions for the greatest satisfaction of its clients with the help of a highly qualified and experienced team that operates in various activities ranging from website and app creation to community management, copywriting, SEO, branding … and constantly supports the customers in their web strategies.': 'Fondée en 2019, Fiction To Mission est un service complet de conception de sites Web et de marketing numérique basé en Tunisie. Sa mission principale est de trouver des solutions optimales et innovantes pour la plus grande satisfaction de ses clients avec l\'aide d\'une équipe hautement qualifiée et expérimentée qui opère dans diverses activités allant de la création de sites Web et d\'applications à la gestion de communauté, la rédaction, le référencement, le branding… et en permanence accompagne les clients dans leurs stratégies web.',
-  'Health care': 'Soins de santé',
-  'IT services': 'services informatiques',
-  'Industry experience': 'Expérience industrielle',
-  'Making you feel valued and looked after is a priority, hence customer service is the core of our business. You’ll be involved at every stage of your project’s journey.': 'Vous faire sentir valorisé et soigné est une priorité, c\'est pourquoi le service client est au cœur de notre activité. Vous serez impliqué à chaque étape du cheminement de votre projet.',
-  'Need a quote for your project? Have a question about our work or services? Just let us know.': 'Besoin d\'un devis pour votre projet ? Vous avez une question sur notre travail ou nos services ? Faites le nous savoir.',
-  'Not Just Clients. Partners & Friends.': 'Pas seulement des clients. Partenaires et amis.',
-  'Real estate': 'Immobilier',
-  'Social media': 'Des médias sociaux',
-  'Start-ups': 'Start-up',
-  'Still looking for something else? NO WORRIES, we’ve got you. Getting in touch with us, explaining your needs and goals and trusting us is all you need to do.': 'Vous cherchez toujours autre chose ? PAS DE SOUCIS, nous vous avons. Il vous suffit de nous contacter, de nous expliquer vos besoins et vos objectifs et de nous faire confiance.',
-  View: 'Vue',
-  'We offer a spectrum of services that helps you grow your business and enhance your online presence.': 'Nous offrons une gamme de services qui vous aident à développer votre entreprise et à améliorer votre présence en ligne.'
+  'Keep in touch': 'Rester en contact', // rester en contact
+  'Making you feel valued and looked after is a priority, hence customer service is the core of our business.            You’ll be involved at every stage of your project’s journey.': 'Vous faire sentir valorisé et soigné est une priorité, c\'est pourquoi le service client est au cœur de notre activité. Vous serez impliqué à chaque étape du cheminement de votre projet.'
 }

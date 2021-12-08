@@ -77,8 +77,7 @@
           <div class="desc">
             <h1 class="mb-3" v-tr>Who we are</h1>
             <p class="h4" v-tr>
-              Founded in 2019, Fiction To Mission is a full-service web design and digital marketing based in Tunisia.
-              It’s main mission is to find optimal and innovative solutions for the greatest satisfaction of its clients with the help of a highly qualified and experienced team that operates in various activities ranging from website and app creation to community management, copywriting, SEO, branding … and constantly supports the customers in their web strategies.
+              Founded in 2019, Fiction To Mission is a full-service web design and digital marketing based in Tunisia. It’s main mission is to find optimal and innovative solutions for the greatest satisfaction of its clients with the help of a highly qualified and experienced team that operates in various activities ranging from website and app creation to community management, copywriting, SEO, branding … and constantly supports the customers in their web strategies.
             </p>
           </div>
         </div>

@@ -38,6 +38,14 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+.rtl {
+  .advantage {
+    .adv_desc {
+      margin-right: 1rem;
+      margin-left: 0;
+    }
+  }
+}
 .advantage {
   height: 13.75rem;
 

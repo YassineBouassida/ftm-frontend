@@ -7,11 +7,11 @@
         :key="index"
         class="service_card pointer pa-2 my-3 mx-2"
         :size="114"
-        :title="service.titleDisplay"
-        :desc="service.description"
-        :icon="service.icon.url"
-        :iconHover="service.iconHover.url"
-        :slug="service.slug"
+        :title="deepFind(service,'titleDisplay')"
+        :desc="deepFind(service,'description')"
+        :icon="deepFind(service,'icon.url')"
+        :iconHover="deepFind(service,'iconHover.url')"
+        :slug="deepFind(service,'slug')"
         @click.native="redirectToService(service.slug)"
       ></serviceCard>
     </div>
@@ -29,11 +29,11 @@
         :alwaysActive="true"
         class="service_card pointer pa-2"
         :size="114"
-        :title="service.title"
-        :desc="service.description"
-        :icon="service.icon.url"
-        :iconHover="service.iconHover.url"
-        :slug="service.slug"
+        :title="deepFind(service,'titleDisplay')"
+        :desc="deepFind(service,'description')"
+        :icon="deepFind(service,'icon.url')"
+        :iconHover="deepFind(service,'iconHover.url')"
+        :slug="deepFind(service,'slug')"
         @click.native="redirectToService(service.slug)"
       ></externalServiceCard>
       <template #customPaging>
@@ -65,7 +65,7 @@ export default {
         arrows: false,
         dotsClass: "slick-dots custom-dot-class",
         edgeFriction: 0.35,
-        speed: 1000,
+        speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
         infinite: true
