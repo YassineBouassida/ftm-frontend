@@ -37,9 +37,7 @@ export default {
         {
           hid: "canonical",
           rel: "canonical",
-          href: `${process.env.hostname}$
-          {this.$route.path}`
-
+          href: `${process.env.hostname}${this.$route.path}`
         }
       ]
     };
