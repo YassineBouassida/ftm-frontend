@@ -198,8 +198,7 @@ export default {
   'FILL-NEEDS': 'FILL-NEEDS',
   'Tell us about your project': 'Tell us about your project',
   'We want to know what you’re up to. Tell us a bit about your project needs (timeline, budget, etc) so we can create a workflow that makes sense to your company needs.': 'We want to know what you’re up to. Tell us a bit about your project needs (timeline, budget, etc) so we can create a workflow that makes sense to your company needs.',
-  'We focus on bringing value to our customers and on helping them succeed in the marketplace.': 'We focus on bringing value to our customers and on helping them succeed in the marketplace.', // UNUSED
-  'We are committed to support you over the long terms: before, during and after the entire software development process.': 'We are committed to support you over the long terms: before, during and after the entire software development process.', // UNUSED
-  'You take advantage of our experiences, high quality IT solutions, and the most exciting experience with a long term partner.': 'You take advantage of our experiences, high quality IT solutions, and the most exciting experience with a long term partner.', // UNUSED
-  'Read more': 'Read more'
+  "We focus on bringing value to our customers and on helping them succeed in the marketplace.":"We focus on bringing value to our customers and on helping them succeed in the marketplace.",
+  "We are committed to support you over the long terms: before, during and after the entire software development process.": "We are committed to support you over the long terms: before, during and after the entire software development process.",
+  "You take advantage of our experiences, high quality IT solutions, and the most exciting experience with a long term partner.":"You take advantage of our experiences, high quality IT solutions, and the most exciting experience with a long term partner."
 }

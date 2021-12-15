@@ -116,9 +116,10 @@
       <div class="py-5">
         <div class="c_head my-5">
           <h1 class="txt_center" v-tr>Industry experience</h1>
-          <p class="txt_center" v-tr>
-            FTM’s clients range in size, fields and countries. But we love designing for smaller companies and facilitating their successful navigation in a competitive multi-national marketplace. Check out some of the fileds we’ve had the pleasure of working in:
-          </p>
+          <p
+            class="txt_center"
+            v-tr
+          >FTM’s clients range in size, fields and countries. But we love designing for smaller companies and facilitating their successful navigation in a competitive multi-national marketplace. Check out some of the fileds we’ve had the pleasure of working in:</p>
         </div>
         <div class="brands_list flex align_center wrap space_between">
           <div
@@ -160,17 +161,24 @@
               :key="index"
               class="txt_center my-3"
             >
-              <span v-if="index<4">{{stack.title}}</span>
+              <span v-if="index<3">{{stack.title}}</span>
             </h4>
+            <router-link
+              :to="`services/${deepFind(service, 'slug')}`"
+              tag="u"
+              class="text_primary t-11 w-100 d_block txt_center pointer"
+              v-tr
+            >Read more</router-link>
           </div>
         </div>
       </div>
       <div class="c_footer flex end mb-5">
         <div class="w-70">
           <h1 class="txt_right" v-tr>AND MUCH-MORE</h1>
-          <p class="txt_right" v-tr>
-            Still looking for something else? NO WORRIES, we’ve got you. Getting in touch with us, explaining your needs and goals and trusting us is all you need to do.
-          </p>
+          <p
+            class="txt_right"
+            v-tr
+          >Still looking for something else? NO WORRIES, we’ve got you. Getting in touch with us, explaining your needs and goals and trusting us is all you need to do.</p>
         </div>
       </div>
     </section>
@@ -255,23 +263,23 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-.rtl{
-  .hero{
-    .c_head{
+.rtl {
+  .hero {
+    .c_head {
       align-items: flex-start;
     }
   }
-  .promise{
-    h1{
+  .promise {
+    h1 {
       text-align: end;
     }
   }
-  .services{
-    .c_head{
+  .services {
+    .c_head {
       justify-content: start;
     }
   }
-  .c_footer{
+  .c_footer {
     justify-content: start;
   }
 }

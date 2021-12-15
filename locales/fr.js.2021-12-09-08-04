@@ -196,13 +196,5 @@ export default {
   'Start-ups': 'Start-up',
   'Still looking for something else? NO WORRIES, we’ve got you. Getting in touch with us, explaining your needs and goals and trusting us is all you need to do.': 'Vous cherchez toujours autre chose ? PAS DE SOUCIS, nous vous avons. Il vous suffit de nous contacter, de nous expliquer vos besoins et vos objectifs et de nous faire confiance.',
   View: 'Vue',
-  'We offer a spectrum of services that helps you grow your business and enhance your online presence.': 'Nous offrons une gamme de services qui vous aident à développer votre entreprise et à améliorer votre présence en ligne.',
-  'CONTACT US': 'NOUS CONTACTER',
-  'FILL-NEEDS': 'REMPLIR LES BESOINS',
-  'Tell us about your project': 'Parlez nous de votre projet',
-  'We want to know what you’re up to. Tell us a bit about your project needs (timeline, budget, etc) so we can create a workflow that makes sense to your company needs.': 'Nous voulons savoir ce que vous faites. Parlez-nous un peu des besoins de votre projet (échéancier, budget, etc.) afin que nous puissions créer un flux de travail adapté aux besoins de votre entreprise.',
-  'We focus on bringing value to our customers and on helping them succeed in the marketplace.': 'Nous nous efforçons d\'apporter de la valeur à nos clients et de les aider à réussir sur le marché.', // UNUSED
-  'We are committed to support you over the long terms: before, during and after the entire software development process.': 'Nous nous engageons à vous accompagner sur le long terme : avant, pendant et après tout le processus de développement logiciel.', // UNUSED
-  'You take advantage of our experiences, high quality IT solutions, and the most exciting experience with a long term partner.': 'Vous profitez de nos expériences, de nos solutions informatiques de haute qualité et de l\'expérience la plus excitante avec un partenaire à long terme.', // UNUSED
-  'Read more': 'Lire la suite'
+  'We offer a spectrum of services that helps you grow your business and enhance your online presence.': 'Nous offrons une gamme de services qui vous aident à développer votre entreprise et à améliorer votre présence en ligne.'
 }

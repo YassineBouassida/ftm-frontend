@@ -308,6 +308,10 @@ export default {
         {
           innerHTML: JSON.stringify(this.structuredData),
           type: "application/ld+json"
+        },
+        {
+          innerHTML: JSON.stringify(this.structuredProductData),
+          type: "application/ld+json"
         }
       ],
       meta: [
@@ -355,6 +359,17 @@ export default {
         "@context": "https://schema.org",
         "@type": "FAQPage",
         mainEntity: mainEntity
+      };
+    },
+    structuredProductData() {
+      return {
+        "@context": "https://schema.org/",
+        "@type": "Product",
+        name: this.deepFind(this.serviceBySlug, "titleDisplay"),
+        image:
+          this.api_url + this.deepFind(this.serviceBySlug, "hero.image.url"),
+        description: this.deepFind(this.serviceBySlug, "hero.description"),
+        brand: "FTM"
       };
     }
   },

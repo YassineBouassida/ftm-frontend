@@ -216,7 +216,7 @@ export default {
     i18n: true,
     // nuxt-i18n notation (advanced)
     i18n: {
-      locales: ['en', 'fr'],
+      locales: ['en', 'fr', 'ar'],
       routesNameSeparator: '___'
     },
     routes: async () => {
@@ -353,6 +353,9 @@ export default {
 
       "name": "ftm",
       "short_name": "ftm",
+      icon: {
+        fileName: "~/static/favicon/favicon-32x32.png?v1"
+      },
       "icons": [{
           "source": "~/static/favicon/favicon-512x512.png",
           "sizes": "512x512",
@@ -405,7 +408,7 @@ export default {
           "source": "~/static/favicon/apple-icon-120x120.png",
           "sizes": "120x120",
           "type": "image/png",
-          "purpose": "apple-touch-icon"
+          "purpose": "any maskable"
         },
         {
           "source": "~/static/favicon/apple-icon-144x144.png",

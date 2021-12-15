@@ -208,19 +208,30 @@ export default {
           postalCode: "3027",
           addressCountry: "TN"
         },
+        logo:
+          "https://server.fictiontomission.com/uploads/logo_schema_e70f7d93b0.png",
         geo: {
           "@type": "GeoCoordinates",
           latitude: 34.73948578898038,
           longitude: 10.756593153971355
-        }
+        },
+        sameAs: [
+          "https://www.facebook.com/FictionToMission",
+          "https://twitter.com/fiction2mission",
+          "https://www.instagram.com/fictiontomission/",
+          "https://www.youtube.com/channel/UChHAp1oCk8idA7TQ3uD4ndQ",
+          "https://www.linkedin.com/company/fictiontomission",
+          "https://www.pinterest.fr/FictionToMission/",
+          "https://fictiontomission.com"
+        ]
       }
     };
   }
 };
 </script>
 <style lang="scss" scoped>
-.rtl{
-  .social_links a:last-of-type{
+.rtl {
+  .social_links a:last-of-type {
     margin-right: 1rem;
   }
 }

@@ -18,9 +18,10 @@
         <div class="container flex end align_center fill_height">
           <div class="w-50">
             <h1 class="text_white txt_right" v-tr>Tell us about your project</h1>
-            <p class="text_white txt_right" v-tr>
-              We want to know what you’re up to. Tell us a bit about your project needs (timeline, budget, etc) so we can create a workflow that makes sense to your company needs.
-            </p>
+            <p
+              class="text_white txt_right"
+              v-tr
+            >We want to know what you’re up to. Tell us a bit about your project needs (timeline, budget, etc) so we can create a workflow that makes sense to your company needs.</p>
           </div>
         </div>
       </div>
@@ -180,7 +181,11 @@
               <h4 class="text_primary" v-tr>Please check required fields</h4>
             </div>
             <div class="flex align_center end mt-4">
-              <fBtn @click.native="submitForm" class="call_to_action bg_primary f_link text_white">
+              <fBtn
+                :loading="loading"
+                @click.native="submitForm"
+                class="call_to_action bg_primary f_link text_white"
+              >
                 <h3 class="text_white px-5 w-40" v-tr>Submit</h3>
               </fBtn>
             </div>
@@ -214,6 +219,7 @@ export default {
   data() {
     return {
       checkForm: false,
+      loading: false,
       form: {
         name: "",
         email: "",
@@ -346,24 +352,54 @@ export default {
   methods: {
     submitForm() {
       if (this.verifyForm()) {
-        // this.$apollo.mutate({
-        //   mutation: createMessage,
-        //   variables: {
-        //     ...this.form
-        //   },
-        //   update: (cache, { data: { message } }) => {
-        //     // Read the data from our cache for this query.
-        //     // eslint-disable-next-line
-        //     console.log(message);
-        //   }
-        // });
+        this.$apollo.mutate({
+          mutation: createMessage,
+          variables: {
+            ...this.form
+          },
+          update: (cache, { data: { message } }) => {
+            // Read the data from our cache for this query.
+            // eslint-disable-next-line
+            console.log(message);
+          }
+        });
+        this.emptyErrors();
+        this.emptyForm();
         this.checkForm = false;
       } else {
         this.checkForm = true;
       }
     },
+    emptyErrors() {
+      this.errors = {
+        name: "",
+        email: "",
+        job: "",
+        budget: "",
+        deadline: "",
+        industry: "",
+        subject: "",
+        company: "",
+        phone: "",
+        total: 6
+      };
+    },
+
+    emptyForm() {
+      this.form = {
+        name: "",
+        email: "",
+        job: "",
+        budget: "",
+        deadline: "",
+        industry: "",
+        subject: "",
+        company: "",
+        phone: ""
+      };
+    },
+
     verifyForm() {
-     
       let verifier = 1;
       Object.keys(this.$refs).map(refKey => {
         let ref = this.$refs[refKey];

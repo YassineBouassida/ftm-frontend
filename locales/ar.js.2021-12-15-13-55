@@ -57,8 +57,8 @@ export default {
   'What we promise is not simply code but rather a solution. You get a W3C fully compliant markup with no compromise on quality. We know you look for positive attitude, timely reactions, and flexibility. We are here to listen and give the utmost of our capabilities.': 'ما نعد به ليس مجرد كود بل هو حل. تحصل على ترميز متوافق تمامًا مع W3C دون المساومة على الجودة. نحن نعلم أنك تبحث عن المواقف الإيجابية وردود الفعل في الوقت المناسب والمرونة. نحن هنا للاستماع وإعطاء أقصى قدر من قدراتنا.', // UNUSED
   'Whether you’re a small business or a large corporation, we look forward to working with you on your next creative endeavor': 'سواء كنت شركة صغيرة أو شركة كبيرة ، فإننا نتطلع إلى العمل معك في مسعاك الإبداعي القادم',
   'FILL-NEEDS': 'أكمل الإستمارة',
-  'Tell us about your project': 'أخبرنا عن مشروعك',
-  'We want to know what you’re up to. Tell us a bit about your project needs (timeline, budget, etc) so we can create a workflow that makes sense to your company needs.': 'نريد أن نعرف ما أنت بصدد القيام به. أخبرنا قليلاً عن احتياجات مشروعك (الجدول الزمني والميزانية وما إلى ذلك) حتى نتمكن من إنشاء سير عمل يتناسب مع احتياجات شركتك.',
+  'Tell us about your project':'أخبرنا عن مشروعك',
+  'We want to know what you’re up to. Tell us a bit about your project needs (timeline, budget, etc) so we can create a workflow that makes sense to your company needs.':'نريد أن نعرف ما أنت بصدد القيام به. أخبرنا قليلاً عن احتياجات مشروعك (الجدول الزمني والميزانية وما إلى ذلك) حتى نتمكن من إنشاء سير عمل يتناسب مع احتياجات شركتك.',
   'CONTACT US': 'اتصل بنا',
   'Do you want to build something?            Need': 'هل تريد بناء شيء ما؟ يحتاج', // UNUSED
   'Follow us': 'تابعنا',
@@ -195,8 +195,7 @@ export default {
   'Start-ups': 'الشركات الناشئة',
   View: 'المزيدةة',
   'We offer a spectrum of services that helps you grow your business and enhance your online presence.': 'نحن نقدم مجموعة من الخدمات التي تساعدك على تنمية أعمالك وتعزيز وجودك على الإنترنت.',
-  'We focus on bringing value to our customers and on helping them succeed in the marketplace.': 'نحن نركز على تقديم قيمة لعملائنا ومساعدتهم على النجاح في السوق.', // UNUSED
-  'We are committed to support you over the long terms: before, during and after the entire software development process.': 'نحن ملتزمون بدعمك على المدى الطويل: قبل وأثناء وبعد عملية تطوير البرامج بأكملها.', // UNUSED
-  'You take advantage of our experiences, high quality IT solutions, and the most exciting experience with a long term partner.': 'يمكنك الاستفادة من خبراتنا وحلول تكنولوجيا المعلومات عالية الجودة والتجربة الأكثر إثارة مع شريك طويل الأجل.', // UNUSED
-  'Read more': 'المزيد'
+  "We focus on bringing value to our customers and on helping them succeed in the marketplace.":"نحن نركز على تقديم قيمة لعملائنا ومساعدتهم على النجاح في السوق.",
+  "We are committed to support you over the long terms: before, during and after the entire software development process.": "نحن ملتزمون بدعمك على المدى الطويل: قبل وأثناء وبعد عملية تطوير البرامج بأكملها.",
+  "You take advantage of our experiences, high quality IT solutions, and the most exciting experience with a long term partner.":"يمكنك الاستفادة من خبراتنا وحلول تكنولوجيا المعلومات عالية الجودة والتجربة الأكثر إثارة مع شريك طويل الأجل."
 }
