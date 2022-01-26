@@ -62,8 +62,11 @@ export default {
     background-size: cover;
     background-position: center center;
     border-radius: 25px;
+    .overlay_light {
+      display: none !important;
+    }
   }
-  .project_logo {
+  .project_logo  {
     height: 12rem;
   }
 

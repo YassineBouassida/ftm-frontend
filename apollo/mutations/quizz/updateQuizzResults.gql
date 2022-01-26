@@ -1,0 +1,33 @@
+mutation updateQuizzResult(
+  $id: ID!
+  $UID: String!
+  $status: String
+  $results: JSON
+  $stepsCompleted: Int
+  $total: Int
+) {
+  updateQuizzResult(
+    input: {
+      where: { id: $id }
+      data: {
+        UID: $UID
+        status: $status
+        results: $results
+        stepsCompleted: $stepsCompleted
+        total: $total
+      }
+    }
+  ) {
+    quizzResult {
+      id
+      UID
+      status
+      results
+      stepsCompleted
+      total
+      quizzName {
+        id
+      }
+    }
+  }
+}

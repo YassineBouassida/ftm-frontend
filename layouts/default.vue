@@ -1,6 +1,6 @@
 <template>
   <div class="flex column app" :class="{rtl:rtl,ltr:!rtl}">
-    <fHeader class="bg_white headerContainer" :class="{sticky:sticky}" />
+    <fHeader class="bg_white headerContainer" :class="{sticky:sticky,elevate_1:sticky}" />
     <nuxt class="main" />
     <fFooter></fFooter>
   </div>

@@ -11,6 +11,7 @@
         :key="index"
         class="mx-3 pointer caroussel_item relative"
       >
+        <div class="overlay_light flex align_center center" v-if="activeSlide!=index"></div>
         <img :src="api_url+deepFind(item,'media.url')" :alt="item.title" width="auto" height="auto" />
       </div>
       <template #prevArrow>
@@ -83,7 +84,7 @@ export default {
     };
   },
   methods: {
-    beforeSlideChange(newVal) {
+    beforeSlideChange(old, newVal) {
       this.activeSlide = newVal;
     }
   }
@@ -103,9 +104,9 @@ export default {
   .slick-active.slick-center.slick-current {
     .caroussel_item {
       max-width: 500px;
-      .overlay_light {
-        display: none;
-      }
+      // .overlay_light {
+      //   display: none;
+      // }
     }
   }
   .custom-arrow {

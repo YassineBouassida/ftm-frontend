@@ -1,0 +1,58 @@
+# Write your query or mutation here
+query Quizz($locale: String) {
+  quizzes(locale:$locale) {
+    name
+    questions {
+      id
+      title
+      step
+      next
+      previous
+      options {
+        id
+        text
+        cost
+        icon {
+          name
+          url
+        }
+      }
+      marks {
+        id
+        text
+        textDisplay
+        cost
+      }
+      inputs {
+        id
+        placeholder
+        required
+        type
+        label
+        name
+      }
+      hint {
+        id
+        title
+        description
+      }
+      results {
+        id
+        total
+        steps
+        selectedOption
+        marks {
+          id
+          text
+          textDisplay
+          cost
+        }
+        inputs {
+          id
+          required
+          placeholder
+        }
+      }
+    }
+  }
+}

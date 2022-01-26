@@ -1,0 +1,34 @@
+
+
+
+mutation createMessage(
+  $uid: String!
+  $status: String
+  $results: JSON
+  $stepsCompleted: Int
+  $total: Int
+  $quizzName: ID
+) {
+  createQuizzResult(
+    input: {
+      data: {
+        UID: $uid
+        status: $status
+        results: $results
+        stepsCompleted: $stepsCompleted
+        total: $total
+        quizzName: $quizzName
+      }
+    }
+  ) {
+    quizzResult {
+      id
+      UID
+      status
+      results
+      stepsCompleted
+      total
+      quizzName{id name}
+    }
+  }
+}

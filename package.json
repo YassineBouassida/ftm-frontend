@@ -16,6 +16,7 @@
     "@nuxtjs/pwa": "^3.3.5",
     "@nuxtjs/sentry": "^5.1.5",
     "@nuxtjs/sitemap": "^2.4.0",
+    "cookie-universal-nuxt": "^2.1.5",
     "core-js": "^3.15.1",
     "fs": "^0.0.1-security",
     "graphql-tag": "^2.12.5",

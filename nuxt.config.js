@@ -110,6 +110,7 @@ export default {
     '~/components',
     '~/components/ui',
     '~/components/parts',
+    '~/components/parts/quizz',
     '~/components/svg',
 
   ],
@@ -142,6 +143,7 @@ export default {
     '@nuxtjs/i18n',
     'nuxt-i18n-easy',
     '@nuxtjs/sitemap',
+    'cookie-universal-nuxt',
     ['@nuxtjs/html-minifier', {
       log: 'once',
       logHtml: true

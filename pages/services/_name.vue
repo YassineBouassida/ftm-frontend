@@ -257,7 +257,7 @@
           v-for="(faq, index) in deepFind(serviceBySlug, 'faqs')"
           :key="index"
           :expanded="expanded==index"
-          @expand="expanded=index"
+          @expand="expanded==index?expanded=null:expanded=index"
         ></faq>
       </div>
     </section>
