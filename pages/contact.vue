@@ -7,21 +7,21 @@
           <img width="auto" height="auto" src="~static/img/contact/hero.svg" alt="hero" />
         </div>
         <div class="desc w-50 flex column center">
-          <h1 class="hero_text mb-3" v-tr>CONTACT US</h1>
+          <h1 class="hero_text mb-3" >{{$t('contact.hero.heroText1')}}</h1>
           <div class="flex align_center">
             <div class="separator bg_primary relative mr-3"></div>
-            <h1 class="text_right" v-tr>FILL-NEEDS</h1>
+            <h1 class="text_right" >{{$t('contact.hero.heroText2')}}</h1>
           </div>
         </div>
       </div>
       <div class="hero_content">
         <div class="container flex end align_center fill_height">
           <div class="w-50">
-            <h1 class="text_white txt_right" v-tr>Tell us about your project</h1>
+            <h1 class="text_white txt_right" >{{$t('contact.hero.h1')}}</h1>
             <p
               class="text_white txt_right"
-              v-tr
-            >We want to know what you’re up to. Tell us a bit about your project needs (timeline, budget, etc) so we can create a workflow that makes sense to your company needs.</p>
+              
+            >{{$t('contact.hero.p')}}</p>
           </div>
         </div>
       </div>
@@ -30,15 +30,15 @@
     <section class="bg_lightGrey">
       <div class="contact_form container bg_white relative">
         <div class="c_head w-50">
-          <h1 v-tr>Our offices</h1>
+          <h1 >{{$t('contact.form.h1')}}</h1>
           <p
-            v-tr
-          >Fiction to mission is based in Sfax, Tunisia. Our in-house team is made up of creative professionals that work closely with more than 50 creatives all around the globe to create out-of-the-box multimedia content, customized for your needs.</p>
+            
+          >{{$t('contact.form.p')}}</p>
         </div>
         <div class="c_body flex">
           <div class="form_contact w-50">
             <div class="cellule">
-              <h2 v-tr>Contact us</h2>
+              <h2 >{{$t('contact.form.coord.contact')}}</h2>
               <h3 class="mt-2 text_primary">
                 <a
                   href="mailto:contact@fictiontomission.com"
@@ -47,7 +47,7 @@
               </h3>
             </div>
             <div class="cellule mt-2">
-              <h2 v-tr>Address</h2>
+              <h2 >{{$t('contact.form.coord.address')}}</h2>
               <h3 class="mt-2 text_primary">
                 <a
                   href="https://g.page/fictiontomission?share"
@@ -62,7 +62,7 @@
               </h3>
             </div>
             <div class="cellule mt-2">
-              <h2 v-tr>Phone</h2>
+              <h2 >{{$t('contact.form.coord.phone')}}</h2>
               <h3 class="mt-2 text_primary">
                 <a class="text_primary" href="tel:+216 92 24 33 33">(+216) 92 10 13 33</a>
                 <br />
@@ -76,9 +76,9 @@
               iType="text"
               data-field="input"
               class="my-2"
-              :label="$t('Name')"
+              :label="$t('contact.form.name.label')"
               required
-              :placeholder="$t('Full name')"
+              :placeholder="$t('contact.form.name.placeholder')"
               :error="errors.name"
               @errorField="errors.name=$event;"
               ref="name"
@@ -87,7 +87,7 @@
               v-model="form.email"
               iType="email"
               class="my-2"
-              label="Email"
+              :label="$t('contact.form.name.label')"
               required
               placeholder="email@company.com"
               data-field="input"
@@ -100,9 +100,9 @@
               iType="text"
               data-field="input"
               class="my-2"
-              :label="$t('Company')"
+              :label="$t('contact.form.company.label')"
               required
-              :placeholder="$t('Company name')"
+              :placeholder="$t('contact.form.company.placeholder')"
               :error="errors.company"
               @errorField="errors.company=$event"
               ref="company"
@@ -111,9 +111,9 @@
               v-model="form.phone"
               iType="number"
               class="my-2"
-              :label="$t('Phone number')"
+              :label="$t('contact.form.phone.label')"
               required
-              :placeholder="$t('+216 99 999 999 ')"
+              :placeholder="$t('contact.form.phone.placeholder')"
               data-field="input"
               :error="errors.phone"
               @errorField="errors.phone=$event"
@@ -123,9 +123,9 @@
               v-model="form.budget"
               iType="text"
               class="my-2"
-              :label="$t('Budget')"
+              :label="$t('contact.form.budget.label')"
               required
-              :placeholder="$t('Estimated budget')"
+              :placeholder="$t('contact.form.budget.placeholder')"
               data-field="input"
               :error="errors.budget"
               @errorField="errors.budget=$event"
@@ -136,7 +136,7 @@
               class="my-2"
               data-field="select"
               :options="positions"
-              :label="$t('Job position')"
+              :label="$t('contact.form.job.label')"
               placeholder="Please select"
               :error="errors.job"
               @errorField="errors.job=$event"
@@ -147,9 +147,9 @@
               v-model="form.deadline"
               class="my-2"
               data-field="input"
-              :label="$t('Deadline')"
+              :label="$t('contact.form.deadline.label')"
               iType="datetime-local"
-              placeholder="12/31/1996"
+              :placeholder="$t('contact.form.deadline.placeholder')"
               :error="errors.deadline"
               @errorField="errors.deadline=$event"
               ref="deadline"
@@ -159,7 +159,7 @@
               class="my-2"
               data-field="select"
               :options="industries"
-              :label="$t('Industry')"
+              :label="$t('contact.form.industry.label')"
               placeholder="Please select"
               :error="errors.industry"
               @errorField="errors.industry=$event"
@@ -169,16 +169,16 @@
               v-model="form.subject"
               iType="textarea"
               class="my-2"
-              :label="$t('Subject')"
+              :label="$t('contact.form.subject.label')"
               required
-              :placeholder="$t('Your message')"
+              :placeholder="$t('contact.form.subject.placeholder')"
               data-field="textarea"
               :error="errors.subject"
               @errorField="errors.subject=$event"
               ref="subject"
             ></base-input>
             <div class="flex align_center center mt-2" v-if="checkForm">
-              <h4 class="text_primary" v-tr>Please check required fields</h4>
+              <h4 class="text_primary" >Please check required fields</h4>
             </div>
             <div class="flex align_center end mt-4">
               <fBtn
@@ -186,7 +186,7 @@
                 @click.native="submitForm"
                 class="call_to_action bg_primary f_link text_white"
               >
-                <h3 class="text_white px-5 w-40" v-tr>Submit</h3>
+                <h3 class="text_white px-5 w-40" >{{$t('contact.form.btn')}}</h3>
               </fBtn>
             </div>
           </form>
@@ -244,107 +244,107 @@ export default {
         total: 6
       },
       industries: [
-        { text: this.$t("Please select"), val: "" },
+        { text: this.$t('contact.form.industry.industries.select'), val: "" },
         {
-          text: this.$t("Accounting and Finance"),
+          text: this.$t('contact.form.industry.industries.accounting'),
           val: "Accounting and Finance"
         },
         {
-          text: this.$t("Administrative and Clerical"),
+          text: this.$t('contact.form.industry.industries.admin'),
           val: "Administrative and Clerical"
         },
-        { text: this.$t("Construction"), val: "Construction" },
+        { text: this.$t('contact.form.industry.industries.construction'), val: "Construction" },
         {
-          text: this.$t("Creative and Design"),
+         text: this.$t('contact.form.industry.industries.creative'),
           val: "Creative and Design"
         },
         {
-          text: this.$t("Customer Service"),
+         text: this.$t('contact.form.industry.industries.customer'),
           val: "Customer Service"
         },
-        { text: this.$t("Education"), val: "Education" },
+        {text: this.$t('contact.form.industry.industries.education'), val: "Education" },
         {
-          text: this.$t("Energy and Utilities"),
+          text: this.$t('contact.form.industry.industries.energy'),
           val: "Energy and Utilities"
         },
-        { text: this.$t("Engineering"), val: "Engineering" },
-        { text: this.$t("Financial Services"), val: "Financial Services" },
-        { text: this.$t("Healthcare"), val: "Healthcare" },
-        { text: this.$t("Hospitality"), val: "Hospitality" },
-        { text: this.$t("IT"), val: "IT" },
-        { text: this.$t("Labor"), val: "Labor" },
-        { text: this.$t("Legal"), val: "Legal" },
+        { text: this.$t('contact.form.industry.industries.engineer'), val: "Engineering" },
+        { text: this.$t('contact.form.industry.industries.financial'), val: "Financial Services" },
+        { text: this.$t('contact.form.industry.industries.health'), val: "Healthcare" },
+        { text: this.$t('contact.form.industry.industries.hospitality'), val: "Hospitality" },
+        { text: this.$t('contact.form.industry.industries.it'), val: "IT" },
+        { text: this.$t('contact.form.industry.industries.labor'), val: "Labor" },
+        { text: this.$t('contact.form.industry.industries.legal'), val: "Legal" },
         {
-          text: this.$t("Maintenance and Repair"),
+          text: this.$t('contact.form.industry.industries.maintenance'),
           val: "Maintenance and Repair"
         },
-        { text: this.$t("Management"), val: "Management" },
+        { text: this.$t('contact.form.industry.industries.management'), val: "Management" },
         {
-          text: this.$t("Manufacturing and Industrial"),
+          text: this.$t('contact.form.industry.industries.manufactur'),
           val: "Manufacturing and Industrial"
         },
         {
-          text: this.$t("Marketing and Advertising"),
+          text: this.$t('contact.form.industry.industries.marketing'),
           val: "Marketing and Advertising"
         },
-        { text: this.$t("Pharmaceutical and Research"), val: "" },
+        { text: this.$t('contact.form.industry.industries.pharma'), val: "" },
         {
-          text: this.$t("Production Animation Agency"),
+          text: this.$t('contact.form.industry.industries.production'),
           val: "Production Animation Agency"
         },
         {
-          text: this.$t("Professional"),
+          text: this.$t('contact.form.industry.industries.professional'),
           val: "Professional"
         },
         {
-          text: this.$t("Restaurant and Food Service"),
+          text: this.$t('contact.form.industry.industries.restau'),
           val: "Restaurant and Food Service"
         },
         {
-          text: this.$t("Retail"),
+          text: this.$t('contact.form.industry.industries.retail'),
           val: "Retail"
         },
         {
-          text: this.$t("SaaS"),
+          text: this.$t('contact.form.industry.industries.saas'),
           val: "SaaS"
         },
         {
-          text: this.$t("Sales"),
+          text: this.$t('contact.form.industry.industries.sales'),
           val: "Sales"
         },
         {
-          text: this.$t("Security"),
+          text: this.$t('contact.form.industry.industries.security'),
           val: "Security"
         },
         {
-          text: this.$t("Telecommunications"),
+          text: this.$t('contact.form.industry.industries.telecom'),
           val: "Telecommunications"
         },
         {
-          text: this.$t("Transportation"),
+          text: this.$t('contact.form.industry.industries.transport'),
           val: "Transportation"
         },
         {
-          text: this.$t("Warehouse"),
+          text: this.$t('contact.form.industry.industries.warehouse'),
           val: "Warehouse"
         }
       ],
       positions: [
-        { text: this.$t("Please select"), val: "" },
-        { text: this.$t("CEO / C-Level / VP"), val: "CEO" },
+        { text: this.$t('contact.form.job.positions.select'), val: "" },
+        {text: this.$t('contact.form.job.positions.ceo'), val: "CEO" },
         {
-          text: this.$t("Marketing Manager / Marketing Director"),
+          text: this.$t('contact.form.job.positions.marketing'),
           val: "Marketing"
         },
-        { text: this.$t("Operations Manager"), val: "Operations" },
-        { text: this.$t("Financial Manager"), val: "Financial" },
-        { text: this.$t("Production Manager"), val: "Production" },
+        { text: this.$t('contact.form.job.positions.operations'), val: "Operations" },
+        { text: this.$t('contact.form.job.positions.financial'), val: "Financial" },
+        { text: this.$t('contact.form.job.positions.production'), val: "Production" },
         {
-          text: this.$t("Other Marketing Position"),
+          text: this.$t('contact.form.job.positions.otherMarketing'),
           val: "Other Marketing Position"
         },
-        { text: this.$t("Student"), val: "Student" },
-        { text: this.$t("Other"), val: "Other" }
+        { text: this.$t('contact.form.job.positions.student'), val: "Student" },
+        { text: this.$t('contact.form.job.positions.other'), val: "Other" }
       ]
     };
   },

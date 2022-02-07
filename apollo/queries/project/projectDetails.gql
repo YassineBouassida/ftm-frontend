@@ -82,6 +82,8 @@ query Project($locale: String!, $slug: String!) {
           }
         }
         title
+        desc
+        subTitle
         description
       }
  fragment  videoPart on ComponentProjectPartsVideo {
@@ -104,7 +106,14 @@ query Project($locale: String!, $slug: String!) {
         id
         title
         description
+        desc
+        subTitle
         media {
+          name
+          url
+          previewUrl
+        }
+        media_sm {
           name
           url
           previewUrl

@@ -25,7 +25,7 @@
     </div>
     <!-- ***************************** -->
     <div class="steps_body mt-5">
-      <h3 class="txt_right mb-2" v-tr>A cocktail of skills !</h3>
+      <h3 class="txt_right mb-2">{{$t('home.how.coctail')}}</h3>
       <div class="step_content elevate_1 bg_white pa-4">
         <!-- ***************Only on desktop************** -->
         <VueSlickCarousel

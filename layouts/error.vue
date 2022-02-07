@@ -6,10 +6,10 @@
           <img width="auto" height="auto" src="~static/img/404.png" alt="404 error" />
         </div>
         <div class="w-45 flex column align_center">
-          <h1 class="hero_text txt_center">Oops</h1>
-          <h1 class="text_primary txt_center" v-tr>Something went wrong</h1>
-          <p class="txt_center" v-tr>Don't worry, we are here to help</p>
-          <fBtn class="bg_primary text_white w-50" link :to="localePath('/')" v-tr>Home page</fBtn>
+          <h1 class="hero_text txt_center">{{$t('common.error.oops')}}</h1>
+          <h1 class="text_primary txt_center" >{{$t('common.error.sthg')}}</h1>
+          <p class="txt_center" >{{$t('common.error.noWorries')}}</p>
+          <fBtn class="bg_primary text_white w-50" link :to="localePath('/')" >{{$t('common.error.link')}}</fBtn>
         </div>
       </div>
     </div>

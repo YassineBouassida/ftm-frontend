@@ -4,9 +4,9 @@
       <div class="artboard flex1 flex container">
         <div class="w-50 pt-5">
           <h1 class="hero_text">
-            <span v-tr>WHY WORK</span>
+            <span >{{$t('about.heroText1')}}</span>
             <br />
-            <span v-tr>WITH US</span>
+            <span >{{$t('about.heroText2')}}</span>
             <span class="separator bg_primary relative mr-3"></span>
           </h1>
         </div>
@@ -18,33 +18,33 @@
         <div class="container">
           <div class="flex fill_height fill_width">
             <div class="w-50 py-5 call_to_action">
-              <h1 class="text_white" v-tr>Your project is complete but misses something?</h1>
-              <h1 class="text_white" v-tr>You only have an idea but still not concreted?</h1>
+              <h1 class="text_white" >{{$t('about.aboutText.h1_1')}}</h1>
+              <h1 class="text_white" >{{$t('about.aboutText.h1_2')}}</h1>
 
               <div class="vision_mission flex column">
                 <h1
                   class="hero_text text_white"
                   :class="{'text_small_to_big':!mission,'text_big_to_small':mission}"
-                  v-tr
-                >Mission</h1>
+                  
+                >{{$t('about.aboutText.mission.text')}}</h1>
                 <p
                   class="h4 subheading text_white"
                   :class="{'text_small_to_big':mission,'text_big_to_small':!mission}"
-                  v-tr
-                >Vision</p>
+                  
+                >{{$t('about.aboutText.vision.text')}}</p>
               </div>
             </div>
             <div class="w-50 flex end paragraph">
               <p
                 class="text_white txt_right pr-3"
                 v-show="mission"
-                v-tr
-              >Our vision is to be a global name in the arena of website development, digital marketing and software solutions in the competitive international market place.</p>
+                
+              >{{$t('about.aboutText.vision.desc')}}</p>
               <p
                 v-show="!mission"
                 class="text_white txt_right pr-3"
-                v-tr
-              >Our mission is to develop high quality and affordable web solutions that create value and competitive advantage for our worldwide clients.</p>
+                
+              >{{$t('about.aboutText.mission.desc')}}</p>
               <div class="circles_deco py-4 px-2 flex column space_between">
                 <div class="circle pointer"></div>
                 <div class="circle active pointer"></div>
@@ -57,7 +57,7 @@
         </div>
       </div>
       <div class="about_footer bg_lightGrey flex align_center center">
-        <h2 v-tr>Get ready for your next adventure with Fiction To Mission!</h2>
+        <h2 >{{$t('about.aboutText.footer')}}</h2>
       </div>
     </section>
     <!-- Cases section -->
@@ -75,9 +75,9 @@
         </div>
         <div class="text_side ml-4 w-50">
           <div class="desc">
-            <h1 class="mb-3" v-tr>Who we are</h1>
-            <p class="h4" v-tr>
-              Founded in 2019, Fiction To Mission is a full-service web design and digital marketing based in Tunisia. It’s main mission is to find optimal and innovative solutions for the greatest satisfaction of its clients with the help of a highly qualified and experienced team that operates in various activities ranging from website and app creation to community management, copywriting, SEO, branding … and constantly supports the customers in their web strategies.
+            <h1 class="mb-3" >{{$t('about.cases.who.h1')}}</h1>
+            <p class="h4" >
+              {{$t('about.cases.who.p')}}
             </p>
           </div>
         </div>
@@ -86,11 +86,11 @@
       <div class="case txt_right flex1 flex align_center space_between" id="case1">
         <div class="text_side mr-4 w-50">
           <div class="desc">
-            <h1 class="mb-3" v-tr>Our values</h1>
+            <h1 class="mb-3" >{{$t('about.cases.values.h1')}}</h1>
             <p
               class="h4"
-              v-tr
-            >Fiction To Mission is 100% committed to a growth strategy to provide companies with a comprehensive solution for better digital businesses.</p>
+              
+            >{{$t('about.cases.values.p')}}</p>
           </div>
         </div>
         <div class="w-50">
@@ -106,24 +106,24 @@
     </section>
     <!-- Team members -->
     <section class="team container my-5">
-      <h1 v-tr>Meet the founders</h1>
+      <h1 >{{$t('about.team.h1')}}</h1>
       <p
         class="w-50"
-        v-tr
-      >Whether you are in the process of creating a website or you are looking to boost the attendance of your site, Fiction To Mission can offer you a personalized solution, adapted to your needs.</p>
+        
+      >{{$t('about.team.p')}}</p>
       <div class="flex align_center space_between py-4 members">
         <div class="member flex align_center">
           <div class="avatar"></div>
           <div class="ml-3">
             <h1>Oussama Kriaa</h1>
-            <p class="my-1" v-tr>co-founder/ fullstack developper</p>
+            <p class="my-1" >co-founder/ fullstack developper</p>
           </div>
         </div>
         <div class="member flex align_center">
           <div class="avatar"></div>
           <div class="ml-3">
             <h1>Yassine Bouassida</h1>
-            <p class="my-1" v-tr>co-founder/ fullstack developper</p>
+            <p class="my-1" >co-founder/ fullstack developper</p>
           </div>
         </div>
       </div>

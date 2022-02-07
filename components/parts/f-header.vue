@@ -36,36 +36,30 @@
             class="f_link mr-4"
             :to="localePath('/')"
             @click.native="openMenu=false"
-            v-tr
-          >Home</nuxt-link>
+          >{{$t('header.links.home')}}</nuxt-link>
           <nuxt-link
             class="f_link mx-4"
             :to="localePath('/about')"
-            v-tr
             @click.native="openMenu=false"
-          >About</nuxt-link>
+          >{{$t('header.links.about')}}</nuxt-link>
           <nuxt-link
             class="f_link mx-4"
             :to="localePath('/projects')"
-            v-tr
             @click.native="openMenu=false"
-          >Samples</nuxt-link>
+          >{{$t('header.links.samples')}}</nuxt-link>
           <nuxt-link
             class="f_link ml-4"
             :to="localePath('/services')"
-            v-tr
             @click.native="openMenu=false"
-          >Services</nuxt-link>
+          >{{$t('header.links.services')}}</nuxt-link>
           <nuxt-link
             class="f_link ml-4 mobile"
             :to="localePath('/services')"
-            v-tr
             @click.native="openMenu=false"
-          >Privacy policy</nuxt-link>
+          >{{$t('header.links.privacy')}}</nuxt-link>
           <nuxt-link
             class="f_link ml-4 mobile"
             :to="localePath('/services')"
-            v-tr
             @click.native="openMenu=false"
           >Cookies</nuxt-link>
         </div>
@@ -113,7 +107,7 @@
             />
           </fBtn>
           <fBtn link :to="localePath('/contact')" class="quote_btn bg_primary f_link">
-            <h3 class="text_white" v-tr>GET A QUOTE</h3>
+            <h3 class="text_white">{{$t('header.btn')}}</h3>
           </fBtn>
         </div>
       </div>
@@ -146,15 +140,6 @@ export default {
       },
       deep: true,
       immediate: true
-    },
-    "$i18n.locale": {
-      handler: function(locale) {
-        setTimeout(() => {
-          window.location.reload(true);
-        }, 500);
-      },
-      deep: true,
-      immediate: false
     }
   }
 };

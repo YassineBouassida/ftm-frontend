@@ -3,22 +3,22 @@
     <!-- hero section  -->
     <section class="hero">
       <div class="container">
-        <h1 class="text_white txt_center">Fiction To Mission</h1>
-        <h2 class="text_white txt_center" v-tr>we refectlect the world through our projection!</h2>
+        <h1 class="text_white txt_center">{{$t('samples.h1')}}</h1>
+        <h2 class="text_white txt_center" >{{$t('samples.h2')}}</h2>
       </div>
     </section>
     <!-- Projects list section  -->
     <section class="projects_list bg_white py-5">
       <div class="container">
         <div class="c_head">
-          <h1 v-tr>Projects made with love</h1>
+          <h1 >{{$t('samples.projectList.h1')}}</h1>
           <p
-            v-tr
-          >Our portfolio crosses the Tunisian borders. Get to know a collection of our favorite projects that we have proudly made with love. We cannot wait to start what can be done.</p>
+            
+          >{{$t('samples.projectList.p')}}</p>
         </div>
         <div class="c_body flex wrap fill_width space_between">
           <div
-            :style="{backgroundImage:`url(${api_url+deepFind(projects,'0.header.cover.url')})`}"
+            :style="{backgroundImage:`url(${api_url+deepFind(projects,`${index}.header.cover.url`)})`}"
             class="project_case elevate_1 pointer pair relative my-1"
             v-for="(item, index) in projects.length"
             :key="index"
@@ -27,23 +27,23 @@
             <div class="overlay pa-4 flex column space_between fill_height">
               <div class="c_head">
                 <h2 class="flex align_center space_between text_white pb-2">
-                  <span>{{deepFind(projects,'0.header.title')}}</span>
-                  <span class="t-10">{{deepFind(projects,'0.header.finish_date')}}</span>
+                  <span>{{deepFind(projects,`${index}.header.title`)}}</span>
+                  <span class="t-10">{{deepFind(projects,`${index}.header.finish_date`)}}</span>
                 </h2>
                 <h3 class="text_white">
                   <span
                     class="mr-2"
-                    v-for="(industry, index) in deepFind(projects,'0.header.industries')"
+                    v-for="(industry, index) in deepFind(projects,`${index}.header.industries`)"
                     :key="index"
-                  >{{industry.name}}{{index==deepFind(projects,'0.header.industries.length')-1?'':','}}</span>
+                  >{{industry.name}}{{index==deepFind(projects,`${index}.header.industries.length`)-1?'':','}}</span>
                 </h3>
               </div>
               <div class="c_footer">
                 <router-link
                   tag="h3"
-                  :to="localePath(`/projects/${deepFind(projects,'0.slug')}`)"
+                  :to="localePath(`/projects/${deepFind(projects,`${index}.slug`)}`)"
                   class="text_white txt_center"
-                >View project</router-link>
+                >{{$t('samples.projectList.view')}}</router-link>
               </div>
             </div>
           </div>
@@ -59,26 +59,26 @@
             <div class="icon_box bg_redLight flex align_center center">
               <img width="auto" height="auto" src="~/static/img/icons/projects/time.png" alt="time icon" />
             </div>
-            <h2 class="txt_center my-4" v-tr>Any Time Zone</h2>
+            <h2 class="txt_center my-4" >{{$t('samples.features.time.h1')}}</h2>
             <p
               class="txt_center my-0"
-              v-tr
-            >No matter where you are, we can work remotely and be available around the clock to attend to your needs</p>
+              
+            >{{$t('samples.features.time.p')}}</p>
           </div>
           <div class="flex column center align_center w-40">
             <div class="icon_box bg_redLight flex align_center center">
               <img width="auto" height="auto" src="~/static/img/icons/projects/globe.png" alt="time icon" />
             </div>
-            <h2 class="txt_center my-4" v-tr>Any Language</h2>
+            <h2 class="txt_center my-4" >{{$t('samples.features.lang.h1')}}</h2>
             <p
-              v-tr
+              
               class="txt_center my-0"
-            >No need to worry about your audience’s language, we can match it! We are able to produce projects in whatever language you require.</p>
+            >{{$t('samples.features.lang.p')}}</p>
           </div>
         </div>
         <div class="features_footer flex center">
-          <p class="txt_center w-70" v-tr>
-            Making you feel valued and looked after is a priority, hence customer service is the core of our business. You’ll be involved at every stage of your project’s journey.
+          <p class="txt_center w-70" >
+            {{$t('samples.features.lang.footer')}}
           </p>
         </div>
       </div>

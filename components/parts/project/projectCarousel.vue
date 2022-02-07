@@ -1,6 +1,9 @@
 <template>
-  <div class="caroussel w-100">
-    <h2 class="mb-3">{{deepFind(variables,'title')}}</h2>
+  <div class="caroussel w-100" v-if="variables">
+    <h2 class="mb-3" v-html="deepFind(variables,'title')"></h2>
+    <p class="mb-3" v-html="deepFind(variables,'desc')"></p>
+    <h3 class="mb-3" v-html="deepFind(variables,'subTitle')"></h3>
+
     <VueSlickCarousel
       @beforeChange="beforeSlideChange"
       v-if="deepFind(variables,'carouselItem.length')"
@@ -30,6 +33,9 @@
       <p class="my-2">{{deepFind(variables,'carouselItem.'+activeSlide+'.description')}}</p>
     </div>
   </div>
+  <div v-else class="bg_lightGrey loading_page flex align_center center">
+    <div class="load_spinner open_spinner"></div>
+  </div>
 </template>
 <script>
 import VueSlickCarousel from "vue-slick-carousel";
@@ -48,10 +54,7 @@ export default {
         infinite: true,
         centerMode: true,
         centerPadding: "30px",
-        slidesToShow:
-          this.deepFind(this.variables, "carouselItem.length") > 1
-            ? this.deepFind(this.variables, "carouselItem.length") - 1
-            : 1,
+        slidesToShow: this.calculateSlidesToShow(),
         slidesToScroll: 1,
         variableWidth: true,
         speed: 500,
@@ -86,6 +89,16 @@ export default {
   methods: {
     beforeSlideChange(old, newVal) {
       this.activeSlide = newVal;
+    },
+    calculateSlidesToShow() {
+      let carousselSize = this.deepFind(this.variables, "carouselItem.length");
+      console.log("carousselSize ", carousselSize);
+
+      if (carousselSize < 4) {
+        return carousselSize;
+      } else {
+        return 3;
+      }
     }
   }
 };

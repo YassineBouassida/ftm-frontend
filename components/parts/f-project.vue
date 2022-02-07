@@ -5,13 +5,13 @@
     </div>
     <div class="p_content flex1">
       <h2 class="flex align_baseline space_between mr-5 ml-4">
-        <span v-tr>Not Just Clients. Partners & Friends.</span>
+        <span >{{$t('home.portfolio.testi.h3')}}</span>
         <router-link
           :to="localePath(project.project_link)"
           tag="span"
           class="subheading pointer view_project text_primary"
-          v-tr
-        >View</router-link>
+         
+        >{{$t('home.portfolio.testi.prev')}}</router-link>
       </h2>
       <div class="p_card elevate_1 pa-3 relative flex align_center bg_white">
         <div class="flex align_center fill_height p_card_container">
@@ -26,7 +26,7 @@
                 :to="localePath(project.project_link)"
                 tag="span"
                 class="subheading pointer view_link text_primary"
-              >View</router-link>
+              >{{$t('home.portfolio.testi.prev')}}</router-link>
             </h2>
             <p class="mt-2">
               <strong>{{project.client.name}}</strong>

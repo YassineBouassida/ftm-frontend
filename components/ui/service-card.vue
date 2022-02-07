@@ -36,7 +36,7 @@
         class="a bg_primary mr-3 load_more_btn flex align_center center"
         :style="{visibility:!(serviceHovered||alwaysActive)?'hidden':'visible'}"
       >
-        <span v-tr class="text_white">Load more</span>
+        <span class="text_white">{{$t('services.knowledge.readMore')}}</span>
         <span class="circle_load flex align_center center ml-2">
           <img src="~static/img/icons/feather-arrow-right.png" alt="right arrow" width="auto" height="auto" />
         </span>

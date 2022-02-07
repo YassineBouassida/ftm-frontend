@@ -6,31 +6,31 @@
   >
     <div class="flex align_start space_between container py-5 wrap">
       <div class="flex1 links_block useful_link">
-        <h2 class="text_text2" v-tr>Useful links</h2>
+        <h2 class="text_text2" >{{$t('footer.links.text')}}</h2>
         <div class="usefull_links">
-          <nuxt-link :to="localePath('/')" class="a text_text2 my-3 pointer" tag="div" v-tr>Home</nuxt-link>
+          <nuxt-link :to="localePath('/')" class="a text_text2 my-3 pointer" tag="div" >{{$t('footer.links.home')}}</nuxt-link>
           <nuxt-link
             :to="localePath('/about')"
             class="a text_text2 my-3 pointer"
             tag="div"
-            v-tr
-          >About</nuxt-link>
+            
+          >{{$t('footer.links.about')}}</nuxt-link>
           <nuxt-link
             :to="localePath('/projects')"
             class="a text_text2 my-3 pointer"
             tag="div"
-            v-tr
-          >Samples</nuxt-link>
+            
+          >{{$t('footer.links.samples')}}</nuxt-link>
           <nuxt-link
             :to="localePath('/services')"
             class="a text_text2 my-3 pointer"
             tag="div"
-            v-tr
-          >Services</nuxt-link>
+            
+          >{{$t('footer.links.services')}}</nuxt-link>
         </div>
       </div>
       <div class="flex1 links_block services">
-        <h2 class="text_text2" v-tr>Services</h2>
+        <h2 class="text_text2" >{{$t('footer.links.services')}}</h2>
         <div class="usefull_links">
           <nuxt-link
             :to="localePath(`/services/${service.slug}`)"
@@ -42,14 +42,12 @@
         </div>
       </div>
       <div class="flex1 links_block contact_us">
-        <h2 class="text_text2" v-tr>Keep in touch</h2>
-        <p class="text_text2 subheading">
-          <span v-tr>Do you want to build something? Need</span>
-          <br />
-          <span v-tr>help figuring it out? We can help!</span>
+        <h2 class="text_text2" >{{$t('footer.keep.h1')}}</h2>
+        <p class="text_text2 subheading" v-html="$t('footer.keep.p')">
+          
         </p>
-        <h3 class="text_text2 my-2" v-tr>Request Free Consultation Here.</h3>
-        <h2 class="text_text2" v-tr>Follow us</h2>
+        <h3 class="text_text2 my-2" >{{$t('footer.keep.strong')}}</h3>
+        <h2 class="text_text2" >{{$t('footer.keep.h3')}}</h2>
         <div class="social_links flex align_center mt-3">
           <a
             class="mr-3"
@@ -101,23 +99,23 @@
         <fLogo></fLogo>
         <p
           class="subheading text_text2"
-          v-tr
-        >Our mission is to find optimal and innovative solutions for the greatest satisfaction of our clients with the help of our highly qualified</p>
+          
+        >{{$t('footer.about.h3')}}</p>
         <div class="flex column f_link_container">
           <div class="flex start">
             <p class="my-1" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-              Address:
-              <span itemprop="streetAddress">Av. Hédi Nouira,Sfax El Jadida,</span>
+              {{$t('footer.about.address.text')}}:
+              <span itemprop="streetAddress">{{$t('footer.about.address.street')}}</span>
               <br />
-              <span itemprop="addressLocality">imm Fourat 3ème étage App. N°306</span> ,
+              <span itemprop="addressLocality">{{$t('footer.about.address.local')}}</span> ,
               <br />
-              <span itemprop="addressRegion">Sfax</span>
+              <span itemprop="addressRegion">{{$t('footer.about.address.region')}}</span>
               <span itemprop="postalCode">3027</span>
             </p>
           </div>
           <div class="flex start">
             <p class="text_text2 my-1">
-              Email:
+              {{$t('footer.about.email')}}:
               <a class="text_text2" href="mailto:Info@fictiontomission.com">
                 <span itemprop="email">Info@fictiontomission.com</span>
               </a>
@@ -125,7 +123,7 @@
           </div>
           <div class="flex start">
             <p class="text_text2 my-1">
-              Phone:
+              {{$t('footer.about.phone')}}:
               <a
                 href="tel:+216-92-243-333"
                 itemprop="telephone"

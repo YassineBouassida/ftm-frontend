@@ -6,17 +6,17 @@
         <div class="flex align_center space_between hero_container">
           <div class="text_head">
             <h1 class="hero_text text_white">
-              <span v-tr>OUR SERVICES</span>
+              <span >{{$t('services.hero.heroText1')}}</span>
               <br />
               <span class="flex align_baseline">
                 <div class="separator bg_text1 mr-3"></div>
-                <span v-tr>EFFECTIVELY</span>
+                <span >{{$t('services.hero.heroText2')}}</span>
               </span>
             </h1>
             <p
               class="text_white"
-              v-tr
-            >We offer a spectrum of services that helps you grow your business and enhance your online presence.</p>
+              
+            >{{$t('services.hero.p')}}</p>
           </div>
           <div class="w-50 image flex end">
             <img width="auto" height="auto" src="~static/img/services/services.png" alt="hero" />
@@ -25,11 +25,11 @@
         <div class="why_us bg_white flex center flex2">
           <div class="container w-90 flex column align_center">
             <div class="mb-4 c_head py-5 flex column align_end w-100">
-              <h1 v-tr class="w-50 txt_right">WHY WORK WITH US</h1>
+              <h1  class="w-50 txt_right">{{$t('services.whyUs.h1')}}</h1>
               <p
                 class="w-50 txt_right"
-                v-tr
-              >In order to maximize their benefits, clients from the entire world collaborate with us because of our</p>
+                
+              >{{$t('services.whyUs.p')}}</p>
             </div>
             <div class="voices flex align_center space_between w-90">
               <div class="flex align_center column">
@@ -38,10 +38,10 @@
                     width="auto"
                     height="auto"
                     src="~/static/img/services/precession.png"
-                    alt="precession"
+                    :alt="$t('services.whyUs.precission')"
                   />
                 </div>
-                <h2 class="text_primary mt-3" v-tr>PRECESSION</h2>
+                <h2 class="text_primary mt-3" >{{$t('services.whyUs.precission')}}</h2>
               </div>
               <div class="flex align_center column">
                 <div class="voice flex align_center center">
@@ -49,10 +49,10 @@
                     width="auto"
                     height="auto"
                     src="~static/img/services/management.png"
-                    alt="precession"
+                    :alt="$t('services.whyUs.team')"
                   />
                 </div>
-                <h2 class="text_primary mt-3" v-tr>TEAM-MANAGEMENT</h2>
+                <h2 class="text_primary mt-3" >{{$t('services.whyUs.team')}}</h2>
               </div>
               <div class="flex align_center column">
                 <div class="voice flex align_center center">
@@ -60,10 +60,10 @@
                     width="auto"
                     height="auto"
                     src="~static/img/services/perfection.png"
-                    alt="precession"
+                    :alt="$t('services.whyUs.perfection')"
                   />
                 </div>
-                <h2 class="text_primary mt-3" v-tr>PERFECTION</h2>
+                <h2 class="text_primary mt-3" >{{$t('services.whyUs.perfection')}}</h2>
               </div>
             </div>
           </div>
@@ -74,14 +74,14 @@
     <section class="promises pt-5 px-0 container bg_white">
       <div class="flex column align_center mb-5">
         <div class="c_head w-90 mb-5">
-          <h1 v-tr>Our Promise</h1>
+          <h1 >{{$t('services.promises.h1')}}</h1>
           <p
-            v-tr
-          >We embrace the challenges and create innovative ideas. We will always provide web strategies and solutions that will drive business results. We are here to listen and give the utmost of our capabilities.</p>
+            
+          >{{$t('services.promises.p')}}</p>
           <h2>
-            <span v-tr>Here is some information about</span>
-            <span class="text_primary">FTM</span>
-            <span v-tr>in numbers:</span>
+            <span >{{$t('services.promises.h3_1')}}</span>
+            <span class="text_primary">{{$t('services.promises.h3_2')}}</span>
+            <span >{{$t('services.promises.h3_3')}}</span>
           </h2>
         </div>
       </div>
@@ -89,23 +89,20 @@
         <div class="fill_height w-90 flex align_center space_between">
           <div class="promise flex align_center">
             <h1 class="hero_text text_white mr-3">5</h1>
-            <h1 class="text_white">
-              YEARS OF
-              <br />EXPERIENCE
+            <h1 class="text_white" v-html="$t('services.promises.years')">
+             
             </h1>
           </div>
           <div class="promise flex align_center">
             <h1 class="hero_text text_white mr-3">1K</h1>
-            <h1 class="text_white">
-              PROJECTS
-              <br />COMPLETED
+            <h1 class="text_white" v-html="$t('services.promises.projects')">
+             
             </h1>
           </div>
           <div class="promise flex align_center">
             <h1 class="hero_text text_white mr-3">2M</h1>
-            <h1 class="text_white">
-              CUPS OF
-              <br />COFFEE
+            <h1 class="text_white" v-html="$t('services.promises.cups')">
+            
             </h1>
           </div>
         </div>
@@ -115,11 +112,11 @@
     <section class="brands container bg_white">
       <div class="py-5">
         <div class="c_head my-5">
-          <h1 class="txt_center" v-tr>Industry experience</h1>
+          <h1 class="txt_center" >{{$t('services.industries.h1')}}</h1>
           <p
             class="txt_center"
-            v-tr
-          >FTM’s clients range in size, fields and countries. But we love designing for smaller companies and facilitating their successful navigation in a competitive multi-national marketplace. Check out some of the fileds we’ve had the pleasure of working in:</p>
+            
+          >{{$t('services.industries.p')}}</p>
         </div>
         <div class="brands_list flex align_center wrap space_between">
           <div
@@ -141,11 +138,11 @@
     <section class="services bg_white container">
       <div class="c_head flex end mb-5">
         <div class="w-50">
-          <h1 class="txt_right" v-tr>THIS IS OUR KNOWLEDGE</h1>
+          <h1 class="txt_right" >{{$t('services.knowledge.h1')}}</h1>
           <p
-            v-tr
+            
             class="txt_right"
-          >Here are the main services we offer, depending on your needs, goals and aspirations.</p>
+          >{{$t('services.knowledge.p')}}</p>
         </div>
       </div>
       <div class="c_body">
@@ -167,18 +164,18 @@
               :to="`services/${deepFind(service, 'slug')}`"
               tag="u"
               class="text_primary t-11 w-100 d_block txt_center pointer"
-              v-tr
-            >Read more</router-link>
+              
+            >{{$t('services.knowledge.readMore')}}</router-link>
           </div>
         </div>
       </div>
       <div class="c_footer flex end mb-5">
         <div class="w-70">
-          <h1 class="txt_right" v-tr>AND MUCH-MORE</h1>
+          <h1 class="txt_right" >{{$t('services.knowledge.footer.h1')}}</h1>
           <p
             class="txt_right"
-            v-tr
-          >Still looking for something else? NO WORRIES, we’ve got you. Getting in touch with us, explaining your needs and goals and trusting us is all you need to do.</p>
+            
+          >{{$t('services.knowledge.footer.p')}}</p>
         </div>
       </div>
     </section>
@@ -194,16 +191,16 @@ export default {
   data() {
     return {
       brands: [
-        { image: "consultancy.svg", text: this.$t("Consultancy") },
-        { image: "e-commerce.svg", text: this.$t("E-commerce") },
-        { image: "education.svg", text: this.$t("Education") },
-        { image: "fintech.svg", text: this.$t("Fintech") },
-        { image: "healthcare.svg", text: this.$t("Health care") },
-        { image: "it-service.svg", text: this.$t("IT services") },
-        { image: "realestate.svg", text: this.$t("Real estate") },
-        { image: "retail.svg", text: this.$t("Retail") },
-        { image: "socialmedia.svg", text: this.$t("Social media") },
-        { image: "start-up.svg", text: this.$t("Start-ups") }
+        { image: "consultancy.svg", text: this.$t('services.industries.list.consultancy') },
+        { image: "e-commerce.svg", text: this.$t('services.industries.list.ecomerce') },
+        { image: "education.svg", text: this.$t('services.industries.list.educ') },
+        { image: "fintech.svg", text: this.$t('services.industries.list.fintech') },
+        { image: "healthcare.svg", text: this.$t('services.industries.list.health') },
+        { image: "it-service.svg", text: this.$t('services.industries.list.it') },
+        { image: "realestate.svg", text: this.$t('services.industries.list.realestate') },
+        { image: "retail.svg", text: this.$t('services.industries.list.retail') },
+        { image: "socialmedia.svg", text: this.$t('services.industries.list.social') },
+        { image: "start-up.svg", text: this.$t('services.industries.list.startup') }
       ]
     };
   },

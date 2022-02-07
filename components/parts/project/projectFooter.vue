@@ -14,14 +14,14 @@
         target="blank"
         class="btn w-30 flex align_center center call_to_action bg_primary mx-3 f_link text_white"
       >
-        <h3 v-tr class="text_white">Live preview</h3>
+        <h3  class="text_white">{{$t('projectDetails.live')}}</h3>
       </a>
       <fBtn
         link
         :to="localePath('/contact')"
         class="w-30 call_to_action mx-3 bg_primary f_link text_white"
       >
-        <h3 v-tr class="text_white">Get a Quote</h3>
+        <h3 class="text_white">{{$t('projectDetails.getQuote')}}</h3>
       </fBtn>
     </div>
     <div class="separator"></div>

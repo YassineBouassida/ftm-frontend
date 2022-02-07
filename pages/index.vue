@@ -5,15 +5,14 @@
       <div class="hero flex container align_center">
         <div class="desc">
           <h1 class="hero_text mb-3 desktop">
-            {{$t('We are focused on')}}
+            {{$t('home.hero.heroText1')}}
             <br />
-            {{$t('your success!')}}
+            {{$t('home.hero.heroText2')}}
+            <br />
+            {{$t('home.hero.heroText3')}}
           </h1>
-          <p
-            v-tr
-            class="my-5"
-          >Your project is complete but misses something? You only have an idea but still not concreted?</p>
-          <h2 v-tr class="my-5">Get ready for your next adventure with Fiction To Mission!</h2>
+          <p class="my-5">{{$t('home.hero.h3')}}</p>
+          <h2 class="my-5">{{$t('home.hero.h2')}}</h2>
           <div class="flex ml-5 call_to_action_container">
             <fBtn
               link
@@ -21,15 +20,15 @@
               to="https://fb.com/book/FictionToMission/"
               class="w-60 call_to_action bg_primary flex align_center center f_link text_white"
             >
-              <h3 v-tr class="text_white">GET APPOINTMENT</h3>
+              <h3 class="text_white">{{$t('home.hero.btn')}}</h3>
             </fBtn>
           </div>
         </div>
         <div>
           <h1 class="hero_text mb-3 mobile">
-            {{$t('We are focused on')}}
+            {{$t('home.hero.heroText1')}}
             <br />
-            {{$t('your success!')}}
+            {{$t('home.hero.heroText2')}}
           </h1>
           <hero class="image"></hero>
         </div>
@@ -40,10 +39,8 @@
     <section class="services bg_white" id="services">
       <div class="container flex column">
         <div class="c_head txt_center">
-          <h1 v-tr>Services we provide</h1>
-          <p
-            v-tr
-          >We offer the full spectrum of digital services to help your business grow successfully.</p>
+          <h1>{{$t('home.services.h1')}}</h1>
+          <p>{{$t('home.services.p')}}</p>
         </div>
         <fServicesCarousel :services="services" v-if="deepFind(services,'length')"></fServicesCarousel>
       </div>
@@ -53,10 +50,8 @@
     <section class="about bg_lightGrey">
       <div class="container">
         <div class="c_head txt_center">
-          <h1 v-tr>About Us</h1>
-          <p
-            v-tr
-          >Our mission is to find optimal and innovative solutions for the greatest satisfaction of our clients with the help of our highly qualified and experienced team that combines passion, know-how and professionalism.</p>
+          <h1>{{$t('home.about.h1')}}</h1>
+          <p>{{$t('home.about.p')}}</p>
         </div>
         <div class="about_table flex">
           <div class="w-50 p1">
@@ -66,21 +61,19 @@
               </div>
               <div class="w-50 h-100 p12 part bg_white pa-3 tablette_and_down">
                 <div class="text">
-                  <h2 v-tr>Research Team</h2>
+                  <h2>{{$t('home.about.research.h2')}}</h2>
                   <p
                     class="subheading"
-                    v-tr
-                  >Do not worry about TOMORROW. Our team is committed to keep up to date and develop creative ideas every day to offer you customizable, scalable and flexible websites.</p>
+                  >{{$t('home.about.research.p')}}</p>
                 </div>
               </div>
               <!-- Only on small mobiles -->
               <div class="w-50 h-100 p13 part bg_white pa-3 tablette_and_up">
                 <div class="text">
-                  <h2 v-tr>Experience</h2>
+                  <h2>{{$t('home.about.exp.h2')}}</h2>
                   <p
                     class="subheading"
-                    v-tr
-                  >Fiction To Mission has a Tunisian nationality and an international passport ! Here’s some of the projects we worked on and check out our most exciting experiences.</p>
+                  >{{$t('home.about.exp.p')}}</p>
                 </div>
               </div>
               <!-- ********************* -->
@@ -88,22 +81,20 @@
             <div class="flex h-50">
               <div class="w-50 h-100 p13 part bg_white pa-3 tablette_and_down">
                 <div class="text">
-                  <h2 v-tr>Experience</h2>
+                   <h2>{{$t('home.about.exp.h2')}}</h2>
                   <p
                     class="subheading"
-                    v-tr
-                  >Fiction To Mission has a Tunisian nationality and an international passport ! Here’s some of the projects we worked on and check out our most exciting experiences.</p>
-                </div>
+                  >{{$t('home.about.exp.p')}}</p>
+                   </div>
               </div>
               <!-- Only on small mobiles -->
               <div class="w-50 h-100 p12 part bg_white pa-3 tablette_and_up">
                 <div class="text">
-                  <h2 v-tr>Research Team</h2>
+                   <h2>{{$t('home.about.research.h2')}}</h2>
                   <p
                     class="subheading"
-                    v-tr
-                  >Do not worry about TOMORROW. Our team is committed to keep up to date and develop creative ideas every day to offer you customizable, scalable and flexible websites.</p>
-                </div>
+                  >{{$t('home.about.research.p')}}</p>
+                  </div>
               </div>
               <!-- ********************* -->
               <div class="w-50 h-100 p14 part bg_text1">
@@ -118,8 +109,7 @@
             <div class="fill_width p22 h-20 part bg_white pa-3">
               <p
                 class="subheading"
-                v-tr
-              >Today, Fiction To Mission operates in various activities ranging from website creation to mobile app development and social media communication.</p>
+              >{{$t('home.about.act.p')}}</p>
             </div>
           </div>
         </div>
@@ -129,27 +119,23 @@
     <section class="cases bg_white">
       <div class="container flex column small_container">
         <div class="c_head txt_center">
-          <h1 v-tr>We exist to help you improve your business</h1>
-          <p
-            v-tr
-          >Whether you are in the process of creating a website or you are looking to boost the attendance of your site, Fiction To Mission can offer you a personalized solution, adapted to your needs.</p>
+          <h1>{{$t('home.cases.h1')}}</h1>
+          <p>{{$t('home.cases.p')}}</p>
         </div>
         <!-- First Case  -->
 
         <div class="case txt_right flex1 flex align_center space_between" id="case1">
           <div class="text_side mr-4">
             <div class="desc">
-              <h2 class="text_primary mb-3" v-tr>In case of not having a website</h2>
+              <h2 class="text_primary mb-3">{{$t('home.cases.not.h2')}}</h2>
               <p
                 class="h4"
-                v-tr
-              >Your website can be available 24/7/365 even when you’re not, it will attract new customers to your business, make you more money and add instant credibility to your project.</p>
+              >{{$t('home.cases.not.p')}}</p>
             </div>
             <div class="desktop notice bg_lightGrey pa-3 flex align_center">
               <p
                 class="subheading pr-4"
-                v-tr
-              >Did you know that 81% of people research a business or service on the internet prior to making a purchase decision ! If you don’t have a website, you have no chance at capturing a share of this market.</p>
+              >{{$t('home.cases.not.notice')}}</p>
               <img width="auto" height="auto" src="~static/img/notice.png" alt="notice" />
             </div>
           </div>
@@ -176,18 +162,16 @@
           </div>
           <div class="text_side ml-4">
             <div class="desc">
-              <h2 class="text_primary mb-3" v-tr>In case of having a website</h2>
+              <h2 class="text_primary mb-3">{{$t('home.cases.yes.h2')}}</h2>
               <p
                 class="h4"
-                v-tr
-              >Than it is time to adapt your website with the latest trends in web design and development. Our mission is to bring life to your website again and help your organization build momentum; making your efforts easier and creating new opportunities.</p>
+              >{{$t('home.cases.yes.p')}}</p>
             </div>
             <div class="desktop notice bg_lightGrey pa-3 flex align_center">
               <img width="auto" height="auto" src="~static/img/notice.png" alt="notice" />
               <p
                 class="subheading pl-4"
-                v-tr
-              >Do you think that your website isn’t good enough for your business ? Do you believe that your underperforming website can leave your company in the dust ?</p>
+              >{{$t('home.cases.yes.notice')}}</p>
             </div>
           </div>
         </div>
@@ -197,7 +181,7 @@
     <section class="howItWorks bg_lightGrey">
       <div class="container">
         <div class="c_head txt_center">
-          <h2 v-tr>How we do it ?</h2>
+          <h2>{{$t('home.how.h2')}}</h2>
           <h1 class="my-4">{{deepFind(pages,'0.Section.0.title')}}</h1>
           <p>{{deepFind(pages,'0.Section.0.description')}}</p>
         </div>
@@ -212,12 +196,11 @@
       <ideaToSolution class="absolute background_img"></ideaToSolution>
       <div class="spark container relative flex2">
         <div class="w-50 absolute itsDesc">
-          <h1 class="text_white mb-4" v-tr>Fiction To Mission - Idea to solution</h1>
-          <h2 class="text_white mb-3" v-tr>Spark an idea and build a fire</h2>
+          <h1 class="text_white mb-4">{{$t('home.spark.h1')}}</h1>
+          <h2 class="text_white mb-3">{{$t('home.spark.h2')}}</h2>
           <p
             class="h4 text_white"
-            v-tr
-          >We turn your ideas into successful projects by incorporating your vision. We like challenges that require technical solutions and original content. Our company develops both turnkey and custom solutions. Both are acceptable, depending on your goals and your budget.</p>
+          >{{$t('home.spark.p')}}</p>
         </div>
         <div class="absolute features flex column align_center">
           <div
@@ -244,7 +227,7 @@
     </section>
     <!-- Technologies Section -->
     <section class="technologies container small_container flex align_center wrap">
-      <h2 class="flex1 fill_width txt_center mr-4" v-tr>Technologies</h2>
+      <h2 class="flex1 fill_width txt_center mr-4">{{$t('home.tech.h2')}}</h2>
       <VueSlickCarousel
         v-bind="slickSettings"
         v-if="deepFind(technologies,'length')"
@@ -272,21 +255,20 @@
       id="projects"
     >
       <div class="vertical_name flex align_baseline">
-        <h1 class="text_white" v-tr>#PORTFOLIO</h1>
+        <h1 class="text_white">{{$t('home.portfolio.big')}}</h1>
       </div>
       <div class="projects_body">
         <div class="project_head w-50 mb-5">
-          <h1 v-tr>Our latest cases</h1>
+          <h1>{{$t('home.portfolio.h1')}}</h1>
           <p
             class="px-2"
-            v-tr
-          >The success of our partners is what truly defines us, but most importantly their TRUST. Check out some of our Tunisian and international partners we worked with.</p>
+          >{{$t('home.portfolio.p')}}</p>
         </div>
         <fProjects ref="projects" @projectChanged="selectedProject=$event" :projects="cases"></fProjects>
         <div class="project_footer flex mt-2">
           <div class="empty flex2"></div>
           <div class="mr-5 footer_desc flex align_center space_between flex1">
-            <h3 v-tr>Want to be one of them ? Join us !</h3>
+            <h3>{{$t('home.portfolio.testi.h3')}}</h3>
             <div class="indicators flex align_center center">
               <span
                 @click="changeProjectSlick(index)"

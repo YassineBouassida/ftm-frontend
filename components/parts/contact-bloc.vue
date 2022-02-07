@@ -1,20 +1,20 @@
 <template>
   <section class="services_footer flex align_center">
     <div class="container flex column align_end">
-      <h1 v-tr class="text_white">Let’s Work Together</h1>
-      <p v-tr class="text_white w-50 txt_right">
-        Need a quote for your project? Have a question about our work or services? Just let us know.
+      <h1  class="text_white">{{$t('common.servicesFooter.h1')}}</h1>
+      <p  class="text_white w-50 txt_right">
+       {{$t('common.servicesFooter.p1')}}
       </p>
       <p
         class="text_white w-50 txt_right"
-        v-tr
-      >Whether you’re a small business or a large corporation, we look forward to working with you on your next creative endeavor</p>
+        
+      >{{$t('common.servicesFooter.p2')}}</p>
       <fBtn
         link
         :to="localePath('/contact')"
         class="px-4 call_to_action bg_white f_link text_white"
       >
-        <h3 v-tr class="text_text1">Contact us</h3>
+        <h3  class="text_text1">{{$t('common.servicesFooter.btn')}}</h3>
       </fBtn>
     </div>
   </section>

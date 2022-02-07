@@ -46,7 +46,7 @@
       <div class="sub_services bg_white py-5 flex column container relative">
         <div class="intro w-50">
           <div class="top_part flex align_center end pr-5 mb-2">
-            <h2 class="mr-3" v-tr>we provide</h2>
+            <h2 class="mr-3" >{{$t('serviceDetails.cycle.h2')}}</h2>
             <div class="separator bg_primary relative"></div>
           </div>
           <div class="title_part pr-5">
@@ -93,7 +93,7 @@
       v-if="deepFind(serviceBySlug, 'technologies.length')"
       class="technologies container small_container flex align_center wrap"
     >
-      <h2 class="flex1 fill_width txt_center mr-4" v-tr>Technologies</h2>
+      <h2 class="flex1 fill_width txt_center mr-4" >{{$t('serviceDetails.techs.h2')}}</h2>
       <VueSlickCarousel v-bind="slickSettings" class="flex2 tech_list">
         <div
           class="tech bg_lightGrey flex align_center center ml-4"
@@ -120,7 +120,7 @@
     <section class="why_us bg_lightGrey py-5">
       <div class="container">
         <div class="c_head">
-          <h2 v-tr>WHY-FTM?</h2>
+          <h2 >{{$t('serviceDetails.why.h2')}}</h2>
           <h1 v-html="deepFind(this.serviceBySlug, 'advantages.title')"></h1>
           <p v-html="deepFind(this.serviceBySlug, 'advantages.description')"></p>
         </div>
@@ -232,7 +232,7 @@
                   </h3>
                 </fBtn>
                 <router-link tag="div" :to="localePath('/contact')" class="a text_white txt_center">
-                  <u v-tr>Do you have any special requirements?</u>
+                  <u >{{$t('serviceDetails.pack.u')}}</u>
                 </router-link>
               </div>
             </div>
@@ -240,8 +240,8 @@
               :to="localePath('/projects')"
               tag="h3"
               class="mt-3 text_white pointer txt_right"
-              v-tr
-            >View Samples</nuxt-link>
+              
+            >{{$t('serviceDetails.pack.h3')}}</nuxt-link>
           </div>
         </div>
       </div>
@@ -250,7 +250,7 @@
     <!-- Faq's section -->
     <section class="faqs py-5 bg_white">
       <div class="container" itemtype="https://schema.org/FAQPage">
-        <h1 class="txt_right mb-4" v-tr>Frequently Asked Questions</h1>
+        <h1 class="txt_right mb-4" >{{$t('serviceDetails.faqs.h1')}}</h1>
         <faq
           class="faq bg_lightGrey pa-2 my-4"
           :faq="faq"
@@ -269,8 +269,8 @@
     >
       <div class="container">
         <div class="c_head">
-          <h1 class="mb-2" v-tr>We offer you more</h1>
-          <h2 v-tr>We can help you in many other ways</h2>
+          <h1 class="mb-2" >{{$t('serviceDetails.related.h1')}}</h1>
+          <h2 >{{$t('serviceDetails.related.h2')}}</h2>
         </div>
         <div class="flex align_center wrap space_between py-3 my-3">
           <serviceCard

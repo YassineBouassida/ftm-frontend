@@ -11,10 +11,12 @@
           v-if="component['__typename']=='ComponentProjectPartsVideo'"
         ></project-video>
         <project-entity
+          class="my-5"
           :variables="component"
           v-if="component['__typename']=='ComponentProjectPartsEntity'"
         ></project-entity>
         <project-carousel
+          class="my-5"
           :variables="component"
           v-if="component['__typename']=='ComponentProjectPartsCarousel'"
         ></project-carousel>
