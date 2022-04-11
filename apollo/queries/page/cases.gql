@@ -16,6 +16,19 @@ query Cases($locale: String) {
         name
       }
     }
+    project {
+      header {
+        cover {
+          url
+        }
+        cover_sm {
+          url
+        }
+        cover_xs {
+          url
+        }
+      }
+    }
     project_link
   }
 }

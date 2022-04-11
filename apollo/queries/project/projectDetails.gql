@@ -9,6 +9,12 @@ query Project($locale: String!, $slug: String!) {
         url
         previewUrl
       }
+      cover_sm{
+        url
+      }
+      cover_xs{
+        url
+      }
        logo {
         name
         url
@@ -100,6 +106,8 @@ query Project($locale: String!, $slug: String!) {
           url
           previewUrl
         }
+        iframe
+        iframe_link
       }
  fragment  EntityPart on ComponentProjectPartsEntity {
         __typename
@@ -117,5 +125,9 @@ query Project($locale: String!, $slug: String!) {
           name
           url
           previewUrl
+        }
+        media_xs{
+          url
+          name
         }
       }

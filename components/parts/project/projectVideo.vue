@@ -1,10 +1,16 @@
 <template>
-  <div class="video relative" @mouseenter="hovered=true" @mouseleave="hovered=false">
+  <div
+    class="video relative"
+    v-if="deepFind(variables,'iframe')"
+    @mouseenter="hovered=true"
+    @mouseleave="hovered=false"
+  >
     <video
       ref="video"
       :src="api_url+ deepFind(variables,'video.url')"
       :poster="api_url+ deepFind(variables,'poster.url')"
       :alt="deepFind(variables,'title')"
+      controls
       @ended="onEnd"
     ></video>
     <!-- Play button -->
@@ -35,6 +41,17 @@
       />
     </div>
   </div>
+  <div class="video relative" v-else @mouseenter="hovered=true" @mouseleave="hovered=false">
+    <iframe
+      width="560"
+      height="315"
+      :src="deepFind(variables,'iframe_link')"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </div>
 </template>
 <script>
 export default {
@@ -61,7 +78,6 @@ export default {
     },
     onEnd() {
       this.ended = true;
-      
     },
     onReload() {
       this.$refs.video.load();
@@ -74,8 +90,9 @@ export default {
 </script>
 <style lang="scss" scoped>
 .video {
-  height: 500px;
-  video {
+  height: auto;
+  video,
+  iframe {
     height: 100%;
     width: 100%;
     object-fit: cover;

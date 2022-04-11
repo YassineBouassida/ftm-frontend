@@ -1,16 +1,20 @@
 <template>
   <div class="project flex align_center">
     <div class="p_cover flex2">
-      <img width="auto" height="auto" :src="api_url+project.image.url" :alt="project.image.name" />
+      <img
+        width="auto"
+        height="auto"
+        :src="api_url+project.project.header.cover.url"
+        :alt="project.image.name"
+      />
     </div>
     <div class="p_content flex1">
       <h2 class="flex align_baseline space_between mr-5 ml-4">
-        <span >{{$t('home.portfolio.testi.h3')}}</span>
+        <span>{{$t('home.portfolio.testi.h3')}}</span>
         <router-link
           :to="localePath(project.project_link)"
           tag="span"
           class="subheading pointer view_project text_primary"
-         
         >{{$t('home.portfolio.testi.prev')}}</router-link>
       </h2>
       <div class="p_card elevate_1 pa-3 relative flex align_center bg_white">
