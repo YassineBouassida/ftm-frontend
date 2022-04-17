@@ -1,12 +1,7 @@
 <template>
   <div class="project flex align_center">
     <div class="p_cover flex2">
-      <img
-        width="auto"
-        height="auto"
-        :src="api_url+project.project.header.cover.url"
-        :alt="project.image.name"
-      />
+      <img width="auto" height="auto" :src="api_url+getCoverImage" :alt="project.image.name" />
     </div>
     <div class="p_content flex1">
       <h2 class="flex align_baseline space_between mr-5 ml-4">
@@ -46,6 +41,25 @@
 export default {
   props: {
     project: Object
+  },
+  computed: {
+    getCoverImage() {
+      let viewPort = this.$store.getters["style/viewPort"];
+      if (viewPort == "large") {
+        return this.deepFind(this.project, "project.header.cover.url");
+      } else if (viewPort == "sm") {
+        return (
+          this.deepFind(this.project, "project.header.cover_sm.url") ||
+          this.deepFind(this.project, "project.header.cover.url")
+        );
+      } else if (viewPort == "xs") {
+        return (
+          this.deepFind(this.project, "project.header.cover_xs.url") ||
+          this.deepFind(this.project, "project.header.cover_sm.url") ||
+          this.deepFind(this.project, "project.header.cover.url")
+        );
+      }
+    }
   }
 };
 </script>

@@ -1,7 +1,7 @@
 <template>
   <div
     class="video relative"
-    v-if="deepFind(variables,'iframe')"
+    v-if="!deepFind(variables,'iframe')"
     @mouseenter="hovered=true"
     @mouseleave="hovered=false"
   >
@@ -97,6 +97,9 @@ export default {
     width: 100%;
     object-fit: cover;
   }
+  iframe {
+    min-height: 550px;
+  }
   .video_btn {
     pointer-events: auto !important ;
     &:hover {
@@ -106,6 +109,9 @@ export default {
   @media (max-width: 767px) {
     .video_btn {
       width: 10rem !important;
+    }
+    iframe {
+      min-height: 315px;
     }
   }
 }

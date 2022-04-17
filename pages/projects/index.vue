@@ -4,17 +4,15 @@
     <section class="hero">
       <div class="container">
         <h1 class="text_white txt_center">{{$t('samples.h1')}}</h1>
-        <h2 class="text_white txt_center" >{{$t('samples.h2')}}</h2>
+        <h2 class="text_white txt_center">{{$t('samples.h2')}}</h2>
       </div>
     </section>
     <!-- Projects list section  -->
     <section class="projects_list bg_white py-5">
       <div class="container">
         <div class="c_head">
-          <h1 >{{$t('samples.projectList.h1')}}</h1>
-          <p
-            
-          >{{$t('samples.projectList.p')}}</p>
+          <h1>{{$t('samples.projectList.h1')}}</h1>
+          <p>{{$t('samples.projectList.p')}}</p>
         </div>
         <div class="c_body flex wrap fill_width space_between">
           <div
@@ -57,29 +55,31 @@
         <div class="flex align_center space_between mb-5 boxes">
           <div class="flex column center align_center w-40">
             <div class="icon_box bg_redLight flex align_center center">
-              <img width="auto" height="auto" src="~/static/img/icons/projects/time.png" alt="time icon" />
+              <img
+                width="auto"
+                height="auto"
+                src="~/static/img/icons/projects/time.png"
+                alt="time icon"
+              />
             </div>
-            <h2 class="txt_center my-4" >{{$t('samples.features.time.h1')}}</h2>
-            <p
-              class="txt_center my-0"
-              
-            >{{$t('samples.features.time.p')}}</p>
+            <h2 class="txt_center my-4">{{$t('samples.features.time.h1')}}</h2>
+            <p class="txt_center my-0">{{$t('samples.features.time.p')}}</p>
           </div>
           <div class="flex column center align_center w-40">
             <div class="icon_box bg_redLight flex align_center center">
-              <img width="auto" height="auto" src="~/static/img/icons/projects/globe.png" alt="time icon" />
+              <img
+                width="auto"
+                height="auto"
+                src="~/static/img/icons/projects/globe.png"
+                alt="time icon"
+              />
             </div>
-            <h2 class="txt_center my-4" >{{$t('samples.features.lang.h1')}}</h2>
-            <p
-              
-              class="txt_center my-0"
-            >{{$t('samples.features.lang.p')}}</p>
+            <h2 class="txt_center my-4">{{$t('samples.features.lang.h1')}}</h2>
+            <p class="txt_center my-0">{{$t('samples.features.lang.p')}}</p>
           </div>
         </div>
         <div class="features_footer flex center">
-          <p class="txt_center w-70" >
-            {{$t('samples.features.lang.footer')}}
-          </p>
+          <p class="txt_center w-70">{{$t('samples.features.lang.footer')}}</p>
         </div>
       </div>
     </section>
@@ -132,7 +132,7 @@ export default {
 <style lang="scss" scoped>
 // hero section
 .hero {
-  min-height: calc(100vh - 80px);
+  min-height: 50vh;
   background-image: url("~static/img/projects/projects_hero.png");
 
   background-size: cover;
@@ -142,7 +142,7 @@ export default {
     padding-top: 8rem;
   }
   @media (max-width: 1024px) {
-    min-height: calc(100vh - 60px);
+    min-height: 50vh;
   }
 }
 //project list section

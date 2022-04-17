@@ -3,7 +3,7 @@
     <div
       v-if="variables.cover"
       class="hero_img relative"
-      :style="{backgroundImage:`url(${api_url}${ deepFind(variables,'cover.url')})`}"
+      :style="{backgroundImage:`url(${api_url}${getCoverImage})`}"
     >
       <div class="overlay_light flex align_center center">
         <img
@@ -52,6 +52,25 @@ export default {
     variables: {
       type: Object
     }
+  },
+  computed: {
+    getCoverImage() {
+      let viewPort = this.$store.getters["style/viewPort"];
+      if (viewPort == "large") {
+        return this.deepFind(this.variables, "cover.url");
+      } else if (viewPort == "sm") {
+        return (
+          this.deepFind(this.variables, "cover_sm.url") ||
+          this.deepFind(this.variables, "cover.url")
+        );
+      } else if (viewPort == "xs") {
+        return (
+          this.deepFind(this.variables, "cover_xs.url") ||
+          this.deepFind(this.variables, "cover_sm.url") ||
+          this.deepFind(this.variables, "cover.url")
+        );
+      }
+    }
   }
 };
 </script>
@@ -66,7 +85,7 @@ export default {
       display: none !important;
     }
   }
-  .project_logo  {
+  .project_logo {
     height: 12rem;
   }
 

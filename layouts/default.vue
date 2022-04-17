@@ -50,6 +50,12 @@ export default {
   },
   beforeMount() {
     window.addEventListener("scroll", this.handleScroll);
+    window.addEventListener("resize", () => {
+      this.$store.dispatch("style/changeViewPort", window.innerWidth);
+    });
+  },
+  mounted() {
+    this.$store.dispatch("style/changeViewPort", window.innerWidth);
   },
   beforeDestroy() {
     window.removeEventListener("scroll", this.handleScroll);

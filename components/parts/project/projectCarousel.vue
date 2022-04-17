@@ -29,8 +29,8 @@
       </template>
     </VueSlickCarousel>
     <div class="my-3">
-      <h2 class="text_primary">{{deepFind(variables,'carouselItem.'+activeSlide+'.title')}}</h2>
-      <p class="my-2">{{deepFind(variables,'carouselItem.'+activeSlide+'.description')}}</p>
+      <h2 class="text_primary" v-html="deepFind(variables,'carouselItem.'+activeSlide+'.title')"></h2>
+      <p class="my-2" v-html="deepFind(variables,'carouselItem.'+activeSlide+'.description')"></p>
     </div>
   </div>
   <div v-else class="bg_lightGrey loading_page flex align_center center">
@@ -59,6 +59,18 @@ export default {
         variableWidth: true,
         speed: 500,
         responsive: [
+          {
+            breakpoint: 1640,
+            settings: {
+              dots: false,
+              infinite: true,
+              centerMode: true,
+              centerPadding: "30px",
+              slidesToShow: 2,
+              slidesToScroll: 1,
+              variableWidth: true
+            }
+          },
           {
             breakpoint: 1024,
             settings: {
@@ -109,9 +121,13 @@ export default {
     max-width: 300px;
     transition: 1s all;
     img {
-      max-width: 100%;
-      height: 540px;
+      /* width: 100%; */
+      height: auto;
+
       object-fit: cover;
+      max-width: 100%;
+      margin: 0 auto;
+      max-height: 540px;
     }
   }
   .slick-active.slick-center.slick-current {

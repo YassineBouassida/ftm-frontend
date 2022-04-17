@@ -8,18 +8,9 @@
       <img
         width="auto"
         height="auto"
-        :src="api_url+deepFind(variables,'media.url')"
+        :src="api_url+getEntityImage"
         :alt="deepFind(variables,'title')"
-        v-if="deepFind(variables,'media.url')"
-        class="desktop"
-      />
-      <img
-        width="auto"
-        height="auto"
-        :src="api_url+deepFind(variables,'media_sm.url')"
-        :alt="deepFind(variables,'title')"
-        v-if="deepFind(variables,'media_sm.url')"
-        class="mobile"
+        v-if="getEntityImage"
       />
     </div>
     <div class="panel bg_lightGrey py-3 px-5" v-if="deepFind(variables,'description')">
@@ -32,6 +23,25 @@ export default {
   props: {
     variables: {
       type: Object
+    }
+  },
+  computed: {
+    getEntityImage() {
+      let viewPort = this.$store.getters["style/viewPort"];
+      if (viewPort == "large") {
+        return this.deepFind(this.variables, "media.url");
+      } else if (viewPort == "sm") {
+        return (
+          this.deepFind(this.variables, "media_sm.url") ||
+          this.deepFind(this.variables, "media.url")
+        );
+      } else if (viewPort == "xs") {
+        return (
+          this.deepFind(this.variables, "media_xs.url") ||
+          this.deepFind(this.variables, "media_sm.url") ||
+          this.deepFind(this.variables, "media.url")
+        );
+      }
     }
   }
 };

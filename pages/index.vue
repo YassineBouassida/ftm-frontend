@@ -62,18 +62,14 @@
               <div class="w-50 h-100 p12 part bg_white pa-3 tablette_and_down">
                 <div class="text">
                   <h2>{{$t('home.about.research.h2')}}</h2>
-                  <p
-                    class="subheading"
-                  >{{$t('home.about.research.p')}}</p>
+                  <p class="subheading">{{$t('home.about.research.p')}}</p>
                 </div>
               </div>
               <!-- Only on small mobiles -->
               <div class="w-50 h-100 p13 part bg_white pa-3 tablette_and_up">
                 <div class="text">
                   <h2>{{$t('home.about.exp.h2')}}</h2>
-                  <p
-                    class="subheading"
-                  >{{$t('home.about.exp.p')}}</p>
+                  <p class="subheading">{{$t('home.about.exp.p')}}</p>
                 </div>
               </div>
               <!-- ********************* -->
@@ -81,20 +77,16 @@
             <div class="flex h-50">
               <div class="w-50 h-100 p13 part bg_white pa-3 tablette_and_down">
                 <div class="text">
-                   <h2>{{$t('home.about.exp.h2')}}</h2>
-                  <p
-                    class="subheading"
-                  >{{$t('home.about.exp.p')}}</p>
-                   </div>
+                  <h2>{{$t('home.about.exp.h2')}}</h2>
+                  <p class="subheading">{{$t('home.about.exp.p')}}</p>
+                </div>
               </div>
               <!-- Only on small mobiles -->
               <div class="w-50 h-100 p12 part bg_white pa-3 tablette_and_up">
                 <div class="text">
-                   <h2>{{$t('home.about.research.h2')}}</h2>
-                  <p
-                    class="subheading"
-                  >{{$t('home.about.research.p')}}</p>
-                  </div>
+                  <h2>{{$t('home.about.research.h2')}}</h2>
+                  <p class="subheading">{{$t('home.about.research.p')}}</p>
+                </div>
               </div>
               <!-- ********************* -->
               <div class="w-50 h-100 p14 part bg_text1">
@@ -107,9 +99,7 @@
               <presenter class="part_svg"></presenter>
             </div>
             <div class="fill_width p22 h-20 part bg_white pa-3">
-              <p
-                class="subheading"
-              >{{$t('home.about.act.p')}}</p>
+              <p class="subheading">{{$t('home.about.act.p')}}</p>
             </div>
           </div>
         </div>
@@ -128,14 +118,10 @@
           <div class="text_side mr-4">
             <div class="desc">
               <h2 class="text_primary mb-3">{{$t('home.cases.not.h2')}}</h2>
-              <p
-                class="h4"
-              >{{$t('home.cases.not.p')}}</p>
+              <p class="h4">{{$t('home.cases.not.p')}}</p>
             </div>
             <div class="desktop notice bg_lightGrey pa-3 flex align_center">
-              <p
-                class="subheading pr-4"
-              >{{$t('home.cases.not.notice')}}</p>
+              <p class="subheading pr-4">{{$t('home.cases.not.notice')}}</p>
               <img width="auto" height="auto" src="~static/img/notice.png" alt="notice" />
             </div>
           </div>
@@ -163,15 +149,11 @@
           <div class="text_side ml-4">
             <div class="desc">
               <h2 class="text_primary mb-3">{{$t('home.cases.yes.h2')}}</h2>
-              <p
-                class="h4"
-              >{{$t('home.cases.yes.p')}}</p>
+              <p class="h4">{{$t('home.cases.yes.p')}}</p>
             </div>
             <div class="desktop notice bg_lightGrey pa-3 flex align_center">
               <img width="auto" height="auto" src="~static/img/notice.png" alt="notice" />
-              <p
-                class="subheading pl-4"
-              >{{$t('home.cases.yes.notice')}}</p>
+              <p class="subheading pl-4">{{$t('home.cases.yes.notice')}}</p>
             </div>
           </div>
         </div>
@@ -198,9 +180,7 @@
         <div class="w-50 absolute itsDesc">
           <h1 class="text_white mb-4">{{$t('home.spark.h1')}}</h1>
           <h2 class="text_white mb-3">{{$t('home.spark.h2')}}</h2>
-          <p
-            class="h4 text_white"
-          >{{$t('home.spark.p')}}</p>
+          <p class="h4 text_white">{{$t('home.spark.p')}}</p>
         </div>
         <div class="absolute features flex column align_center">
           <div
@@ -260,9 +240,7 @@
       <div class="projects_body">
         <div class="project_head w-50 mb-5">
           <h1>{{$t('home.portfolio.h1')}}</h1>
-          <p
-            class="px-2"
-          >{{$t('home.portfolio.p')}}</p>
+          <p class="px-2">{{$t('home.portfolio.p')}}</p>
         </div>
         <fProjects ref="projects" @projectChanged="selectedProject=$event" :projects="cases"></fProjects>
         <div class="project_footer flex mt-2">
@@ -297,6 +275,7 @@ import casesQuery from "~/apollo/queries/page/cases";
 export default {
   name: "homePage",
   components: { VueSlickCarousel },
+
   head() {
     return {
       title: this.deepFind(this.pages, "0.seo.title"),
