@@ -54,7 +54,7 @@ export default {
     "hero": {
       "heroText1": "Montée en flèche",
       "heroText2": "votre entreprise",
-      "heroText3": "",
+      "heroText3": " ",
       "h3": "Votre entreprise souffre-t-elle d'un faible trafic organique, d'une moindre fidélisation de l'audience, d'un faible taux de conversion et d'un nombre insuffisant de prospects ?",
       "h2": "FTM vous guide à travers le processus de croissance systématique axé en fin de compte sur la réalisation de ventes optimales.",
       "btn": "Obtenez plus de prospects"

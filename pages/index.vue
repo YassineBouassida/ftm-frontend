@@ -289,7 +289,28 @@ export default {
           hid: "keywords",
           name: "keywords",
           content: this.deepFind(this.pages, "0.seo.keywords")
-        }
+        },
+        {
+          hid: "og-title",
+          property: "og:title",
+          content: this.deepFind(this.pages, "0.seo.title")
+        },
+        {
+          hid: "og-desc",
+          property: "og:description",
+          content: this.deepFind(this.pages, "0.seo.description")
+        },
+        {
+          hid: "og-image",
+          property: "og:image",
+          content: this.api_url + this.deepFind(this.pages, "0.seo.cover.url")
+        },
+        {
+          hid: "og-url",
+          property: "og:url",
+          content: this.host + this.localePath("/")
+        },
+        { hid: "t-type", name: "twitter:card", content: "summary_large_image" }
       ]
     };
   },
