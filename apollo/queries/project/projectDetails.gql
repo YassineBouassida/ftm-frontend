@@ -108,6 +108,7 @@ query Project($locale: String!, $slug: String!) {
           url
           previewUrl
         }
+        description
         iframe
         iframe_link
       }

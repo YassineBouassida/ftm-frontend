@@ -124,7 +124,7 @@ export default {
 <style lang="scss" scoped>
 .caroussel {
   .second_desc {
-    border-top: $border;
+    border-top: 1px solid #606060;
   }
   .caroussel_item {
     max-width: 300px;
