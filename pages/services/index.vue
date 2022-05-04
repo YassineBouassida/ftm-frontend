@@ -95,49 +95,51 @@
       </div>
     </section>
     <!-- Services section part -->
-    <section class="services bg_white container py-5">
-      <div class="c_head flex start mb-5">
-        <div class="w-50">
-          <h1 class="txt_left">{{$t('services.knowledge.h1')}}</h1>
-          <p class="txt_left">{{$t('services.knowledge.p')}}</p>
-        </div>
-      </div>
-      <div class="c_body">
-        <div class="services_list flex space_between wrap">
-          <div class="service w-25 my-4" v-for="(service, key) in services" :key="key">
-            <router-link
-              :to="`services/${deepFind(service, 'slug')}`"
-              tag="h2"
-              class="text_primary txt_center pointer title_link"
-            >{{deepFind(service, 'titleDisplay')}}</router-link>
-            <h4
-              v-for="(stack, index) in subDivisions(service)"
-              :key="index"
-              class="txt_center my-3"
-            >
-              <span v-if="index<3">{{stack.title}}</span>
-            </h4>
-            <router-link
-              :to="`services/${deepFind(service, 'slug')}`"
-              tag="u"
-              class="text_primary t-11 w-100 d_block txt_center pointer"
-            >{{$t('services.knowledge.readMore')}}</router-link>
+    <section class="services bg_white container py-5 flex center px-0">
+      <div class="w-90">
+        <div class="c_head flex start mb-5">
+          <div class="w-50">
+            <h1 class="txt_left">{{$t('services.knowledge.h1')}}</h1>
+            <p class="txt_left">{{$t('services.knowledge.p')}}</p>
           </div>
         </div>
-      </div>
-      <div class="c_footer flex start my-3">
-        <div class="w-70">
-          <h1 class="txt_left">{{$t('services.knowledge.footer.h1')}}</h1>
-          <p class="txt_left">{{$t('services.knowledge.footer.p')}}</p>
+        <div class="c_body">
+          <div class="services_list flex space_between wrap">
+            <div class="service w-25 my-4" v-for="(service, key) in services" :key="key">
+              <router-link
+                :to="`services/${deepFind(service, 'slug')}`"
+                tag="h2"
+                class="text_primary txt_center pointer title_link"
+              >{{deepFind(service, 'titleDisplay')}}</router-link>
+              <h4
+                v-for="(stack, index) in subDivisions(service)"
+                :key="index"
+                class="txt_center my-3"
+              >
+                <span v-if="index<3">{{stack.title}}</span>
+              </h4>
+              <router-link
+                :to="`services/${deepFind(service, 'slug')}`"
+                tag="u"
+                class="text_primary t-11 w-100 d_block txt_center pointer"
+              >{{$t('services.knowledge.readMore')}}</router-link>
+            </div>
+          </div>
+        </div>
+        <div class="c_footer flex start my-3">
+          <div class="w-70">
+            <h1 class="txt_left">{{$t('services.knowledge.footer.h1')}}</h1>
+            <p class="txt_left">{{$t('services.knowledge.footer.p')}}</p>
+          </div>
         </div>
       </div>
     </section>
     <!-- Brands section part -->
-    <section class="brands container bg_white mb-5">
-      <div class="py-2">
+    <section class="brands container bg_white mb-5 flex center px-0">
+      <div class="py-2 w-90">
         <div class="c_head my-5">
-          <h1 class="txt_center">{{$t('services.industries.h1')}}</h1>
-          <p class="txt_center">{{$t('services.industries.p')}}</p>
+          <h1>{{$t('services.industries.h1')}}</h1>
+          <p>{{$t('services.industries.p')}}</p>
         </div>
         <div class="brands_list flex align_center wrap space_between">
           <div

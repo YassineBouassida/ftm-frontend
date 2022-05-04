@@ -14,7 +14,7 @@
         target="blank"
         class="btn w-30 flex align_center center call_to_action bg_primary mx-3 f_link text_white"
       >
-        <h3  class="text_white">{{$t('projectDetails.live')}}</h3>
+        <h3 class="text_white">{{$t('projectDetails.live')}}</h3>
       </a>
       <fBtn
         link
@@ -71,8 +71,9 @@
             class="tool_icon mt-2 mr-2"
             v-for="(tool, index) in deepFind(variables,'tools')"
             :key="index"
+            :title="tool.name"
           >
-            <img width="auto" height="auto" :src="api_url+tool.image.url" :alt="tool.name" title="Adobe illustrator" />
+            <img width="auto" height="auto" :src="api_url+tool.image.url" :alt="tool.name" />
           </div>
         </div>
         <div class="creative_fields my-3">
@@ -104,7 +105,6 @@ export default {
   },
   methods: {
     beforeSlideChange(newVal, next) {
-
       this.activeSlide = next;
     },
     changeProjectSlick(index) {

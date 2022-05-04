@@ -3,20 +3,24 @@
     <!-- Project hero section -->
     <project-header :variables="deepFind(projects,'0.header')" class="mt-4"></project-header>
     <!-- Project body part -->
-    <section class="body container bg_white py-3 mb-4">
-      <div v-for="(component, index) in deepFind(projects,'0.component')" :key="index">
+    <section>
+      <div
+        v-for="(component, index) in deepFind(projects,'0.component')"
+        :key="index"
+        class="body container bg_white py-3 mb-4"
+      >
         <project-video
           :variables="component"
-          class="my-5"
+          class="my-3"
           v-if="component['__typename']=='ComponentProjectPartsVideo'"
         ></project-video>
         <project-entity
-          class="my-5"
+          class="my-3"
           :variables="component"
           v-if="component['__typename']=='ComponentProjectPartsEntity'"
         ></project-entity>
         <project-carousel
-          class="my-5"
+          class="my-3"
           :variables="component"
           v-if="component['__typename']=='ComponentProjectPartsCarousel'"
         ></project-carousel>
@@ -64,7 +68,7 @@ export default {
           hid: "og:image",
           property: "og:image",
           content:
-            this.api_url + this.deepFind(this.projects,  "0.seo.cover.url")
+            this.api_url + this.deepFind(this.projects, "0.seo.cover.url")
         },
         {
           hid: "og-url",
@@ -104,6 +108,7 @@ section {
 }
 
 .body {
+  border-radius: 9px;
   padding-right: 3rem !important;
   padding-left: 3rem !important;
   @media (max-width: 480px) {

@@ -99,7 +99,7 @@ export default {
   plugins: [{
     src: '~/plugins/vue-fb-customer-chat.js',
     ssr: false
-  }],
+  }, '~/plugins/string-cutter.js'],
   loading: {
     color: '#E02B2B',
     height: '3px'

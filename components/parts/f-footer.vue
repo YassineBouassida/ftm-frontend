@@ -6,31 +6,32 @@
   >
     <div class="flex align_start space_between container py-5 wrap">
       <div class="flex1 links_block useful_link">
-        <h2 class="text_text2" >{{$t('footer.links.text')}}</h2>
+        <h2 class="text_text2">{{$t('footer.links.text')}}</h2>
         <div class="usefull_links">
-          <nuxt-link :to="localePath('/')" class="a text_text2 my-3 pointer" tag="div" >{{$t('footer.links.home')}}</nuxt-link>
+          <nuxt-link
+            :to="localePath('/')"
+            class="a text_text2 my-3 pointer"
+            tag="div"
+          >{{$t('footer.links.home')}}</nuxt-link>
           <nuxt-link
             :to="localePath('/about')"
             class="a text_text2 my-3 pointer"
             tag="div"
-            
           >{{$t('footer.links.about')}}</nuxt-link>
           <nuxt-link
             :to="localePath('/projects')"
             class="a text_text2 my-3 pointer"
             tag="div"
-            
           >{{$t('footer.links.samples')}}</nuxt-link>
           <nuxt-link
             :to="localePath('/services')"
             class="a text_text2 my-3 pointer"
             tag="div"
-            
           >{{$t('footer.links.services')}}</nuxt-link>
         </div>
       </div>
       <div class="flex1 links_block services">
-        <h2 class="text_text2" >{{$t('footer.links.services')}}</h2>
+        <h2 class="text_text2">{{$t('footer.links.services')}}</h2>
         <div class="usefull_links">
           <nuxt-link
             :to="localePath(`/services/${service.slug}`)"
@@ -42,12 +43,10 @@
         </div>
       </div>
       <div class="flex1 links_block contact_us">
-        <h2 class="text_text2" >{{$t('footer.keep.h1')}}</h2>
-        <p class="text_text2 subheading" v-html="$t('footer.keep.p')">
-          
-        </p>
-        <h3 class="text_text2 my-2" >{{$t('footer.keep.strong')}}</h3>
-        <h2 class="text_text2" >{{$t('footer.keep.h3')}}</h2>
+        <h2 class="text_text2">{{$t('footer.keep.h1')}}</h2>
+        <p class="text_text2 subheading" v-html="$t('footer.keep.p')"></p>
+        <h3 class="text_text2 my-2">{{$t('footer.keep.strong')}}</h3>
+        <h2 class="text_text2">{{$t('footer.keep.h3')}}</h2>
         <div class="social_links flex align_center mt-3">
           <a
             class="mr-3"
@@ -97,15 +96,14 @@
       </div>
       <div class="flex1 links_block about_us">
         <fLogo></fLogo>
-        <p
-          class="subheading text_text2"
-          
-        >{{$t('footer.about.h3')}}</p>
+        <p class="subheading text_text2">{{$t('footer.about.h3')}}</p>
         <div class="flex column f_link_container">
           <div class="flex start">
             <p class="my-1" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
               {{$t('footer.about.address.text')}}:
-              <span itemprop="streetAddress">{{$t('footer.about.address.street')}}</span>
+              <span
+                itemprop="streetAddress"
+              >{{$t('footer.about.address.street')}}</span>
               <br />
               <span itemprop="addressLocality">{{$t('footer.about.address.local')}}</span> ,
               <br />
@@ -116,7 +114,10 @@
           <div class="flex start">
             <p class="text_text2 my-1">
               {{$t('footer.about.email')}}:
-              <a class="text_text2" href="mailto:Info@fictiontomission.com">
+              <a
+                class="text_text2"
+                href="mailto:Info@fictiontomission.com"
+              >
                 <span itemprop="email">Info@fictiontomission.com</span>
               </a>
             </p>
@@ -236,7 +237,7 @@ export default {
 .footer {
   min-height: 350px;
   & > .flex {
-    padding: 90px 0 !important;
+    padding: 30px 0 !important;
   }
   .links_block {
     flex-shrink: 0;

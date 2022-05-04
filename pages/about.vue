@@ -18,8 +18,8 @@
         <div class="container">
           <div class="flex fill_height fill_width">
             <div class="w-50 py-5 call_to_action">
-              <h1 class="text_white">{{$t('about.aboutText.h1_1')}}</h1>
-              <h1 class="text_white">{{$t('about.aboutText.h1_2')}}</h1>
+              <p class="text_white">{{$t('about.aboutText.h1_1')}}</p>
+              <p class="text_white">{{$t('about.aboutText.h1_2')}}</p>
 
               <div class="vision_mission flex column">
                 <h1
@@ -33,14 +33,14 @@
               </div>
             </div>
             <div class="w-50 flex end paragraph">
-              <p
-                class="text_white txt_right pr-3"
+              <h2
+                class="text_white txt_right pr-3 pb-2"
                 v-show="mission"
-              >{{$t('about.aboutText.vision.desc')}}</p>
-              <p
+              >{{$t('about.aboutText.vision.desc')}}</h2>
+              <h2
                 v-show="!mission"
-                class="text_white txt_right pr-3"
-              >{{$t('about.aboutText.mission.desc')}}</p>
+                class="text_white txt_right pr-3 pb-2"
+              >{{$t('about.aboutText.mission.desc')}}</h2>
               <div class="circles_deco py-4 px-2 flex column space_between">
                 <div class="circle pointer"></div>
                 <div class="circle active pointer"></div>
@@ -197,10 +197,12 @@ export default {
     }
     .paragraph {
       align-items: end;
-      p {
+      h2 {
+        font-size: 1.4rem;
         animation: fade-in 2s forwards;
         @media (max-width: 768px) {
           animation: vertical-fade-in 2s forwards;
+          text-align: center;
         }
       }
     }
@@ -384,9 +386,10 @@ export default {
 }
 .team {
   .yassine .avatar {
-    background: #fff url("~static/img/about/avatar_y.jpg") no-repeat;
-    background-position-y: 26%;
-    background-position-x: -21px;
+    background: #fff url("~static/img/about/avatar_y1.jpg") no-repeat;
+    background-position-y: center;
+    background-position-x: center;
+    background-size: contain;
   }
   .oussama .avatar {
     background: #fff url("~static/img/about/avatar_o.png") no-repeat;
@@ -423,6 +426,7 @@ export default {
       justify-content: center;
       .member {
         margin-bottom: 1.5rem;
+        width: 430px;
       }
     }
   }
@@ -440,6 +444,7 @@ export default {
       .member {
         margin-bottom: 1.5rem;
         flex-wrap: wrap;
+        width: 300px;
         justify-content: center;
       }
     }

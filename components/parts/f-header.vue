@@ -185,6 +185,9 @@ export default {
       }
     }
   }
+  @media (max-width: 375px) {
+    min-width: 100px;
+  }
 }
 .burger {
   width: 2.5rem;

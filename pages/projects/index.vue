@@ -141,8 +141,11 @@ export default {
   .container {
     padding-top: 8rem;
   }
-  @media (max-width: 1024px) {
-    min-height: 50vh;
+  @media (max-width: 992px) {
+    min-height: 30vh;
+    .container {
+      padding-top: 6rem;
+    }
   }
 }
 //project list section

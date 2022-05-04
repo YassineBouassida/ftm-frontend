@@ -2,7 +2,6 @@
   <div class="entity my-5">
     <h2 class="mb-3" v-html="deepFind(variables,'title')"></h2>
     <p class="mb-3" v-html="deepFind(variables,'desc')"></p>
-    <h3 class="mb-3" v-html="deepFind(variables,'subTitle')"></h3>
 
     <div class="image relative mb-3">
       <img
@@ -14,6 +13,7 @@
       />
     </div>
     <div class="panel bg_lightGrey py-3 px-5" v-if="deepFind(variables,'description')">
+      <h3 class="mb-3" v-html="deepFind(variables,'subTitle')"></h3>
       <p class="h4" v-html="deepFind(variables,'description')"></p>
     </div>
   </div>
