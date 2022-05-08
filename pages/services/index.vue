@@ -473,6 +473,14 @@ export default {
       }
     }
   }
+  @media (max-width: 767px) {
+    .c_head {
+      h1,
+      p {
+        text-align: center;
+      }
+    }
+  }
 }
 .services {
   @media (max-width: 1024px) {

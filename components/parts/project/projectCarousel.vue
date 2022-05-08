@@ -27,7 +27,7 @@
         </div>
       </template>
     </VueSlickCarousel>
-    <div class="my-4">
+    <div class="my-4 slide_desc">
       <h2 class="text_primary" v-html="deepFind(variables,'carouselItem.'+activeSlide+'.title')"></h2>
       <p class="my-2" v-html="deepFind(variables,'carouselItem.'+activeSlide+'.description')"></p>
     </div>
@@ -172,11 +172,17 @@ export default {
         left: calc(5% - 1.4rem);
       }
     }
+    @media (max-width: 480px) {
+      display: none;
+    }
   }
   @media (max-width: 1024px) {
     .caroussel_item {
       max-width: 100%;
       margin: 0 !important;
+    }
+    .slide_desc {
+      margin-top: 48px !important;
     }
     .next_arrow {
       right: -2rem !important ;

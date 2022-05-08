@@ -85,12 +85,21 @@
             <img width="auto" height="auto" src="~static/img/icons/social/linkedin_dark.png" alt />
           </a>
           <a
+           class="mr-3"
             aria-label="social"
             href="https://www.youtube.com/channel/UChHAp1oCk8idA7TQ3uD4ndQ"
             target="_blank"
             rel="noopener noreferrer"
           >
             <img width="auto" height="auto" src="~static/img/icons/social/youtube_dark.png" alt />
+          </a>
+          <a
+            aria-label="social"
+            href="https://wa.me/21692243333"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img width="auto" height="auto" src="~static/img/icons/social/whatsapp_dark.png" alt />
           </a>
         </div>
       </div>
