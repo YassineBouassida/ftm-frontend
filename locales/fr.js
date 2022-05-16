@@ -11,7 +11,8 @@ export default {
       sthg: "Quelque chose s'est mal passé",
       noWorries: "Ne vous inquiétez pas, nous sommes là pour vous aider",
       link: "Accueil",
-    }
+    },
+    readMore: "En savoir plus",
   },
   "footer": {
     "links": {
@@ -46,8 +47,10 @@ export default {
       "about": "A propos",
       "samples": "Projets",
       "services": "Services",
-      "privacy": "Politique de confidentialité"
+      "privacy": "Politique de confidentialité",
+     
     },
+    "servicesDropDown":"Nos principaux services",
     "btn": "OBTENIR UN DEVIS"
   },
   "home": {

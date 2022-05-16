@@ -11,7 +11,8 @@ export default {
       sthg: "Something went wrong",
       noWorries: "Don't worry, we are here to help",
       link: "Home page",
-    }
+    },
+    readMore: "Read more",
   },
   "footer": {
     "links": {
@@ -46,8 +47,10 @@ export default {
       "about": "About",
       "samples": "Samples",
       "services": "Services",
-      "privacy": "Privacy policy"
+      "privacy": "Privacy policy",
+
     },
+    "servicesDropDown": "FTM main services",
     "btn": "GET A QUOTE"
   },
   "home": {

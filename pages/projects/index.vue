@@ -16,7 +16,7 @@
         </div>
         <div class="c_body flex wrap fill_width space_between">
           <div
-            :style="{backgroundImage:`url(${api_url+deepFind(projects,`${index}.header.cover.url`)})`}"
+            :style="{backgroundImage:`url(${api_url+getCoverImage(index)})`}"
             class="project_case elevate_1 pointer pair relative my-1"
             v-for="(item, index) in projects.length"
             :key="index"
@@ -125,7 +125,20 @@ export default {
     window.removeEventListener("scroll", this.handleScroll);
   },
   methods: {
-    handleScroll(y) {}
+    handleScroll(y) {},
+    getCoverImage(index) {
+      let parinage = this.parinage[index],
+        project = this.projects[index];
+
+      if (parinage == 0) {
+        return this.deepFind(project, "header.cover.url");
+      } else {
+        return (
+          this.deepFind(project, "header.cover_sm.url") ||
+          this.deepFind(project, "header.cover.url")
+        );
+      }
+    }
   }
 };
 </script>

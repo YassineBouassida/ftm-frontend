@@ -91,6 +91,8 @@ export default {
   env: {
     strapiBaseUri: process.env.NODE_ENV == 'production' ? process.env.API_URL : "http://localhost:1337",
     hostname: process.env.NODE_ENV == 'production' ? process.env.HOST_URL : "http://localhost:3000",
+    SITE_KEY: '6LeNc_MfAAAAAGyoaNTh2WbEzF-cRRLWOFwl0gK3',
+    SECRET_KEY: '6LeNc_MfAAAAAGwBnUC215GHKRkmU20wCfyDfpql'
   },
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: ["~static/css/global.css"],
@@ -131,6 +133,7 @@ export default {
   },
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    '@nuxtjs/recaptcha',
     ['@nuxtjs/google-analytics', {
       id: 'UA-211276768-1'
     }],
@@ -211,6 +214,13 @@ export default {
 
 
   ],
+  //Recaptcha
+  recaptcha: {
+    /* reCAPTCHA options */
+    hideBadge: false,
+    siteKey: '6LeNc_MfAAAAAGyoaNTh2WbEzF-cRRLWOFwl0gK3',
+    version: 3,
+  },
   //Sitemap
   sitemap: {
     hostname: 'https://fictiontomission.com',

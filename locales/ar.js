@@ -11,7 +11,8 @@ export default {
       sthg: "حدث خطأ ما",
       noWorries: "لا تقلق ، نحن هنا للمساعدة",
       link: "الصفحة الرئيسية",
-    }
+    },
+    readMore: "قراءة المزيد",
   },
   "footer": {
     "links": {
@@ -46,8 +47,10 @@ export default {
       "about": "من نحن",
       "samples": "الأعمال",
       "services": "الخدمات",
-      "privacy": "خصوصيات الموقع"
+      "privacy": "خصوصيات الموقع",
+
     },
+    "servicesDropDown": "أهم خدماتنا",
     "btn": "احصل على عرض أسعار"
   },
   "home": {
