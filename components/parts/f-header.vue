@@ -179,9 +179,8 @@
         <div class="services_list">
           <h1>{{$t('header.servicesDropDown')}}</h1>
           <nuxt-link
-            tag="div"
             v-for="(service, index) in services"
-            :key="index"
+            :key="'s-'+index"
             class="f_link pointer flex align_center"
             :class="{active_link:selectedService==index}"
             :to="localePath(`/services/${service.slug}`)"
@@ -195,8 +194,7 @@
           </nuxt-link>
           <hr />
           <nuxt-link
-            tag="div"
-            class="f_link pointer active_link"
+            class="f_link pointer active_link flex pointer"
             :to="localePath(`/services`)"
             @click.native="openMenu=false;servicesDropdownOpen=false"
           >
@@ -234,6 +232,12 @@ export default {
       },
       watchLoading: function(isLoading) {
         this.$nextTick(() => {
+          console.log(
+            "************************* Services ************************",
+            this.services,
+            "********************************************************"
+          );
+
           if (this.$nuxt && this.$nuxt.$loading) {
             isLoading
               ? this.$nuxt.$loading.start()
@@ -263,7 +267,7 @@ export default {
         }
       },
       deep: true,
-      immediate: true
+      immediate: false
     }
   },
   methods: {
