@@ -176,7 +176,7 @@
         <h2 class="text_primary pointer flex align_center" @click="smServicesMenu=false">
           <img class="mr-2" src="~/static/img/icons/red_arrow_left.png" alt="red arrow left" /> Back
         </h2>
-        <div class="services_list">
+        <div class="services_list" v-if="smServicesMenu">
           <h1>{{$t('header.servicesDropDown')}}</h1>
           <nuxt-link
             v-for="(service, index) in services"
@@ -234,7 +234,7 @@ export default {
         this.$nextTick(() => {
           console.log(
             "************************* Services ************************",
-            this.services,
+            "this.services",
             "********************************************************"
           );
 
@@ -586,6 +586,7 @@ export default {
     height: 2.5rem;
     padding: 0.5rem;
     border-radius: 50%;
+    flex-shrink: 0;
     .service_icon {
       max-width: 100%;
       max-height: 100%;
@@ -597,6 +598,9 @@ export default {
   padding: 1rem;
   * {
     visibility: visible;
+    overflow: hidden;
+    flex-flow: nowrap;
+    white-space: nowrap;
   }
 }
 </style>
