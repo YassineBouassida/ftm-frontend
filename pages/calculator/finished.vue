@@ -6,6 +6,7 @@
       class="subheading my-2"
     >Now we know your needs you can schedule a meeting to start the mission.</h3>
     <fBtn
+      id="appointmentBtn"
       link
       external
       to="https://fb.com/book/FictionToMission/"
@@ -19,4 +20,9 @@
 export default {};
 </script>
 <style lang="scss" scoped>
+@media (max-width: 767px) {
+  .mt-5.mb-3.pa-3.bg_primary.w-30.flex.align_center.center.f_link.text_white.mx-2 {
+    width: auto !important;
+  }
+}
 </style>

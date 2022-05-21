@@ -351,4 +351,24 @@ export default {
     }
   }
 }
+@media (max-width: 1024px) {
+  .calc_step {
+    flex-wrap: wrap;
+    .w-65 {
+      width: 100% !important;
+      .c_body {
+        max-height: none;
+      }
+    }
+    .w-35 {
+      width: 100% !important;
+    }
+    .pa-5 {
+      padding: 1rem !important;
+    }
+    .ans_opt {
+      width: 100% !important;
+    }
+  }
+}
 </style>
