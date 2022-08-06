@@ -85,7 +85,7 @@
             <img width="auto" height="auto" src="~static/img/icons/social/linkedin_dark.png" alt />
           </a>
           <a
-           class="mr-3"
+            class="mr-3"
             aria-label="social"
             href="https://www.youtube.com/channel/UChHAp1oCk8idA7TQ3uD4ndQ"
             target="_blank"
@@ -169,7 +169,8 @@ import servicesQuery from "~/apollo/queries/home/services";
 export default {
   apollo: {
     services: {
-      prefetch: true,
+      prefetch: false,
+      fetchPolicy: "cache-first",
       variables() {
         return { locale: this.$i18n.locale };
       },

@@ -250,7 +250,8 @@ export default {
   },
   apollo: {
     services: {
-      prefetch: true,
+      prefetch: false,
+      fetchPolicy: "cache-first",
       query: servicesQuery,
       variables() {
         return { locale: this.$i18n.locale };

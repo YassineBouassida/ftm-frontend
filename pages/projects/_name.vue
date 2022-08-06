@@ -84,7 +84,8 @@ export default {
   },
   apollo: {
     projects: {
-      prefetch: true,
+      prefetch: false,
+      fetchPolicy: "cache-first",
       query: projectQuery,
       variables() {
         return { slug: this.$route.params.name, locale: this.$i18n.locale };

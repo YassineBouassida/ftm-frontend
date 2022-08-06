@@ -226,10 +226,7 @@
                   to="https://fb.com/book/FictionToMission/"
                   class="fill_width mt-4 mb-3 d_block bg_white flex align_center center text_text1"
                 >
-                  <h3>
-                    (
-                    <span v-html="deepFind(serviceBySlug, 'packages.0.details.price')"></span>) Continue
-                  </h3>
+                  <h3>Continue</h3>
                 </fBtn>
                 <router-link tag="div" :to="localePath('/contact')" class="a text_white txt_center">
                   <u>{{$t('serviceDetails.pack.u')}}</u>
@@ -474,7 +471,8 @@ export default {
   },
   apollo: {
     services: {
-      prefetch: true,
+      prefetch: false,
+      fetchPolicy: "cache-first",
       query: serviceQuery,
       variables() {
         return { slug: this.$route.params.name, locale: this.$i18n.locale };

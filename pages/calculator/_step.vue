@@ -183,7 +183,8 @@ export default {
   },
   apollo: {
     quizzes: {
-      prefetch: true,
+      prefetch: false,
+      fetchPolicy: "cache-first",
       query: quizzQuery,
       variables() {
         return { locale: this.$i18n.locale };

@@ -96,7 +96,8 @@ import projectQuery from "~/apollo/queries/project/projects";
 export default {
   apollo: {
     projects: {
-      prefetch: true,
+      prefetch: false,
+      fetchPolicy: "cache-first",
       query: projectQuery,
       variables() {
         return { locale: this.$i18n.locale };

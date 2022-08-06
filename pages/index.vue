@@ -317,7 +317,8 @@ export default {
   apollo: {
     services: {
       fetchPolicy: "no-cache",
-      prefetch: true,
+      prefetch: false,
+      fetchPolicy: "cache-first",
       query: servicesQuery,
       variables() {
         return { locale: this.$i18n.locale };
@@ -334,7 +335,8 @@ export default {
     },
     pages: {
       fetchPolicy: "no-cache",
-      prefetch: true,
+      prefetch: false,
+      fetchPolicy: "cache-first",
       query: pageQuery,
       variables() {
         return { slug: "home", locale: this.$i18n.locale };
@@ -350,7 +352,8 @@ export default {
       }
     },
     cases: {
-      prefetch: true,
+      prefetch: false,
+      fetchPolicy: "cache-first",
       query: casesQuery,
       variables() {
         return { locale: this.$i18n.locale };

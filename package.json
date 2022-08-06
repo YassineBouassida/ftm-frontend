@@ -26,6 +26,7 @@
     "nuxt-font-loader-strategy": "^1.1.10",
     "nuxt-i18n-easy": "^1.5.1",
     "nuxt-precompress": "^0.5.9",
+    "nuxt-ssr-cache": "^1.5.2",
     "vue-fb-customer-chat": "^0.2.0",
     "vue-slick-carousel": "^1.0.6",
     "whatwg-url": "^11.0.0"

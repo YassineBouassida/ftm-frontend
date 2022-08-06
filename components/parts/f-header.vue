@@ -225,19 +225,14 @@ export default {
   apollo: {
     services: {
       fetchPolicy: "no-cache",
-      prefetch: true,
+      prefetch: false,
+      fetchPolicy: "cache-first",
       query: servicesQuery,
       variables() {
         return { locale: this.$i18n.locale };
       },
       watchLoading: function(isLoading) {
         this.$nextTick(() => {
-          console.log(
-            "************************* Services ************************",
-            "this.services",
-            "********************************************************"
-          );
-
           if (this.$nuxt && this.$nuxt.$loading) {
             isLoading
               ? this.$nuxt.$loading.start()
