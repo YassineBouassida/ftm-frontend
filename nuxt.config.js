@@ -86,7 +86,7 @@ export default {
   // },
 
   env: {
-    strapiBaseUri: process.env.NODE_ENV == 'production' ? process.env.API_URL : "http://localhost:1337",
+    strapiBaseUri: process.env.NODE_ENV == 'production' ? process.env.API_URL : "http://127.0.0.1:1337",
     hostname: process.env.NODE_ENV == 'production' ? process.env.HOST_URL : "http://localhost:3000",
     SITE_KEY: '6LeNc_MfAAAAAGyoaNTh2WbEzF-cRRLWOFwl0gK3',
     SECRET_KEY: '6LeNc_MfAAAAAGwBnUC215GHKRkmU20wCfyDfpql'

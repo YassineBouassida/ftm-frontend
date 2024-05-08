@@ -1,37 +1,22 @@
 <template>
   <div v-if="!this.$apollo.loading">
     <!-- Project hero section -->
-    <project-header :variables="deepFind(projects,'0.header')" class="mt-4"></project-header>
+    <project-header :variables="deepFind(projects, '0.header')" class="mt-4"></project-header>
     <!-- Project body part -->
     <section>
-      <div
-        v-for="(component, index) in deepFind(projects,'0.component')"
-        :key="index"
-        class="body container bg_white py-3 mb-4"
-      >
-        <project-video
-          :variables="component"
-          class="my-3"
-          v-if="component['__typename']=='ComponentProjectPartsVideo'"
-        ></project-video>
-        <project-entity
-          class="my-3"
-          :variables="component"
-          v-if="component['__typename']=='ComponentProjectPartsEntity'"
-        ></project-entity>
-        <project-carousel
-          class="my-3"
-          :variables="component"
-          v-if="component['__typename']=='ComponentProjectPartsCarousel'"
-        ></project-carousel>
+      <div v-for="(component, index) in deepFind(projects, '0.component')" :key="index"
+        class="body container bg_white py-3 mb-4">
+        <project-video :variables="component" class="my-3"
+          v-if="component['__typename'] == 'ComponentProjectPartsVideo'"></project-video>
+        <project-entity class="my-3" :variables="component"
+          v-if="component['__typename'] == 'ComponentProjectPartsEntity'"></project-entity>
+        <project-carousel class="my-3" :variables="component"
+          v-if="component['__typename'] == 'ComponentProjectPartsCarousel'"></project-carousel>
       </div>
     </section>
     <!-- Project footer section -->
-    <project-footer
-      :preview="deepFind(projects,'0.preview_link')"
-      :variables="deepFind(projects,'0.footer')"
-      class="mb-4"
-    ></project-footer>
+    <project-footer :preview="deepFind(projects, '0.preview_link')" :variables="deepFind(projects, '0.footer')"
+      class="mb-4"></project-footer>
   </div>
   <div v-else class="bg_lightGrey loading_page flex align_center center">
     <div class="load_spinner open_spinner"></div>
@@ -88,9 +73,9 @@ export default {
       fetchPolicy: "cache-first",
       query: projectQuery,
       variables() {
-        return { slug: this.$route.params.name, locale: this.$i18n.locale };
+        return { slug: this.$route.params.name, locale: "en" };//*** this.$i18n.locale*/
       },
-      watchLoading: function(isLoading) {
+      watchLoading: function (isLoading) {
         this.$nextTick(() => {
           if (this.$nuxt && this.$nuxt.$loading) {
             isLoading
@@ -112,6 +97,7 @@ section {
   border-radius: 9px;
   padding-right: 3rem !important;
   padding-left: 3rem !important;
+
   @media (max-width: 480px) {
     padding-right: 1rem !important;
     padding-left: 1rem !important;

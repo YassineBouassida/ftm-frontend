@@ -17,8 +17,10 @@ export const actions = {
     let quizz = app.$cookies.get('quizz');
     if (quizz) {
       let storeQuizz = await dispatch('calculator/fetchQuizzByUid', quizz.UID)
+      if (storeQuizz?.data?.quizzResults) {
+        app.$cookies.set('quizz', storeQuizz.data.quizzResults[0])
 
-      app.$cookies.set('quizz', storeQuizz.data.quizzResults[0])
+      }
     } else {
       const UID = getUID();
 
