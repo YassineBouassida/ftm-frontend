@@ -29,29 +29,88 @@
         </fBtn>
       </div>
       <!-- Right side and menu side <1024-->
-      <div class="right_side flex" :class="{opened:openMenu}">
+      <div class="right_side flex" :class="{opened:openMenu,collapsedMenu:smServicesMenu}">
         <close class="close_sign" :reverse="!openMenu" @click.native="openMenu=false"></close>
         <div class="links flex align_center center">
           <nuxt-link
             class="f_link mr-4"
             :to="localePath('/')"
-            @click.native="openMenu=false"
+            @click.native="openMenu=false;servicesDropdownOpen=false"
           >{{$t('header.links.home')}}</nuxt-link>
           <nuxt-link
             class="f_link mx-4"
             :to="localePath('/about')"
-            @click.native="openMenu=false"
+            @click.native="openMenu=false;servicesDropdownOpen=false"
           >{{$t('header.links.about')}}</nuxt-link>
           <nuxt-link
             class="f_link mx-4"
             :to="localePath('/projects')"
-            @click.native="openMenu=false"
+            @click.native="openMenu=false;servicesDropdownOpen=false"
           >{{$t('header.links.samples')}}</nuxt-link>
-          <nuxt-link
-            class="f_link ml-4"
-            :to="localePath('/services')"
-            @click.native="openMenu=false"
-          >{{$t('header.links.services')}}</nuxt-link>
+          <div
+            class="f_link ml-4 services_link flex align_center pointer"
+            @click="servicesClicked()"
+            @mouseenter="servicesMouseEntered"
+          >
+            {{$t('header.links.services')}}
+            <img
+              src="~/static/img/icons/arrow_right.png"
+              width="auto"
+              class="ml-1 desktop"
+              height="13px"
+              alt="arrow right"
+            />
+            <img
+              src="~/static/img/icons/white_arrow_left.png"
+              width="auto"
+              class="ml-1 mobile"
+              height="13px"
+              alt="arrow right"
+            />
+          </div>
+
+          <!-- *************************Services dropdown list******************** -->
+          <div
+            class="services_dropdown flex elevate_3"
+            v-if="servicesDropdownOpen"
+            @mouseleave="servicesDropdownOpen=false"
+          >
+            <div class="w-50 services_list">
+              <h1>{{$t('header.servicesDropDown')}}</h1>
+              <nuxt-link
+                tag="div"
+                v-for="(service, index) in services"
+                :key="index"
+                class="f_link pointer"
+                :class="{active_link:selectedService==index}"
+                :to="localePath(`/services/${service.slug}`)"
+                @click.native="openMenu=false;servicesDropdownOpen=false"
+                @mouseenter.native="selectedService=index"
+              >{{service.titleDisplay}}</nuxt-link>
+              <hr />
+              <nuxt-link
+                tag="div"
+                class="f_link pointer active_link"
+                :to="localePath(`/services`)"
+                @click.native="openMenu=false;servicesDropdownOpen=false"
+              >
+                <strong>{{$t('common.readMore')}}</strong>
+              </nuxt-link>
+            </div>
+            <div class="w-50 flex column space_between cover_display">
+              <div class="cover flex align_center center">
+                <img
+                  :src="api_url+deepFind(services,`${selectedService}.hero.image.url`)"
+                  :alt="deepFind(services,`${selectedService}.titleDisplay`)"
+                />
+              </div>
+              <div class="desc">
+                <p>{{deepFind(services,`${selectedService}.description`)|turncut(209)}}</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- ******************************************************************** -->
           <nuxt-link
             class="f_link ml-4 mobile"
             :to="localePath('/services')"
@@ -81,6 +140,7 @@
             >{{locale.text}}</a>
           </div>
         </div>
+
         <div class="flex social_part end">
           <fBtn
             external
@@ -111,10 +171,42 @@
           </fBtn>
         </div>
       </div>
+      <!-- Mobile and tablett  services menu -->
+      <div class="smServicesMenu" :class="{openedServiceMenu:smServicesMenu}">
+        <h2 class="text_primary pointer flex align_center" @click="smServicesMenu=false">
+          <img class="mr-2" src="~/static/img/icons/red_arrow_left.png" alt="red arrow left" /> Back
+        </h2>
+        <div class="services_list" v-if="smServicesMenu">
+          <h1>{{$t('header.servicesDropDown')}}</h1>
+          <nuxt-link
+            v-for="(service, index) in services"
+            :key="'s-'+index"
+            class="f_link pointer flex align_center"
+            :class="{active_link:selectedService==index}"
+            :to="localePath(`/services/${service.slug}`)"
+            @click.native="openMenu=false;servicesDropdownOpen=false"
+            @mouseenter.native="selectedService=index"
+          >
+            <div class="icon_box flex align_center center bg_primary mr-2">
+              <img :src="api_url+service.iconHover.url" alt="service icon " class="service_icon" />
+            </div>
+            {{service.titleDisplay}}
+          </nuxt-link>
+          <hr />
+          <nuxt-link
+            class="f_link pointer active_link flex pointer"
+            :to="localePath(`/services`)"
+            @click.native="openMenu=false;servicesDropdownOpen=false"
+          >
+            <strong>{{$t('common.readMore')}}</strong>
+          </nuxt-link>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 <script>
+import servicesQuery from "~/apollo/queries/header/services";
 export default {
   data() {
     return {
@@ -124,10 +216,32 @@ export default {
         { text: "EN", val: "en", icon: "en.svg" },
         { text: "FR", val: "fr", icon: "fr.svg" },
         { text: "AR", val: "ar", icon: "ar.svg" }
-      ]
+      ],
+      servicesDropdownOpen: false,
+      selectedService: 0,
+      smServicesMenu: false
     };
   },
-
+  apollo: {
+    services: {
+      fetchPolicy: "no-cache",
+      prefetch: false,
+      fetchPolicy: "cache-first",
+      query: servicesQuery,
+      variables() {
+        return { locale: this.$i18n.locale };
+      },
+      watchLoading: function(isLoading) {
+        this.$nextTick(() => {
+          if (this.$nuxt && this.$nuxt.$loading) {
+            isLoading
+              ? this.$nuxt.$loading.start()
+              : this.$nuxt.$loading.finish();
+          }
+        });
+      }
+    }
+  },
   watch: {
     $route: {
       handler: function(route) {
@@ -140,6 +254,32 @@ export default {
       },
       deep: true,
       immediate: true
+    },
+    openMenu: {
+      handler: function(val) {
+        if (!val) {
+          this.smServicesMenu = false;
+        }
+      },
+      deep: true,
+      immediate: false
+    }
+  },
+  methods: {
+    servicesClicked(e) {
+      let innerWidth = window.innerWidth;
+      if (innerWidth < 1025) {
+        this.smServicesMenu = true;
+      } else {
+        this.$router.push(this.localePath("/services"));
+        this.openMenu = false;
+        this.servicesDropdownOpen = false;
+      }
+    },
+    servicesMouseEntered() {
+      if (window.innerWidth > 1025) {
+        this.servicesDropdownOpen = true;
+      }
     }
   }
 };
@@ -149,6 +289,27 @@ export default {
   .social_btn {
     margin-left: 1rem !important;
     margin-right: 0rem !important;
+  }
+  .services_link {
+    flex-direction: row-reverse;
+  }
+  .services_dropdown {
+    .f_link {
+      margin: 0 !important;
+    }
+    left: auto;
+    right: -175px;
+    h1 {
+      margin-right: 1rem;
+      margin-left: 0;
+    }
+    .cover,
+    .desc {
+      margin-right: 2.5%;
+    }
+    hr {
+      margin-right: 1rem;
+    }
   }
   @media (min-width: 1025px) {
     .social_btn {
@@ -184,6 +345,9 @@ export default {
         height: 25px;
       }
     }
+  }
+  @media (max-width: 375px) {
+    min-width: 100px;
   }
 }
 .burger {
@@ -262,12 +426,19 @@ export default {
         top: 2rem;
         right: 2rem;
         transition: 2s all;
+        z-index: 99;
+        user-select: none;
+        cursor: pointer;
       }
     }
+  }
+  .services_link {
+    justify-content: center;
   }
 }
 
 .links {
+  position: relative;
   flex-grow: 1;
   .f_link {
     border-bottom: 2px solid transparent;
@@ -320,5 +491,111 @@ export default {
   border-radius: 0 0 9px 9px;
   transition: 0.5s all;
   z-index: 999;
+}
+.services_dropdown {
+  position: absolute;
+  align-items: center;
+  background: map-get($map: $colors, $key: white);
+  border-radius: 0 0 9px 9px;
+  transition: 0.5s all;
+  z-index: 999;
+  top: 100px;
+  box-shadow: 0 6px 35px rgba(0, 0, 0, 0.16);
+  left: -175px;
+  align-items: stretch;
+
+  @media (min-width: 1641px) {
+    width: 1568px !important;
+  }
+
+  @media (min-width: 1201px) and (max-width: 1640px) {
+    width: 1128px !important;
+  }
+
+  @media (min-width: 1025px) and (max-width: 1200px) {
+    width: 948px !important;
+  }
+  .services_list {
+    h1 {
+      margin-top: 1rem;
+      padding-left: 1rem;
+    }
+  }
+  hr {
+    width: 50%;
+    margin-left: 1rem;
+  }
+  .f_link {
+    padding: 0.5rem 1rem;
+    border: none;
+    &:hover {
+      border: none;
+    }
+    &.active_link {
+      color: map-get($map: $colors, $key: primary);
+    }
+  }
+  .cover_display {
+    padding: 1rem 0;
+  }
+  .cover,
+  .desc {
+    width: 95%;
+    margin-left: 2.5%;
+  }
+  .desc {
+    min-height: 150px;
+  }
+  .cover {
+    margin-top: 2rem;
+    background: #393535;
+
+    border-radius: 12px;
+    padding: 10px;
+    img {
+      max-height: 200px;
+    }
+  }
+}
+.collapsedMenu {
+  right: 80% !important;
+}
+.smServicesMenu {
+  position: fixed;
+  z-index: 201;
+  width: 0%;
+  height: 100%;
+  background: map-get($map: $colors, $key: white);
+  top: 0;
+  right: 0;
+  transition: 1s all;
+  overflow-x: hidden;
+  * {
+    visibility: hidden;
+  }
+  .f_link {
+    padding: 0.5rem 0;
+  }
+  .icon_box {
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0.5rem;
+    border-radius: 50%;
+    flex-shrink: 0;
+    .service_icon {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+}
+.openedServiceMenu {
+  width: 80%;
+  padding: 1rem;
+  * {
+    visibility: visible;
+    overflow: hidden;
+    flex-flow: nowrap;
+    white-space: nowrap;
+  }
 }
 </style>

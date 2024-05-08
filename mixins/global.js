@@ -17,11 +17,12 @@
    }
  };
  export default {
-     data() {
-         return {
-            api_url: process.env.strapiBaseUri,
-         }
-     },
+   data() {
+     return {
+       api_url: process.env.strapiBaseUri,
+       host: process.env.hostname
+     }
+   },
    methods: {
      deepFind
    },

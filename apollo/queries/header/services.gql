@@ -1,0 +1,21 @@
+# Write your query or mutation here
+query Service($locale: String) {
+  services(locale: $locale) {
+    locale
+      hero {
+     
+      image {
+        url
+      }
+    }
+    titleDisplay
+    id
+    
+    slug
+    description
+    iconHover {
+      url
+    }
+  }
+ 
+}

@@ -289,14 +289,36 @@ export default {
           hid: "keywords",
           name: "keywords",
           content: this.deepFind(this.pages, "0.seo.keywords")
-        }
+        },
+        {
+          hid: "og-title",
+          property: "og:title",
+          content: this.deepFind(this.pages, "0.seo.title")
+        },
+        {
+          hid: "og-desc",
+          property: "og:description",
+          content: this.deepFind(this.pages, "0.seo.description")
+        },
+        {
+          hid: "og-image",
+          property: "og:image",
+          content: this.api_url + this.deepFind(this.pages, "0.seo.cover.url")
+        },
+        {
+          hid: "og-url",
+          property: "og:url",
+          content: this.host + this.localePath("/")
+        },
+        { hid: "t-type", name: "twitter:card", content: "summary_large_image" }
       ]
     };
   },
   apollo: {
     services: {
       fetchPolicy: "no-cache",
-      prefetch: true,
+      prefetch: false,
+      fetchPolicy: "cache-first",
       query: servicesQuery,
       variables() {
         return { locale: this.$i18n.locale };
@@ -313,7 +335,8 @@ export default {
     },
     pages: {
       fetchPolicy: "no-cache",
-      prefetch: true,
+      prefetch: false,
+      fetchPolicy: "cache-first",
       query: pageQuery,
       variables() {
         return { slug: "home", locale: this.$i18n.locale };
@@ -329,7 +352,8 @@ export default {
       }
     },
     cases: {
-      prefetch: true,
+      prefetch: false,
+      fetchPolicy: "cache-first",
       query: casesQuery,
       variables() {
         return { locale: this.$i18n.locale };

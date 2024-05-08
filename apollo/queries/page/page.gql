@@ -5,6 +5,10 @@ query Pages($locale:String!,$slug:String!) {
       title
       description
       keywords
+      
+      cover{
+        url
+      }
       __typename
     }
     url

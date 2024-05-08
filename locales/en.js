@@ -6,12 +6,13 @@ export default {
       p2: "Whether you’re a small business or a large corporation, we look forward to working with you on your next creative endeavor",
       btn: "Contact us"
     },
-    error:{
-      oops:"Oops",
-      sthg:"Something went wrong",
-      noWorries:"Don't worry, we are here to help",
-      link:"Home page",
-    }
+    error: {
+      oops: "Oops",
+      sthg: "Something went wrong",
+      noWorries: "Don't worry, we are here to help",
+      link: "Home page",
+    },
+    readMore: "Read more",
   },
   "footer": {
     "links": {
@@ -45,8 +46,11 @@ export default {
       "home": "Home",
       "about": "About",
       "samples": "Samples",
-      "services": "Services"
+      "services": "Services",
+      "privacy": "Privacy policy",
+
     },
+    "servicesDropDown": "FTM main services",
     "btn": "GET A QUOTE"
   },
   "home": {
@@ -94,13 +98,13 @@ export default {
     },
     "how": {
       "h2": "How do we accomplish it?",
-        "coctail":"A cocktail of skills",
-         "exp":"Experienced team",
-      "full":"Full-service",
-      "high":"High quality service",
-      "exp_desc":"We focus on bringing value to our customers and on helping them succeed in the marketplace.",
-      "full_desc":"We are committed to support you over the long terms: before, during and after the entire software development process.",
-      "high_desc":"You take advantage of our experiences, high quality IT solutions, and the most exciting experience with a long term partner."
+      "coctail": "A cocktail of skills",
+      "exp": "Experienced team",
+      "full": "Full-service",
+      "high": "High quality service",
+      "exp_desc": "We focus on bringing value to our customers and on helping them succeed in the marketplace.",
+      "full_desc": "We are committed to support you over the long terms: before, during and after the entire software development process.",
+      "high_desc": "You take advantage of our experiences, high quality IT solutions, and the most exciting experience with a long term partner."
     },
     "spark": {
       "h1": "Fiction To Mission - Corporate Success Assured",
@@ -169,7 +173,7 @@ export default {
     "projectList": {
       h1: "Projects made with love",
       p: "Our portfolio crosses the Tunisian borders. Get to know a collection of our favorite projects that we have proudly made with love. We cannot wait to start what can be done.",
-      view:"View project"
+      view: "View project"
     },
     features: {
       time: {
@@ -184,9 +188,9 @@ export default {
     },
 
   },
-  projectDetails:{
-    getQuote:"Get a Quote",
-    live:"Live preview"
+  projectDetails: {
+    getQuote: "Get a Quote",
+    live: "Live preview"
   },
   services: {
     hero: {
@@ -197,9 +201,9 @@ export default {
     whyUs: {
       h1: "WHY WORK WITH US",
       p: "n order to maximize their benefits, clients from the entire world collaborate with us because of our",
-      precission:"PRECESSION",
-      team:"TEAM-MANAGEMENT",
-      perfection:"PERFECTION"
+      precission: "PRECESSION",
+      team: "TEAM-MANAGEMENT",
+      perfection: "PERFECTION"
     },
     promises: {
       h1: "Our Promise",
@@ -208,24 +212,24 @@ export default {
       h3_2: " FTM",
       h3_3: "in numbers:",
 
-      years:"YEARS OF <br> EXPERIENCE",
-      projects:"PROJECTS <br> COMPLETED",
-      cups:"CUPS OF <br> COFFEE"
+      years: "YEARS OF <br> EXPERIENCE",
+      projects: "PROJECTS <br> COMPLETED",
+      cups: "CUPS OF <br> COFFEE"
     },
     industries: {
       h1: "Industry experience",
       p: "FTM’s clients range in size, fields and countries. But we love designing for smaller companies and facilitating their successful navigation in a competitive multi-national marketplace. Check out some of the fileds we’ve had the pleasure of working in:",
-      list:{
-        consultancy:"Consultancy" ,
-        ecomerce:"E-commerce" ,
-        educ:"Education" ,
-        fintech:"Fintech" ,
-        health:"Health care" ,
-        it:"IT services" ,
-        realestate:"Real estate" ,
-        retail:"Retail" ,
-        social:"Social media" ,
-        startup:"Start-ups" ,
+      list: {
+        consultancy: "Consultancy",
+        ecomerce: "E-commerce",
+        educ: "Education",
+        fintech: "Fintech",
+        health: "Health care",
+        it: "IT services",
+        realestate: "Real estate",
+        retail: "Retail",
+        social: "Social media",
+        startup: "Start-ups",
       }
     },
     knowledge: {
@@ -238,28 +242,28 @@ export default {
       }
     }
   },
-  serviceDetails:{
-    cycle:{
-      h2:"Get a Quote",
-    
+  serviceDetails: {
+    cycle: {
+      h2: "Get a Quote",
+
     },
-    techs:{
-      h2:'Technologies'
+    techs: {
+      h2: 'Technologies'
     },
-    why:{
-      h2:'WHY-FTM?'
+    why: {
+      h2: 'WHY-FTM?'
     },
-    pack:{
-      u:'Do you have any special requirements?',
-      h3:'View Samples'
+    pack: {
+      u: 'Do you have any special requirements?',
+      h3: 'View Samples'
     },
-    faqs:{
-      h1:'Frequently Asked Questions',
-      
+    faqs: {
+      h1: 'Frequently Asked Questions',
+
     },
-    related:{
-      h1:'We offer you more',
-      h2:'We can help you in many other ways'
+    related: {
+      h1: 'We offer you more',
+      h2: 'We can help you in many other ways'
     }
 
   },

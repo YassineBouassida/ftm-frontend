@@ -28,7 +28,7 @@
       <p
         class="subheading"
         :style="{visibility:!(serviceHovered||alwaysActive)?'hidden':'visible'}"
-      >{{desc}}</p>
+      >{{desc|turncut(209)}}</p>
     </div>
     <div class="s_footer txt_right flex align_center end">
       <nuxt-link
@@ -38,7 +38,12 @@
       >
         <span class="text_white">{{$t('services.knowledge.readMore')}}</span>
         <span class="circle_load flex align_center center ml-2">
-          <img src="~static/img/icons/feather-arrow-right.png" alt="right arrow" width="auto" height="auto" />
+          <img
+            src="~static/img/icons/feather-arrow-right.png"
+            alt="right arrow"
+            width="auto"
+            height="auto"
+          />
         </span>
       </nuxt-link>
     </div>

@@ -11,7 +11,8 @@ export default {
       sthg: "Quelque chose s'est mal passé",
       noWorries: "Ne vous inquiétez pas, nous sommes là pour vous aider",
       link: "Accueil",
-    }
+    },
+    readMore: "En savoir plus",
   },
   "footer": {
     "links": {
@@ -46,15 +47,17 @@ export default {
       "about": "A propos",
       "samples": "Projets",
       "services": "Services",
-      "privacy": "Politique de confidentialité"
+      "privacy": "Politique de confidentialité",
+     
     },
+    "servicesDropDown":"Nos principaux services",
     "btn": "OBTENIR UN DEVIS"
   },
   "home": {
     "hero": {
       "heroText1": "Montée en flèche",
       "heroText2": "votre entreprise",
-      "heroText3": "",
+      "heroText3": " ",
       "h3": "Votre entreprise souffre-t-elle d'un faible trafic organique, d'une moindre fidélisation de l'audience, d'un faible taux de conversion et d'un nombre insuffisant de prospects ?",
       "h2": "FTM vous guide à travers le processus de croissance systématique axé en fin de compte sur la réalisation de ventes optimales.",
       "btn": "Obtenez plus de prospects"

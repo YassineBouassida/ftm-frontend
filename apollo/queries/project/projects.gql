@@ -11,6 +11,9 @@ query Project($locale:String) {
         url
         previewUrl
       }
+      cover_sm{
+        url
+      }
       
       title
       

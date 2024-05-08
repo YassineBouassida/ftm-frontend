@@ -11,11 +11,7 @@ export default {
         name: 'viewport',
         content: 'width=device-width, initial-scale=1,maximum-scale=1.0, user-scalable=no'
       },
-      {
-        hid: 'description',
-        name: 'description',
-        content: ''
-      },
+     
       {
         name: 'format-detection',
         content: 'telephone=no'
@@ -88,9 +84,12 @@ export default {
   //     }
   //   }
   // },
+
   env: {
-    strapiBaseUri: process.env.NODE_ENV == 'production' ? process.env.API_URL : "http://localhost:1337",
+    strapiBaseUri: process.env.NODE_ENV == 'production' ? process.env.API_URL : "http://127.0.0.1:1337",
     hostname: process.env.NODE_ENV == 'production' ? process.env.HOST_URL : "http://localhost:3000",
+    SITE_KEY: '6LeNc_MfAAAAAGyoaNTh2WbEzF-cRRLWOFwl0gK3',
+    SECRET_KEY: '6LeNc_MfAAAAAGwBnUC215GHKRkmU20wCfyDfpql'
   },
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: ["~static/css/global.css"],
@@ -99,7 +98,7 @@ export default {
   plugins: [{
     src: '~/plugins/vue-fb-customer-chat.js',
     ssr: false
-  }],
+  }, '~/plugins/string-cutter.js'],
   loading: {
     color: '#E02B2B',
     height: '3px'
@@ -131,6 +130,8 @@ export default {
   },
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    'nuxt-ssr-cache',
+    '@nuxtjs/recaptcha',
     ['@nuxtjs/google-analytics', {
       id: 'UA-211276768-1'
     }],
@@ -211,6 +212,41 @@ export default {
 
 
   ],
+  cache: {
+
+    useHostPrefix: false,
+    pages: [
+      // these are prefixes of pages that need to be cached
+      // if you want to cache all pages, just include '/'
+      '/',
+
+    ],
+
+    key(route, context) {
+      // custom function to return cache key, when used previous
+      // properties (useHostPrefix, pages) are ignored. return 
+      // falsy value to bypass the cache
+    },
+
+    store: {
+      type: 'memory',
+
+      // maximum number of pages to store in memory
+      // if limit is reached, least recently used page
+      // is removed.
+      max: 100,
+
+      // number of seconds to store this page in cache
+      ttl: 60,
+    },
+  },
+  //Recaptcha
+  recaptcha: {
+    /* reCAPTCHA options */
+    hideBadge: false,
+    siteKey: '6LeNc_MfAAAAAGyoaNTh2WbEzF-cRRLWOFwl0gK3',
+    version: 3,
+  },
   //Sitemap
   sitemap: {
     hostname: 'https://fictiontomission.com',

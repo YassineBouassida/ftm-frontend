@@ -22,8 +22,8 @@
     <!-- Seo and how it works -->
     <section class="seo_hiw container py-3 bg_white my-3">
       <article class="my-5 pb-5 flex align_center space_between seo_part">
-        <div>
-          <h3 class="txt_right my-2">SEO and marketing strategy</h3>
+        <div class="strategy_container">
+          <h3 class="txt_right my-2 strategy_text">SEO and marketing strategy</h3>
           <div class="strategy_img pa-3 flex align_center center">
             <img src="~static/img/calculator/strategy@2x.png" alt="marketing strategy" />
           </div>
@@ -58,7 +58,7 @@
       <article class="how_it_works my-5">
         <h1>Find out how our calculator works</h1>
         <p>A common question web design companies get asked is “are there any monthly costs for my website?” the answer is yes. You will have to pay a nominal fee for hosting on a monthly basis. You will also have to pay for your domain name, however this can be purchased on a yearly basis – or you can pay up front for 5 years. Buying your domain name for an extended period of time usually works out cheaper so most business owners do that.</p>
-        <div class="flex align_center space_between my-5">
+        <div class="flex align_center space_between my-5 steps_container">
           <div class="txt_center steps flex column align_center w-30">
             <img src="~static/img/calculator/steps.svg" alt="Calculator steps" />
             <h2 class="mt-4">10 steps</h2>
@@ -131,7 +131,7 @@ export default {
   margin-bottom: 1rem;
   border-radius: 9px;
   .image {
-    background-image: url("~static/img/calculator/Process@2x.png");
+    background-image: url("~static/img/calculator/Process.png");
     width: 100%;
     height: 320px;
     background-size: cover;
@@ -180,6 +180,88 @@ export default {
         transition: 0.5s all;
         min-height: 6rem;
       }
+    }
+  }
+}
+@media (max-width: 1600px) {
+  .hero {
+    .hero_text {
+      font-size: 2.8rem;
+    }
+    .image {
+      background-image: url("~static/img/calculator/Calculator-m.png");
+      padding: 1.5rem !important;
+    }
+  }
+}
+@media (max-width: 1200px) {
+  .seo_part {
+    flex-wrap: wrap;
+    justify-content: center;
+    .strategy_text {
+      display: none;
+    }
+    .strategy_container,
+    .strategy_img {
+      width: 100%;
+    }
+    .seo_text {
+      width: 100% !important;
+      text-align: center;
+      margin-top: 2rem;
+
+      .seo_actions {
+        justify-content: center;
+      }
+    }
+  }
+
+  .how_it_works {
+    text-align: center;
+  }
+}
+@media (max-width: 1024px) {
+  .hero {
+    .hero_text {
+      font-size: 2.8rem;
+    }
+    .image {
+      background-image: url("~static/img/calculator/Calculator-s.png");
+      background-position: right;
+    }
+  }
+  .steps_container {
+    flex-wrap: wrap;
+    .steps {
+      width: 100% !important;
+      margin-bottom: 1.5rem;
+    }
+  }
+}
+@media (max-width: 767px) {
+  .hero {
+    text-align: center;
+    .hero_text {
+      text-align: center;
+      width: 100%;
+    }
+    .image {
+      background-image: url("~static/img/calculator/Calculator-s.png");
+      background-position: bottom right;
+      height: 380px;
+      align-items: flex-start;
+    }
+  }
+  .calc_widget {
+    padding: 1rem !important;
+    &::v-deep img {
+      max-width: 90%;
+    }
+  }
+
+  .strategy_img {
+    img {
+      max-width: 90%;
     }
   }
 }

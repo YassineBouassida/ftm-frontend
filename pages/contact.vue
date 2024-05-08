@@ -7,21 +7,18 @@
           <img width="auto" height="auto" src="~static/img/contact/hero.svg" alt="hero" />
         </div>
         <div class="desc w-50 flex column center">
-          <h1 class="hero_text mb-3" >{{$t('contact.hero.heroText1')}}</h1>
+          <h1 class="hero_text mb-3">{{$t('contact.hero.heroText1')}}</h1>
           <div class="flex align_center">
             <div class="separator bg_primary relative mr-3"></div>
-            <h1 class="text_right" >{{$t('contact.hero.heroText2')}}</h1>
+            <h1 class="text_right">{{$t('contact.hero.heroText2')}}</h1>
           </div>
         </div>
       </div>
       <div class="hero_content">
         <div class="container flex end align_center fill_height">
           <div class="w-50">
-            <h1 class="text_white txt_right" >{{$t('contact.hero.h1')}}</h1>
-            <p
-              class="text_white txt_right"
-              
-            >{{$t('contact.hero.p')}}</p>
+            <h1 class="text_white txt_right">{{$t('contact.hero.h1')}}</h1>
+            <p class="text_white txt_right">{{$t('contact.hero.p')}}</p>
           </div>
         </div>
       </div>
@@ -30,15 +27,13 @@
     <section class="bg_lightGrey">
       <div class="contact_form container bg_white relative">
         <div class="c_head w-50">
-          <h1 >{{$t('contact.form.h1')}}</h1>
-          <p
-            
-          >{{$t('contact.form.p')}}</p>
+          <h1>{{$t('contact.form.h1')}}</h1>
+          <p>{{$t('contact.form.p')}}</p>
         </div>
         <div class="c_body flex">
           <div class="form_contact w-50">
             <div class="cellule">
-              <h2 >{{$t('contact.form.coord.contact')}}</h2>
+              <h2>{{$t('contact.form.coord.contact')}}</h2>
               <h3 class="mt-2 text_primary">
                 <a
                   href="mailto:contact@fictiontomission.com"
@@ -47,7 +42,7 @@
               </h3>
             </div>
             <div class="cellule mt-2">
-              <h2 >{{$t('contact.form.coord.address')}}</h2>
+              <h2>{{$t('contact.form.coord.address')}}</h2>
               <h3 class="mt-2 text_primary">
                 <a
                   href="https://g.page/fictiontomission?share"
@@ -62,7 +57,7 @@
               </h3>
             </div>
             <div class="cellule mt-2">
-              <h2 >{{$t('contact.form.coord.phone')}}</h2>
+              <h2>{{$t('contact.form.coord.phone')}}</h2>
               <h3 class="mt-2 text_primary">
                 <a class="text_primary" href="tel:+216 92 24 33 33">(+216) 92 10 13 33</a>
                 <br />
@@ -87,7 +82,7 @@
               v-model="form.email"
               iType="email"
               class="my-2"
-              :label="$t('contact.form.name.label')"
+              :label="$t('contact.form.email.label')"
               required
               placeholder="email@company.com"
               data-field="input"
@@ -178,7 +173,7 @@
               ref="subject"
             ></base-input>
             <div class="flex align_center center mt-2" v-if="checkForm">
-              <h4 class="text_primary" >Please check required fields</h4>
+              <h4 class="text_primary">Please check required fields</h4>
             </div>
             <div class="flex align_center end mt-4">
               <fBtn
@@ -186,7 +181,7 @@
                 @click.native="submitForm"
                 class="call_to_action bg_primary f_link text_white"
               >
-                <h3 class="text_white px-5 w-40" >{{$t('contact.form.btn')}}</h3>
+                <h3 class="text_white px-5 w-40">{{$t('contact.form.btn')}}</h3>
               </fBtn>
             </div>
           </form>
@@ -244,128 +239,177 @@ export default {
         total: 6
       },
       industries: [
-        { text: this.$t('contact.form.industry.industries.select'), val: "" },
+        { text: this.$t("contact.form.industry.industries.select"), val: "" },
         {
-          text: this.$t('contact.form.industry.industries.accounting'),
+          text: this.$t("contact.form.industry.industries.accounting"),
           val: "Accounting and Finance"
         },
         {
-          text: this.$t('contact.form.industry.industries.admin'),
+          text: this.$t("contact.form.industry.industries.admin"),
           val: "Administrative and Clerical"
         },
-        { text: this.$t('contact.form.industry.industries.construction'), val: "Construction" },
         {
-         text: this.$t('contact.form.industry.industries.creative'),
+          text: this.$t("contact.form.industry.industries.construction"),
+          val: "Construction"
+        },
+        {
+          text: this.$t("contact.form.industry.industries.creative"),
           val: "Creative and Design"
         },
         {
-         text: this.$t('contact.form.industry.industries.customer'),
+          text: this.$t("contact.form.industry.industries.customer"),
           val: "Customer Service"
         },
-        {text: this.$t('contact.form.industry.industries.education'), val: "Education" },
         {
-          text: this.$t('contact.form.industry.industries.energy'),
+          text: this.$t("contact.form.industry.industries.education"),
+          val: "Education"
+        },
+        {
+          text: this.$t("contact.form.industry.industries.energy"),
           val: "Energy and Utilities"
         },
-        { text: this.$t('contact.form.industry.industries.engineer'), val: "Engineering" },
-        { text: this.$t('contact.form.industry.industries.financial'), val: "Financial Services" },
-        { text: this.$t('contact.form.industry.industries.health'), val: "Healthcare" },
-        { text: this.$t('contact.form.industry.industries.hospitality'), val: "Hospitality" },
-        { text: this.$t('contact.form.industry.industries.it'), val: "IT" },
-        { text: this.$t('contact.form.industry.industries.labor'), val: "Labor" },
-        { text: this.$t('contact.form.industry.industries.legal'), val: "Legal" },
         {
-          text: this.$t('contact.form.industry.industries.maintenance'),
+          text: this.$t("contact.form.industry.industries.engineer"),
+          val: "Engineering"
+        },
+        {
+          text: this.$t("contact.form.industry.industries.financial"),
+          val: "Financial Services"
+        },
+        {
+          text: this.$t("contact.form.industry.industries.health"),
+          val: "Healthcare"
+        },
+        {
+          text: this.$t("contact.form.industry.industries.hospitality"),
+          val: "Hospitality"
+        },
+        { text: this.$t("contact.form.industry.industries.it"), val: "IT" },
+        {
+          text: this.$t("contact.form.industry.industries.labor"),
+          val: "Labor"
+        },
+        {
+          text: this.$t("contact.form.industry.industries.legal"),
+          val: "Legal"
+        },
+        {
+          text: this.$t("contact.form.industry.industries.maintenance"),
           val: "Maintenance and Repair"
         },
-        { text: this.$t('contact.form.industry.industries.management'), val: "Management" },
         {
-          text: this.$t('contact.form.industry.industries.manufactur'),
+          text: this.$t("contact.form.industry.industries.management"),
+          val: "Management"
+        },
+        {
+          text: this.$t("contact.form.industry.industries.manufactur"),
           val: "Manufacturing and Industrial"
         },
         {
-          text: this.$t('contact.form.industry.industries.marketing'),
+          text: this.$t("contact.form.industry.industries.marketing"),
           val: "Marketing and Advertising"
         },
-        { text: this.$t('contact.form.industry.industries.pharma'), val: "" },
+        { text: this.$t("contact.form.industry.industries.pharma"), val: "" },
         {
-          text: this.$t('contact.form.industry.industries.production'),
+          text: this.$t("contact.form.industry.industries.production"),
           val: "Production Animation Agency"
         },
         {
-          text: this.$t('contact.form.industry.industries.professional'),
+          text: this.$t("contact.form.industry.industries.professional"),
           val: "Professional"
         },
         {
-          text: this.$t('contact.form.industry.industries.restau'),
+          text: this.$t("contact.form.industry.industries.restau"),
           val: "Restaurant and Food Service"
         },
         {
-          text: this.$t('contact.form.industry.industries.retail'),
+          text: this.$t("contact.form.industry.industries.retail"),
           val: "Retail"
         },
         {
-          text: this.$t('contact.form.industry.industries.saas'),
+          text: this.$t("contact.form.industry.industries.saas"),
           val: "SaaS"
         },
         {
-          text: this.$t('contact.form.industry.industries.sales'),
+          text: this.$t("contact.form.industry.industries.sales"),
           val: "Sales"
         },
         {
-          text: this.$t('contact.form.industry.industries.security'),
+          text: this.$t("contact.form.industry.industries.security"),
           val: "Security"
         },
         {
-          text: this.$t('contact.form.industry.industries.telecom'),
+          text: this.$t("contact.form.industry.industries.telecom"),
           val: "Telecommunications"
         },
         {
-          text: this.$t('contact.form.industry.industries.transport'),
+          text: this.$t("contact.form.industry.industries.transport"),
           val: "Transportation"
         },
         {
-          text: this.$t('contact.form.industry.industries.warehouse'),
+          text: this.$t("contact.form.industry.industries.warehouse"),
           val: "Warehouse"
         }
       ],
       positions: [
-        { text: this.$t('contact.form.job.positions.select'), val: "" },
-        {text: this.$t('contact.form.job.positions.ceo'), val: "CEO" },
+        { text: this.$t("contact.form.job.positions.select"), val: "" },
+        { text: this.$t("contact.form.job.positions.ceo"), val: "CEO" },
         {
-          text: this.$t('contact.form.job.positions.marketing'),
+          text: this.$t("contact.form.job.positions.marketing"),
           val: "Marketing"
         },
-        { text: this.$t('contact.form.job.positions.operations'), val: "Operations" },
-        { text: this.$t('contact.form.job.positions.financial'), val: "Financial" },
-        { text: this.$t('contact.form.job.positions.production'), val: "Production" },
         {
-          text: this.$t('contact.form.job.positions.otherMarketing'),
+          text: this.$t("contact.form.job.positions.operations"),
+          val: "Operations"
+        },
+        {
+          text: this.$t("contact.form.job.positions.financial"),
+          val: "Financial"
+        },
+        {
+          text: this.$t("contact.form.job.positions.production"),
+          val: "Production"
+        },
+        {
+          text: this.$t("contact.form.job.positions.otherMarketing"),
           val: "Other Marketing Position"
         },
-        { text: this.$t('contact.form.job.positions.student'), val: "Student" },
-        { text: this.$t('contact.form.job.positions.other'), val: "Other" }
+        { text: this.$t("contact.form.job.positions.student"), val: "Student" },
+        { text: this.$t("contact.form.job.positions.other"), val: "Other" }
       ]
     };
   },
+  async mounted() {
+    try {
+      await this.$recaptcha.init();
+    } catch (e) {
+      console.log(e);
+    }
+  },
 
   methods: {
-    submitForm() {
+    async submitForm() {
       if (this.verifyForm()) {
-        this.$apollo.mutate({
-          mutation: createMessage,
-          variables: {
-            ...this.form
-          },
-          update: (cache, { data: { message } }) => {
-            // Read the data from our cache for this query.
-            // eslint-disable-next-line
-            console.log(message);
-          }
-        });
-        this.emptyErrors();
-        this.emptyForm();
-        this.checkForm = false;
+        try {
+          const token = await this.$recaptcha.execute("login");
+          console.log("ReCaptcha token:", token);
+          this.$apollo.mutate({
+            mutation: createMessage,
+            variables: {
+              ...this.form
+            },
+            update: (cache, { data: { message } }) => {
+              // Read the data from our cache for this query.
+              // eslint-disable-next-line
+              console.log(message);
+            }
+          });
+          this.emptyErrors();
+          this.emptyForm();
+          this.checkForm = false;
+        } catch (error) {
+          console.log("Login error:", error);
+        }
       } else {
         this.checkForm = true;
       }

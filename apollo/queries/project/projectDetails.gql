@@ -63,7 +63,9 @@ query Project($locale: String!, $slug: String!) {
       title
       description
       keywords
-      
+      cover{
+        url
+      }
     }
     component {
       ... videoPart
@@ -106,6 +108,7 @@ query Project($locale: String!, $slug: String!) {
           url
           previewUrl
         }
+        description
         iframe
         iframe_link
       }

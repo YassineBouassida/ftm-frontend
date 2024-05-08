@@ -42,6 +42,8 @@
     </div>
   </div>
   <div class="video relative" v-else @mouseenter="hovered=true" @mouseleave="hovered=false">
+     <h2 class="mb-3" v-html="deepFind(variables,'title')"></h2>
+    <p class="mb-3" v-html="deepFind(variables,'description')"></p>
     <iframe
       width="560"
       height="315"

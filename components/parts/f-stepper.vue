@@ -1,5 +1,5 @@
 <template>
-  <div class="steps">
+  <div class="steps" v-if="steps">
     <!-- ***************Only on desktop************** -->
     <div class="desktop steps_head flex center">
       <div
@@ -41,7 +41,12 @@
           >
             <div class="step_btn elevate_2 bg_white flex align_center center relative">
               <div class="circle_deco"></div>
-              <img width="auto" height="auto" :src="api_url+deepFind(step, 'iconHover.url')" :alt="step.title" />
+              <img
+                width="auto"
+                height="auto"
+                :src="api_url+deepFind(step, 'iconHover.url')"
+                :alt="step.title"
+              />
             </div>
           </div>
           <template #customPaging>

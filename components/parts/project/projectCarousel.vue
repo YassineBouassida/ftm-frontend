@@ -2,7 +2,6 @@
   <div class="caroussel w-100" v-if="variables">
     <h2 class="mb-3" v-html="deepFind(variables,'title')"></h2>
     <p class="mb-3" v-html="deepFind(variables,'desc')"></p>
-    <h3 class="mb-3" v-html="deepFind(variables,'subTitle')"></h3>
 
     <VueSlickCarousel
       @beforeChange="beforeSlideChange"
@@ -28,9 +27,16 @@
         </div>
       </template>
     </VueSlickCarousel>
-    <div class="my-3">
+    <div class="my-4 slide_desc">
       <h2 class="text_primary" v-html="deepFind(variables,'carouselItem.'+activeSlide+'.title')"></h2>
       <p class="my-2" v-html="deepFind(variables,'carouselItem.'+activeSlide+'.description')"></p>
+    </div>
+    <div
+      class="my-4 second_desc pt-4"
+      v-if="deepFind(variables,'subTitle')||deepFind(variables,'description')"
+    >
+      <h3 class="mb-3" v-html="deepFind(variables,'subTitle')"></h3>
+      <p class="mb-3" v-html="deepFind(variables,'description')"></p>
     </div>
   </div>
   <div v-else class="bg_lightGrey loading_page flex align_center center">
@@ -117,6 +123,9 @@ export default {
 </script>
 <style lang="scss" scoped>
 .caroussel {
+  .second_desc {
+    border-top: 1px solid #606060;
+  }
   .caroussel_item {
     max-width: 300px;
     transition: 1s all;
@@ -163,11 +172,17 @@ export default {
         left: calc(5% - 1.4rem);
       }
     }
+    @media (max-width: 480px) {
+      display: none;
+    }
   }
   @media (max-width: 1024px) {
     .caroussel_item {
       max-width: 100%;
       margin: 0 !important;
+    }
+    .slide_desc {
+      margin-top: 48px !important;
     }
     .next_arrow {
       right: -2rem !important ;
