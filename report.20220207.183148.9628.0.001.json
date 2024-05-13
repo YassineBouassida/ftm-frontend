@@ -300,7 +300,7 @@
     "=C:": "C:\\Users\\yassine\\Documents\\work\\tunisia\\FTM\\website",
     "ALLUSERSPROFILE": "C:\\ProgramData",
     "ANDROID_HOME": "C:\\Android\\android-sdk",
-    "API_URL": "https://server.fictiontomission.com",
+    "API_URL": "https://server.fiction-to-mission.com",
     "APPDATA": "C:\\Users\\yassine\\AppData\\Roaming",
     "ChocolateyInstall": "C:\\ProgramData\\chocolatey",
     "ChocolateyLastPathUpdate": "132692274193999982",
@@ -322,7 +322,7 @@
     "HOME": "C:\\Users\\yassine",
     "HOMEDRIVE": "C:",
     "HOMEPATH": "\\Users\\yassine",
-    "HOST_URL": "https://fictiontomission.com",
+    "HOST_URL": "https://fiction-to-mission.com",
     "INIT_CWD": "C:\\Users\\yassine\\Documents\\work\\tunisia\\FTM\\website",
     "INTEL_DEV_REDIST": "C:\\Program Files (x86)\\Common Files\\Intel\\Shared Libraries\\",
     "JAVA_HOME": "C:\\Program Files\\Java\\jdk1.8.0_211",
@@ -385,7 +385,7 @@
     "VUE_ENV": "server",
     "windir": "C:\\WINDOWS",
     "_applied": "true",
-    "_AXIOS_BASE_URL_": "https://server.fictiontomission.com"
+    "_AXIOS_BASE_URL_": "https://server.fiction-to-mission.com"
   },
   "sharedObjects": [
     "C:\\Program Files\\nodejs\\node.exe",

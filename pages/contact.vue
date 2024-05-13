@@ -35,21 +35,14 @@
             <div class="cellule">
               <h2>{{$t('contact.form.coord.contact')}}</h2>
               <h3 class="mt-2 text_primary">
-                <a
-                  href="mailto:contact@fictiontomission.com"
-                  class="text_primary"
-                >contact@fictiontomission.com</a>
+                <a href="mailto:contact@fiction-to-mission.com" class="text_primary">contact@fiction-to-mission.com</a>
               </h3>
             </div>
             <div class="cellule mt-2">
               <h2>{{$t('contact.form.coord.address')}}</h2>
               <h3 class="mt-2 text_primary">
-                <a
-                  href="https://g.page/fictiontomission?share"
-                  class="text_primary"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <a href="https://g.page/fictiontomission?share" class="text_primary" target="_blank"
+                  rel="noopener noreferrer">
                   St. Hédi Nouira,Sfax El Jadida,
                   <br />imm Fourat 3ème étage App. N°306,
                   <br />Sfax, 3027, Tunisia.
@@ -66,121 +59,39 @@
             </div>
           </div>
           <form class="w-50" @submit.prevent>
-            <base-input
-              v-model="form.name"
-              iType="text"
-              data-field="input"
-              class="my-2"
-              :label="$t('contact.form.name.label')"
-              required
-              :placeholder="$t('contact.form.name.placeholder')"
-              :error="errors.name"
-              @errorField="errors.name=$event;"
-              ref="name"
-            ></base-input>
-            <base-input
-              v-model="form.email"
-              iType="email"
-              class="my-2"
-              :label="$t('contact.form.email.label')"
-              required
-              placeholder="email@company.com"
-              data-field="input"
-              :error="errors.email"
-              @errorField="errors.email=$event"
-              ref="email"
-            ></base-input>
-            <base-input
-              v-model="form.company"
-              iType="text"
-              data-field="input"
-              class="my-2"
-              :label="$t('contact.form.company.label')"
-              required
-              :placeholder="$t('contact.form.company.placeholder')"
-              :error="errors.company"
-              @errorField="errors.company=$event"
-              ref="company"
-            ></base-input>
-            <base-input
-              v-model="form.phone"
-              iType="number"
-              class="my-2"
-              :label="$t('contact.form.phone.label')"
-              required
-              :placeholder="$t('contact.form.phone.placeholder')"
-              data-field="input"
-              :error="errors.phone"
-              @errorField="errors.phone=$event"
-              ref="phone"
-            ></base-input>
-            <base-input
-              v-model="form.budget"
-              iType="text"
-              class="my-2"
-              :label="$t('contact.form.budget.label')"
-              required
-              :placeholder="$t('contact.form.budget.placeholder')"
-              data-field="input"
-              :error="errors.budget"
-              @errorField="errors.budget=$event"
-              ref="budget"
-            ></base-input>
-            <base-input
-              v-model="form.job"
-              class="my-2"
-              data-field="select"
-              :options="positions"
-              :label="$t('contact.form.job.label')"
-              placeholder="Please select"
-              :error="errors.job"
-              @errorField="errors.job=$event"
-              ref="job"
-            ></base-input>
+            <base-input v-model="form.name" iType="text" data-field="input" class="my-2"
+              :label="$t('contact.form.name.label')" required :placeholder="$t('contact.form.name.placeholder')"
+              :error="errors.name" @errorField="errors.name=$event;" ref="name"></base-input>
+            <base-input v-model="form.email" iType="email" class="my-2" :label="$t('contact.form.email.label')" required
+              placeholder="email@company.com" data-field="input" :error="errors.email" @errorField="errors.email=$event"
+              ref="email"></base-input>
+            <base-input v-model="form.company" iType="text" data-field="input" class="my-2"
+              :label="$t('contact.form.company.label')" required :placeholder="$t('contact.form.company.placeholder')"
+              :error="errors.company" @errorField="errors.company=$event" ref="company"></base-input>
+            <base-input v-model="form.phone" iType="number" class="my-2" :label="$t('contact.form.phone.label')" required
+              :placeholder="$t('contact.form.phone.placeholder')" data-field="input" :error="errors.phone"
+              @errorField="errors.phone=$event" ref="phone"></base-input>
+            <base-input v-model="form.budget" iType="text" class="my-2" :label="$t('contact.form.budget.label')" required
+              :placeholder="$t('contact.form.budget.placeholder')" data-field="input" :error="errors.budget"
+              @errorField="errors.budget=$event" ref="budget"></base-input>
+            <base-input v-model="form.job" class="my-2" data-field="select" :options="positions"
+              :label="$t('contact.form.job.label')" placeholder="Please select" :error="errors.job"
+              @errorField="errors.job=$event" ref="job"></base-input>
 
-            <base-input
-              v-model="form.deadline"
-              class="my-2"
-              data-field="input"
-              :label="$t('contact.form.deadline.label')"
-              iType="datetime-local"
-              :placeholder="$t('contact.form.deadline.placeholder')"
-              :error="errors.deadline"
-              @errorField="errors.deadline=$event"
-              ref="deadline"
-            ></base-input>
-            <base-input
-              v-model="form.industry"
-              class="my-2"
-              data-field="select"
-              :options="industries"
-              :label="$t('contact.form.industry.label')"
-              placeholder="Please select"
-              :error="errors.industry"
-              @errorField="errors.industry=$event"
-              ref="industry"
-            ></base-input>
-            <base-input
-              v-model="form.subject"
-              iType="textarea"
-              class="my-2"
-              :label="$t('contact.form.subject.label')"
-              required
-              :placeholder="$t('contact.form.subject.placeholder')"
-              data-field="textarea"
-              :error="errors.subject"
-              @errorField="errors.subject=$event"
-              ref="subject"
-            ></base-input>
+            <base-input v-model="form.deadline" class="my-2" data-field="input" :label="$t('contact.form.deadline.label')"
+              iType="datetime-local" :placeholder="$t('contact.form.deadline.placeholder')" :error="errors.deadline"
+              @errorField="errors.deadline=$event" ref="deadline"></base-input>
+            <base-input v-model="form.industry" class="my-2" data-field="select" :options="industries"
+              :label="$t('contact.form.industry.label')" placeholder="Please select" :error="errors.industry"
+              @errorField="errors.industry=$event" ref="industry"></base-input>
+            <base-input v-model="form.subject" iType="textarea" class="my-2" :label="$t('contact.form.subject.label')"
+              required :placeholder="$t('contact.form.subject.placeholder')" data-field="textarea" :error="errors.subject"
+              @errorField="errors.subject=$event" ref="subject"></base-input>
             <div class="flex align_center center mt-2" v-if="checkForm">
               <h4 class="text_primary">Please check required fields</h4>
             </div>
             <div class="flex align_center end mt-4">
-              <fBtn
-                :loading="loading"
-                @click.native="submitForm"
-                class="call_to_action bg_primary f_link text_white"
-              >
+              <fBtn :loading="loading" @click.native="submitForm" class="call_to_action bg_primary f_link text_white">
                 <h3 class="text_white px-5 w-40">{{$t('contact.form.btn')}}</h3>
               </fBtn>
             </div>
@@ -462,31 +373,35 @@ export default {
   .desc {
     align-items: end;
   }
+
   .separator {
     height: 4px;
     width: 1.5rem;
     border-radius: 15px;
   }
+
   .image {
     position: relative;
     bottom: -5rem;
     perspective: 800px;
+
     img {
       animation: bounce 3s infinite ease-in-out;
     }
   }
+
   .hero_content {
     height: 27.5rem;
     width: 100%;
-    background: linear-gradient(
-      -90deg,
-      rgba(51, 51, 51, 1) 0%,
-      rgba(135, 84, 84, 1) 100%
-    );
+    background: linear-gradient(-90deg,
+        rgba(51, 51, 51, 1) 0%,
+        rgba(135, 84, 84, 1) 100%);
   }
+
   @media (max-width: 1024px) {
-    & > .container {
+    &>.container {
       flex-wrap: wrap;
+
       .image {
         justify-content: center;
         bottom: 0rem;
@@ -496,6 +411,7 @@ export default {
           max-height: 30rem;
         }
       }
+
       .desc {
         width: 100% !important;
         margin-top: 2rem;
@@ -503,11 +419,14 @@ export default {
         align-items: center;
       }
     }
+
     .hero_content {
       .container {
         justify-content: center;
+
         .w-50 {
           width: 100% !important;
+
           h1,
           p {
             text-align: center;
@@ -516,6 +435,7 @@ export default {
       }
     }
   }
+
   @media (max-width: 480px) {
     .image {
       img {
@@ -524,6 +444,7 @@ export default {
     }
   }
 }
+
 //********************* */
 //*********Contact form************ */
 .contact_form {
@@ -531,29 +452,37 @@ export default {
   border-radius: 9px;
   top: -5rem;
   padding: 5rem;
+
   .c_head {
     margin-bottom: 4rem;
+
     p {
       line-height: 1.5;
     }
   }
+
   @media (max-width: 1024px) {
     .c_head {
       width: 100% !important;
     }
+
     .c_body {
       flex-wrap: wrap;
+
       .form_contact {
         width: 100% !important;
+
         .cellule {
           text-align: center;
         }
       }
+
       form {
         width: 100% !important;
       }
     }
   }
+
   @media (max-width: 480px) {
     padding: 2rem;
   }
@@ -564,9 +493,11 @@ export default {
   0% {
     transform: translateY(-5px);
   }
+
   50% {
     transform: translateY(10px);
   }
+
   100% {
     transform: translateY(-5px);
   }

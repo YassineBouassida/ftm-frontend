@@ -249,7 +249,7 @@ export default {
   },
   //Sitemap
   sitemap: {
-    hostname: 'https://fictiontomission.com',
+    hostname: 'https://fiction-to-mission.com',
     // shortcut notation (basic)
     i18n: true,
     // nuxt-i18n notation (advanced)
@@ -260,8 +260,8 @@ export default {
     routes: async () => {
       const {
         data
-      } = await axios.get('https://server.fictiontomission.com/services');
-      const projects = await axios.get('https://server.fictiontomission.com/projects');
+      } = await axios.get('https://server.fiction-to-mission.com/services');
+      const projects = await axios.get('https://server.fiction-to-mission.com/projects');
       let locales = ['en', 'fr'];
       let servicesRoutes = [];
       let projectRoutes = [];
